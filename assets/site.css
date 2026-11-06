@@ -33,6 +33,16 @@ img,svg{max-width:100%}
 .marka{gap:4px}
 .marka-hiz{width:38px;height:29px;flex:none}
 .marka-ad{display:inline-block;font:700 32px/1 var(--baslik);letter-spacing:-.3px;transform:skewX(-12deg);padding-right:4px}
+.ust-wa{margin-left:auto;font:600 15px/1 var(--govde);color:#178F44;text-decoration:none;border:1.5px solid #9BD8B1;border-radius:999px;padding:9px 14px;white-space:nowrap}
+.ust-wa:hover{background:#EAF8EF;color:#0F6B33}
+.ikonbar{background:#FFF6DA;border-top:1px solid #F0E2B0;border-bottom:1px solid #EAD9A0}
+.ikonbar-ic{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;padding-top:4px;padding-bottom:4px}
+.ikonbar-ic::-webkit-scrollbar{display:none}
+.ikonbar a{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:8px;color:#2B3A33;text-decoration:none;font:500 15px/1 var(--govde);white-space:nowrap}
+.ikonbar a:hover{background:#FCEBB5;color:var(--murekkep)}
+.ikonbar a[aria-current="page"]{background:var(--gece);color:#F4F1E6}
+.ikonbar a[aria-current="page"] svg{stroke:#F2CC63}
+.ikonbar svg{width:22px;height:22px;flex:none;fill:none;stroke:#3E5248;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
 .nav::-webkit-scrollbar{display:none}
 .nav a{color:var(--soluk);text-decoration:none;font:600 16px/1 var(--govde);padding:10px 12px;border-radius:6px;white-space:nowrap}
@@ -234,6 +244,9 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
   .kap{padding:0 16px}
   .ust .kap{gap:10px;min-height:56px;flex-wrap:wrap;padding-top:8px}
   .nav{margin-left:0;width:100%;padding-bottom:4px}
+  .ust .kap{flex-wrap:nowrap;padding-top:0}
+  .ust-wa{font-size:13px;padding:7px 10px}
+  .ikonbar a{font-size:14px;padding:8px 10px}
   .nav a{padding:8px 10px;font-size:15px}
   .marka-ad{font-size:28px}
   .bas{padding-top:26px}
