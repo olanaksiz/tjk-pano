@@ -272,7 +272,7 @@
         if (!a || !a.length) { durum.textContent = 'Bu sayfa yalnız yöneticiler içindir. Giriş yaptığın hesap yönetici değil.'; return; }
         durum.textContent = 'Veriler yükleniyor…';
         return Promise.all([rest('profiller?select=*&order=created_at.desc&limit=5000'), rest('olaylar?select=id,user_id,tur,plan,sayfa,created_at&order=created_at.desc&limit=5000')])
-          .then(function (r) { durum.textContent = ''; panel.hidden = false; adminCiz(r[0] || [], r[1] || []); });
+          .then(function (r) { durum.textContent = ''; var h = $('h1', kok); if (h) h.textContent = 'Admin paneli'; panel.hidden = false; adminCiz(r[0] || [], r[1] || []); });
       });
     }).catch(function (e) { durum.textContent = hataYazi(e); });
   }

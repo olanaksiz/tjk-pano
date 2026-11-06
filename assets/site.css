@@ -465,3 +465,11 @@ dialog.uyelik::backdrop{background:rgba(0,6,15,.72)}
 main:has(> .koyu-bolum:last-child)+.alt,main:has(> section.koyu-bolum:only-child)+.alt{margin-top:0}
 .admin-giris .uy-sekmeler,.admin-giris .uy-link{display:none}
 .admin-giris{background:#06122B;color:#EAF1FB}
+.admin:has([data-admin-giris]:not([hidden])) .bas{text-align:center}
+.admin-giris{margin:6px auto 48px;padding-top:26px}
+.admin-logo{display:flex;align-items:center;justify-content:center;gap:4px;color:#fff}
+.admin-logo .marka-hiz{width:52px;height:39px}
+.admin-logo .marka-ad{font-size:42px;color:#fff}
+.admin-etiket{margin:6px 0 0;text-align:center;font:600 13px/1 var(--govde);letter-spacing:.12em;text-transform:uppercase;color:#86C8FF}
+.admin-giris .uy-ic{padding-top:14px}
+.admin:has([data-admin-giris]:not([hidden])) .bas .not{margin-left:auto;margin-right:auto}
