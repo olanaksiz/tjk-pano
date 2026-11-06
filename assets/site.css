@@ -277,29 +277,15 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
 .kunye dd{margin:0}
 @media (max-width:680px){.kunye{grid-template-columns:1fr;gap:2px}.kunye dd{margin-bottom:10px}}
 /* Alt bilgi */
-.alt{margin-top:40px;background:#00081A;color:#9FB0C8;font-size:15px;border-top:1px solid #0E1F3D}
-.alt .kap{padding-top:28px;padding-bottom:30px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
-.alt p{margin:0 0 10px;max-width:62ch}
-.alt a{color:#E6EEF9}
-.alt a:hover{color:#86C8FF}
-.alt-yasal{border-top:1px solid #12284D;background:#000613}
-.alt-yasal .kap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:16px;padding-bottom:84px}
-.alt .alt-yasal nav{display:flex;flex-wrap:wrap;gap:8px 22px;flex-direction:row}
-.alt-yasal a{font-size:14px;color:#C3D1E8;text-decoration:none}
-.alt-yasal a:hover,.alt-yasal a[aria-current="page"]{color:#86C8FF;text-decoration:underline}
-.alt-yasal span{font-size:13px;color:#7083A0}
 .yasal{max-width:74ch}
 .yasal h2{font:700 26px/1.1 var(--baslik);margin:28px 0 10px}
 .yasal ul{margin:0 0 14px;padding-left:22px}
 .yasal li{margin:0 0 6px}
 .yasal-diger{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 10px;padding-top:20px;border-top:1px solid var(--cizgi)}
 .yasal-diger a{background:var(--beyaz);border:1px solid var(--cizgi);border-radius:999px;padding:8px 14px;text-decoration:none;font-weight:600;font-size:15px}
-.alt nav{display:flex;flex-direction:column;gap:8px}
-.alt .marka{display:flex;margin:0 0 12px}.alt .marka-ad{color:#F4F1E6;font-size:30px}
 
 @media (max-width:900px){
   .iki{grid-template-columns:1fr;gap:28px}
-  .alt .kap{grid-template-columns:1fr}
 }
 @media (max-width:680px){
   body{font-size:16px}
@@ -473,3 +459,36 @@ main:has(> .koyu-bolum:last-child)+.alt,main:has(> section.koyu-bolum:only-child
 .admin-etiket{margin:6px 0 0;text-align:center;font:600 13px/1 var(--govde);letter-spacing:.12em;text-transform:uppercase;color:#86C8FF}
 .admin-giris .uy-ic{padding-top:14px}
 .admin:has([data-admin-giris]:not([hidden])) .bas .not{margin-left:auto;margin-right:auto}
+
+/* Alt bilgi (kurumsal düzen) */
+.alt{margin-top:40px;background:#00081A;color:#9FB0C8;font-size:15px;border-top:1px solid #0E1F3D}
+.alt a{color:#C3D1E8;text-decoration:none}
+.alt a:hover{color:#86C8FF}
+.alt-ust{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:32px 40px;padding-top:44px;padding-bottom:32px}
+.alt-marka{display:inline-flex;margin:0 0 14px}.alt-marka .marka-ad{color:#fff;font-size:32px}
+.alt-slogan{margin:0 0 18px;max-width:36ch;line-height:1.55;color:#9FB0C8}
+.alt-wa{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1.5px solid #1F7A49;border-radius:999px;color:#7FE3A6!important;font-weight:600;font-size:14.5px}
+.alt-wa svg{width:18px;height:18px}
+.alt-wa:hover{background:rgba(37,211,102,.12)}
+.alt-sutun{display:flex;flex-direction:column;gap:10px}
+.alt-sutun h2{margin:4px 0 6px;font:600 12.5px/1 var(--govde);letter-spacing:.14em;text-transform:uppercase;color:#6F86A8}
+.alt-sutun a{font-size:15px;line-height:1.3}
+.alt-iletisim address{font-style:normal;font-size:14px;line-height:1.5;color:#8A9BB6;margin-top:2px}
+.alt-uyari{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:1px solid #13284F;border-radius:12px;background:rgba(14,40,90,.25);margin-bottom:28px}
+.alt-uyari p{margin:0;font-size:13.5px;line-height:1.55;color:#8A9BB6}
+.alt-uyari .yas{flex:none;display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:2px solid #C0392B;color:#FF9C8F;font:700 14px/1 var(--govde)}
+.alt-yasal{border-top:1px solid #12284D;background:#000613}
+.alt-yasal .kap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-top:18px;padding-bottom:84px}
+.alt-telif{margin:0;font-size:13.5px;color:#7083A0}
+.alt-telif span{margin-left:14px;padding-left:14px;border-left:1px solid #1E3358}
+.alt-telif a{color:#8A9BB6}
+.alt .alt-yasal nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+.alt-yasal nav a{font-size:13.5px;color:#9FB0C8}
+.alt-yasal nav a:hover,.alt-yasal nav a[aria-current="page"]{color:#86C8FF}
+@media (max-width:900px){.alt-ust{grid-template-columns:repeat(3,minmax(0,1fr))}.alt-marka-blok{grid-column:1/-1}}
+@media (max-width:680px){
+  .alt-ust{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px;padding-top:34px}
+  .alt-iletisim{grid-column:1/-1}
+  .alt-telif span{display:block;margin:6px 0 0;padding:0;border:0}
+  .alt-yasal .kap{flex-direction:column;align-items:flex-start;padding-bottom:96px}
+}
