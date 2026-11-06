@@ -216,8 +216,18 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
   .atlar td.yerk{grid-column:3;grid-row:2;justify-self:end}
   .atlar td.son6k,.atlar td.agfk,.atlar td.gnyk{grid-column:2}
   .tablo.yigin tr{grid-template-columns:1fr auto;padding:12px 12px}
+  .tablo.yigin,.tablo.yigin tbody{display:block;width:100%}
+  .tablo.yigin caption{display:block}
+  .sira-dizi{white-space:normal;overflow-wrap:anywhere}
+  .tablo.yigin td.sag{text-align:left;grid-column:1/-1}
   .tablo.yigin td:first-child{grid-column:1/-1;font-weight:600}
   .liste li{grid-template-columns:60px 1fr}
 }
+/* WhatsApp iletişim düğmesi */
+.wa{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:8px;background:#1DA851;color:#fff;border-radius:999px;padding:10px 18px 10px 12px;font:600 16px/1 var(--govde);text-decoration:none;box-shadow:0 6px 18px rgba(15,43,34,.28)}
+.wa:hover{background:#178F44;color:#fff}
+.wa svg{width:28px;height:28px;flex:none}
+@media (max-width:680px){.wa{padding:12px}.wa span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.wa svg{width:32px;height:32px}}
+@media print{.wa{display:none}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media print{.ust,.alt,.atlamalar{display:none}}
