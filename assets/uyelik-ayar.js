@@ -5,5 +5,6 @@
 // "service_role" / "secret" anahtarını ASLA buraya yazma.
 window.TJKD_UYELIK = {
   url: '',
-  anon: ''
+  anon: '',
+  adminEposta: 'info@elyapa.com'  // admin kullanıcı adı bu e-postaya bağlanır
 };

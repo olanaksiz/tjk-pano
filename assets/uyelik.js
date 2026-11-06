@@ -6,6 +6,8 @@
   var KEY = String(AYAR.anon || '');
   var HAZIR = /^https:\/\/.+/.test(URL) && KEY.length > 20;
   var SK = 'tjkd-oturum';
+  var ADMIN_EPOSTA = String(AYAR.adminEposta || 'info@elyapa.com');
+  function kimlik(v) { v = String(v || '').trim(); return v.toLocaleLowerCase('tr-TR') === 'admin' ? ADMIN_EPOSTA : v; }
   var $ = function (s, k) { return (k || document).querySelector(s); };
   var $$ = function (s, k) { return Array.prototype.slice.call((k || document).querySelectorAll(s)); };
 
@@ -163,14 +165,14 @@
       e.preventDefault();
       var d = new FormData(fg);
       kilitle(fg, true); mesaj(fg, 'Giriş yapılıyor…');
-      istek('/auth/v1/token?grant_type=password', {method: 'POST', body: {email: String(d.get('eposta') || '').trim(), password: String(d.get('sifre') || '')}})
+      istek('/auth/v1/token?grant_type=password', {method: 'POST', body: {email: kimlik(d.get('eposta')), password: String(d.get('sifre') || '')}})
         .then(function (j) { oturumKaydet(j); profilSoz = null; olay('giris'); mesaj(fg, 'Giriş yapıldı.', 'tamam'); setTimeout(function () { kapat(); if (location.pathname.indexOf('/uye-ol') === 0) location.href = '/premium/'; else location.reload(); }, 400); })
         .catch(function (err) { mesaj(fg, hataYazi(err), 'hata'); })
         .then(function () { kilitle(fg, false); });
     });
     var su = $('[data-sifre-unuttum]', kapsam);
     if (su) su.addEventListener('click', function () {
-      var ep = String(new FormData(fg).get('eposta') || '').trim();
+      var ep = kimlik(new FormData(fg).get('eposta'));
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ep)) return mesaj(fg, 'Önce e-posta adresini yaz, sonra "Şifremi unuttum"a bas.', 'hata');
       istek('/auth/v1/recover?redirect_to=' + encodeURIComponent(location.origin + '/uye-ol/'), {method: 'POST', body: {email: ep}})
         .then(function () { mesaj(fg, ep + ' adresine şifre yenileme bağlantısı gönderdik.', 'tamam'); })
@@ -265,6 +267,8 @@
   function adminSayfa() {
     var kok = $('[data-admin]'); if (!kok) return;
     var durum = $('[data-admin-durum]', kok), panel = $('[data-admin-panel]', kok), girisK = $('[data-admin-giris]', kok);
+    var gi = $('[data-form=giris] [name=eposta]', girisK);
+    if (gi) { gi.type = 'text'; gi.setAttribute('autocomplete', 'username'); gi.setAttribute('autocapitalize', 'none'); gi.setAttribute('spellcheck', 'false'); gi.placeholder = 'admin'; var lb = gi.parentNode; if (lb && lb.firstChild && lb.firstChild.nodeType === 3) lb.firstChild.nodeValue = 'Kullanıcı adı'; }
     if (!HAZIR) { durum.textContent = 'Yönetici girişi bu sayfadan yapılır. Giriş, Supabase bağlantısı kurulunca çalışmaya başlar.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
     oturum().then(function (s) {
       if (!s) { durum.textContent = 'Yönetici hesabınla giriş yap.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
