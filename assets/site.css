@@ -59,6 +59,7 @@ h3{font:700 26px/1.05 var(--baslik);margin:0}
 .kahraman-ic{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
 .kahraman h1{font:700 clamp(44px,6.2vw,76px)/.95 var(--baslik);margin:0 0 18px;color:#F4F1E6;letter-spacing:-.4px}
 .kahraman h1 .satir{display:block}
+.kahraman-ust{font:600 18px/1.3 var(--govde);color:#F2CC63;margin:-6px 0 14px}
 .kahraman-alt{font-size:20px;line-height:1.5;color:#CFDDD5;max-width:52ch;margin:0 0 26px}
 .kahraman-dugme{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 30px}
 .dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font:600 17px/1 var(--govde);text-decoration:none}
@@ -69,13 +70,27 @@ h3{font:700 26px/1.05 var(--baslik);margin:0}
 .kahraman-ozellik{list-style:none;margin:0;padding:22px 0 0;border-top:1px solid #2C5446;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
 .kahraman-ozellik b{display:block;font:700 22px/1.1 var(--baslik);color:#F2CC63;margin-bottom:4px}
 .kahraman-ozellik span{font-size:15px;color:#A9C2B6;line-height:1.4}
-.kahraman-gorsel{margin:0;border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #3A6A58,0 30px 60px -20px rgba(0,0,0,.6);aspect-ratio:16/9;background:#163A2E}
+.kahraman-gorsel{margin:0;border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #3A6A58,0 30px 60px -20px rgba(0,0,0,.6);aspect-ratio:792/726;background:#0A1424;max-width:560px;justify-self:end;width:100%}
 .kahraman-gorsel img{display:block;width:100%;height:100%;object-fit:cover}
 .kahraman-sanat-kap{display:flex;justify-content:center}
 .kahraman-sanat{width:100%;max-width:560px;height:auto}
 .buyuk-h{font:700 clamp(36px,5vw,52px)/1 var(--baslik);margin:0 0 14px}
 @media (max-width:900px){.kahraman-ic{grid-template-columns:1fr;gap:26px;padding-top:34px;padding-bottom:36px}.kahraman-gorsel,.kahraman-sanat-kap{order:-1}.kahraman-sanat{max-width:340px}}
 @media (max-width:680px){.kahraman-alt{font-size:17px}.kahraman-ozellik{grid-template-columns:1fr;gap:12px}.dugme{flex:1 1 auto}}
+
+/* Hazır kuponlar tanıtımı */
+.kuponlar-tanitim{background:var(--beyaz);border-bottom:1px solid var(--cizgi)}
+.kuponlar-tanitim .kap{padding-top:40px;padding-bottom:36px}
+.kt-bas{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:18px}
+.kt-bas h2{margin:0}.kt-bas p{margin:0;color:var(--soluk)}
+.kt-liste{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.kt{border:1px solid var(--cizgi);border-radius:12px;padding:18px 18px 16px;background:var(--kagit);position:relative}
+.kt h3{margin:8px 0 6px}.kt p{margin:0;color:#33443B}
+.kt-etiket{display:inline-block;font:600 13px/1 var(--govde);padding:5px 9px;border-radius:999px;background:var(--cim-acik);color:var(--cim)}
+.kt-orta .kt-etiket{background:var(--amber-acik);color:var(--amber-koyu)}
+.kt-buyuk{background:var(--gece);border-color:var(--gece);color:#F4F1E6}.kt-buyuk p{color:#C3D5CC}.kt-buyuk .kt-etiket{background:#F2CC63;color:var(--gece)}
+.kt-not{margin:14px 0 0;color:var(--soluk);font-size:15px}
+@media (max-width:760px){.kt-liste{grid-template-columns:1fr}}
 
 /* TABELA — günün sonuç panosu */
 .tabela{background:var(--gece);color:#fff;border-radius:12px;padding:20px 22px 16px;display:grid;gap:18px}
