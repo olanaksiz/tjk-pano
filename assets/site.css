@@ -53,10 +53,12 @@ h3{font:700 26px/1.05 var(--baslik);margin:0}
 
 /* Ana sayfa kahraman bölümü */
 .kahraman{position:relative;background:radial-gradient(120% 140% at 85% 30%,#1C4A3B 0%,#0F2B22 55%,#0B2019 100%);color:#F4F1E6;overflow:hidden}
-.kahraman-pist{position:absolute;inset:0;width:100%;height:100%;opacity:.3;pointer-events:none}
+.kahraman-pist{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 40%,#000 75%);mask-image:linear-gradient(90deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.35) 40%,#000 75%)}
+.kahraman-ic.tek{grid-template-columns:minmax(0,640px);padding-top:72px;padding-bottom:72px}
 .kahraman-ic{position:relative}
 .kahraman-ic{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
 .kahraman h1{font:700 clamp(44px,6.2vw,76px)/.95 var(--baslik);margin:0 0 18px;color:#F4F1E6;letter-spacing:-.4px}
+.kahraman h1 .satir{display:block}
 .kahraman-alt{font-size:20px;line-height:1.5;color:#CFDDD5;max-width:52ch;margin:0 0 26px}
 .kahraman-dugme{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 30px}
 .dugme{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font:600 17px/1 var(--govde);text-decoration:none}
