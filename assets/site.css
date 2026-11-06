@@ -1,0 +1,222 @@
+/* TJK Detay — tabela temalı spor-medya düzeni */
+@font-face{font-family:"Barlow";src:url(/assets/fonts/Barlow-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url(/assets/fonts/Barlow-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url(/assets/fonts/Barlow-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(/assets/fonts/BarlowCondensed-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(/assets/fonts/BarlowCondensed-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+
+:root{
+  --kagit:#F5F7F5; --beyaz:#FFFFFF; --murekkep:#14231C; --soluk:#56665E; --cizgi:#D6DFD9; --cizgi-acik:#E8EEEA;
+  --cim:#0D6B4E; --cim-acik:#E2F0E9; --gece:#0F2B22; --gece-2:#183A2F; --gece-yazi:#A9C2B6;
+  --amber:#FFC531; --amber-acik:#FFF4D1; --amber-koyu:#7A5500;
+  --kirmizi:#B3392A; --kirmizi-acik:#FBE8E4; --turuncu:#9A5B00; --turuncu-acik:#FCEFD6;
+  --govde:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --baslik:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --olcu:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--kagit);color:var(--murekkep);font:400 17px/1.55 var(--govde);font-feature-settings:"tnum" 1}
+a{color:var(--cim);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--murekkep)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:3px}
+img,svg{max-width:100%}
+.kap{max-width:var(--olcu);margin:0 auto;padding:0 20px}
+.gizli{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.atla{position:absolute;left:-999px;top:8px;background:var(--amber);color:var(--murekkep);padding:8px 12px;z-index:20}
+.atla:focus{left:8px}
+
+/* Başlık çubuğu */
+.ust{background:var(--beyaz);border-bottom:1px solid var(--cizgi);position:sticky;top:0;z-index:10}
+.ust .kap{display:flex;align-items:center;gap:28px;min-height:64px}
+.marka{display:flex;align-items:center;gap:10px;color:var(--murekkep);text-decoration:none;flex:none}
+.marka-isaret{width:34px;height:34px;border-radius:7px;background:var(--gece);display:grid;place-items:center;color:var(--amber);font:700 19px/1 var(--baslik);letter-spacing:.5px}
+.marka-ad{font:700 25px/1 var(--baslik);letter-spacing:.2px}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:var(--soluk);text-decoration:none;font:600 16px/1 var(--govde);padding:10px 12px;border-radius:6px;white-space:nowrap}
+.nav a:hover{color:var(--murekkep);background:var(--cizgi-acik)}
+.nav a[aria-current="page"]{color:var(--murekkep);box-shadow:inset 0 -3px 0 var(--cim);border-radius:0}
+
+/* Sayfa başı */
+.bas{padding:40px 0 8px}
+.tarih{font:600 15px/1.2 var(--govde);color:var(--soluk);margin:0 0 6px}
+h1{font:700 clamp(40px,6vw,64px)/.98 var(--baslik);margin:0 0 14px;letter-spacing:-.2px}
+h2{font:700 32px/1.05 var(--baslik);margin:0 0 14px}
+h3{font:700 26px/1.05 var(--baslik);margin:0}
+.giris{font-size:20px;line-height:1.5;max-width:62ch;margin:0 0 26px}
+.giris strong{font-weight:600}
+.bolum{padding:34px 0;border-top:1px solid var(--cizgi)}
+.bolum:first-of-type{border-top:0}
+.not{color:var(--soluk);font-size:15px;max-width:70ch}
+
+/* TABELA — günün sonuç panosu */
+.tabela{background:var(--gece);color:#fff;border-radius:12px;padding:20px 22px 16px;display:grid;gap:18px}
+.tb-satir{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start}
+.tb-hip{padding-top:6px}
+.tb-hip b{display:block;font:700 26px/1 var(--baslik);color:#fff}
+.tb-hip span{display:block;font-size:14px;color:var(--gece-yazi);margin-top:4px}
+.tb-kosular{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.tb-k{display:grid;grid-template-rows:auto auto auto;justify-items:center;gap:4px;padding:8px 4px 8px;border-radius:8px;background:var(--gece-2);color:#fff;text-decoration:none;min-height:104px}
+.tb-k:hover{background:#21493B;color:#fff}
+.tb-r{font:600 13px/1 var(--govde);color:var(--gece-yazi)}
+.tb-no{font:700 44px/1 var(--baslik);color:var(--amber);min-width:1ch;text-align:center}
+.tb-k.bekliyor .tb-no{color:#4E6F62;font-size:34px;padding:5px 0}
+.rol{font:600 12px/1 var(--govde);padding:4px 7px;border-radius:999px;white-space:nowrap}
+.rol-ilk4{background:#2E8C69;color:#fff}
+.rol-y{background:var(--amber);color:var(--murekkep)}
+.rol-s{background:#fff;color:var(--gece)}
+.rol-dis{background:#7B2A20;color:#FFD9D2}
+.rol-bek{background:transparent;color:var(--gece-yazi);border:1px solid #3B5E51}
+.tb-alt{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--gece-yazi);border-top:1px solid #234A3D;padding-top:12px}
+.tb-alt span{display:inline-flex;align-items:center;gap:6px}
+
+/* İki kolon */
+.iki{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px}
+
+/* Tablolar */
+.tablo{width:100%;border-collapse:collapse;background:var(--beyaz);border:1px solid var(--cizgi);border-radius:10px;overflow:hidden;font-size:16px}
+.tablo caption{text-align:left;font:700 22px/1.1 var(--baslik);padding:0 0 10px;caption-side:top}
+.tablo th{font:600 14px/1.2 var(--govde);color:var(--soluk);text-align:left;padding:10px 12px;background:#F0F4F1;border-bottom:1px solid var(--cizgi)}
+.tablo td{padding:10px 12px;border-bottom:1px solid var(--cizgi-acik);vertical-align:top}
+.tablo tr:last-child td{border-bottom:0}
+.tablo .sag{text-align:right;white-space:nowrap}
+.para{font:600 18px/1.2 var(--baslik);letter-spacing:.2px;white-space:nowrap}
+.para-buyuk{font-size:22px;color:var(--cim)}
+.sira-dizi{font:600 17px/1.2 var(--baslik);letter-spacing:.5px;color:var(--soluk);white-space:nowrap}
+.devir{color:var(--kirmizi);font-weight:600}
+
+/* Sürpriz listesi */
+.liste{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.liste li{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center;background:var(--beyaz);border:1px solid var(--cizgi);border-radius:10px;padding:10px 14px}
+.liste .gny{font:700 30px/1 var(--baslik);color:var(--amber-koyu);text-align:right}
+.liste b{font-weight:600}
+.liste small{display:block;color:var(--soluk);font-size:14px}
+
+/* Hipodrom atlama */
+.atlamalar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.atlamalar a{display:inline-flex;gap:8px;align-items:center;background:var(--beyaz);border:1px solid var(--cizgi);border-radius:999px;padding:8px 14px;text-decoration:none;color:var(--murekkep);font-weight:600}
+.atlamalar a span{color:var(--soluk);font-weight:500}
+.siradaki{display:none;margin:14px 0 0;background:var(--amber-acik);border:1px solid #F1D27A;border-radius:10px;padding:12px 16px;font-weight:600}
+.siradaki.var{display:block}
+
+/* Koşu kartı */
+.hip-bolum{padding:30px 0 6px}
+.hip-bolum h2 span{color:var(--soluk);font:600 18px/1 var(--govde);margin-left:8px}
+.kosu{display:grid;grid-template-columns:96px minmax(0,1fr);background:var(--beyaz);border:1px solid var(--cizgi);border-radius:12px;margin:0 0 18px;overflow:hidden;scroll-margin-top:80px}
+.kosu.sirada{border-color:var(--amber);box-shadow:0 0 0 2px var(--amber)}
+.kosu-no{background:var(--gece);color:var(--amber);display:flex;flex-direction:column;align-items:center;padding:16px 6px;gap:6px}
+.kosu-no b{font:700 54px/.9 var(--baslik)}
+.kosu-no span{font:600 18px/1 var(--baslik);color:#fff}
+.kosu-no small{font-size:12px;color:var(--gece-yazi);text-align:center}
+.kosu-ic{padding:16px 20px 18px;min-width:0}
+.kosu-bas{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:8px}
+.kosu-meta{display:flex;flex-wrap:wrap;gap:6px 16px;color:var(--soluk);font-size:15px;margin:0 0 12px}
+.sv{font:600 14px/1 var(--govde);padding:6px 10px;border-radius:999px;border:1px solid}
+.sv-yuksek{color:var(--kirmizi);background:var(--kirmizi-acik);border-color:#EBB8AE}
+.sv-orta{color:var(--turuncu);background:var(--turuncu-acik);border-color:#EBCB8E}
+.sv-dusuk{color:var(--cim);background:var(--cim-acik);border-color:#B5D8C6}
+.sv-neden{font-size:14px;color:var(--soluk);margin:-4px 0 12px}
+.secim{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 10px;margin:0 0 10px}
+.secim-ad{font:600 15px/1 var(--govde);color:var(--soluk);min-width:84px}
+.at-cip{display:inline-flex;align-items:baseline;gap:6px;border-radius:7px;padding:5px 9px 5px 6px;background:var(--cim-acik);color:var(--murekkep);font-weight:600;font-size:16px}
+.at-cip i{font-style:normal;font:700 18px/1 var(--baslik);background:var(--cim);color:#fff;border-radius:5px;padding:3px 6px 2px;min-width:26px;text-align:center}
+.at-cip.y{background:var(--amber-acik)} .at-cip.y i{background:var(--amber);color:var(--murekkep)}
+.at-cip.s{background:#EEF1EF} .at-cip.s i{background:#5C6C64}
+.at-cip.kazandi{outline:2px solid var(--amber);outline-offset:1px}
+.uyari{font-size:15px;margin:0 0 12px;padding:8px 12px;border-left:4px solid var(--amber);background:var(--amber-acik);border-radius:0 8px 8px 0}
+
+/* Sonuç şeridi */
+.sonuc{display:flex;flex-wrap:wrap;gap:6px;background:var(--gece);border-radius:10px;padding:10px;margin:2px 0 14px}
+.sonuc div{display:flex;align-items:center;gap:8px;background:var(--gece-2);border-radius:7px;padding:6px 10px;color:#fff;font-size:15px}
+.sonuc .yer{font:600 14px/1 var(--govde);color:var(--gece-yazi)}
+.sonuc .no{font:700 26px/1 var(--baslik);color:var(--amber)}
+.sonuc .bizde{font-size:12px;color:var(--murekkep);background:#9FD3BD;border-radius:999px;padding:2px 7px;font-weight:600}
+.sonuc .gny{font:600 16px/1 var(--baslik);color:var(--amber)}
+
+/* At tablosu */
+.atlar{width:100%;border-collapse:collapse;font-size:15px}
+.atlar th{font:600 13px/1.2 var(--govde);color:var(--soluk);text-align:left;padding:8px 8px;border-bottom:1px solid var(--cizgi);white-space:nowrap}
+.atlar td{padding:9px 8px;border-bottom:1px solid var(--cizgi-acik);vertical-align:middle}
+.atlar tr.bizim td{background:#F4FAF7}
+.atlar tr.kosmaz td{color:#9AA8A1;text-decoration:line-through}
+.atlar .no{font:700 22px/1 var(--baslik);width:44px;text-align:center}
+.atlar .ad{font-weight:600}
+.atlar .ad small{display:block;font-weight:400;color:var(--soluk);font-size:14px}
+.son6{display:inline-flex;gap:2px}
+.son6 b{display:inline-grid;place-items:center;width:20px;height:22px;border-radius:4px;background:#EEF2EF;font:600 15px/1 var(--baslik);color:var(--soluk)}
+.son6 b.k1{background:var(--amber);color:var(--murekkep)}
+.son6 b.k3{background:var(--cim-acik);color:var(--cim)}
+.etiket{display:inline-block;font:600 13px/1 var(--govde);padding:4px 7px;border-radius:5px;white-space:nowrap}
+.e-biz{background:var(--cim);color:#fff} .e-y{background:var(--amber);color:var(--murekkep)} .e-s{background:#5C6C64;color:#fff}
+.e-gazi{background:var(--amber-acik);color:var(--amber-koyu);border:1px solid #F1D27A}
+.e-fav{color:var(--cim);font-weight:600;font-size:13px}
+.yildiz{color:var(--amber-koyu);font-size:13px;letter-spacing:-1px}
+.yer-son{font:700 20px/1 var(--baslik)}
+.yer-son.y1{color:var(--amber-koyu)}
+details.yorum{margin-top:12px;border-top:1px solid var(--cizgi-acik);padding-top:10px}
+details.yorum summary{cursor:pointer;font-weight:600;color:var(--cim)}
+details.yorum p{margin:8px 0 0;max-width:78ch}
+.tablo-kaydir{overflow-x:auto}
+
+/* Performans */
+.oran{display:inline-flex;align-items:center;gap:10px}
+.oran-cubuk{width:120px;height:10px;background:var(--cizgi-acik);border-radius:5px;overflow:hidden}
+.oran-cubuk i{display:block;height:100%;background:var(--cim)}
+
+/* Hakkımızda */
+.metin{max-width:70ch}
+.metin p{margin:0 0 14px}
+.sss details{background:var(--beyaz);border:1px solid var(--cizgi);border-radius:10px;padding:14px 16px;margin:0 0 10px;max-width:78ch}
+.sss summary{cursor:pointer;font:700 22px/1.1 var(--baslik)}
+.sss details p{margin:10px 0 0}
+
+/* Alt bilgi */
+.alt{margin-top:40px;background:var(--gece);color:var(--gece-yazi);font-size:15px}
+.alt .kap{padding-top:28px;padding-bottom:30px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.alt p{margin:0 0 10px;max-width:62ch}
+.alt a{color:#fff}
+.alt nav{display:flex;flex-direction:column;gap:8px}
+.alt .marka-ad{color:#fff;font-size:22px}
+
+@media (max-width:900px){
+  .iki{grid-template-columns:1fr;gap:28px}
+  .alt .kap{grid-template-columns:1fr}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .kap{padding:0 16px}
+  .ust .kap{gap:10px;min-height:56px;flex-wrap:wrap;padding-top:8px}
+  .nav{margin-left:0;width:100%;padding-bottom:4px}
+  .nav a{padding:8px 10px;font-size:15px}
+  .marka-ad{font-size:22px}
+  .bas{padding-top:26px}
+  .giris{font-size:18px}
+  .tabela{padding:16px 14px 12px}
+  .tb-satir{grid-template-columns:1fr;gap:10px}
+  .tb-hip{display:flex;align-items:baseline;gap:10px;padding:0}
+  .tb-hip span{margin:0}
+  .tb-kosular{grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px}
+  .tb-k{min-height:92px}
+  .tb-no{font-size:36px}
+  .kosu{grid-template-columns:1fr}
+  .kosu-no{flex-direction:row;justify-content:flex-start;gap:12px;padding:10px 16px}
+  .kosu-no b{font-size:40px}
+  .kosu-ic{padding:14px 14px 16px}
+  .secim-ad{min-width:0;width:100%}
+  /* tablolar mobilde satır kartına döner */
+  .atlar thead,.tablo.yigin thead{display:none}
+  .atlar tr,.tablo.yigin tr{display:grid;grid-template-columns:44px 1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--cizgi-acik)}
+  .atlar td,.tablo.yigin td{border:0;padding:0}
+  .atlar td.no{grid-row:span 3;align-self:start;padding-top:2px}
+  .atlar td.ad{grid-column:2}
+  .atlar td[data-l]::before,.tablo.yigin td[data-l]::before{content:attr(data-l) " ";color:var(--soluk);font-size:13px;font-weight:500}
+  .atlar td.bizimk{grid-column:3;grid-row:1;justify-self:end}
+  .atlar td.yerk{grid-column:3;grid-row:2;justify-self:end}
+  .atlar td.son6k,.atlar td.agfk,.atlar td.gnyk{grid-column:2}
+  .tablo.yigin tr{grid-template-columns:1fr auto;padding:12px 12px}
+  .tablo.yigin td:first-child{grid-column:1/-1;font-weight:600}
+  .liste li{grid-template-columns:60px 1fr}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{.ust,.alt,.atlamalar{display:none}}

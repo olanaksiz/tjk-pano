@@ -1,0 +1,14 @@
+# TJK Detay
+
+> Türkiye at yarışları için bağımsız günlük koşu analizi: her koşuda kural tablosundan çıkan ilk 4, Y atı (yorumcuların en çok yazdığı, bizde olmayan at), sürpriz listesi ve sürpriz olasılığı; koşu sonrası sonuç, ödemeler ve yorum. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur.
+
+## Sayfalar
+- [Günün özeti](https://tjkdetay.com/): son günün sonuç tabelası, isabet ve çok ayaklı oyun ödemeleri
+- [Koşular](https://tjkdetay.com/kosular/): koşu koşu ilk 4, Y atı, sürpriz olasılığı, at tablosu
+- [Sonuçlar](https://tjkdetay.com/sonuclar/): ganyan, ikili, sıralı üçlü, tabela, 6'lı/5'li/4'lü/3'lü ganyan ödemeleri
+- [Performans](https://tjkdetay.com/performans/): gün gün isabet
+- [Hakkımızda](https://tjkdetay.com/hakkimizda/): yöntem ve terimler
+
+## Veri
+- [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-06.json)
+- [Gün listesi ve isabet (JSON)](https://tjkdetay.com/data/gunler.json)
