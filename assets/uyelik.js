@@ -1,4 +1,4 @@
-// TJK Detay — üyelik, premium ve admin paneli (Supabase Auth + REST; dış kütüphane yok)
+// TJK Detay — üyelik, premium ve ödeme (Supabase Auth + REST + Edge Functions; dış kütüphane yok)
 (function () {
   'use strict';
   var AYAR = window.TJKD_UYELIK || {};
@@ -227,11 +227,58 @@
     });
   }
 
+  // ---------- ayarlar (herkese açık: planlar, ödeme, site) ----------
+  var ayarSoz = null;
+  function ayarlar() {
+    if (ayarSoz) return ayarSoz;
+    ayarSoz = !HAZIR ? Promise.resolve({}) : istek('/rest/v1/ayarlar?select=anahtar,deger&herkese_acik=eq.true')
+      .then(function (r) { var m = {}; (r || []).forEach(function (x) { m[x.anahtar] = x.deger; }); return m; })
+      .catch(function () { return {}; });
+    return ayarSoz;
+  }
+  function tl(kurus) { return (Number(kurus) / 100).toLocaleString('tr-TR', {style: 'currency', currency: 'TRY', minimumFractionDigits: 2}); }
+
+  function fn(ad, govde) {
+    return oturum().then(function (s) {
+      if (!s) { var e = new Error('Oturum yok'); e.durum = 401; throw e; }
+      return istek('/functions/v1/' + ad, {method: govde ? 'POST' : 'GET', token: s.at, body: govde});
+    });
+  }
+
+  // ---------- duyuru şeridi (admin → Site ayarları) ----------
+  function duyuru() {
+    if (document.body.classList.contains('admin-govde')) return;
+    ayarlar().then(function (m) {
+      var d = m.site || {};
+      if (!d.duyuru_aktif || !d.duyuru) return;
+      var bar = document.createElement('div'); bar.className = 'duyuru'; bar.setAttribute('role', 'note');
+      var ic = document.createElement('div'); ic.className = 'kap';
+      if (d.duyuru_link) { var a = document.createElement('a'); a.href = d.duyuru_link; a.textContent = d.duyuru; ic.appendChild(a); } else ic.textContent = d.duyuru;
+      bar.appendChild(ic);
+      var ust = $('header.ust'); if (ust && ust.parentNode) ust.parentNode.insertBefore(bar, ust); else document.body.insertBefore(bar, document.body.firstChild);
+    });
+  }
+
   // ---------- premium sayfası ----------
+  var PLAN_OZELLIK = ['Her altılı için küçük, orta ve büyük hazır kupon', 'Ayak ayak gerekçe ve kupon tutarı', 'Koşu öncesi sürpriz uyarıları', 'Altılı sonrası kupon karnesi'];
+  function planKart(p, odemeAcik) {
+    var art = document.createElement('article'); art.className = 'plan' + (p.one_cikan ? ' plan-one' : '');
+    var h = document.createElement('h2'); h.textContent = p.ad; art.appendChild(h);
+    var su = document.createElement('p'); su.className = 'plan-sure'; su.textContent = p.gun + ' gün'; art.appendChild(su);
+    var fi = document.createElement('p'); fi.className = 'plan-fiyat'; fi.textContent = Number(p.fiyat) > 0 ? tl(Math.round(Number(p.fiyat) * 100)) : 'Fiyat yakında'; art.appendChild(fi);
+    if (Number(p.fiyat) > 0) { var kd = document.createElement('p'); kd.className = 'plan-kdv'; kd.textContent = 'KDV dahil · otomatik yenileme yok'; art.appendChild(kd); }
+    var ul = document.createElement('ul'); (p.ozellikler && p.ozellikler.length ? p.ozellikler : PLAN_OZELLIK).forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); }); art.appendChild(ul);
+    if (p.one_cikan) { var n = document.createElement('p'); n.className = 'plan-not'; n.textContent = p.etiket || 'En avantajlı plan'; art.appendChild(n); }
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'dugme dugme-mavi'; b.setAttribute('data-plan', p.kod); b.textContent = 'Premium\'a geç'; art.appendChild(b);
+    return art;
+  }
+
   function premiumSayfa() {
     var kok = $('[data-premium]'); if (!kok) return;
-    var hesap = $('#hesap');
+    var hesap = $('#hesap'), planKok = $('[data-planlar]', kok), odeme = $('[data-odeme]', kok);
+    var PLANLAR = {}, ODEME = {};
     if (!HAZIR) { $$('[data-kurulum]', kok).forEach(function (x) { x.hidden = false; }); }
+    var q = new URLSearchParams(location.search);
     profil().then(function (p) {
       if (p) {
         olay('premium_sayfasi');
@@ -242,126 +289,81 @@
           $('[data-hesap-durum]', hesap).textContent = premiumMu(p) ? ('Premium' + (p.premium_bitis ? ' · bitiş ' + new Date(p.premium_bitis).toLocaleDateString('tr-TR') : '')) : 'Ücretsiz üye';
         }
       }
-      if ((new URLSearchParams(location.search)).get('neden') === 'kupon') { var u = $('[data-kupon-not]', kok); if (u) u.hidden = false; }
+      if (q.get('neden') === 'kupon') { var u = $('[data-kupon-not]', kok); if (u) u.hidden = false; }
     });
-    $$('[data-plan]', kok).forEach(function (b) {
-      b.addEventListener('click', function () {
-        var plan = b.getAttribute('data-plan');
-        oturum().then(function (s) {
-          if (!s) { ac('kayit', 'premium'); return; }
-          olay('odemeye_gecti', {plan: plan}).then(function () {
-            var k = $('[data-odeme-bilgi]', kok);
-            if (k) { k.hidden = false; k.scrollIntoView({behavior: 'smooth', block: 'center'}); }
-          });
+    // PayTR dönüşü
+    var dn = $('[data-odeme-sonuc]', kok);
+    if (dn && q.get('odeme') === 'tamam') {
+      dn.hidden = false; dn.className = 'odeme-sonuc bekle'; dn.textContent = 'Ödemen alındı, banka onayı bekleniyor…';
+      var deneme = 0;
+      (function bak() {
+        profil(true).then(function (p) {
+          if (premiumMu(p)) { dn.className = 'odeme-sonuc tamam'; dn.textContent = 'Teşekkürler! Premium üyeliğin açıldı' + (p.premium_bitis ? ' (bitiş: ' + new Date(p.premium_bitis).toLocaleDateString('tr-TR') + ').' : '.'); ustBar(); return; }
+          if (++deneme < 20) setTimeout(bak, 3000); else { dn.className = 'odeme-sonuc bekle'; dn.textContent = 'Ödemen alındı; onay birkaç dakika sürebilir. Sayfayı biraz sonra yenile ya da WhatsApp\'tan yaz.'; }
         });
-      });
-    });
-  }
-
-  // ---------- admin paneli ----------
-  function tarih(t) { try { return new Date(t).toLocaleString('tr-TR', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}); } catch (e) { return t; } }
-  var PLAN_AD = {haftalik: 'Haftalık', aylik: 'Aylık'};
-  var OLAY_AD = {kayit: 'Üye oldu', giris: 'Giriş yaptı', kupon_tikladi: 'Hazır kuponlara tıkladı', premium_sayfasi: 'Premium sayfasını gördü', odemeye_gecti: 'Ödemeye geçti', odeme_tamam: 'Ödemeyi tamamladı'};
-  function el(ad, sinif, metin) { var x = document.createElement(ad); if (sinif) x.className = sinif; if (metin != null) x.textContent = metin; return x; }
-
-  function adminSayfa() {
-    var kok = $('[data-admin]'); if (!kok) return;
-    var durum = $('[data-admin-durum]', kok), panel = $('[data-admin-panel]', kok), girisK = $('[data-admin-giris]', kok);
-    var gi = $('[data-form=giris] [name=eposta]', girisK);
-    if (gi) { gi.type = 'text'; gi.setAttribute('autocomplete', 'username'); gi.setAttribute('autocapitalize', 'none'); gi.setAttribute('spellcheck', 'false'); gi.placeholder = 'admin'; var lb = gi.parentNode; if (lb && lb.firstChild && lb.firstChild.nodeType === 3) lb.firstChild.nodeValue = 'Kullanıcı adı'; }
-    if (!HAZIR) { durum.textContent = 'Yönetici girişi bu sayfadan yapılır. Giriş, Supabase bağlantısı kurulunca çalışmaya başlar.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
-    oturum().then(function (s) {
-      if (!s) { durum.textContent = 'Yönetici hesabınla giriş yap.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
-      return rest('adminler?select=user_id').then(function (a) {
-        if (!a || !a.length) { durum.textContent = 'Bu sayfa yalnız yöneticiler içindir. Giriş yaptığın hesap yönetici değil.'; return; }
-        durum.textContent = 'Veriler yükleniyor…';
-        return Promise.all([rest('profiller?select=*&order=created_at.desc&limit=5000'), rest('olaylar?select=id,user_id,tur,plan,sayfa,created_at&order=created_at.desc&limit=5000')])
-          .then(function (r) { durum.textContent = ''; var h = $('h1', kok); if (h) h.textContent = 'Admin paneli'; panel.hidden = false; adminCiz(r[0] || [], r[1] || []); });
-      });
-    }).catch(function (e) { durum.textContent = hataYazi(e); });
-  }
-
-  function adminCiz(U, O) {
-    var kok = $('[data-admin-panel]');
-    var byId = {}; U.forEach(function (u) { byId[u.id] = u; });
-    var son = {}; O.forEach(function (o) { if (!son[o.user_id]) son[o.user_id] = o; });
-    var kim = function (tur) { var s = {}; O.forEach(function (o) { if (o.tur === tur) s[o.user_id] = 1; }); return Object.keys(s).length; };
-    var hafta = Date.now() - 7 * 864e5;
-    var premiumN = U.filter(premiumMu).length;
-    var kpi = [['Toplam üye', U.length], ['Son 7 günde yeni üye', U.filter(function (u) { return new Date(u.created_at) > hafta; }).length],
-      ['Hazır kuponlardan gelen', (function () { var s = {}; U.forEach(function (u) { if (u.kaynak === 'kupon') s[u.id] = 1; }); O.forEach(function (o) { if (o.tur === 'kupon_tikladi') s[o.user_id] = 1; }); return Object.keys(s).length; })()], ['Premium sayfasını gören', kim('premium_sayfasi')], ['Ödemeye geçen', kim('odemeye_gecti')], ['Premium üye', premiumN]];
-    var kk = $('[data-kpi]', kok); kk.textContent = '';
-    kpi.forEach(function (k) { var d = el('div', 'kpi'); d.appendChild(el('b', '', String(k[1]))); d.appendChild(el('span', '', k[0])); kk.appendChild(d); });
-
-    var huni = $('[data-huni]', kok); huni.textContent = '';
-    var adim = [['Üye oldu', U.length], ['Premium sayfasını gördü', kim('premium_sayfasi')], ['Ödemeye geçti', kim('odemeye_gecti')], ['Premium oldu', premiumN]];
-    var en = Math.max(1, U.length);
-    adim.forEach(function (a) {
-      var r = el('div', 'huni-satir'); r.appendChild(el('span', 'huni-ad', a[0]));
-      var c = el('span', 'huni-cubuk'); var i = el('i'); i.style.width = Math.round(100 * a[1] / en) + '%'; c.appendChild(i); r.appendChild(c);
-      r.appendChild(el('b', '', a[1] + ' (' + Math.round(100 * a[1] / en) + '%)')); huni.appendChild(r);
-    });
-
-    var ara = $('[data-ara]', kok), filtre = $('[data-filtre]', kok), tb = $('[data-uyeler] tbody', kok);
-    var odemeci = {}; O.forEach(function (o) { if (o.tur === 'odemeye_gecti') odemeci[o.user_id] = o; });
-    function satirlar() {
-      var q = (ara.value || '').toLocaleLowerCase('tr-TR'), f = filtre.value;
-      tb.textContent = '';
-      var L = U.filter(function (u) {
-        if (f === 'premium' && !premiumMu(u)) return false;
-        if (f === 'odeme' && !odemeci[u.id]) return false;
-        if (f === 'ileti' && !u.ileti_onay) return false;
-        return !q || [u.ad_soyad, u.eposta, u.telefon].join(' ').toLocaleLowerCase('tr-TR').indexOf(q) >= 0;
-      });
-      L.forEach(function (u) {
-        var tr = el('tr');
-        var td = function (v, s) { var x = el('td', s || '', v == null ? '' : String(v)); tr.appendChild(x); return x; };
-        td(u.ad_soyad || '—'); td(u.eposta); td(u.telefon || '—'); td(tarih(u.created_at));
-        td(premiumMu(u) ? ('Premium' + (u.premium_bitis ? ' · ' + new Date(u.premium_bitis).toLocaleDateString('tr-TR') : '')) : 'Ücretsiz', premiumMu(u) ? 'rozet-p' : '');
-        td(odemeci[u.id] ? ('Evet · ' + (PLAN_AD[odemeci[u.id].plan] || odemeci[u.id].plan || '') + ' · ' + tarih(odemeci[u.id].created_at)) : '—', odemeci[u.id] ? 'rozet-o' : '');
-        td(u.ileti_onay ? 'Var' : 'Yok');
-        td(son[u.id] ? (OLAY_AD[son[u.id].tur] || son[u.id].tur) + ' · ' + tarih(son[u.id].created_at) : '—');
-        var islem = el('td', 'islem');
-        var b1 = el('button', 'dugme-k', premiumMu(u) ? 'Premium kaldır' : '30 gün ver');
-        b1.type = 'button';
-        b1.addEventListener('click', function () {
-          var gun = premiumMu(u) ? 0 : 30;
-          if (!window.confirm((gun ? '30 gün premium verilsin mi: ' : 'Premium kaldırılsın mı: ') + (u.eposta || ''))) return;
-          b1.disabled = true;
-          rest('rpc/admin_premium_ayarla', {method: 'POST', body: {hedef: u.id, gun: gun}})
-            .then(function () { u.premium = gun > 0; u.premium_bitis = gun ? new Date(Date.now() + gun * 864e5).toISOString() : null; satirlar(); })
-            .catch(function (e) { alert(hataYazi(e)); b1.disabled = false; });
-        });
-        islem.appendChild(b1); tr.appendChild(islem);
-        tb.appendChild(tr);
-      });
-      $('[data-sayi]', kok).textContent = L.length + ' üye listeleniyor';
+      })();
+    } else if (dn && q.get('odeme') === 'hata') {
+      dn.hidden = false; dn.className = 'odeme-sonuc hata'; dn.textContent = 'Ödeme tamamlanamadı. Kartından para çekilmediyse tekrar deneyebilirsin; sorun sürerse WhatsApp\'tan yaz.';
     }
-    ara.addEventListener('input', satirlar); filtre.addEventListener('change', satirlar); satirlar();
-
-    var ob = $('[data-olaylar] tbody', kok); ob.textContent = '';
-    O.slice(0, 200).forEach(function (o) {
-      var u = byId[o.user_id] || {}, tr = el('tr');
-      [tarih(o.created_at), (u.ad_soyad || '') + (u.eposta ? ' (' + u.eposta + ')' : ''), OLAY_AD[o.tur] || o.tur, PLAN_AD[o.plan] || o.plan || '', o.sayfa || ''].forEach(function (v) { tr.appendChild(el('td', '', v)); });
-      if (o.tur === 'odemeye_gecti') tr.className = 'vurgu';
-      ob.appendChild(tr);
+    ayarlar().then(function (m) {
+      ODEME = (m.odeme_yontemleri || {});
+      var L = Array.isArray(m.premium_planlar) ? m.premium_planlar.filter(function (p) { return p && p.aktif !== false; }) : null;
+      if (L && L.length && planKok) { planKok.textContent = ''; L.forEach(function (p) { PLANLAR[p.kod] = p; planKok.appendChild(planKart(p)); }); }
+      $$('[data-plan]', kok).forEach(function (b) { b.addEventListener('click', function () { planSec(b.getAttribute('data-plan')); }); });
     });
-
-    $('[data-csv]', kok).addEventListener('click', function () {
-      var bas = ['Ad soyad', 'E-posta', 'Telefon', 'Kayıt', 'Premium', 'Premium bitiş', 'Ödemeye geçti', 'İleti onayı', 'Kaynak'];
-      var rows = [bas].concat(U.map(function (u) { return [u.ad_soyad, u.eposta, u.telefon, u.created_at, premiumMu(u) ? 'evet' : 'hayır', u.premium_bitis || '', odemeci[u.id] ? 'evet' : 'hayır', u.ileti_onay ? 'evet' : 'hayır', u.kaynak || '']; }));
-      var csv = '﻿' + rows.map(function (r) { return r.map(function (v) { v = v == null ? '' : String(v); return /[";\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(';'); }).join('\n');
-      var a = document.createElement('a'); a.href = URL_.createObjectURL(new Blob([csv], {type: 'text/csv;charset=utf-8'})); a.download = 'tjkdetay-uyeler-' + new Date().toISOString().slice(0, 10) + '.csv'; document.body.appendChild(a); a.click(); a.remove();
+    function planSec(kod) {
+      oturum().then(function (s) {
+        if (!s) { ac('kayit', 'premium'); return; }
+        olay('odemeye_gecti', {plan: kod});
+        var p = PLANLAR[kod], paytr = ODEME.paytr || {};
+        var bilgi = $('[data-odeme-bilgi]', kok);
+        if (!p || !(Number(p.fiyat) > 0) || !paytr.aktif || !odeme) {
+          if (odeme) odeme.hidden = true;
+          if (bilgi) { bilgi.hidden = false; bilgi.scrollIntoView({behavior: 'smooth', block: 'center'}); }
+          return;
+        }
+        if (bilgi) bilgi.hidden = true;
+        odeme.hidden = false; odeme.setAttribute('data-secili', kod);
+        $('[data-odeme-ozet]', odeme).textContent = 'tjkdetay Premium · ' + p.ad + ' (' + p.gun + ' gün) · ' + tl(Math.round(Number(p.fiyat) * 100)) + ' (KDV dahil)' + (paytr.test_modu ? ' · TEST MODU' : '');
+        $('[data-odeme-cerceve]', odeme).textContent = '';
+        $('[data-odeme-onay]', odeme).checked = false;
+        var bt = $('[data-odeme-baslat]', odeme); bt.hidden = false; bt.disabled = false;
+        odeme.scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+    }
+    if (odeme) $('[data-odeme-baslat]', odeme).addEventListener('click', function () {
+      var bt = this, ms = $('[data-odeme-mesaj]', odeme);
+      if (!$('[data-odeme-onay]', odeme).checked) { ms.className = 'uy-mesaj hata'; ms.textContent = 'Devam etmek için ön bilgilendirme formu ve mesafeli satış sözleşmesini onayla.'; return; }
+      bt.disabled = true; ms.className = 'uy-mesaj'; ms.textContent = 'Güvenli ödeme sayfası hazırlanıyor…';
+      fn('paytr-token', {plan: odeme.getAttribute('data-secili'), onay: true}).then(function (j) {
+        if (!j || !j.token) throw new Error((j && j.hata) || 'Ödeme başlatılamadı');
+        ms.textContent = ''; bt.hidden = true;
+        var cer = $('[data-odeme-cerceve]', odeme); cer.textContent = '';
+        var fr = document.createElement('iframe'); fr.id = 'paytriframe'; fr.src = 'https://www.paytr.com/odeme/guvenli/' + encodeURIComponent(j.token);
+        fr.setAttribute('frameborder', '0'); fr.setAttribute('scrolling', 'no'); fr.title = 'PayTR güvenli ödeme'; fr.style.width = '100%'; fr.style.minHeight = '640px'; fr.style.border = '0';
+        cer.appendChild(fr);
+        var sc = document.createElement('script'); sc.src = 'https://www.paytr.com/js/iframeResizer.min.js';
+        sc.onload = function () { try { window.iFrameResize({}, '#paytriframe'); } catch (e) {} };
+        document.body.appendChild(sc);
+      }).catch(function (e) {
+        bt.disabled = false;
+        ms.className = 'uy-mesaj hata';
+        var m = (e && e.message) || '';
+        ms.textContent = (e && e.durum === 401) ? 'Oturumun sona ermiş; yeniden giriş yap.' : (m.indexOf('Ödeme') >= 0 || m.indexOf('PayTR') >= 0 || m.indexOf('Plan') >= 0 || m.indexOf('onay') >= 0 ? m : 'Ödeme başlatılamadı: ' + hataYazi(e));
+      });
     });
   }
-  var URL_ = window.URL;
 
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); adminSayfa();
+    ustBar(); premiumSayfa(); duyuru();
   });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
+
+  // admin paneli ve modüller için ortak arayüz
+  window.TJKD = {hazir: HAZIR, url: URL, istek: istek, oturum: oturum, rest: rest, fn: fn, olay: olay, profil: profil, premiumMu: premiumMu, hataYazi: hataYazi,
+    formlariBagla: formlariBagla, sekme: sekme, mesaj: mesaj, cikis: cikis, kimlik: kimlik, ayarlar: ayarlar, tl: tl};
 })();
