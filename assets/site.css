@@ -30,8 +30,9 @@ img,svg{max-width:100%}
 .ust{background:var(--beyaz);border-bottom:1px solid var(--cizgi);position:sticky;top:0;z-index:10}
 .ust .kap{display:flex;align-items:center;gap:28px;min-height:64px}
 .marka{display:flex;align-items:center;gap:10px;color:var(--murekkep);text-decoration:none;flex:none}
-.marka-isaret{width:34px;height:34px;border-radius:7px;background:var(--gece);display:grid;place-items:center;color:var(--amber);font:700 19px/1 var(--baslik);letter-spacing:.5px}
-.marka-ad{font:700 25px/1 var(--baslik);letter-spacing:.2px}
+.marka{gap:4px}
+.marka-hiz{width:38px;height:29px;flex:none}
+.marka-ad{display:inline-block;font:700 32px/1 var(--baslik);letter-spacing:-.3px;transform:skewX(-12deg);padding-right:4px}
 .nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
 .nav::-webkit-scrollbar{display:none}
 .nav a{color:var(--soluk);text-decoration:none;font:600 16px/1 var(--govde);padding:10px 12px;border-radius:6px;white-space:nowrap}
@@ -177,7 +178,7 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
 .alt p{margin:0 0 10px;max-width:62ch}
 .alt a{color:#fff}
 .alt nav{display:flex;flex-direction:column;gap:8px}
-.alt .marka-ad{color:#fff;font-size:22px}
+.alt .marka{display:flex;margin:0 0 12px}.alt .marka-ad{color:#F4F1E6;font-size:30px}
 
 @media (max-width:900px){
   .iki{grid-template-columns:1fr;gap:28px}
@@ -189,7 +190,7 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
   .ust .kap{gap:10px;min-height:56px;flex-wrap:wrap;padding-top:8px}
   .nav{margin-left:0;width:100%;padding-bottom:4px}
   .nav a{padding:8px 10px;font-size:15px}
-  .marka-ad{font-size:22px}
+  .marka-ad{font-size:28px}
   .bas{padding-top:26px}
   .giris{font-size:18px}
   .tabela{padding:16px 14px 12px}
