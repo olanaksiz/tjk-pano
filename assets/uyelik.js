@@ -265,9 +265,9 @@
   function adminSayfa() {
     var kok = $('[data-admin]'); if (!kok) return;
     var durum = $('[data-admin-durum]', kok), panel = $('[data-admin-panel]', kok), girisK = $('[data-admin-giris]', kok);
-    if (!HAZIR) { durum.textContent = 'Üyelik altyapısı henüz bağlanmadı. Kurulum adımları tamamlanınca bu panel açılır.'; return; }
+    if (!HAZIR) { durum.textContent = 'Yönetici girişi bu sayfadan yapılır. Giriş, Supabase bağlantısı kurulunca çalışmaya başlar.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
     oturum().then(function (s) {
-      if (!s) { durum.textContent = 'Admin paneli için yönetici hesabınla giriş yap.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
+      if (!s) { durum.textContent = 'Yönetici hesabınla giriş yap.'; girisK.hidden = false; formlariBagla(girisK); sekme('giris', girisK); return; }
       return rest('adminler?select=user_id').then(function (a) {
         if (!a || !a.length) { durum.textContent = 'Bu sayfa yalnız yöneticiler içindir. Giriş yaptığın hesap yönetici değil.'; return; }
         durum.textContent = 'Veriler yükleniyor…';

@@ -15,6 +15,7 @@
   --olcu:1180px;
 }
 *,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--kagit);color:var(--murekkep);font:400 17px/1.55 var(--govde);font-feature-settings:"tnum" 1}
 a{color:var(--cim);text-decoration-thickness:1px;text-underline-offset:3px}
@@ -356,7 +357,7 @@ details.yorum p{margin:8px 0 0;max-width:78ch}
 .ust-wa+.ust-uye{margin-left:4px}
 .ust-giris{font:600 15px/1 var(--govde);color:#C3D1E8;text-decoration:none;padding:9px 10px;border-radius:8px}
 .ust-giris:hover{color:#fff;background:#0B1E42}
-.ust-premium{display:inline-flex;align-items:center;gap:6px;font:700 15px/1 var(--govde);color:#1A1300;text-decoration:none;background:linear-gradient(180deg,#F6D77A,#D3A12C);border-radius:999px;padding:10px 16px;box-shadow:0 6px 18px -8px rgba(242,193,78,.8);white-space:nowrap}
+.ust-premium{display:inline-flex;align-items:center;gap:5px;font:700 15px/1 var(--govde);color:#1A1300;text-decoration:none;background:linear-gradient(180deg,#F6D77A,#D3A12C);border-radius:999px;padding:10px 16px;box-shadow:0 6px 18px -8px rgba(242,193,78,.8);white-space:nowrap}
 .ust-premium:hover{color:#1A1300;background:#F6D77A}
 .ust-premium.aktif{background:transparent;color:#F6D77A;border:1.5px solid #8A6A1E;box-shadow:none}
 @media (max-width:680px){
@@ -462,3 +463,5 @@ dialog.uyelik::backdrop{background:rgba(0,6,15,.72)}
 .program-tablo tr.kosmaz td{color:#9AA8A1;text-decoration:line-through}
 
 main:has(> .koyu-bolum:last-child)+.alt,main:has(> section.koyu-bolum:only-child)+.alt{margin-top:0}
+.admin-giris .uy-sekmeler,.admin-giris .uy-link{display:none}
+.admin-giris{background:#06122B;color:#EAF1FB}
