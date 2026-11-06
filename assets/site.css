@@ -66,7 +66,7 @@ h3{font:700 26px/1.05 var(--baslik);margin:0}
 .dugme-altin:hover{background:#F6D77A;color:#13231C}
 .dugme-cizgi{border:1.5px solid #6E9384;color:#F4F1E6}
 .dugme-cizgi:hover{border-color:#F6D77A;color:#F6D77A}
-.kahraman-ozellik{list-style:none;margin:0;padding:22px 0 0;border-top:1px solid #2C5446;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.kahraman-ozellik{list-style:none;margin:0;padding:22px 0 0;border-top:1px solid #2C5446;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}
 .kahraman-ozellik b{display:block;font:700 22px/1.1 var(--baslik);color:#F2CC63;margin-bottom:4px}
 .kahraman-ozellik span{font-size:15px;color:#A9C2B6;line-height:1.4}
 .kahraman-gorsel{margin:0;border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px #3A6A58,0 30px 60px -20px rgba(0,0,0,.6);aspect-ratio:16/9;background:#163A2E}
