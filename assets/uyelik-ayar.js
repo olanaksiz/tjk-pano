@@ -1,0 +1,9 @@
+// tjkdetay.com — üyelik bağlantı ayarı
+// Bu dosyayı GitHub'da KENDİN doldur (Supabase → Project Settings → API):
+//   url  : "Project URL"  (ör. https://abcdxyz.supabase.co)
+//   anon : "anon public" ya da "publishable" anahtar (tarayıcıda görünmesi normaldir)
+// "service_role" / "secret" anahtarını ASLA buraya yazma.
+window.TJKD_UYELIK = {
+  url: '',
+  anon: ''
+};
