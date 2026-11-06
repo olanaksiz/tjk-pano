@@ -63,3 +63,100 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
   m.querySelectorAll('.mm-panel a').forEach(function (a) { a.addEventListener('click', function () { m.open = false; }); });
 })();
+
+/* ---- Canlı yayın sayfası: tıkla-oynat (youtube-nocookie), sekmeler, admin listesi ---- */
+(function () {
+  var kok = document.querySelector('[data-canli]');
+  if (!kok) return;
+  var oy = document.querySelector('[data-oynatici]');
+  var veri = {};
+  try { veri = JSON.parse(document.getElementById('canli-veri').textContent || '{}'); } catch (e) { veri = {}; }
+  function idAl(x) {
+    if (!x) return '';
+    if (/^[\w-]{11}$/.test(x)) return x;
+    var m = String(x).match(/(?:v=|youtu\.be\/|\/live\/|\/embed\/)([\w-]{11})/);
+    return m ? m[1] : '';
+  }
+  function el(t, c, yazi) { var e = document.createElement(t); if (c) e.className = c; if (yazi != null) e.textContent = yazi; return e; }
+  function resim(id) { var i = el('img'); i.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg'; i.alt = ''; i.width = 480; i.height = 360; i.loading = 'lazy'; return i; }
+  function poster(y) {
+    if (!oy || !y || oy.classList.contains('oynuyor')) return;
+    var b = el('button', 'cy-poster'); b.type = 'button';
+    b.dataset.yayin = y.id; b.dataset.gomulu = y.gomulu ? '1' : '0'; b.dataset.baslik = y.baslik + ' · ' + y.yer;
+    b.setAttribute('aria-label', y.baslik + ', ' + y.yer + (y.gomulu ? ' yayınını oynat' : " yayınını YouTube'da aç"));
+    b.appendChild(resim(y.id));
+    b.appendChild(el('i', 'cy-oynat buyuk'));
+    var ic = el('span', 'cy-poster-ic');
+    ic.appendChild(el('b', '', y.baslik + ' · ' + y.yer));
+    ic.appendChild(el('small', '', y.gomulu ? 'Oynatmak için dokun' : "TJK bu yayını yalnızca YouTube'da açıyor · dokun"));
+    b.appendChild(ic); oy.textContent = ''; oy.appendChild(b);
+  }
+  function oynat(id, gomulu, baslik) {
+    if (!gomulu) { window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); return; }
+    var f = el('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+    f.title = baslik || 'TJK TV canlı yayın';
+    f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.setAttribute('allowfullscreen', '');
+    f.referrerPolicy = 'strict-origin-when-cross-origin';
+    oy.textContent = ''; oy.appendChild(f); oy.classList.add('oynuyor');
+    var r = oy.getBoundingClientRect();
+    if (r.top < 0 || r.bottom > innerHeight) oy.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-yayin]');
+    if (!a || !kok.parentNode) return;
+    var g = a.getAttribute('data-gomulu') === '1';
+    if (!g && a.tagName === 'A') return; // yeni sekmede YouTube
+    e.preventDefault();
+    oynat(a.getAttribute('data-yayin'), g, a.getAttribute('data-baslik'));
+  });
+  function sekme() {
+    var b = location.hash === '#yurt-disi' ? 'yurtdisi' : 'yurtici';
+    document.querySelectorAll('[data-sekme]').forEach(function (s) { if (s.getAttribute('data-sekme') === b) s.setAttribute('aria-current', 'true'); else s.removeAttribute('aria-current'); });
+    var L = veri[b] || [];
+    if (L.length) poster(L[0]);
+  }
+  addEventListener('hashchange', function () { if (oy && /^#yurt-(ici|disi)$/.test(location.hash)) oy.classList.remove('oynuyor'); sekme(); });
+  sekme();
+  // Admin → "Canlı yayın" modülünde girilen liste varsa onu kullan
+  function listeCiz(bolum, L) {
+    var ul = document.querySelector('#' + (bolum === 'yurtici' ? 'yurt-ici' : 'yurt-disi') + ' .cy-kartlar');
+    if (!ul) return;
+    ul.textContent = '';
+    L.forEach(function (y) {
+      var li = el('li', 'cy-kart'), a = el('a');
+      a.href = 'https://www.youtube.com/watch?v=' + y.id; a.target = '_blank'; a.rel = 'noopener';
+      a.dataset.yayin = y.id; a.dataset.gomulu = y.gomulu ? '1' : '0'; a.dataset.baslik = y.baslik + ' · ' + y.yer;
+      var r = el('span', 'cy-resim'); r.appendChild(resim(y.id)); r.appendChild(el('i', 'cy-oynat'));
+      if (!y.gomulu) r.appendChild(el('em', '', "YouTube'da açılır"));
+      var t = el('span', 'cy-yazi'); t.appendChild(el('b', '', y.baslik)); t.appendChild(el('small', '', y.yer || ''));
+      a.appendChild(r); a.appendChild(t); li.appendChild(a); ul.appendChild(li);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () { if (window.TJKD && TJKD.ayarlar) TJKD.ayarlar().then(function (m) {
+    var c = m && m.canli_yayin;
+    if (!c) return;
+    var degisti = false;
+    ['yurtici', 'yurtdisi'].forEach(function (b) {
+      var L = (Array.isArray(c[b]) ? c[b] : []).map(function (y) { return {id: idAl(y.url || y.id), baslik: String(y.baslik || 'TJK TV'), yer: String(y.yer || ''), gomulu: y.gomulu !== false}; }).filter(function (y) { return y.id; });
+      if (L.length) { veri[b] = L; listeCiz(b, L); degisti = true; }
+    });
+    if (degisti) sekme();
+  }); });
+})();
+
+/* ---- Kampanyalar: admin duyurusu sayfada da görünsün ---- */
+document.addEventListener('DOMContentLoaded', function () {
+  var k = document.querySelector('[data-kamp-duyuru]');
+  if (!k || !window.TJKD || !TJKD.ayarlar) return;
+  TJKD.ayarlar().then(function (m) {
+    var d = (m && m.site) || {};
+    if (!d.duyuru_aktif || !d.duyuru) return;
+    var b = document.createElement('b'); b.textContent = 'Güncel duyuru';
+    var p = document.createElement('p'); p.textContent = d.duyuru;
+    k.appendChild(b); k.appendChild(p);
+    if (d.duyuru_link && /^(https?:)?\/\//.test(d.duyuru_link) || /^\//.test(d.duyuru_link || '')) { var a = document.createElement('a'); a.href = d.duyuru_link; a.textContent = 'Ayrıntı'; a.className = 'dugme dugme-mavi'; k.appendChild(a); }
+    k.hidden = false;
+  });
+});

@@ -126,3 +126,6 @@ input.ad-girdi[type=search]{flex:1 1 260px}
 }
 .ad-kutu,.ad-iki>*,.ad-modul{min-width:0}
 .ad-icerik{min-width:0;box-sizing:border-box}
+.ad-canli-satir{display:grid;grid-template-columns:minmax(120px,1.2fr) minmax(90px,.8fr) minmax(180px,2fr) auto auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #EEF2F7}
+.ad-onay{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:#334155;white-space:nowrap}
+@media (max-width:760px){.ad-canli-satir{grid-template-columns:1fr 1fr}.ad-canli-satir .ad-girdi:nth-child(3){grid-column:1/-1}}
