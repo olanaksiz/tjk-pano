@@ -4,7 +4,7 @@
 //   anon : "anon public" ya da "publishable" anahtar (tarayıcıda görünmesi normaldir)
 // "service_role" / "secret" anahtarını ASLA buraya yazma.
 window.TJKD_UYELIK = {
-  url: '',
-  anon: '',
+  url: 'https://ffgsprkdcmbtnfmsqije.supabase.co',
+  anon: '',   // ← Supabase'deki Publishable key'i bu iki tırnağın arasına yapıştır
   adminEposta: 'info@elyapa.com'  // admin kullanıcı adı bu e-postaya bağlanır
 };
