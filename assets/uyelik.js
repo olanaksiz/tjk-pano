@@ -354,12 +354,40 @@
     });
   }
 
+  // ---------- ziyaret sayacı (çerezsiz; IP saklanmaz; Do Not Track / GPC açıksa sayılmaz) ----------
+  function sayac() {
+    if (!HAZIR || document.body.classList.contains('admin-govde')) return;
+    var ua = navigator.userAgent || '';
+    if (navigator.webdriver || /bot|crawl|spider|slurp|lighthouse|headless|preview/i.test(ua)) return;
+    if (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
+    try { if (localStorage.getItem('tjkd-z-kapali') === '1') return; } catch (e) {}
+    var oturumNo = null, yeni = false;
+    try {
+      oturumNo = sessionStorage.getItem('tjkd-z');
+      if (!oturumNo) { oturumNo = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); sessionStorage.setItem('tjkd-z', oturumNo); }
+    } catch (e) { oturumNo = null; }
+    try { if (!localStorage.getItem('tjkd-z-gordu')) { yeni = true; localStorage.setItem('tjkd-z-gordu', '1'); } } catch (e) {}
+    var kaynak = '';
+    try {
+      var q = new URLSearchParams(location.search);
+      kaynak = (q.get('utm_source') || '').toLowerCase().slice(0, 40);
+      if (!kaynak && q.get('fbclid')) kaynak = 'facebook (reklam/bağlantı)';
+      if (!kaynak && q.get('gclid')) kaynak = 'google (reklam)';
+      if (!kaynak && document.referrer) { var h = new window.URL(document.referrer).hostname.replace(/^www\./, ''); if (h && h !== location.hostname.replace(/^www\./, '')) kaynak = h; }
+    } catch (e) {}
+    var cihaz = /iPad|Tablet/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua)) ? 'tablet' : (/Mobi|Android|iPhone/i.test(ua) ? 'mobil' : 'masaustu');
+    oturum().then(function (s) {
+      return istek('/rest/v1/rpc/ziyaret_kaydet', {method: 'POST', token: s ? s.at : null,
+        body: {p_yol: location.pathname.slice(0, 200), p_kaynak: kaynak || null, p_cihaz: cihaz, p_oturum: oturumNo, p_yeni: yeni}});
+    }).catch(function () {});
+  }
+
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); duyuru();
+    ustBar(); premiumSayfa(); duyuru(); sayac();
   });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
 

@@ -160,3 +160,13 @@ document.addEventListener('DOMContentLoaded', function () {
     k.hidden = false;
   });
 });
+
+/* ---- Çerez politikası: bu tarayıcıda ziyaret sayacını kapat/aç ---- */
+(function () {
+  var b = document.querySelector('[data-sayac-kapat]'); if (!b) return;
+  var d = document.querySelector('[data-sayac-durum]');
+  function kapali() { try { return localStorage.getItem('tjkd-z-kapali') === '1'; } catch (e) { return false; } }
+  function ciz() { var k = kapali(); b.textContent = k ? 'Sayacı yeniden aç' : 'Bu tarayıcıda sayacı kapat'; if (d) d.textContent = k ? 'Bu tarayıcıda ziyaret sayacı kapalı; sayfa açılışlarınız sayılmıyor.' : 'Sayılmak istemiyorsanız aşağıdaki düğmeyle bu tarayıcıda sayacı kapatabilirsiniz.'; }
+  b.addEventListener('click', function () { try { if (kapali()) { localStorage.removeItem('tjkd-z-kapali'); } else { localStorage.setItem('tjkd-z-kapali', '1'); try { localStorage.removeItem('tjkd-z-gordu'); sessionStorage.removeItem('tjkd-z'); } catch (e) {} } } catch (e) {} ciz(); });
+  ciz();
+})();

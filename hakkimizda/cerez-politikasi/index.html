@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Çerez Politikası | TJK Detay</title>
-<meta name="description" content="tjkdetay.com çerez politikası: sitemiz çerez ve takip kodu kullanmaz.">
+<meta name="description" content="tjkdetay.com çerez politikası: çerez ve reklam kodu kullanmayız; anonim ziyaret sayacı ve üyelik oturumu için tarayıcı deposunu sınırlı kullanırız.">
 <link rel="canonical" href="https://tjkdetay.com/hakkimizda/cerez-politikasi/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="theme-color" content="#00081A">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="TJK Detay">
 <meta property="og:locale" content="tr_TR">
 <meta property="og:title" content="Çerez Politikası | TJK Detay">
-<meta property="og:description" content="tjkdetay.com çerez politikası: sitemiz çerez ve takip kodu kullanmaz.">
+<meta property="og:description" content="tjkdetay.com çerez politikası: çerez ve reklam kodu kullanmayız; anonim ziyaret sayacı ve üyelik oturumu için tarayıcı deposunu sınırlı kullanırız.">
 <meta property="og:url" content="https://tjkdetay.com/hakkimizda/cerez-politikasi/">
 <meta property="og:image" content="https://tjkdetay.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611070239">
+<link rel="stylesheet" href="/assets/site.css?v=202611070250">
 <link rel="alternate" type="application/json" href="/data/2026-11-06.json" title="Günün verisi (JSON)">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Hakkımızda", "item": "https://tjkdetay.com/hakkimizda/"}, {"@type": "ListItem", "position": 3, "name": "Çerez Politikası", "item": "https://tjkdetay.com/hakkimizda/cerez-politikasi/"}]}</script>
 </head>
@@ -55,13 +55,21 @@
 <p>Çerezler, bir internet sitesinin tarayıcınıza kaydettiği küçük metin dosyalarıdır. Oturum açık tutmak, tercih hatırlamak, ziyaretleri ölçmek ya da reklamları kişiselleştirmek için kullanılır.</p>
 
 <h2>Sitemiz çerez kullanıyor mu?</h2>
-<p>Hayır. Sitemizde şunların hiçbiri yoktur:</p>
+<p>Hayır. Sitemizde çerez, reklam kodu ya da başka sitelerin takip kodu yoktur. Yazı tipleri ve görseller kendi alan adımızdan yüklenir. Tarayıcınızın deposunu (localStorage ve sessionStorage) yalnız aşağıda yazan sınırlı amaçlarla kullanırız.</p>
+
+<h2>Anonim ziyaret sayacı</h2>
+<p>Hangi sayfaların okunduğunu ve ziyaretçilerin siteye nereden geldiğini görmek için çerezsiz, anonim bir sayaç kullanırız. Her sayfa açılışında şu bilgiler kaydedilir:</p>
 <ul>
-  <li>Oturum, analiz, reklam ya da takip çerezi</li>
-  <li>Tarayıcı deposuna (localStorage gibi) yazılan bilgi</li>
-  <li>Üçüncü taraf takip kodu</li>
+  <li>Açılan sayfanın adresi (ör. /kosular/; arama ve form bilgileri alınmaz)</li>
+  <li>Sizi gönderen sitenin adı ya da kampanya etiketi (ör. "facebook", utm_source)</li>
+  <li>Cihaz türü (mobil, tablet ya da masaüstü)</li>
+  <li>Üye girişi açık mı (evet/hayır; kim olduğunuz kaydedilmez)</li>
+  <li>Sekme açık kaldığı sürece geçerli rastgele bir ziyaret numarası. Bu numara sessionStorage'da "tjkd-z" adıyla tutulur ve sekmeyi kapatınca silinir.</li>
+  <li>Siteye ilk kez gelip gelmediğiniz. Bunun için localStorage'a "tjkd-z-gordu" adıyla yalnız "1" değeri yazılır; kimlik bilgisi içermez.</li>
 </ul>
-<p>Yazı tipleri ve görseller kendi alan adımızdan yüklenir. Bu yüzden çerez onay penceresi göstermiyoruz.</p>
+<p>IP adresinizi, tarayıcı parmak izinizi ya da başka sitelerdeki hareketlerinizi kaydetmeyiz. Kayıtlar Supabase'in Avrupa Birliği'ndeki (Frankfurt) sunucularında tutulur, yalnız yöneticiler toplu sayılar olarak görür ve 13 ay sonra silinir. Tarayıcınızda "Do Not Track" ya da "Global Privacy Control" açıksa hiç sayılmazsınız.</p>
+<p data-sayac-durum>Sayılmak istemiyorsanız aşağıdaki düğmeyle bu tarayıcıda sayacı kapatabilirsiniz.</p>
+<p><button type="button" class="dugme dugme-cizgi" data-sayac-kapat>Bu tarayıcıda sayacı kapat</button></p>
 
 <h2>Üye girişi yaptığınızda</h2>
 <p>Üye girişi yaptığınızda oturumunuzu açık tutmak için tarayıcınızın yerel deposuna (localStorage) “tjkd-oturum” adlı bir oturum anahtarı kaydedilir. Bu kayıt:</p>
@@ -119,7 +127,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 7 Kasım 2026, 02:39 · <a href="/data/2026-11-06.json">Günün verisi (JSON)</a></span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 7 Kasım 2026, 02:50 · <a href="/data/2026-11-06.json">Günün verisi (JSON)</a></span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/" aria-current="page">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -161,8 +169,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611070239" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611070239" defer></script>
-<script src="/assets/uyelik.js?v=202611070239" defer></script>
+<script src="/assets/site.js?v=202611070250" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611070250" defer></script>
+<script src="/assets/uyelik.js?v=202611070250" defer></script>
 </body>
 </html>
