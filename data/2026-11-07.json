@@ -1084,11 +1084,49 @@
       }
      ],
      "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      8,
+      10,
+      3,
+      9,
+      5
+     ],
+     "kazanan_ganyan": 16.95,
+     "kazanan_bizde": "Sürpriz",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "8",
+       "tutar": 16.95
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "8/10",
+       "tutar": 40.6
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "8/10",
+       "tutar": 134.85
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "8/10/3",
+       "tutar": 1345.3
+      },
+      {
+       "oyun": "SIRALI 5'Lİ",
+       "sira": "8/10/3/9/5",
+       "tutar": 36126.06
+      },
+      {
+       "oyun": "4. ÇİFTE",
+       "sira": "5/8",
+       "tutar": 115.85,
+       "devir": null
+      }
+     ],
+     "yorum": "1. 8: sürprizimiz, 4/28 yorumcu, 0 ilk tercih · 2. 10: Y atımız, 23/28 yorumcu, 3 ilk tercih · 3. 3: 1. sıramız, 26/28 yorumcu, 18 ilk tercih · 4. 9: ilk 4 dışı, 21/28 yorumcu, 2 ilk tercih"
     },
     {
      "kosu": 6,
@@ -1515,14 +1553,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 13,
+  "biten": 14,
   "ilk4": 10,
   "y": 2,
-  "s": 0,
+  "s": 1,
   "dis": 1,
   "bir": 3,
   "fav": 5,
-  "fav3": 9,
+  "fav3": 10,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
