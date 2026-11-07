@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 7 Kasım 2026, 22:25. Kaynak: https://tjkdetay.com/
+Güncelleme: 7 Kasım 2026, 22:55. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
