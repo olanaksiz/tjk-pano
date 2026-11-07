@@ -215,3 +215,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Hazır kuponlar: kuponu panoya kopyala
+document.addEventListener('click', function (e) {
+  var b = e.target.closest && e.target.closest('[data-kopya]');
+  if (!b) return;
+  var t = b.getAttribute('data-kopya');
+  var bitti = function () { var eski = b.textContent; b.textContent = 'Kopyalandı'; b.classList.add('ok'); setTimeout(function () { b.textContent = eski; b.classList.remove('ok'); }, 1800); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(bitti, function () {});
+  else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); bitti(); } catch (x) {} a.remove(); }
+});

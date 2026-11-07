@@ -818,8 +818,8 @@
      ],
      "y": [
       {
-       "no": 8,
-       "at": "Zaedno"
+       "no": 11,
+       "at": "Sunfyre"
       }
      ],
      "surpriz_listesi": [
@@ -832,7 +832,7 @@
        "at": "Sunfyre"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -926,7 +926,7 @@
        "at": "Maybe For Us"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
