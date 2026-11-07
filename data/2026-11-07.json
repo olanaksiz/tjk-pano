@@ -1164,12 +1164,41 @@
        "at": "Brave Ares"
       }
      ],
-     "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [
+      4,
+      1,
+      5,
+      3,
+      2
+     ],
+     "kazanan_ganyan": 2.2,
+     "kazanan_bizde": "İlk 4 · #1",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "4",
+       "tutar": 2.2
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "4/1",
+       "tutar": 23.9
+      },
+      {
+       "oyun": "1. 6'LI GANYAN",
+       "sira": "1/8/3/5/8/4",
+       "tutar": 228627.68,
+       "devir": null
+      },
+      {
+       "oyun": "5. ÇİFTE",
+       "sira": "8/4",
+       "tutar": 25.15,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 4 Paşot 1. sıramız (YZ favorisi). 2. gelen 1 Brave Ares Y atımızdı (4/29 yorumcu). 3. gelen 5 Hill Of Angels 2. sıramız ve yorumcu favorisi, 4. gelen 3 Lungta 3. sıramız."
     },
     {
      "kosu": 7,
@@ -1553,14 +1582,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 14,
-  "ilk4": 10,
+  "biten": 15,
+  "ilk4": 11,
   "y": 2,
   "s": 1,
   "dis": 1,
-  "bir": 3,
+  "bir": 4,
   "fav": 5,
-  "fav3": 10,
+  "fav3": 11,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
