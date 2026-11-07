@@ -1844,6 +1844,51 @@
        "oyun": "GANYAN",
        "sira": "1",
        "tutar": 2.95
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/2",
+       "tutar": 4.65
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "1/2",
+       "tutar": 9.2
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "1/2/8",
+       "tutar": 279.8
+      },
+      {
+       "oyun": "6'LI GANYAN",
+       "sira": "7,8/1/1/4/1,4,7/1",
+       "tutar": 3578.35,
+       "devir": null
+      },
+      {
+       "oyun": "5'Lİ GANYAN",
+       "sira": "1/1/4/1,4,7/1",
+       "tutar": 1216.65,
+       "devir": null
+      },
+      {
+       "oyun": "4'LÜ GANYAN",
+       "sira": "1/4/1,4,7/1",
+       "tutar": 148.13,
+       "devir": null
+      },
+      {
+       "oyun": "3'LÜ GANYAN",
+       "sira": "4/1,4,7/1",
+       "tutar": 37.5,
+       "devir": null
+      },
+      {
+       "oyun": "5. ÇİFTE",
+       "sira": "1/1",
+       "tutar": 18.15,
+       "devir": null
       }
      ],
      "yorum": "Kazanan 1 Feritbatur 1. sıramız ve YZ favorisi. 2. gelen 2 Pirim Özer 2. sıramız ve yorumcu favorisi, 3. gelen 8 Afrika Sultanı ilk 4 dışı, 4. gelen 5 Elmas Gözlüm 3. sıramız."
