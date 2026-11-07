@@ -90,7 +90,7 @@
        "at": "Natrose"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -454,7 +454,7 @@
        "at": "Call To Warrior"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -552,7 +552,7 @@
        "at": "The Legacy"
       }
      ],
-     "surpriz_olasiligi": "Yüksek",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -818,8 +818,8 @@
      ],
      "y": [
       {
-       "no": 11,
-       "at": "Sunfyre"
+       "no": 8,
+       "at": "Zaedno"
       }
      ],
      "surpriz_listesi": [
@@ -865,8 +865,8 @@
      ],
      "y": [
       {
-       "no": 11,
-       "at": "Gold Power"
+       "no": 1,
+       "at": "Doğantürkbeyi"
       }
      ],
      "surpriz_listesi": [
@@ -1006,8 +1006,8 @@
      ],
      "y": [
       {
-       "no": 5,
-       "at": "Arapçelik"
+       "no": 1,
+       "at": "Kaanhakan"
       }
      ],
      "surpriz_listesi": [
@@ -1024,7 +1024,7 @@
        "at": "Prenses Dilara"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
