@@ -444,8 +444,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Çepni"
+       "no": 5,
+       "at": "Moriarty"
       }
      ],
      "surpriz_listesi": [
@@ -534,8 +534,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Golden Best"
+       "no": 9,
+       "at": "Kunta"
       }
      ],
      "surpriz_listesi": [
@@ -585,8 +585,8 @@
      ],
      "y": [
       {
-       "no": 2,
-       "at": "My Star"
+       "no": 10,
+       "at": "Canvelo"
       }
      ],
      "surpriz_listesi": [
@@ -732,7 +732,7 @@
        "at": "Sakız Adası"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -779,7 +779,7 @@
        "at": "Es Bana"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -879,7 +879,7 @@
        "at": "King Ferit"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -926,7 +926,7 @@
        "at": "Maybe For Us"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -1057,8 +1057,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Fırathan Ağası"
+       "no": 6,
+       "at": "Işıkalp"
       }
      ],
      "surpriz_listesi": [],
