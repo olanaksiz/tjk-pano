@@ -1,0 +1,974 @@
+{
+ "tarih": "2026-11-07",
+ "site": "https://tjkdetay.com",
+ "aciklama": "TJK Detay günlük koşu analizi: ilk 4, Y atı, sürpriz listesi, sonuç ve ödemeler. Bilgi amaçlıdır.",
+ "hipodromlar": [
+  {
+   "ad": "Ankara",
+   "yer": "Ankara 75. Yıl Hipodromu",
+   "kosular": [
+    {
+     "kosu": 1,
+     "saat": "13:30",
+     "cins": "Handikap 16, DHÖW, 4 ve Yukarı Araplar",
+     "mesafe": "2100 m kum",
+     "alan": 7,
+     "ilk4": [
+      {
+       "no": 5,
+       "at": "Gazneli"
+      },
+      {
+       "no": 1,
+       "at": "Cezzar Bey"
+      },
+      {
+       "no": 3,
+       "at": "Ateş Reisi"
+      },
+      {
+       "no": 6,
+       "at": "Tabip Bey"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 2,
+       "at": "Fennan"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 2,
+     "saat": "14:00",
+     "cins": "Maiden, DHÖW, 3 Yaşlı Araplar",
+     "mesafe": "1500 m kum",
+     "alan": 9,
+     "ilk4": [
+      {
+       "no": 7,
+       "at": "Başkut Ana"
+      },
+      {
+       "no": 1,
+       "at": "Etman"
+      },
+      {
+       "no": 6,
+       "at": "Günşiray"
+      },
+      {
+       "no": 4,
+       "at": "Harputşahini"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 3,
+       "at": "Deprem Han"
+      },
+      {
+       "no": 9,
+       "at": "Natrose"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 3,
+     "saat": "14:30",
+     "cins": "SATIŞ 3, 3 Yaşlı İngilizler",
+     "mesafe": "2000 m kum",
+     "alan": 5,
+     "ilk4": [
+      {
+       "no": 3,
+       "at": "Angle Rising"
+      },
+      {
+       "no": 2,
+       "at": "Nine Trees"
+      },
+      {
+       "no": 1,
+       "at": "Lord Vidar"
+      },
+      {
+       "no": 5,
+       "at": "Maximand"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 4,
+     "saat": "15:00",
+     "cins": "Handikap 15, 3 ve Yukarı İngilizler",
+     "mesafe": "1300 m kum",
+     "alan": 10,
+     "ilk4": [
+      {
+       "no": 5,
+       "at": "Fatma Zeryam"
+      },
+      {
+       "no": 7,
+       "at": "Call Me Free"
+      },
+      {
+       "no": 2,
+       "at": "The Last Unicorn"
+      },
+      {
+       "no": 3,
+       "at": "Atomic Force"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 6,
+       "at": "Millennium Falcon"
+      },
+      {
+       "no": 4,
+       "at": "Leader Tulip"
+      },
+      {
+       "no": 8,
+       "at": "Moon Rock"
+      },
+      {
+       "no": 10,
+       "at": "Entity"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 5,
+     "saat": "15:30",
+     "cins": "ŞARTLI 5, DHÖW, 3 Yaşlı Araplar",
+     "mesafe": "1200 m çim",
+     "alan": 8,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Ünal Göz"
+      },
+      {
+       "no": 3,
+       "at": "Ağılmus Aslanı"
+      },
+      {
+       "no": 2,
+       "at": "Pamiralp"
+      },
+      {
+       "no": 7,
+       "at": "Süperoğlan"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 4,
+       "at": "Aydın Dayı"
+      },
+      {
+       "no": 6,
+       "at": "Küçük Naime"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 6,
+     "saat": "16:00",
+     "cins": "KV-6, DHÖ, 4 ve Yukarı Araplar",
+     "mesafe": "2200 m çim",
+     "alan": 7,
+     "ilk4": [
+      {
+       "no": 2,
+       "at": "Sıkıdost"
+      },
+      {
+       "no": 5,
+       "at": "Kerpeten Yalçın"
+      },
+      {
+       "no": 3,
+       "at": "Dinamit"
+      },
+      {
+       "no": 1,
+       "at": "Atabeyli"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 7,
+     "saat": "16:30",
+     "cins": "DÜNYA ŞEHİRCİLİK GÜNÜ KOŞUSU KV-6, Dişi, 2 Yaşlı İngilizler",
+     "mesafe": "1300 m kum",
+     "alan": 5,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Leopardess"
+      },
+      {
+       "no": 3,
+       "at": "Periwinkle"
+      },
+      {
+       "no": 4,
+       "at": "Frequentist"
+      },
+      {
+       "no": 5,
+       "at": "Kaliki"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 2,
+       "at": "Mystic Runner"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 8,
+     "saat": "17:00",
+     "cins": "Maiden, DHÖW, 3 Yaşlı Araplar",
+     "mesafe": "1500 m kum",
+     "alan": 9,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Ataeri"
+      },
+      {
+       "no": 2,
+       "at": "Düz Koşu"
+      },
+      {
+       "no": 3,
+       "at": "Krensia"
+      },
+      {
+       "no": 6,
+       "at": "Yarkaya"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 7,
+       "at": "Buzlubadem"
+      },
+      {
+       "no": 9,
+       "at": "Menessal"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 9,
+     "saat": "17:30",
+     "cins": "ŞARTLI 5, Dişi, 3 ve Yukarı İngilizler",
+     "mesafe": "1600 m çim",
+     "alan": 12,
+     "ilk4": [
+      {
+       "no": 2,
+       "at": "Melian The Maia"
+      },
+      {
+       "no": 1,
+       "at": "Love Sea"
+      },
+      {
+       "no": 6,
+       "at": "Smart Children"
+      },
+      {
+       "no": 9,
+       "at": "Ünlü Bomba"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 7,
+       "at": "Queen Azra"
+      },
+      {
+       "no": 5,
+       "at": "My Blue Heaven"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    }
+   ]
+  },
+  {
+   "ad": "İzmir",
+   "yer": "İzmir Şirinyer Hipodromu",
+   "kosular": [
+    {
+     "kosu": 1,
+     "saat": "16:45",
+     "cins": "Handikap 16, 3 Yaşlı İngilizler",
+     "mesafe": "2200 m kum",
+     "alan": 7,
+     "ilk4": [
+      {
+       "no": 4,
+       "at": "Kral Ayvalik"
+      },
+      {
+       "no": 1,
+       "at": "Harp"
+      },
+      {
+       "no": 6,
+       "at": "You Are Big"
+      },
+      {
+       "no": 2,
+       "at": "Amoni"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 7,
+       "at": "Call To Warrior"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 2,
+     "saat": "17:15",
+     "cins": "ŞARTLI 4, DHÖ, 3 Yaşlı Araplar",
+     "mesafe": "1600 m kum",
+     "alan": 8,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "İlkejder"
+      },
+      {
+       "no": 2,
+       "at": "Kafkas Yürekli"
+      },
+      {
+       "no": 3,
+       "at": "Dostbaşar"
+      },
+      {
+       "no": 8,
+       "at": "Aydinç"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 6,
+       "at": "Şahinbatur"
+      },
+      {
+       "no": 4,
+       "at": "Altın Esmer"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 3,
+     "saat": "18:00",
+     "cins": "Maiden, 2 Yaşlı İngilizler",
+     "mesafe": "1600 m kum",
+     "alan": 13,
+     "ilk4": [
+      {
+       "no": 6,
+       "at": "Arrow Storm"
+      },
+      {
+       "no": 7,
+       "at": "Esence"
+      },
+      {
+       "no": 8,
+       "at": "Dream Of Angel"
+      },
+      {
+       "no": 2,
+       "at": "Baturtay"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 9,
+       "at": "Kunta"
+      },
+      {
+       "no": 10,
+       "at": "Ninja Queen"
+      },
+      {
+       "no": 13,
+       "at": "The Legacy"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 4,
+     "saat": "18:30",
+     "cins": "KİTVAK KOŞUSU KV-6, 3 ve Yukarı İngilizler",
+     "mesafe": "1600 m kum",
+     "alan": 12,
+     "ilk4": [
+      {
+       "no": 8,
+       "at": "Age Of Fire"
+      },
+      {
+       "no": 6,
+       "at": "Flash Boy"
+      },
+      {
+       "no": 7,
+       "at": "Obrada"
+      },
+      {
+       "no": 5,
+       "at": "Emreefe"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 10,
+       "at": "Canvelo"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 5,
+     "saat": "19:00",
+     "cins": "Handikap 16, 3 ve Yukarı İngilizler",
+     "mesafe": "1400 m kum",
+     "alan": 12,
+     "ilk4": [
+      {
+       "no": 3,
+       "at": "Battlecat"
+      },
+      {
+       "no": 1,
+       "at": "Madrigor"
+      },
+      {
+       "no": 2,
+       "at": "Cherokee"
+      },
+      {
+       "no": 5,
+       "at": "Waltz With Dreams"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 8,
+       "at": "Kuzeyin Krali"
+      },
+      {
+       "no": 10,
+       "at": "Mercia"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 6,
+     "saat": "19:30",
+     "cins": "KV-8, 2 Yaşlı İngilizler",
+     "mesafe": "1400 m kum",
+     "alan": 5,
+     "ilk4": [
+      {
+       "no": 4,
+       "at": "Paşot"
+      },
+      {
+       "no": 5,
+       "at": "Hill Of Angels"
+      },
+      {
+       "no": 3,
+       "at": "Lungta"
+      },
+      {
+       "no": 2,
+       "at": "Emperor"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 1,
+       "at": "Brave Ares"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 7,
+     "saat": "20:00",
+     "cins": "Handikap 16, DHÖW, Dişi, 4 ve Yukarı Araplar",
+     "mesafe": "1400 m kum",
+     "alan": 12,
+     "ilk4": [
+      {
+       "no": 11,
+       "at": "Yıldız Sultan"
+      },
+      {
+       "no": 10,
+       "at": "Efor"
+      },
+      {
+       "no": 1,
+       "at": "Kıvılcım Ateşi"
+      },
+      {
+       "no": 7,
+       "at": "Haremli Kız"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 4,
+       "at": "Ergen"
+      },
+      {
+       "no": 2,
+       "at": "Sakız Adası"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 8,
+     "saat": "20:30",
+     "cins": "Maiden, 2 Yaşlı İngilizler",
+     "mesafe": "1600 m kum",
+     "alan": 13,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Framez"
+      },
+      {
+       "no": 7,
+       "at": "Lady Esin"
+      },
+      {
+       "no": 10,
+       "at": "Do It For Love"
+      },
+      {
+       "no": 9,
+       "at": "Bell Sleeve"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 3,
+       "at": "Deli Alperin Oğlu"
+      },
+      {
+       "no": 11,
+       "at": "Es Bana"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    }
+   ]
+  },
+  {
+   "ad": "Diyarbakır",
+   "yer": "Diyarbakır Hipodromu",
+   "kosular": [
+    {
+     "kosu": 1,
+     "saat": "21:00",
+     "cins": "Handikap 14, 3 Yaşlı İngilizler",
+     "mesafe": "1900 m kum",
+     "alan": 11,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Mira Ceti"
+      },
+      {
+       "no": 4,
+       "at": "Serreş"
+      },
+      {
+       "no": 2,
+       "at": "Desesperados"
+      },
+      {
+       "no": 6,
+       "at": "National Hero"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 8,
+       "at": "Zaedno"
+      },
+      {
+       "no": 11,
+       "at": "Sunfyre"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 2,
+     "saat": "21:30",
+     "cins": "DİYARBAKIR EMNİYET MÜDÜRLÜĞÜ KOŞUSU KV-7, 3 ve Yukarı İngilizler",
+     "mesafe": "1200 m kum",
+     "alan": 12,
+     "ilk4": [
+      {
+       "no": 7,
+       "at": "King Lightning"
+      },
+      {
+       "no": 5,
+       "at": "Queen Of Victory"
+      },
+      {
+       "no": 10,
+       "at": "Halland"
+      },
+      {
+       "no": 8,
+       "at": "My Sixth Sense"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 1,
+       "at": "Doğantürkbeyi"
+      },
+      {
+       "no": 2,
+       "at": "King Ferit"
+      }
+     ],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 3,
+     "saat": "22:00",
+     "cins": "ŞARTLI 3, Dişi, 2 Yaşlı İngilizler",
+     "mesafe": "1200 m kum",
+     "alan": 8,
+     "ilk4": [
+      {
+       "no": 2,
+       "at": "Adaryam"
+      },
+      {
+       "no": 1,
+       "at": "Melekcan"
+      },
+      {
+       "no": 5,
+       "at": "Berrybella"
+      },
+      {
+       "no": 8,
+       "at": "Vesperluna"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 3,
+       "at": "Leydi Stark"
+      },
+      {
+       "no": 4,
+       "at": "Maybe For Us"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 4,
+     "saat": "22:30",
+     "cins": "Handikap 16, 3 ve Yukarı İngilizler",
+     "mesafe": "2000 m kum",
+     "alan": 9,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Now See Me"
+      },
+      {
+       "no": 3,
+       "at": "El Verdugo"
+      },
+      {
+       "no": 4,
+       "at": "Blue Ransom"
+      },
+      {
+       "no": 2,
+       "at": "Van Kalesi"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 8,
+       "at": "King Ancestor"
+      },
+      {
+       "no": 6,
+       "at": "Desert Fever"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 5,
+     "saat": "23:00",
+     "cins": "DİYARBAKIR TİCARET VE SANAYİ ODASI KOŞUSU KV-6, DHÖW, 4 ve Yukarı Araplar",
+     "mesafe": "1200 m kum",
+     "alan": 9,
+     "ilk4": [
+      {
+       "no": 2,
+       "at": "Payidar Kaya"
+      },
+      {
+       "no": 4,
+       "at": "Dumrul"
+      },
+      {
+       "no": 7,
+       "at": "Öznilay"
+      },
+      {
+       "no": 6,
+       "at": "Şeşensultanı"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [
+      {
+       "no": 5,
+       "at": "Arapçelik"
+      },
+      {
+       "no": 1,
+       "at": "Kaanhakan"
+      },
+      {
+       "no": 8,
+       "at": "Prenses Dilara"
+      }
+     ],
+     "surpriz_olasiligi": "Düşük",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    },
+    {
+     "kosu": 6,
+     "saat": "23:30",
+     "cins": "ŞARTLI 19, DHÖW, 3 Yaşlı Araplar",
+     "mesafe": "1200 m kum",
+     "alan": 10,
+     "ilk4": [
+      {
+       "no": 1,
+       "at": "Feritbatur"
+      },
+      {
+       "no": 2,
+       "at": "Pirim Özer"
+      },
+      {
+       "no": 5,
+       "at": "Elmas Gözlüm"
+      },
+      {
+       "no": 9,
+       "at": "Koğun Sesi"
+      }
+     ],
+     "y": [],
+     "surpriz_listesi": [],
+     "surpriz_olasiligi": "Orta",
+     "sonuc": [],
+     "kazanan_ganyan": null,
+     "kazanan_bizde": "",
+     "odemeler": [],
+     "yorum": ""
+    }
+   ]
+  }
+ ],
+ "ozet": {
+  "kosu": 23,
+  "biten": 0,
+  "ilk4": 0,
+  "y": 0,
+  "s": 0,
+  "dis": 0,
+  "bir": 0,
+  "fav": 0,
+  "fav3": 0,
+  "gazi_binis": 0,
+  "gazi_kaz": 0,
+  "gazi_ilk3": 0
+ }
+}
