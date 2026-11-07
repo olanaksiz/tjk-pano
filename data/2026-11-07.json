@@ -31,7 +31,12 @@
        "at": "Tabip Bey"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Fennan"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 2,
@@ -69,7 +74,12 @@
        "at": "Harputşahini"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 9,
+       "at": "Natrose"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -80,7 +90,7 @@
        "at": "Natrose"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -111,7 +121,12 @@
        "at": "Maximand"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 4,
+       "at": "Ice Drops"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -144,7 +159,12 @@
        "at": "Atomic Force"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 4,
+       "at": "Leader Tulip"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 6,
@@ -163,7 +183,7 @@
        "at": "Entity"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -194,7 +214,12 @@
        "at": "Süperoğlan"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Küçük Naime"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 4,
@@ -236,7 +261,12 @@
        "at": "Atabeyli"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 4,
+       "at": "Katıcesur"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -269,7 +299,12 @@
        "at": "Kaliki"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Mystic Runner"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 2,
@@ -307,7 +342,12 @@
        "at": "Yarkaya"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 7,
+       "at": "Buzlubadem"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 7,
@@ -349,7 +389,12 @@
        "at": "Ünlü Bomba"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 5,
+       "at": "My Blue Heaven"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 7,
@@ -397,7 +442,12 @@
        "at": "Amoni"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Çepni"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 7,
@@ -435,7 +485,12 @@
        "at": "Aydinç"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Şahinbatur"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 6,
@@ -477,7 +532,12 @@
        "at": "Baturtay"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Golden Best"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 9,
@@ -492,7 +552,7 @@
        "at": "The Legacy"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -523,7 +583,12 @@
        "at": "Emreefe"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "My Star"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 10,
@@ -561,7 +626,12 @@
        "at": "Waltz With Dreams"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 10,
+       "at": "Mercia"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 8,
@@ -603,7 +673,12 @@
        "at": "Emperor"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 1,
+       "at": "Brave Ares"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 1,
@@ -641,7 +716,12 @@
        "at": "Haremli Kız"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Sakız Adası"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 4,
@@ -683,7 +763,12 @@
        "at": "Bell Sleeve"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Deli Alperin Oğlu"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -731,7 +816,12 @@
        "at": "National Hero"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 11,
+       "at": "Sunfyre"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 8,
@@ -773,7 +863,12 @@
        "at": "My Sixth Sense"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 1,
+       "at": "Doğantürkbeyi"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 1,
@@ -815,7 +910,12 @@
        "at": "Vesperluna"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Leydi Stark"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -857,7 +957,12 @@
        "at": "Van Kalesi"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 8,
+       "at": "King Ancestor"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 8,
@@ -899,7 +1004,12 @@
        "at": "Şeşensultanı"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 5,
+       "at": "Arapçelik"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 5,
@@ -945,9 +1055,14 @@
        "at": "Koğun Sesi"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Işıkalp"
+      }
+     ],
      "surpriz_listesi": [],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
