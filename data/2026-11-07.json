@@ -922,11 +922,39 @@
       }
      ],
      "surpriz_olasiligi": "Yüksek",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      3,
+      10,
+      8,
+      9,
+      1
+     ],
+     "kazanan_ganyan": 6.1,
+     "kazanan_bizde": "Listede yok",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "3",
+       "tutar": 6.1
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "3/10",
+       "tutar": 64.7
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "3/10",
+       "tutar": 109.05
+      },
+      {
+       "oyun": "2. ÇİFTE",
+       "sira": "8/3",
+       "tutar": 124.85,
+       "devir": null
+      }
+     ],
+     "yorum": "1. 3: ilk 4 dışı, 24/28 yorumcu, 5 ilk tercih · 2. 10: sürprizimiz, 2/28 yorumcu, 0 ilk tercih · 3. 8: 3. sıramız, 27/28 yorumcu, 6 ilk tercih · 4. 9: Y atımız, 24/28 yorumcu, 7 ilk tercih"
     },
     {
      "kosu": 4,
@@ -965,11 +993,55 @@
       }
      ],
      "surpriz_olasiligi": "Yüksek",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      5,
+      10,
+      12,
+      3,
+      4
+     ],
+     "kazanan_ganyan": 4.1,
+     "kazanan_bizde": "İlk 4 · #4",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "5",
+       "tutar": 4.1
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "5/10",
+       "tutar": 6.3
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "5/10",
+       "tutar": 15.55
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "5/10/12",
+       "tutar": 320.5
+      },
+      {
+       "oyun": "SIRALI 5'Lİ",
+       "sira": "5/10/12/3/4",
+       "tutar": 26715.0
+      },
+      {
+       "oyun": "3. ÇİFTE",
+       "sira": "3/5",
+       "tutar": 51.15,
+       "devir": null
+      },
+      {
+       "oyun": "1. 3'LÜ GANYAN",
+       "sira": "8/3/5",
+       "tutar": 1292.4,
+       "devir": null
+      }
+     ],
+     "yorum": "1. 5: 4. sıramız, 22/28 yorumcu, 3 ilk tercih · 2. 10: Y atımız, 21/28 yorumcu, 8 ilk tercih · 3. 12: ilk 4 dışı, 4/28 yorumcu, 0 ilk tercih · 4. 3: ilk 4 dışı, 4/28 yorumcu, 1 ilk tercih · 8 Age Of Fire koşmadı (1. sıramız)"
     },
     {
      "kosu": 5,
@@ -1443,14 +1515,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 11,
-  "ilk4": 9,
+  "biten": 13,
+  "ilk4": 10,
   "y": 2,
   "s": 0,
-  "dis": 0,
+  "dis": 1,
   "bir": 3,
   "fav": 5,
-  "fav3": 8,
+  "fav3": 9,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
