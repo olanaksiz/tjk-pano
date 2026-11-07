@@ -552,7 +552,7 @@
        "at": "The Legacy"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -818,8 +818,8 @@
      ],
      "y": [
       {
-       "no": 8,
-       "at": "Zaedno"
+       "no": 11,
+       "at": "Sunfyre"
       }
      ],
      "surpriz_listesi": [
@@ -879,7 +879,7 @@
        "at": "King Ferit"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -973,7 +973,7 @@
        "at": "Desert Fever"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -1057,8 +1057,8 @@
      ],
      "y": [
       {
-       "no": 6,
-       "at": "Işıkalp"
+       "no": 3,
+       "at": "Fırathan Ağası"
       }
      ],
      "surpriz_listesi": [],
