@@ -76,8 +76,8 @@
      ],
      "y": [
       {
-       "no": 9,
-       "at": "Natrose"
+       "no": 3,
+       "at": "Deprem Han"
       }
      ],
      "surpriz_listesi": [
@@ -90,7 +90,7 @@
        "at": "Natrose"
       }
      ],
-     "surpriz_olasiligi": "Yüksek",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -161,8 +161,8 @@
      ],
      "y": [
       {
-       "no": 4,
-       "at": "Leader Tulip"
+       "no": 8,
+       "at": "Moon Rock"
       }
      ],
      "surpriz_listesi": [
@@ -405,7 +405,7 @@
        "at": "My Blue Heaven"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -552,7 +552,7 @@
        "at": "The Legacy"
       }
      ],
-     "surpriz_olasiligi": "Yüksek",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -595,7 +595,7 @@
        "at": "Canvelo"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -818,8 +818,8 @@
      ],
      "y": [
       {
-       "no": 11,
-       "at": "Sunfyre"
+       "no": 8,
+       "at": "Zaedno"
       }
      ],
      "surpriz_listesi": [
@@ -865,8 +865,8 @@
      ],
      "y": [
       {
-       "no": 1,
-       "at": "Doğantürkbeyi"
+       "no": 11,
+       "at": "Gold Power"
       }
      ],
      "surpriz_listesi": [
@@ -912,8 +912,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Leydi Stark"
+       "no": 6,
+       "at": "Shuen"
       }
      ],
      "surpriz_listesi": [
