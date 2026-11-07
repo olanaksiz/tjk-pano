@@ -1,14 +1,25 @@
 # TJK Detay
 
-> Türkiye at yarışları için bağımsız günlük koşu analizi: her koşuda kural tablosundan çıkan ilk 4, Y atı (yorumcuların en çok yazdığı, bizde olmayan at), sürpriz listesi ve sürpriz olasılığı; koşu sonrası sonuç, ödemeler ve yorum. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur.
+> Türkiye at yarışları (TJK) için bağımsız günlük koşu analizi: her koşu için kural tablosundan çıkan ilk 4, Y atı ve sürpriz olasılığı; koşu sonrası sonuç ve ödemeler. Ayrıca at yarışı sözlüğü, rehber yazıları ve jokey istatistikleri. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur, bahis kabul etmez.
 
-## Sayfalar
-- [Günün özeti](https://tjkdetay.com/): son günün sonuç tabelası, isabet ve çok ayaklı oyun ödemeleri
-- [Koşular](https://tjkdetay.com/kosular/): koşu koşu ilk 4, Y atı, sürpriz olasılığı, at tablosu
+TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
+
+## Günlük
+- [Günün özeti](https://tjkdetay.com/): sonuç tabelası, isabet, çok ayaklı oyun ödemeleri
+- [Bugünkü tahminler](https://tjkdetay.com/kosular/): koşu koşu ilk 4, Y atı, sürpriz olasılığı
+- [Yarış programı](https://tjkdetay.com/program/): atlar, jokeyler, kilolar, son 6 koşu
 - [Sonuçlar](https://tjkdetay.com/sonuclar/): ganyan, ikili, sıralı üçlü, tabela, 6'lı/5'li/4'lü/3'lü ganyan ödemeleri
-- [Performans](https://tjkdetay.com/performans/): gün gün isabet
-- [Hakkımızda](https://tjkdetay.com/hakkimizda/): yöntem ve terimler
+- [Muhtemel ve AGF](https://tjkdetay.com/muhtemel-agf/): koşu öncesi son oranlar
+- [Canlı yayın](https://tjkdetay.com/canli/): TJK TV resmi YouTube yayınları
+- [Performans](https://tjkdetay.com/performans/): gün gün isabet karnesi
+
+## Başvuru
+- [At yarışı sözlüğü](https://tjkdetay.com/sozluk/): terimlerin kısa tanımları
+- [Rehber](https://tjkdetay.com/rehber/): altılı ganyan, AGF, koşu cinsleri, idman, pist türleri
+- [Jokey istatistikleri](https://tjkdetay.com/jokeyler/): sezon sıralaması ve jokey profilleri
+- [Hakkımızda ve yöntem](https://tjkdetay.com/hakkimizda/)
 
 ## Veri
 - [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-06.json)
 - [Gün listesi ve isabet (JSON)](https://tjkdetay.com/data/gunler.json)
+- [Tam metin (llms-full.txt)](https://tjkdetay.com/llms-full.txt)

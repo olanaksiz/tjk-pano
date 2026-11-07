@@ -170,3 +170,48 @@ document.addEventListener('DOMContentLoaded', function () {
   b.addEventListener('click', function () { try { if (kapali()) { localStorage.removeItem('tjkd-z-kapali'); } else { localStorage.setItem('tjkd-z-kapali', '1'); try { localStorage.removeItem('tjkd-z-gordu'); sessionStorage.removeItem('tjkd-z'); } catch (e) {} } } catch (e) {} ciz(); });
   ciz();
 })();
+
+/* ---- Sözlük: arama ve kategori ---- */
+(function () {
+  var ara = document.querySelector('[data-sz-ara]'); if (!ara) return;
+  var kat = '', terimler = Array.prototype.slice.call(document.querySelectorAll('.sz-terim')), bos = document.querySelector('[data-sz-bos]');
+  function kucuk(s) { return String(s || '').replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase(); }
+  function suz() {
+    var q = kucuk(ara.value.trim()), n = 0;
+    terimler.forEach(function (t) { var ok = (!kat || t.getAttribute('data-kat') === kat) && (!q || t.getAttribute('data-ara').indexOf(q) >= 0); t.hidden = !ok; if (ok) n++; });
+    document.querySelectorAll('.sz-harf').forEach(function (h) { h.hidden = !h.querySelector('.sz-terim:not([hidden])'); });
+    if (bos) bos.hidden = n > 0;
+  }
+  ara.addEventListener('input', suz);
+  document.querySelectorAll('[data-sz-kat]').forEach(function (b) {
+    b.addEventListener('click', function () { kat = b.getAttribute('data-sz-kat'); document.querySelectorAll('[data-sz-kat]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); suz(); });
+  });
+})();
+
+/* ---- Jokeyler: arama ve tür filtresi ---- */
+(function () {
+  var ara = document.querySelector('[data-jk-ara]'); if (!ara) return;
+  var tur = '', satirlar = Array.prototype.slice.call(document.querySelectorAll('.jk-tablo tbody tr'));
+  function kucuk(s) { return String(s || '').replace(/I/g, 'ı').replace(/İ/g, 'i').toLowerCase(); }
+  function suz() { var q = kucuk(ara.value.trim()); satirlar.forEach(function (r) { r.hidden = !((!tur || r.getAttribute('data-tur') === tur) && (!q || r.getAttribute('data-ara').indexOf(q) >= 0)); }); }
+  ara.addEventListener('input', function () { suz(); if (ara.value.trim()) { var t = document.getElementById('tum-b'); if (t && t.getBoundingClientRect().top > innerHeight) t.scrollIntoView({behavior: 'smooth'}); } });
+  document.querySelectorAll('[data-jk-tur]').forEach(function (b) {
+    b.addEventListener('click', function () { tur = b.getAttribute('data-jk-tur'); document.querySelectorAll('[data-jk-tur]').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); suz(); });
+  });
+})();
+
+/* ---- Jokey fotoğrafı: admin'den yüklenen izinli fotoğraf varsa çizimin yerine geçer ---- */
+document.addEventListener('DOMContentLoaded', function () {
+  var alanlar = document.querySelectorAll('[data-jokey-foto]');
+  if (!alanlar.length || !window.TJKD || !TJKD.ayarlar) return;
+  TJKD.ayarlar().then(function (m) {
+    var F = (m && m.jokey_foto) || {};
+    alanlar.forEach(function (a) {
+      var f = F[a.getAttribute('data-jokey-foto')]; if (!f || !f.url || !/^https:\/\//.test(f.url)) return;
+      var img = document.createElement('img'); img.src = f.url; img.alt = ''; img.loading = 'lazy'; img.decoding = 'async';
+      img.onload = function () { a.classList.add('fotolu'); }; a.appendChild(img);
+      var fig = a.closest('figure'); var cap = fig && fig.querySelector('[data-jokey-foto-kaynak]');
+      if (cap && f.kaynak) { cap.textContent = 'Fotoğraf: ' + f.kaynak; cap.hidden = false; }
+    });
+  });
+});

@@ -1,0 +1,650 @@
+# TJK Detay — tam metin
+
+Güncelleme: 7 Kasım 2026, 06:58. Kaynak: https://tjkdetay.com/
+
+## Yöntem
+TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
+
+## At yarışı sözlüğü
+
+- **AGF**: AGF, Altılı Ganyan Favorisi'nin kısaltmasıdır; altılı ganyan ayaklarında en çok oynanan atı ve atların altılı kuponlarındaki tercih oranını gösterir. (https://tjkdetay.com/sozluk/agf/)
+- **Altılı ganyan**: Altılı ganyan, programda belirlenen altı koşunun her birinin kazananını tek kuponda tahmin etmeye dayanan, Türkiye'de en çok bilinen çok ayaklı at yarışı bahsidir. (https://tjkdetay.com/sozluk/altili-ganyan/)
+- **Anne**: Anne, yarış atının orijininde yer alan ve onu doğuran kısraktır; pedigride dişi taraftan soyun başlangıç noktasıdır. (https://tjkdetay.com/sozluk/#anne)
+- **Anne babası**: Anne babası, bir yarış atının annesinin babası olan aygırdır; orijin bilgisinde dişi taraftan gelen kan hattını gösterir. (https://tjkdetay.com/sozluk/#anne-babasi)
+- **Antrenör**: Antrenör, yarış atının günlük bakımını, idman programını ve koşu planlamasını yöneten lisanslı profesyoneldir. (https://tjkdetay.com/sozluk/#antrenor)
+- **Apranti indirimi**: Apranti indirimi, apranti jokeylerin bindikleri atın sıkletinden, kazandıkları koşu sayısına göre kademeli olarak düşebildikleri kilo avantajıdır. (https://tjkdetay.com/sozluk/#apranti-indirimi)
+- **Apranti jokey**: Apranti jokey, yönetmelikteki tanıma göre koşularda at binen ve apranti lisansı taşıyan jokey yamağıdır; belirli koşularda kilo indiriminden yararlanabilir. (https://tjkdetay.com/sozluk/apranti/)
+- **Arkadan gelmek**: Arkadan gelmek, atın koşunun ilk bölümünü geride geçirip son düzlükte hızlanarak öndeki atlara yetişmeye çalıştığı koşu stilidir. (https://tjkdetay.com/sozluk/#arkadan-gelmek)
+- **At sahibi**: At sahibi, yarış atının mülkiyetine sahip olan ve atın yarış kariyeriyle ilgili temel kararları antrenörle birlikte veren kişi veya ortaklıktır. (https://tjkdetay.com/sozluk/#at-sahibi)
+- **At yaşı**: At yaşı, yarış atlarında doğduğu yılın 1 Ocak gününden itibaren hesaplanan yaştır; aynı yıl doğan bütün atlar yeni yılda birlikte bir yaş büyür. (https://tjkdetay.com/sozluk/#at-yasi)
+- **Ayak**: Ayak, altılı ganyan, çifte veya 5'li ganyan gibi çok koşuluk bahislerde kuponu oluşturan koşulardan her birine verilen addır. (https://tjkdetay.com/sozluk/ayak/)
+- **Aygır**: Aygır, iğdiş edilmemiş ve üreme yeteneği olan yetişkin erkek attır; yarış sonrası kariyerinde damızlık olarak kullanılabilir. (https://tjkdetay.com/sozluk/#aygir)
+- **Baba**: Baba, yarış atının orijininde yer alan ve onun soyunu erkek taraftan belirleyen aygırdır. (https://tjkdetay.com/sozluk/#baba)
+- **Banko**: Banko, çok ayaklı bir kuponda bir ayağa yalnızca tek at yazılması ve o ayağın bu ata bırakılmasıdır; banko at kazanamazsa kupon o ayakta kaybeder. (https://tjkdetay.com/sozluk/banko/)
+- **Baş farkı**: Baş farkı, finişte iki at arasındaki farkın yaklaşık bir at başı uzunluğunda olduğunu anlatan ölçüdür. (https://tjkdetay.com/sozluk/#bas-farki)
+- **Boyun farkı**: Boyun farkı, finişte iki at arasındaki farkın yaklaşık bir at boynu uzunluğunda olduğunu anlatan ölçüdür. (https://tjkdetay.com/sozluk/#boyun-farki)
+- **Boy farkı**: Boy farkı, finişte atlar arasındaki mesafeyi bir atın baştan kuyruğa uzunluğu birimiyle ifade eden ölçüdür. (https://tjkdetay.com/sozluk/#boy-farki)
+- **Burun farkı**: Burun farkı, finişte iki at arasındaki en küçük fark ölçüsüdür; bir atın burnunun ötekinin önünde çizgiyi geçtiğini anlatır. (https://tjkdetay.com/sozluk/#burun-farki)
+- **Ceza kilosu**: Ceza kilosu, yarış dilinde bir atın kazandığı koşular veya güçlü dereceleri nedeniyle koşu şartları ya da handikaper kararıyla taşıdığı ek ağırlıktır. (https://tjkdetay.com/sozluk/#ceza-kilosu)
+- **Çalışarak idman**: Çalışarak idman, atın binicisi tarafından zorlanarak, tam kapasitesine yakın bir eforla yaptığı idmandır. (https://tjkdetay.com/sozluk/#calisarak-idman)
+- **Çifte**: Çifte, programda belirlenen iki koşunun kazananlarını birlikte tahmin etmeye dayanan, iki ayaklı bir bahis türüdür. (https://tjkdetay.com/sozluk/#cifte)
+- **Çim pist**: Çim pist, yüzeyi doğal çimle kaplı yarış pistidir; at yarışında kum pistten farklı bir koşu karakteri ve hız profili sunar. (https://tjkdetay.com/sozluk/#cim-pist)
+- **Deklare**: Deklare, bir atın belirli bir koşuya katılacağının ve üzerine binecek binicinin resmi olarak bildirilmesidir. (https://tjkdetay.com/sozluk/#deklare)
+- **Deneme koşusu**: Deneme koşusu, TJK takviminde genç atlar için düzenlenen ve adında Deneme ifadesi geçen büyük koşuları anlatır; Erkek Tay Deneme ve Dişi Tay Deneme bunlardandır. (https://tjkdetay.com/sozluk/#deneme-kosusu)
+- **Derece**: Derece, at yarışında atın bir mesafeyi koşma süresini ve gündelik dilde koşuyu ilk sıralarda bitirmesini anlatan terimdir. (https://tjkdetay.com/sozluk/#derece)
+- **Devir**: Devir, bir bahis türünde bilen kupon çıkmadığında dağıtılamayan ikramiyenin aynı türün sonraki oyununa aktarılmasıdır. (https://tjkdetay.com/sozluk/devir/)
+- **DH, DHT ve DHÖW**: DH, DHT ve DHÖW, TJK programlarında safkan Arap koşularının katılım şartlarını Devlet Harası yetiştirmesi ve soy kökenine göre belirleyen kısaltmalardır. (https://tjkdetay.com/sozluk/#dh-dht-dhow)
+- **Dil bağı**: Dil bağı, koşu sırasında atın dilini sabitleyerek dilin gem üzerinden kaymasını ve nefes almayı zorlaştırmasını önlemek için kullanılan takıdır. (https://tjkdetay.com/sozluk/#dil-bagi)
+- **Diskalifiye**: Diskalifiye, bir atın koşu sonucundan çıkarılması ya da süreli veya süresiz olarak koşulara katılmaktan men edilmesidir. (https://tjkdetay.com/sozluk/#diskalifiye)
+- **Don**: Don, atın tüy rengini ve renk desenini anlatan terimdir; yarış programlarında atın kimlik bilgilerinin bir parçası olarak verilir. (https://tjkdetay.com/sozluk/#don)
+- **EFG**: EFG, bir koşuda üzerine en fazla ganyan oynanan atı ifade eden kısaltmadır; mevzuatta koşmayan atların yerine sayılacak atın belirlenmesinde kullanılır. (https://tjkdetay.com/sozluk/#efg)
+- **Eküri**: Eküri, aynı koşuda aynı sahibe ya da mevzuatta sayılan yakınlarına ait olup resmi programda eküri olarak ilan edilen atlardır. (https://tjkdetay.com/sozluk/#ekuri)
+- **Eyer**: Eyer, jokeyin atın sırtında oturmasını ve dengesini korumasını sağlayan donanımdır; yarış eyerleri oldukça hafiftir ve sıklet hesabında dikkate alınır. (https://tjkdetay.com/sozluk/#eyer)
+- **Favori**: Favori, bir koşuda bahis havuzunda en çok oynanan ve dolayısıyla oyuncuların kazanmasını en çok beklediği attır. (https://tjkdetay.com/sozluk/#favori)
+- **Fazla kilo**: Fazla kilo, binicinin programda yazılı sıklete inememesi nedeniyle atın ilan edilenden daha ağır koşmasıdır; yönetmelikte bunun üst sınırı belirlenmiştir. (https://tjkdetay.com/sozluk/#fazla-kilo)
+- **Finiş**: Finiş, koşunun bittiği varış çizgisi ve atların bu çizgiyi geçtiği an için kullanılan terimdir; sıralama finişteki konuma göre belirlenir. (https://tjkdetay.com/sozluk/#finis)
+- **Forma**: Forma, jokeyin yarışta giydiği, at sahibine ait renk ve desenleri taşıyan üst giysidir; izleyicilerin atları koşu sırasında ayırt etmesini sağlar. (https://tjkdetay.com/sozluk/#forma)
+- **Form dizisi**: Form dizisi, bir atın son yarışlarındaki bitiriş sıralarını kronolojik olarak gösteren kısa rakam dizisidir. (https://tjkdetay.com/sozluk/#form-dizisi)
+- **Foto-finiş**: Foto-finiş, varış çizgisine sabitlenmiş kameralarla atların bitiriş sırasını, aralarındaki farkları ve derecelerini belirleyen sistemdir. (https://tjkdetay.com/sozluk/#foto-finis)
+- **Galop**: Galop, yarış atının belirli bir mesafeyi tempolu biçimde koştuğu ve süresinin kaydedildiği idman türüdür; atın kondisyonunu değerlendirmede kullanılır. (https://tjkdetay.com/sozluk/galop/)
+- **Ganyan**: Ganyan, bir koşuyu birinci bitirecek atı tahmin etmeye dayanan, at yarışının en temel tek koşuluk bahis türüdür. (https://tjkdetay.com/sozluk/ganyan/)
+- **Gazi jokeyi**: Gazi jokeyi, tjkdetay.com'da Gazi Koşusu'nu kazanmış jokeyler için kullanılan işarettir; bu jokeylerin bindiği atlar koşu kartlarında ayrıca belirtilir. (https://tjkdetay.com/sozluk/#gazi-jokeyi)
+- **Gazi Koşusu**: Gazi Koşusu, 1927'den beri düzenlenen ve İstanbul Veliefendi Hipodromu'nda 2400 metre çim pistte 3 yaşlı safkan İngiliz atları arasında koşulan, Türk atçılığının en bilinen yarışlarından biridir. (https://tjkdetay.com/sozluk/gazi-kosusu/)
+- **Gözlük**: Gözlük, atın görüş alanını kısmen kapatarak dikkatini öne yönlendirmek için kullanılan takıdır; TJK programlarında kapalı gözlük KG kısaltmasıyla gösterilir. (https://tjkdetay.com/sozluk/#gozluk)
+- **Grup koşusu (G1, G2, G3)**: Grup koşusu, G1, G2 ve G3 olarak derecelendirilen, en yüksek kalite ve ikramiye düzeyindeki koşulardır; G1 en üst seviyedir. (https://tjkdetay.com/sozluk/#grup-kosusu)
+- **Handikaper**: Handikaper, atların yarış performanslarını değerlendirerek handikap puanlarını belirleyen ve böylece handikap koşularındaki kiloları şekillendiren uzmandır. (https://tjkdetay.com/sozluk/#handikaper)
+- **Handikap koşusu**: Handikap koşusu, atların taşıyacağı kiloların handikap puanlarına göre ayarlandığı ve farklı güçteki atların kâğıt üzerinde eşitlenmeye çalışıldığı koşu cinsidir. (https://tjkdetay.com/sozluk/handikap-kosusu/)
+- **Handikap puanı (HP)**: Handikap puanı (HP), handikaperlerin atların performansına göre verdiği ve handikap koşularında taşınacak kiloyu belirleyen sayısal derecelendirmedir. (https://tjkdetay.com/sozluk/handikap-puani/)
+- **Hara**: Hara, at yetiştirmek amacıyla kurulmuş, damızlık aygır ve kısrakların bulunduğu ve tayların doğup büyüdüğü çiftliktir. (https://tjkdetay.com/sozluk/#hara)
+- **Hipodrom**: Hipodrom, at yarışlarının düzenlendiği; yarış pistleri, tribünler, ahırlar ve idman alanlarından oluşan tesistir. (https://tjkdetay.com/sozluk/#hipodrom)
+- **İdman derecesi**: İdman derecesi, bir atın idmanda belirli bir mesafeyi kaç saniyede koştuğunu gösteren süre kaydıdır. (https://tjkdetay.com/sozluk/#idman-derecesi)
+- **İdman mesafeleri**: İdman mesafeleri, galop sürelerinin ölçüldüğü 400, 600, 800, 1000 metre ve daha uzun bölümleri anlatır; her mesafe atın farklı bir özelliğine ışık tutar. (https://tjkdetay.com/sozluk/#idman-mesafeleri)
+- **İğdiş**: İğdiş, yönetmelikteki tanıma göre operasyonla testisleri alınmış, üreme yeteneği olmayan erkek attır. (https://tjkdetay.com/sozluk/#igdis)
+- **İkili**: İkili, bir koşunun ilk iki sırasını alacak iki atı, aralarındaki sıra önemli olmadan tahmin etmeye dayanan bahis türüdür. (https://tjkdetay.com/sozluk/#ikili)
+- **İkramiye**: İkramiye, at yarışında iki anlamda kullanılır: kazanan bahis kuponuna ödenen tutar ve koşuda derece alan atın sahibine verilen para ödülü. (https://tjkdetay.com/sozluk/#ikramiye)
+- **İlk 4**: İlk 4, tjkdetay.com'un her koşu için kural tablosundan çıkardığı, kazanma şansı en yüksek görülen dört attır; sırası da tablodaki puandan gelir. (https://tjkdetay.com/sozluk/#ilk-4)
+- **İtiraz**: İtiraz, koşu sonucuna veya koşu sırasında yaşanan bir olaya karşı jokey, antrenör ya da at sahibi gibi ilgililerin yetkili kurula başvurmasıdır. (https://tjkdetay.com/sozluk/#itiraz)
+- **Jokey**: Jokey, yarış atına koşuda binen lisanslı profesyonel binicidir; atın koşu taktiğini sahada uygulayan kişidir. (https://tjkdetay.com/sozluk/#jokey)
+- **Jokey yamağı koşusu**: Jokey yamağı koşusu, yalnızca belirli sayıda yarış kazanmış apranti binicilerin binebildiği ve programda Y-0, Y-1, Y-2, Y-3 gibi kodlarla gösterilen koşudur. (https://tjkdetay.com/sozluk/#jokey-yamagi-kosusu)
+- **Kamçı**: Kamçı, jokeyin koşu sırasında atı yönlendirmek ve teşvik etmek için kullandığı, özellikleri ve kullanım sınırları kurallarla belirlenen binicilik aracıdır. (https://tjkdetay.com/sozluk/#kamci)
+- **Kazanç sınırı**: Kazanç sınırı, şartlı koşularda bir atın katılabilmesi için belirli bir dönemde elde ettiği toplam ikramiyenin aşmaması gereken üst tutardır. (https://tjkdetay.com/sozluk/#kazanc-siniri)
+- **KGS**: KGS, "koşmadığı gün sayısı"nın kısaltmasıdır; atın son yarışından bugüne kaç gün geçtiğini gösterir. (https://tjkdetay.com/sozluk/#kgs)
+- **Kısrak**: Kısrak, yetişkin dişi attır; yarış dilinde hem dişi yarış atlarını hem de damızlıkta kullanılan anne atları anlatır. (https://tjkdetay.com/sozluk/#kisrak)
+- **Kilo şartı**: Kilo şartı, bir koşunun şart metninde atların taşıyacağı temel kiloyu ve yaş, cinsiyet veya galibiyete göre yapılacak ekleme ve indirimleri belirleyen kuraldır. (https://tjkdetay.com/sozluk/#kilo-sarti)
+- **Kolon**: Kolon, bir kuponun kapsadığı olası sonuçlardan her birine verilen addır; kupon tutarı kolon sayısına göre hesaplanır. (https://tjkdetay.com/sozluk/#kolon)
+- **Koşmaz**: Koşmaz, programda yer aldığı hâlde koşuya katılmayan ya da koşudan çıkarılan at için kullanılan terimdir; bahis türüne göre iade veya ikame kuralları uygulanır. (https://tjkdetay.com/sozluk/kosmaz/)
+- **Kulaklık**: Kulaklık, atın kulaklarını örterek gürültüden daha az etkilenmesini sağlamak için kullanılan takıdır; TJK programlarında KUL kısaltmasıyla gösterilir. (https://tjkdetay.com/sozluk/#kulaklik)
+- **Kulvar**: Kulvar, yarış pistinde atın koştuğu iç ya da dış hattı anlatır; iç kulvar iç raya yakın, dış kulvar pistin dış kenarına yakın bölgedir. (https://tjkdetay.com/sozluk/#kulvar)
+- **Kum pist**: Kum pist, yüzeyi kum ve benzeri gevşek malzemeden oluşan yarış pistidir; çime göre farklı bir tutunma ve tempo karakteri vardır. (https://tjkdetay.com/sozluk/#kum-pist)
+- **Kupon**: Kupon, bir veya birden fazla bahis seçiminin kolon sayısı, misli ve tutarıyla birlikte kayda geçirildiği bahis belgesidir. (https://tjkdetay.com/sozluk/kupon/)
+- **KV (Kısa vadeli koşu)**: KV, kısa vadeli koşu anlamına gelen ve TJK programlarında KV-6, KV-7, KV-8 gibi numaralarla görülen koşu kategorisidir. (https://tjkdetay.com/sozluk/#kv-kosusu)
+- **Maiden**: Maiden, hayatında hiç koşu kazanmamış atların katılabildiği koşu cinsidir; birçok atın yarış kariyeri bu koşularla başlar. (https://tjkdetay.com/sozluk/maiden/)
+- **Misli**: Misli, aynı bahis kombinasyonundan kaç adet oynandığını gösteren çarpandır; kupon tutarı ve olası ikramiye misli sayısıyla orantılı olarak artar. (https://tjkdetay.com/sozluk/misli/)
+- **Muhtemeller**: Muhtemeller, koşu başlamadan önce bahis havuzundaki o anki dağılıma göre hesaplanan ve atlar kazanırsa ödenebilecek yaklaşık ikramiyeleri gösteren listedir. (https://tjkdetay.com/sozluk/muhtemeller/)
+- **Müşterek bahis**: Müşterek bahis, oynanan tutarların bir havuzda toplandığı ve mevzuattaki paylar ayrıldıktan sonra kalan tutarın kazananlar arasında paylaştırıldığı bahis sistemidir. (https://tjkdetay.com/sozluk/#musterek-bahis)
+- **Nal**: Nal, atın toynağını korumak ve zemine tutunmasını sağlamak için toynağa takılan, yarış atlarında genellikle hafif malzemeden yapılan koruyucu parçadır. (https://tjkdetay.com/sozluk/#nal)
+- **Orijin**: Orijin, bir yarış atının babası, annesi ve anne babasından oluşan soy bilgisidir; atın mesafe, pist ve gelişim eğilimleri hakkında ipucu verir. (https://tjkdetay.com/sozluk/orijin/)
+- **Orta mesafe**: Orta mesafe, at yarışında hız ile dayanıklılığın dengeli biçimde gerektiği koşuları anlatır; yaygın kullanımda kabaca 1500 ile 2000 metre arasıdır. (https://tjkdetay.com/sozluk/#orta-mesafe)
+- **Ölü yarış**: Ölü yarış, iki veya daha fazla atın finiş çizgisini foto-finişte bile ayırt edilemeyecek şekilde aynı anda geçmesi ve aynı sırayı paylaşmasıdır. (https://tjkdetay.com/sozluk/#olu-yaris)
+- **Önde koşmak**: Önde koşmak, atın starttan itibaren koşunun başında yer alarak tempoyu belirlemesi ya da ön grupta konum almasıdır. (https://tjkdetay.com/sozluk/#onde-kosmak)
+- **Pist durumu**: Pist durumu, koşunun yapılacağı zeminin nem ve sertlik düzeyini anlatan, yarış günü ilan edilen bilgidir; normal, yumuşak, ağır, nemli veya sulu gibi ifadelerle belirtilir. (https://tjkdetay.com/sozluk/pist-durumu/)
+- **Plase**: Plase, seçilen atın koşuyu ilk iki sıradan birinde bitirmesine dayanan tek koşuluk bahis türüdür; mevzuattaki tanıma göre en az yedi atın katıldığı koşularda oynanır. (https://tjkdetay.com/sozluk/plase/)
+- **Plase ikili**: Plase ikili, bir koşuda ilk üç sıraya girecek iki atı, aralarındaki sıra önemli olmadan tahmin etmeye dayanan bahis türüdür. (https://tjkdetay.com/sozluk/#plase-ikili)
+- **Rahat idman**: Rahat idman, atın binicisi tarafından zorlanmadan, kendi temposuna yakın biçimde yaptığı idmandır; bu şekilde alınan iyi süreler daha değerli kabul edilir. (https://tjkdetay.com/sozluk/#rahat-idman)
+- **Sabit ihtimalli bahis**: Sabit ihtimalli bahis, ikramiyenin bahis yapıldığı anda kabul edilen oran üzerinden hesaplandığı ve sonradan değişmediği oranlı bahis modelidir. (https://tjkdetay.com/sozluk/#sabit-ihtimalli-bahis)
+- **Safkan Arap**: Safkan Arap, dayanıklılığı ve kendine özgü yapısıyla bilinen, dünyanın en eski at ırklarından biri olan ve Türkiye'de ayrı koşularda yarışan at ırkıdır. (https://tjkdetay.com/sozluk/safkan-arap/)
+- **Safkan İngiliz**: Safkan İngiliz, hız ve yarış performansı için seçici yetiştiricilikle geliştirilmiş, dünya genelinde düz koşuların temelini oluşturan at ırkıdır. (https://tjkdetay.com/sozluk/safkan-ingiliz/)
+- **Satış koşusu**: Satış koşusu, deklare edilen bütün atların satılık sayıldığı koşu cinsidir; programlarda Satış 1, Satış 2 gibi kategorilerle görülür. (https://tjkdetay.com/sozluk/#satis-kosusu)
+- **Sentetik pist**: Sentetik pist, yüzeyi kum, lif ve bağlayıcı maddeler gibi yapay bileşenlerden oluşan, hava koşullarından daha az etkilenmesi amaçlanan yarış pistidir. (https://tjkdetay.com/sozluk/#sentetik-pist)
+- **Seyis**: Seyis, yarış atının günlük bakımını, beslenmesini, temizliğini ve ahırdaki düzenini sağlayan bakım görevlisidir. (https://tjkdetay.com/sozluk/#seyis)
+- **Sıkışmak**: Sıkışmak, koşu sırasında bir atın etrafındaki atlar nedeniyle hareket alanının daralması ve rahat koşamamasıdır. (https://tjkdetay.com/sozluk/#sikismak)
+- **Sıklet**: Sıklet, bir yarış atının koşuda taşıdığı, jokey ve tartıya dahil donanımı kapsayan toplam ağırlıktır; resmi programda her at için kilogram olarak yazılır. (https://tjkdetay.com/sozluk/#siklet)
+- **Sıralı beşli**: Sıralı beşli, bir koşunun ilk beş atını birinciden beşinciye kadar tam sırasıyla tahmin etmeye dayanan bahis türüdür. (https://tjkdetay.com/sozluk/#sirali-besli)
+- **Sıralı ikili**: Sıralı ikili, bir koşunun birinci ve ikinci atını tam sırasıyla tahmin etmeye dayanan bahis türüdür; mevzuata göre en az dört atlı koşularda oynanır. (https://tjkdetay.com/sozluk/sirali-ikili/)
+- **Sıralı üçlü**: Sıralı üçlü, bir koşunun ilk üç atını birinci, ikinci ve üçüncü olarak tam sırasıyla tahmin etmeye dayanan tek koşuluk bahis türüdür. (https://tjkdetay.com/sozluk/sirali-uclu/)
+- **Son düzlük**: Son düzlük, son virajdan finiş çizgisine kadar uzanan düz bölümdür; koşunun çoğu zaman belirlendiği kesimdir. (https://tjkdetay.com/sozluk/#son-duzluk)
+- **Sprint**: Sprint, at yarışında kısa mesafeli koşular için kullanılan terimdir; yaygın kullanımda kabaca 1400 metreye kadar olan mesafeleri anlatır. (https://tjkdetay.com/sozluk/#sprint)
+- **Sprint idmanı**: Sprint idmanı, atın kısa bir mesafeyi yüksek hızla koştuğu ve özellikle çıkış hızı ile son bölüm ivmesini geliştirmeye yönelik idmandır. (https://tjkdetay.com/sozluk/#sprint-idmani)
+- **Start denemesi**: Start denemesi, ilk kez koşacak veya start yasağı almış atların start makinesine uyumunun resmi komisyon tarafından kontrol edildiği işlemdir. (https://tjkdetay.com/sozluk/#start-denemesi)
+- **Start makinesi**: Start makinesi, atların koşuya aynı anda ve eşit koşullarda başlamasını sağlayan, her ata ayrı bölme sunan hareketli kapı sistemidir. (https://tjkdetay.com/sozluk/#start-makinesi)
+- **Start numarası**: Start numarası, atın start makinesinde gireceği bölmeyi gösteren numaradır; atın programdaki numarasından farklıdır ve başlangıçtaki iç-dış konumunu belirler. (https://tjkdetay.com/sozluk/#start-numarasi)
+- **Sürpriz**: Sürpriz, bahis piyasasında az oynanan, düşük beklentili bir atın koşuyu kazanması ya da ön sıralarda bitirmesidir. (https://tjkdetay.com/sozluk/#surpriz)
+- **Sürpriz olasılığı**: Sürpriz olasılığı, bir koşuda favori dışı bir atın kazanma ihtimalinin düşük, orta ya da yüksek olduğunu anlatan tjkdetay.com değerlendirmesidir. (https://tjkdetay.com/sozluk/#surpriz-olasiligi)
+- **Şartlı koşu**: Şartlı koşu, katılım koşulları yaş, ırk, cinsiyet ve kazanç gibi ölçütlerle önceden belirlenen ve atların bu şartlara göre kaydedildiği koşu cinsidir. (https://tjkdetay.com/sozluk/sartli-kosu/)
+- **Tabela**: Tabela, bir koşunun ilk dört sırasına girecek atları tahmin etmeye dayanan bahis türüdür; ikramiye sırayı doğru bilenlerle sırasız bilenler arasında paylaştırılır. (https://tjkdetay.com/sozluk/tabela/)
+- **Takı**: Takı, yarış atına koşuda takılan gözlük, kulaklık, dil bağı gibi yardımcı ekipmanın genel adıdır; resmi programda kısaltmalarla gösterilir. (https://tjkdetay.com/sozluk/#taki)
+- **Takipte koşmak**: Takipte koşmak, atın öndeki atların hemen arkasında konum alarak koşunun son bölümünde atağa geçmek için fırsat kollamasıdır. (https://tjkdetay.com/sozluk/#takipte-kosmak)
+- **Tay**: Tay, genç at için kullanılan terimdir; yarış dilinde özellikle iki ve üç yaşındaki genç yarış atlarını anlatır. (https://tjkdetay.com/sozluk/#tay)
+- **Tempo**: Tempo, bir koşunun hangi hızda koşulduğunu, özellikle öndeki atların koşu boyunca belirlediği hız ritmini anlatır. (https://tjkdetay.com/sozluk/#tempo)
+- **TJK TV ve TAY TV**: TJK TV ve TAY TV, at yarışlarını canlı yayımlayan ve yarış günlerinde koşu görüntüleri, sonuçlar ve yarış programları sunan televizyon kanallarıdır. (https://tjkdetay.com/sozluk/#tjk-tv)
+- **TJK (Türkiye Jokey Kulübü)**: TJK, Türkiye Jokey Kulübü'nün kısaltmasıdır; Türkiye'de at yarışlarını düzenleyen, yarış programlarını, sonuçlarını ve yıllık kuralları yayımlayan kuruluştur. (https://tjkdetay.com/sozluk/#tjk)
+- **Top weight**: Top weight, bir koşuda en yüksek sıkleti taşıyan atı ya da bu en üst kiloyu anlatan, Türkçe yarış dilinde de kullanılan İngilizce terimdir. (https://tjkdetay.com/sozluk/#top-weight)
+- **Uzun mesafe**: Uzun mesafe, dayanıklılığın öne çıktığı ve yaygın kullanımda kabaca 2100 metre ve üzerindeki koşuları anlatan terimdir. (https://tjkdetay.com/sozluk/#uzun-mesafe)
+- **Viraj**: Viraj, yarış pistinin kıvrımlı bölümüdür; atların hızını, konumunu ve kat ettikleri mesafeyi etkileyen kritik bir kesimdir. (https://tjkdetay.com/sozluk/#viraj)
+- **Yarış Komiserler Kurulu**: Yarış Komiserler Kurulu, yarış günlerinde koşuların kurallara uygun yapılmasını denetleyen, itirazları inceleyen ve yaptırım uygulama yetkisi bulunan kuruldur. (https://tjkdetay.com/sozluk/#komiserler-kurulu)
+- **Yarış programı**: Yarış programı, bir yarış gününde koşulacak koşuları, atları, jokeyleri, kiloları, mesafeleri ve bahis seçeneklerini gösteren resmi listedir. (https://tjkdetay.com/sozluk/#yaris-programi)
+- **Yetiştirici**: Yetiştirici, yarış atının doğumunu ve ilk gelişimini sağlayan, tayın üretiminden sorumlu kişi veya kurumdur. (https://tjkdetay.com/sozluk/#yetistirici)
+- **Y atı**: Y atı, yorumcuların en çok seçtiği ama tjkdetay.com'un ilk 4'ünde olmayan attır; analizde beşinci at olarak ayrıca gösterilir. (https://tjkdetay.com/sozluk/#y-ati)
+- **1000 metre idmanı**: 1000 metre idmanı, yarış atının 1000 metrelik bir bölümü tempolu koştuğu ve süresinin kaydedildiği, kondisyon değerlendirmesinde sık başvurulan galop türüdür. (https://tjkdetay.com/sozluk/#1000-metre-idmani)
+- **3'lü ganyan**: 3'lü ganyan, programda belirlenen üç koşunun her birinin kazananını tahmin etmeye dayanan çok ayaklı bahis türüdür. (https://tjkdetay.com/sozluk/#uclu-ganyan)
+- **4'lü ganyan**: 4'lü ganyan, programda belirlenen dört koşunun kazananlarını birlikte tahmin etmeye dayanan çok ayaklı bahis türüdür. (https://tjkdetay.com/sozluk/#dortlu-ganyan)
+- **5'li ganyan**: 5'li ganyan, programda belirlenen beş koşunun kazananlarını birlikte tahmin etmeye dayanan çok ayaklı bahis türüdür. (https://tjkdetay.com/sozluk/#besli-ganyan)
+- **7'li ganyan**: 7'li ganyan, programda belirlenen yedi koşunun kazananlarını tek kuponda tahmin etmeye dayanan çok ayaklı bahis türüdür. (https://tjkdetay.com/sozluk/#yedili-ganyan)
+- **7'li plase**: 7'li plase, programda belirlenen yedi koşunun her birinde birinci veya ikinci gelecek atı tahmin etmeye dayanan çok ayaklı bahis türüdür. (https://tjkdetay.com/sozluk/#yedili-plase)
+
+## Altılı Ganyan Nasıl Oynanır? Kupon ve Kombinasyon Hesabı
+https://tjkdetay.com/rehber/altili-ganyan-nasil-oynanir/
+
+Altılı ganyan, art arda koşulan altı koşunun birincilerini tek kuponda tahmin etmeye dayanan bir müşterek bahistir. Kupondaki kombinasyon sayısı her ayakta seçilen at sayılarının çarpımıyla bulunur; kupon bedeli ise bu sayının birim fiyat ve misliyle çarpılmasıdır. Altı koşunun birincisini birden bilmek zordur ve sonuç her zaman şans içerir.
+
+### Altılı ganyan nedir?
+Altılı ganyan, bir yarış gününde art arda koşulan altı koşunun her birinde birinci gelecek atı tahmin ettiğiniz bahistir. Bu altı koşunun her birine ayak denir. Kuponun ikramiye alabilmesi için altı ayağın birincisinin de kuponda yazılı olması gerekir.At Yarışları Müşterek Bahisler Yönetmeliği üçlü, dörtlü, beşli, altılı ve yedili ganyanı aynı mantıkla tanımlar: belirli sayıda koşunun birincilerini tahmin etmek. Altılı ganyan bu ailenin en çok bilinen üyesidir. Bazı yarış günlerinde aynı hipodromda iki ayrı altılı ganyan düzenlenir; bunlar 1. altılı ve 2. altılı diye ayrılır.Altılı ganyan bir müşterek bahistir. Yani ikramiye önceden belirlenmiş sabit bir oranla ödenmez. O altılıya yatırılan toplam tutardan dağıtılacak kısım, altı ayağı da bilen kombinasyonlar arasında paylaştırılır. Bu yüzden aynı sonuç, kazanan kupon sayısına göre çok farklı ödemeler doğurabilir. Favorilerin kazandığı bir günde çok kişi altıyı bilir ve ödeme düşer; sürpriz sonuçların olduğu günde ise kazanan az olur.
+
+### Altılı ganyan kuponu nasıl doldurulur?
+Kupon doldururken her ayak için bir ya da daha fazla at seçersiniz. Bir ayağa tek at yazmak, o koşuda yalnızca o ata güvendiğiniz anlamına gelir; buna yarış dilinde banko denir. Bir ayağa çok at yazmak ise o koşuyu açık bulduğunuzu gösterir.Ayak: Altılının parçası olan koşulardan her biri.Tek ya da banko: Bir ayağa yazılan tek at.Geniş ayak: Çok sayıda at yazılan ayak.Kombinasyon: Her ayaktan birer at alınarak oluşan tek bir altılı tahmini.Misli: Aynı kuponun kaç kat oynandığı. İki misli, her kombinasyonun iki kez oynanması demektir.Kuponu verirken atların adını değil program numarasını yazarsınız. Numara ile atı eşleştirirken o günün resmî programına bakmak, yanlış ata yazma riskini azaltır. Altılının hangi koşudan başladığını da programdan kontrol etmek gerekir; altılı her zaman günün ilk koşusundan başlamaz.
+
+### Kombinasyon sayısı nasıl hesaplanır?
+Kombinasyon sayısı, her ayakta seçilen at sayılarının çarpımıdır. Toplama yapılmaz, çarpma yapılır. Altılı ganyanı anlamanın en önemli kuralı budur.Aşağıdaki tabloda kurgusal bir kupon var. Numaralar örnek amaçlıdır:AyakSeçilen atlar (program no)At sayısı1. ayak3, 722. ayak513. ayak1, 4, 934. ayak2, 6, 8, 1145. ayak4, 1026. ayak61Hesap: 2 × 1 × 3 × 4 × 2 × 1 = 48 kombinasyon. Bu kupon aslında 48 ayrı altılı tahmini içerir. Her biri, her ayaktan bir at alınarak oluşur; örneğin 3-5-1-2-4-6 bunlardan biridir.Çarpım kuralı bütçeyi hızla büyütür. Aynı kuponda 3. ayağa bir at daha eklerseniz hesap 2 × 1 × 4 × 4 × 2 × 1 = 64 olur. Yalnızca bir at eklemek kombinasyonu üçte bir artırdı. Tek bırakılan bir ayağı ikiye çıkarmak ise kombinasyonu doğrudan iki katına çıkarır: 2. ayağa bir at eklemek 48'i 96'ya taşır.Hızlı kontrol listesiHer ayağa en az bir at yazılmalıdır; boş ayakla kupon olmaz.Altı ayağın hepsi tek yazılırsa kombinasyon sayısı 1'dir.Ayak başına ikişer at yazmak 2 × 2 × 2 × 2 × 2 × 2 = 64 kombinasyon eder.Ayak başına üçer at yazmak 3 × 3 × 3 × 3 × 3 × 3 = 729 kombinasyona ulaşır.
+
+### Kupon bedeli nasıl hesaplanır?
+Kupon bedeli üç sayının çarpımıdır:Kupon bedeli = kombinasyon sayısı × birim fiyat × misliBirim fiyat, bir kombinasyonun bedelidir. Bu tutar yarış otoritesi tarafından belirlenir, zaman içinde güncellenir ve hipodroma göre farklı olabilir. Örneğin 1 Ocak 2022'den itibaren altılı ve beşli ganyanda İstanbul, Ankara, İzmir, Adana, Bursa, Kocaeli ve Antalya yarışları için birim fiyat 8 kuruştan 10 kuruşa, Şanlıurfa, Elazığ ve Diyarbakır yarışları için 6 kuruştan 8 kuruşa çıkarılmıştı. Bu rakamlar yalnızca birim fiyatın değişebildiğini göstermek için verilmiştir; güncel tutarı kupon vermeden önce resmî kaynaktan kontrol etmek gerekir.Örnek kuponumuzda 48 kombinasyon vardı. Birim fiyata B dersek:1 misli kupon: 48 × B2 misli kupon: 96 × B5 misli kupon: 240 × BMisli artırmak kazanma ihtimalini değiştirmez. Kupondaki tahminler aynı kalır; yalnızca hem bedel hem de olası ikramiye aynı oranda büyür. Kazanma ihtimalini değiştiren tek şey kupondaki at seçimleridir.
+
+### Kupondaki at koşmazsa ne olur?
+Kuponunuzdaki bir at koşudan çıkarılırsa kombinasyon iptal edilmez. Yönetmeliğe göre altılı ganyanın ayağını oluşturan bir koşuda çıkan at, ilan edilen AGF (altılı ganyan favorisi) sayılır. Böyle bir ilan yoksa o koşuda üzerine en çok ganyan oynanan at esas alınır. Yani çıkan atınızın yerine o ayağın favorisi kuponunuza girmiş olur.Bu kuralın pratik bir sonucu vardır: Kuponunuzda o ayağın favorisi zaten yazılıysa, çıkan at size yeni bir seçenek kazandırmaz. Favori yazılı değilse, çıkan at sayesinde favori de kuponunuza eklenmiş olur.Eküri atlar için de bir kural bilmek gerekir. Aynı sahibe ya da yakınlarına ait olup aynı koşuya katılan atlar eküri olarak ilan edilir. TJK programının genel kurallarına göre eküri atlardan biri birinci gelirse, aynı ekürinin diğer koşan atları üzerine oynanan ilgili biletler de kazanmış sayılır.Bahis kuralları zaman zaman güncellendiği için ayrıntılı ve güncel düzenleme için TJK'nın yayımladığı kurallara bakmak en doğrusudur.
+
+### Analiz kupona nasıl taşınabilir?
+Altılı ganyanda her ayak aynı zorlukta değildir. Bazı koşularda alanın bir iki atı açıkça öne çıkar, bazılarında birbirine yakın çok sayıda at vardır. Bütçeyi bu farka göre dağıtmak, kuponu bilinçli kurmanın temelidir.tjkdetay'da her koşu için kural tablosundan çıkan ilk 4, yorumcuların en çok yazdığı ama ilk 4'te yer almayan Y atı ve koşunun sürpriz olasılığı (yüksek, orta ya da düşük) ayrı ayrı yayımlanır. Bu bilgileri kupona taşırken şu sorular işe yarar:Sürpriz olasılığı yüksek bir ayağa kaç at yazabilirim ve bunun kombinasyona etkisi ne olur?Sürpriz olasılığı düşük bir ayakta ilk 4'ün üst sıralarıyla yetinmek bütçeyi ne kadar rahatlatır?Y atını bir ayağa eklemek toplam kombinasyonu kaç kat artırıyor?Bütçeyi aşmamak için hangi ayakta daraltma yapabilirim?Bu yaklaşım bir kazanç yöntemi değildir; yalnızca kuponun mantığını görünür kılar. Analizler bilgi amaçlıdır ve at yarışında hiçbir seçim sonucu garanti etmez. Kuponu, kaybetmeyi göze alabileceğiniz bir tutarla sınırlı tutmak her zaman önceliklidir.
+
+### En sık yapılan hesap hataları nelerdir?
+Toplamak: Örnek kuponda 2 + 1 + 3 + 4 + 2 + 1 = 13 değil; doğru sonuç çarpımdır, yani 48.Misliyi unutmak: Misli, bedeli doğrudan katlar. 48 kombinasyonluk kupon 3 misli oynanırsa 144 kombinasyon bedeli ödenir.Eski birim fiyatla hesaplamak: Birim fiyat değişebilir ve hipodroma göre farklı olabilir.Numara karıştırmak: Kupona at adı değil program numarası yazılır; son dakika değişikliklerini kupon vermeden önce kontrol etmek gerekir.Ayak sırasını karıştırmak: Altılının başladığı koşuyu ve ayakların sırasını programdan doğrulamak gerekir.Bütçeyi sonradan genişletmek: Kupon kurulurken at ekledikçe bedel çarpımla büyür. Bütçeyi önce belirleyip kuponu ona göre kurmak, tersini yapmaktan daha sağlıklıdır.
+
+S: Altılı ganyanda kombinasyon sayısı nasıl bulunur?
+C: Her ayakta seçilen at sayıları çarpılır. Örneğin 2, 1, 3, 4, 2 ve 1 at seçilen bir kupon 2 × 1 × 3 × 4 × 2 × 1 = 48 kombinasyondur.
+
+S: Altılı ganyan kupon bedeli nasıl hesaplanır?
+C: Kupon bedeli, kombinasyon sayısı ile birim fiyatın ve mislinin çarpımıdır. Birim fiyat zaman içinde değişebildiği ve hipodroma göre farklı olabildiği için güncel tutarı resmî kaynaktan kontrol etmek gerekir.
+
+S: Altılı ganyanda kuponumdaki at koşmazsa ne olur?
+C: Yönetmeliğe göre çıkan at, o ayak için ilan edilen AGF yani altılı ganyan favorisi sayılır. İlan yoksa o koşuda en çok ganyan oynanan at esas alınır.
+
+S: Misli artırmak altılı ganyanda kazanma şansını artırır mı?
+C: Hayır. Misli yalnızca aynı tahminlerin kaç kat oynandığını belirler; bedeli ve olası ikramiyeyi aynı oranda büyütür, isabet ihtimalini değiştirmez.
+
+S: Altılı ganyanda her ayağa kaç at yazmak gerekir?
+C: Her ayağa en az bir at yazılmalıdır; üst sınırı çoğu zaman bütçe belirler. Kombinasyon çarpımla büyüdüğü için her eklenen at bedeli belirgin biçimde artırır.
+
+## AGF Nedir, Nasıl Okunur? Altılı Ganyan Favorisi Rehberi
+https://tjkdetay.com/rehber/agf-nedir-nasil-okunur/
+
+AGF, altılı ganyan favorisi demektir ve bir ayakta altılı ganyan oynayanların hangi ata ne ölçüde yöneldiğini gösterir. Muhtemel ganyan ise tek koşuluk ganyan havuzundan çıkan tahmini ödemedir. İkisi de oynayanların tercihini yansıtır; bir atın kazanma olasılığını kesin olarak ölçmez.
+
+### AGF nedir?
+AGF, Altılı Ganyan Favorisi ifadesinin kısaltmasıdır. At Yarışları Müşterek Bahisler Yönetmeliği AGF'yi, altılı ganyanın ayaklarını oluşturan her koşuda misli hesabına göre üzerine en çok oynanan at olarak tanımlar.Günlük kullanımda kavram biraz daha geniştir. Programlarda ve analiz sitelerinde her atın yanında bir AGF yüzdesi görürsünüz. Bu yüzde, o ayakta altılı ganyan oynayanların ilgili ata verdiği payı gösterir. Yüzdesi en yüksek olan at, o ayağın AGF'sidir; diğer yüzdeler ise oyuncu tercihinin alana nasıl dağıldığını anlatır.tjkdetay'da AGF, yüzde ve parantez içinde koşudaki sırasıyla yazılır. Örneğin %31 (1), o atın ayağın en çok oynanan atı olduğunu; %9 (4) ise dördüncü sırada tercih edildiğini gösterir.
+
+### AGF kurallarda neden önemlidir?
+AGF yalnızca bir eğilim göstergesi değildir; bahis kurallarında da yeri vardır. Yönetmeliğe göre altılı ganyanın bir ayağında çıkan, yani koşmayan at, ilan edilen AGF sayılır. Böyle bir ilan yoksa o koşuda üzerine en çok ganyan oynanan at esas alınır.Bunun anlamı şudur: Kuponunuzdaki at koşmazsa, onun yerine o ayağın favorisi kuponunuzda yer almış olur. Son dakikada çıkan at olan günlerde hangi atın favori sayıldığını bilmek, kuponunuzun gerçek içeriğini anlamanızı sağlar.Aynı yönetmelik, eküri atlarla ilgili bazı durumlarda da altılı ayaklarında AGF'yi referans alır. Bu yüzden AGF, altılı oynayan herkesin takip ettiği temel bilgilerden biridir.
+
+### AGF ile muhtemel ganyan arasındaki fark nedir?
+İki gösterge sık karıştırılır, ama farklı havuzlardan gelir ve farklı biçimde okunur.ÖzellikAGFMuhtemel ganyanKaynakAltılı ganyan oyunlarıTek koşuluk ganyan oyunlarıGösterimYüzde ve sıraTahmini ödemeNasıl okunur?Yüzde yükseldikçe ilgi artarRakam düştükçe ilgi artarKimin tercihi?Altı koşuyu birlikte düşünen altılı oyuncusuYalnızca o koşuya oynayan ganyan oyuncusuDeğişir mi?Oyun kabulü sürdükçe güncellenirKoşu başlayana kadar güncellenirMuhtemel ganyan, o anki ganyan havuzuna göre bir at kazanırsa yaklaşık ne ödeneceğini gösterir. Düşük muhtemel çok oynanan at, yüksek muhtemel az oynanan at demektir. AGF'de ise tersine, yüksek yüzde çok oynanan atı gösterir.Bunlardan ayrı olarak TJK'nın oran temelli bahisleri de vardır. Oran temelli bahiste ikramiye, ödenen bedel ile bahsin onaylandığı andaki oranın çarpımıdır; yani oran baştan sabitlenir. Muhtemel ganyan ise bir tahmindir ve koşudan sonra kesin ödeme ayrıca ilan edilir.
+
+### AGF yüzdeleri nasıl yorumlanır?
+Favorinin netliği: Birinci sıradaki atın yüzdesi ile ikinci sıradaki arasındaki fark, oyuncuların ne kadar uzlaştığını gösterir. Örnek at A %45, örnek at B %12 ise ilgi büyük ölçüde tek ata yönelmiştir. %22 ve %20 gibi yakın değerler ise açık bir koşuya işaret eder.Dağılım: Yüzdeler beş altı ata yayılmışsa, oyuncular o ayağı kalabalık ve dengeli görüyor demektir.Toplam: Yüzdeler oyuncuların payını gösterdiği için bir ayaktaki değerlerin toplamı 100'e yakındır; yuvarlama küçük sapmalar yaratabilir.Değişim: AGF oyunlar kapanana kadar güncellenir. Sabah görülen tablo, koşuya yakın saatteki tabloyla aynı olmayabilir.AGF'yi kendi analizinizle karşılaştırmak, göstergeyi kullanmanın en verimli yoludur. Analizde öne çıkan bir atın AGF'si düşükse, bu atın neden az oynandığını sormak gerekir: Gözden kaçan bir eksi mi var, yoksa oyuncular bir artıyı mı görmüyor? Tersine, AGF'si yüksek ama analizde zayıf görünen bir at için de aynı soru sorulabilir.AGF ile muhtemel ganyan arasındaki ayrışmalar da dikkat çekicidir. Bir at ganyanda çok, altılıda az oynanıyorsa ya da tersi oluyorsa, iki farklı oyuncu grubunun koşuyu farklı okuduğu düşünülebilir. Bu bir sinyal değil, bir soru işaretidir; cevabı programda ve analizde aramak gerekir.
+
+### Bir ayağın AGF tablosu adım adım nasıl okunur?
+Aşağıdaki tablo kurgusal bir ayağı gösterir. At adları ve rakamlar örnek amaçlıdır:AtAGFMuhtemel ganyantjkdetay sırasıÖrnek at A%38 (1)1,90#2Örnek at B%21 (2)3,40#1Örnek at C%12 (3)9,50İlk 4 dışında, Y atıÖrnek at D%4 (7)14,00#3Favoriyi bulun: Örnek at A, %38 ile ayağın AGF'sidir. Muhtemel ganyanı da en düşük olduğu için iki oyuncu grubu aynı ata yönelmiş görünüyor.Favorinin netliğini ölçün: Birinci ile ikinci arasında 17 puan fark var. Belirgin bir favori, ama alanın geri kalanı da tamamen dışlanmamış.Analizle karşılaştırın: Kural tablosu örnek at B'yi bir numara yapmış. İki kaynağın neden ayrıştığını görmek için B'nin artılarını ve A'nın eksilerini yeniden okumak gerekir.Az oynanan güçlü atlara bakın: Örnek at D'nin AGF'si yalnızca %4, ama kural tablosunda üçüncü. Bu tür atlar, oyuncuların gözden kaçırdığı bir veriyi ya da analizin abarttığı bir artıyı işaret edebilir.Y atını not edin: Örnek at C yorumcuların en çok yazdığı, ama ilk 4'te olmayan at olarak ayrıca gösterilir.Bu okuma, kimin kazanacağını söylemez. Yalnızca oyuncu eğilimi ile analiz arasındaki uyumu ve ayrışmayı görünür kılar.
+
+### AGF'nin sınırları nelerdir?
+Olasılık değildir: %40 AGF, atın yüzde 40 ihtimalle kazanacağı anlamına gelmez. Yalnızca altılı oyuncularının tercih payıdır.Altılı oyuncusunun önceliklerini yansıtır: Altılı oynayanlar bütçeyi korumak için bazı ayaklarda favoriyi tek yazmayı seçebilir. Bu tercih, favorinin yüzdesini atın gerçek gücünden bağımsız olarak yükseltebilir.Havuz büyüklüğü önemlidir: Daha az oynanan altılılarda birkaç büyük kupon yüzdeleri belirgin biçimde oynatabilir.Kalabalığı gösterir, bilgiyi değil: AGF programdaki verilerin yerine geçmez. Kilo, sınıf, idman, pist, mesafe ve jokey bilgileri ayrıca incelenmelidir.Favoriler de kaybeder: At yarışında sonuç şans içerir. AGF'si çok yüksek bir atın kazanamaması sıradan bir durumdur.
+
+### tjkdetay AGF'yi nasıl kullanır?
+tjkdetay'da ilk 4, AGF'ye bakılarak belirlenmez. Her at için aynı kural tablosu doldurulur: kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. İlk 4 yalnızca bu tablodan çıkar.AGF, analizden sonra devreye giren bir bağlam bilgisidir. Koşunun sürpriz olasılığı hesaplanırken piyasa favorisinin ne kadar net olduğu dikkate alınan işaretlerden biridir. Favorinin belirgin olmadığı ve alanın kalabalık olduğu koşular daha açık kabul edilir. Y atı ise AGF'den değil, yorumcuların en çok yazdığı ve ilk 4'te bulunmayan attan belirlenir.Bu yaklaşım sonucu öngörmeyi garanti etmez. AGF de, analiz de bilgi amaçlıdır.
+
+S: AGF'nin açılımı nedir?
+C: AGF, Altılı Ganyan Favorisi demektir. Yönetmelikte, altılı ganyan ayaklarını oluşturan her koşuda üzerine en çok oynanan at olarak tanımlanır.
+
+S: AGF'si yüksek olan at kazanır mı?
+C: Garantisi yoktur. AGF yalnızca altılı oyuncularının tercih payını gösterir; atın kazanma olasılığını ölçmez ve favoriler de kaybedebilir.
+
+S: AGF ile muhtemel ganyan arasındaki fark nedir?
+C: AGF altılı ganyan oyunlarından çıkan bir yüzdedir, muhtemel ganyan ise tek koşuluk ganyan havuzuna göre tahmini ödemedir. AGF'de yüksek yüzde, muhtemelde düşük rakam çok oynanan atı gösterir.
+
+S: Altılı ganyanda atım koşmazsa AGF ne işe yarar?
+C: Yönetmeliğe göre çıkan at, o ayak için ilan edilen AGF sayılır. Böylece kuponunuzda çıkan atın yerine o ayağın favorisi yer almış olur.
+
+S: AGF yüzdeleri gün içinde değişir mi?
+C: Evet. AGF, altılı oyunları kabul edildikçe güncellenir; erken saatlerdeki tablo koşuya yakın saatlerde farklı görünebilir.
+
+## Ganyan, Plase, İkili, Sıralı İkili, Üçlü ve Tabela: Farkları Neler?
+https://tjkdetay.com/rehber/ganyan-plase-ikili-farki/
+
+Ganyan bir koşunun birincisini, plase ilk ikiye girecek bir atı, ikili ilk iki atı sırasız, sıralı ikili ise sırasıyla tahmin etmektir. Sıralı üçlü ilk üç atı doğru sırayla, tabela ise ilk dört atı ister. Tahmin daraldıkça isabet ihtimali azalır; ödeme ise havuza ve kazanan sayısına göre belirlenir.
+
+### At yarışında temel bahis türleri nelerdir?
+Bu yazıdaki bahislerin hepsi tek bir koşuya bağlı müşterek bahislerdir. Müşterek bahiste ikramiye sabit bir oranla değil, o bahis türüne yatırılan toplam tutardan dağıtılacak kısmın kazananlar arasında paylaştırılmasıyla belirlenir. Tanımlar At Yarışları Müşterek Bahisler Yönetmeliği'ne dayanır.BahisNe tahmin edilir?Sıra önemli mi?Yönetmelikteki at sayısı şartıGanyanKoşunun birincisiYalnızca birinci—PlaseBir atın birinci ya da ikinci gelmesiHayırEn az 7 atİkiliİlk iki atHayırEn az 7 atSıralı ikiliİlk iki atEvetEn az 4 atPlase ikiliİlk üçe girecek, farklı derecelerdeki iki atHayır—Sıralı üçlüİlk üç atEvet—Tabelaİlk dört atSıralı ve sırasız ayrı ödenir—Çizgi olan hücreler, bu yazı için incelenen yönetmelik tanımında ayrı bir at sayısı şartı yer almadığını gösterir. Hangi koşuda hangi bahislerin açık olduğunu o günün programından kontrol etmek gerekir.
+
+### Ganyan nedir?
+Ganyan en sade bahistir: Koşuyu hangi atın kazanacağını tahmin edersiniz. At birinci gelirse kazanırsınız; ikinci gelmesi bir şey ifade etmez.Ganyan ödemesi, o koşunun ganyan havuzunda dağıtılacak tutarın kazanan ata yatırılan paya bölünmesiyle oluşur. Çok oynanan bir at kazanırsa ödeme düşük, az oynanan bir at kazanırsa yüksek olur. Koşudan önce gördüğünüz muhtemel ganyan, bu hesabın o anki tahminidir; kesin ödeme koşudan sonra ilan edilir.Ganyan, analiz okumayı öğrenirken iyi bir başlangıç noktasıdır. Tek bir soruya cevap ararsınız: Bu koşuyu kim kazanır? tjkdetay'da bu sorunun karşılığı kural tablosundaki #1'dir, ama #1 de kaybedebilir.
+
+### Plase nedir, ganyandan farkı ne?
+Plase, seçtiğiniz atın ilk iki içinde bitirmesini tahmin etmektir. Yönetmeliğe göre plase en az yedi atın katılacağı koşularda oynanır ve atın birinci ya da ikinci gelmesi yeterlidir.Plase ganyana göre daha geniş bir hedef sunar. Bu yüzden isabet ihtimali daha yüksek, ödemesi ise genellikle daha düşüktür. Yönetmelik ayrıca, yedi ve daha fazla atla ilan edilen bir koşuda çıkan atlar nedeniyle koşan at sayısı yedinin altına düşerse iade uygulanacağını belirtir.Plase, bir atın kazanacağından emin olmadığınız ama ilk ikiye gireceğini düşündüğünüz durumları ifade eder. Örneğin istikrarlı biçimde ikinci ve üçüncü olan örnek at A için ganyandan çok plase sorusu anlamlıdır.
+
+### İkili ile sıralı ikili arasındaki fark nedir?
+İkili bahiste koşunun ilk iki atını sırası önemsiz olarak tahmin edersiniz. 4-7 yazdıysanız sonuç 4-7 ya da 7-4 olsa da kazanırsınız. Yönetmelik ikiliyi en az yedi atın katılacağı koşular için tanımlar.Sıralı ikilide birinci ve ikinciyi doğru sırayla bilmeniz gerekir. 4-7 yazdıysanız sonuç 7-4 olduğunda kupon kazanmaz. Yönetmelik sıralı ikiliyi en az dört atın katılacağı koşular için tanımlar.Sıralı ikilide kombinasyon nasıl hesaplanır?Birinci sıraya 4 ve 7, ikinci sıraya 4, 7 ve 9 yazdığınızı düşünün. Aynı at hem birinci hem ikinci olamayacağı için geçerli kombinasyonlar 4-7, 4-9, 7-4 ve 7-9'dur. Yani 2 × 3 = 6 değil, çakışan iki eşleşme düşülünce 4 kombinasyon oluşur.Plase ikili ise ilk üç dereceye girecek iki atı tahmin etmektir; iki atın da ilk üçte, farklı derecelerde bitirmesi gerekir.
+
+### Sıralı üçlü ile üçlü ganyan aynı şey mi?
+Hayır. İsimleri benzese de iki farklı bahistir:Sıralı üçlü: Tek bir koşunun ilk üç atını doğru sırayla tahmin etmektir.Üçlü ganyan: Art arda üç koşunun birincilerini tahmin etmektir. Altılı ganyanın üç ayaklı biçimi gibi düşünebilirsiniz.Çifte: İki koşunun birincilerini tahmin etmektir.Sıralı üçlüde kombinasyon hızla büyür. Birinci, ikinci ve üçüncü sıraya aynı üç atı yazarsanız (örneğin 2, 5 ve 8), bu üç atın bütün sıralamaları 3 × 2 × 1 = 6 kombinasyon eder. Dört atla aynı işlemi yaparsanız 4 × 3 × 2 = 24, beş atla 5 × 4 × 3 = 60 kombinasyona ulaşırsınız.Bu yüzden sıralı üçlüde genellikle birinci sırayı dar, üçüncü sırayı geniş tutan kuponlar görülür. Hangi kurgunun seçileceği bütçeye ve koşunun ne kadar açık göründüğüne bağlıdır.
+
+### Tabela nedir, nasıl ödenir?
+Tabela, bir koşunun ilk dört atını tahmin etmektir. Yönetmelik tabelayı ilk dördün sıralı ya da sırasız tahmini olarak tanımlar ve dağıtılacak tutarı iki gruba ayırır: %70'i ilk dördü doğru sırayla bilenlere, %30'u sırasız bilenlere. Sıralı bilenlerin kazancının, sırasız bilenlerinkinin en az on iki katı olması da öngörülür.2024'te yapılan yönetmelik değişikliğiyle sırasız bilenlere ayrılan %30'luk payın sıfıra kadar indirilebilmesine imkân tanındı. Bu nedenle tabelada sırasız ödemenin güncel uygulamasını TJK'nın duyurularından kontrol etmek gerekir.Tabelada kazanan çıkmazsa tutar bir sonraki koşuya devreder; buna devir denir. Devirli tabelalar havuzu büyüttüğü için ilgi görebilir, ama tahmin zorluğu değişmez.
+
+### Bahis türlerinde en sık hangi karışıklıklar yaşanır?
+İkili ile sıralı ikiliyi karıştırmak: İkilide sıra önemsizdir, sıralı ikilide sıra şarttır. Aynı iki at için sıralı ikilide iki ayrı kombinasyon gerekir.Sıralı üçlü ile üçlü ganyanı karıştırmak: Biri tek koşunun ilk üçünü, diğeri üç ayrı koşunun birincilerini ister.Plase şartını unutmak: Yönetmeliğe göre plase en az yedi atlı koşularda oynanır ve atın ilk ikiye girmesi gerekir; üçüncülük plasede yeterli değildir.Muhtemeli kesin ödeme sanmak: Muhtemel ganyan, o anki havuza göre bir tahmindir; kesin ödeme koşudan sonra ilan edilir.Tabelada sırasız ödemenin her zaman olacağını varsaymak: Sırasız bilenlere ayrılan pay yönetmelik değişikliğiyle sıfıra kadar indirilebildiği için güncel uygulamayı kontrol etmek gerekir.Bu karışıklıkların çoğu, kupon vermeden önce bahis türünün tanımını bir kez daha okumakla önlenebilir.
+
+### Hangi bahis türü hangi analizle ilişkilidir?
+Bahis türleri arasındaki temel fark tahminin zorluğudur. Genel kural basittir: Tahmin daraldıkça isabet ihtimali düşer, kazanan sayısı azaldığı için ödeme potansiyeli yükselir. Ama ödeme her zaman o koşudaki havuza ve kazanan kombinasyon sayısına bağlıdır; zor bir bahis de, favoriler sırayla geldiğinde düşük ödeyebilir.BahisGöreli zorluktjkdetay analizinde ilgili bölümPlaseDüşükİlk 4'ün üst sıralarıGanyanOrta#1 ve #2İkili ve sıralı ikiliOrta-yüksekİlk 4 içindeki ikili eşleşmelerSıralı üçlüYüksekİlk 4 ve Y atıTabelaÇok yüksekİlk 4, Y atı ve sürpriz listesiBu tablo bir oyun önerisi değildir; bahis türlerini analiz çıktılarıyla ilişkilendirmenin bir yoludur. Hangi bahis türü olursa olsun sonuç şansa bağlıdır. Bütçenizi önceden belirleyip ona bağlı kalmanız her zaman önceliklidir.
+
+S: Ganyan ile plase arasındaki fark nedir?
+C: Ganyanda atın birinci gelmesi gerekir. Plasede ise atın birinci ya da ikinci gelmesi yeterlidir; yönetmeliğe göre plase en az yedi atlı koşularda oynanır.
+
+S: İkili mi sıralı ikili mi daha zordur?
+C: Sıralı ikili daha zordur, çünkü ilk iki atın sırasını da doğru bilmek gerekir. İkilide sıra önemli değildir.
+
+S: Tabelada sırasız bilenlere ödeme yapılır mı?
+C: Yönetmelikte dağıtılacak tutarın %30'u sırasız bilenlere ayrılır. 2024 değişikliğiyle bu payın sıfıra kadar indirilebilmesi mümkün hale geldiği için güncel uygulamayı TJK duyurularından kontrol etmek gerekir.
+
+S: Sıralı üçlüde kombinasyon nasıl hesaplanır?
+C: Aynı atlar üç sıraya da yazılırsa 3 at için 3 × 2 × 1 = 6, 4 at için 4 × 3 × 2 = 24 kombinasyon oluşur. Sıralara farklı atlar yazıldığında, aynı atın iki sırada birden yer aldığı eşleşmeler hesaptan düşülür.
+
+S: Her koşuda bütün bahis türleri oynanır mı?
+C: Hayır. Bazı bahisler için yönetmelikte en az at sayısı şartı vardır ve hangi bahislerin açık olduğu o günün programında belirtilir.
+
+## TJK Yarış Programı Nasıl Okunur? Sütun Sütun Rehber
+https://tjkdetay.com/rehber/yaris-programi-nasil-okunur/
+
+TJK yarış programı, her koşunun şartlarını ve koşacak her atın temel bilgilerini tek tabloda verir. Koşu başlığı mesafeyi, pisti ve koşu cinsini; at satırları ise yaş, orijin, sıklet, jokey, start, HP, son altı koşu ve koşmadığı gün sayısı gibi bilgileri gösterir. Programı doğru okumak, her koşu analizinin ilk adımıdır.
+
+### Yarış programında neler bulunur?
+Yarış programı, bir hipodromdaki günün bütün koşularını sırayla listeler. Her koşu iki parçadan oluşur: koşunun şartlarını anlatan başlık ve koşacak atları gösteren tablo. Program ayrıca genel kuralları ve kısaltmaların açıklamasını da içerebilir.TJK'nın günlük programları farklı biçimlerde yayımlanır ve sütun adları biçime göre küçük farklılıklar gösterebilir. Örneğin bir resmî programda sütunlar at, yaş, don, cinsiyet, orijin, kilo, jokey, sahip, antrenör, start, H.P., Son 6 Y., takı ve forma olarak sıralanırken, günlük programda koşmadığı gün sayısı, son 20 ve bahis bilgileri gibi sütunlar da yer alabilir. Bu rehberdeki açıklamalar her iki biçimde de işinize yarar.
+
+### Koşu başlığı nasıl okunur?
+Başlık, o koşuda neyin yarışılacağını anlatır. Genellikle şu bilgileri içerir:Koşu numarası ve saati: Günün kaçıncı koşusu olduğu ve başlama saati.Koşu cinsi ve adı: Maiden, Şartlı, KV, Handikap, Satış ya da grup koşusu; bazı koşuların özel adı da yazar.Yaş ve ırk: Örneğin 3 yaşlı İngilizler ya da 4 yaşlı Araplar.Kilo şartı: Kiloların nasıl belirlendiği.Mesafe ve pist türü: Metre cinsinden mesafe ve çim, kum ya da sentetik bilgisi.İkramiyeler: İlk beş sıranın ikramiye tutarları.E.İ.D.: Koşunun en iyi derecesi, yani o mesafe ve pistteki rekor.Başlıkta E, D, DHÖ, TR ya da X gibi kısaltmalar da görülebilir. Bunlar cinsiyet, yetiştirme ya da kazanç şartlarını belirtir. Koşu cinsleri rehberinde bu kısaltmaların ayrıntısı yer alır.
+
+### At satırındaki sütunlar ne anlatır?
+SütunNe anlatır?Analizde ne işe yarar?NoAtın program numarasıKupona yazılan numaradırAtAtın adı; eküri bilgisi de bu satırda ya da ayrı bir notta yer alırAtın geçmişini aramak için anahtarYaşAtın yaşı; bazı programlarda don ve cinsiyet de yazarGelişim ve kilo şartları için önemliOrijinAtın babası ve annesi; çoğu zaman annenin babası daMesafe ve pist eğilimi hakkında dolaylı ipucuSıklet (kilo)Atın taşıyacağı ağırlıkKilo farkı ve son koşuya göre değişimJokeyBinici; aprantilerin adının önünde (Ap.) yazarJokey başarısı ve değişikliğiSahip ve antrenörAtın sahibi ve hazırlayan antrenörEküri ve ahır bilgisiStartAtın start makinesindeki yeriÖzellikle kısa ve virajlı koşularda önemliHPHandikap puanı; çim ve kum için ayrı olabilirSınıf ve kilo ilişkisiSon 6Son altı koşudaki derecelerForm eğilimiKGSKoşmadığı gün sayısıUzun ara ya da sık koşmas20Son 20 koşuya dayanan bir performans göstergesiUzun dönemli istikrarEn iyi dereceAtın kaydedilmiş en iyi süresiAlan içindeki hız karşılaştırmasıAGFAltılı ganyan oynayanların ata verdiği payOyuncu eğilimiTakıAtın koşuda kullanacağı ekipmanEkipman değişikliğitjkdetay'daki gösterimde Son 6 sütununda 0, ilk dokuz dışında bitirilen koşuyu ifade eder. AGF ise yüzde ve parantez içinde koşudaki sırasıyla yazılır, örneğin %24 (2).En iyi derece okunurken pist ve mesafenin bugünkü koşuyla aynı olup olmadığı kontrol edilmelidir; farklı şartlarda alınmış süreler doğrudan karşılaştırılmaz.
+
+### Takı kısaltmaları ne anlama gelir?
+Takı, atın koşuda kullanacağı ekipmandır. TJK'nın resmî programındaki kısaltma açıklamalarına göre sık görülen takılar şunlardır:KG: Kapalı gözlük takılacağını ifade eder.KUL: Kulaklık takılacağını ifade eder.DB: Atın dilinin bağlanacağını ifade eder.BB: Atın burnuna bant takılacağını ifade eder.GKR: Göz koruyucu takılacağını ifade eder.YP: Yanak peluşu takılacağını ifade eder.TGK: Atın tek gözü kapalı koşacağını ifade eder.ÇABA: Çene altı baskı aparatı takılacağını ifade eder.ÖG: Atın start makinesine önden giriş yapacağını ifade eder.DS: Komiserler Kurulu kararıyla atın dış start kullandığını ifade eder.SKG, SKUL, SGKR: Atın ring mahallinden starta kadar kapalı gözlük, kulaklık ya da göz koruyucu ile gideceğini ifade eder.Takının kendisinden çok değişikliği bilgilendiricidir. Son koşuda çıkarılan bir takının bugün yeniden takılması ya da ilk kez dil bağı eklenmesi, ahırın bir düzeltme yaptığını gösterebilir.
+
+### Eküri ne demektir?
+TJK programının genel kurallarına göre eküri, aynı koşuya katılan ve sahibine ya da yakınlarına ait olan atlardır. Eküri atların binicileri aynı tip forma giyer; numarası büyük olan atın binicisi ise farklı renkte kep takar.Eküri kuralı bahis açısından da önemlidir. Genel kurallara göre eküri atlardan biri birinci gelirse, aynı ekürinin diğer koşan atları üzerine oynanan ilgili biletler de kazanmış sayılır. Eküri atlardan biri ya da birkaçı koşuya katılmazsa ilgili yönetmelik hükümleri uygulanır.
+
+### Programı hangi sırayla okumak gerekir?
+Koşu başlığını okuyun: Koşu cinsi, mesafe, pist ve şartları not edin.Alanı tanıyın: Kaç at koşuyor, eküri var mı, koşmayacak at bildirildi mi?Kiloları karşılaştırın: En ağır ve en hafif atları, fazla kilo ve apranti indirimlerini işaretleyin.Formu okuyun: Son 6 dizisine ve KGS'ye bakın; uzun aradan dönen ve sık koşan atları ayırın.Sınıfı kontrol edin: Her atın son koşusunun cinsini bugünküyle karşılaştırın.HP ve en iyi dereceye bakın: Bugünkü pist türüne ait HP'yi ve bugünkü mesafedeki dereceleri karşılaştırın.Jokey, start ve takıyı ekleyin: Jokey değişikliği, start yeri ve takı değişikliklerini not edin.Son olarak AGF'ye bakın: Oyuncu eğilimini kendi okumanızla karşılaştırın.AGF'nin en sona bırakılması bilinçli bir tercihtir. Önce verilere bakıp sonra kalabalığın tercihini görmek, okumayı oyuncu eğiliminin etkisinden korur.
+
+### tjkdetay programdan analize nasıl geçer?
+tjkdetay'da programdaki bilgiler her at için aynı kural tablosuna aktarılır. Tabloda kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret ayrı ayrı değerlendirilir. İlk 4 yalnızca bu tablodan çıkar.Analiz bittikten sonra yorumcuların seçimlerine bakılır. Yorumcuların en çok yazdığı ama ilk 4'te bulunmayan at Y atı olarak eklenir; koşunun sürpriz olasılığı da ayrıca yazılır. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.Programı kendiniz okumayı öğrenmek, yayımlanan analizin hangi veriye dayandığını görmenizi sağlar. Analizler bilgi amaçlıdır; at yarışında hiçbir seçim sonucu garanti etmez.
+
+S: KGS ne demek?
+C: KGS, koşmadığı gün sayısı demektir. Atın son koşusundan bu yana kaç gün geçtiğini gösterir ve uzun aradan dönen atları ayırmaya yarar.
+
+S: Son 6 sütunu nasıl okunur?
+C: Son 6, atın son altı koşusundaki derecelerini gösterir. tjkdetay'daki gösterimde 0, ilk dokuz dışında bitirilen koşu anlamına gelir.
+
+S: Programda (Ap.) ne anlama gelir?
+C: (Ap.), binicinin apranti olduğunu gösterir. Aprantiler, kurallara göre kazandıkları koşu sayısına bağlı kilo indiriminden yararlanabilir.
+
+S: KG ve DB takı kısaltmaları ne demek?
+C: TJK programındaki açıklamalara göre KG kapalı gözlük takılacağını, DB ise atın dilinin bağlanacağını ifade eder.
+
+S: E.İ.D. ne demek?
+C: E.İ.D., koşu başlığında yer alan en iyi derecedir; yani o mesafe ve pistteki rekor süreyi gösterir.
+
+## Koşu Cinsleri: Maiden, Şartlı, KV, Handikap ve Grup Koşuları
+https://tjkdetay.com/rehber/kosu-cinsleri-maiden-sartli-kv-grup/
+
+Koşu cinsi, bir koşuya hangi atların katılabileceğini ve atların hangi şartlarda yarışacağını belirler. Maiden hiç kazanmamış atlar içindir; şartlı koşular önceden ilan edilen şartlara, handikaplar puana göre ayarlanan kilolara dayanır, grup koşuları ise en üst basamaktır. Bir atın sınıf değiştirmesi, analizde en çok dikkat edilen işaretlerden biridir.
+
+### Koşu cinsi neden önemlidir?
+Her koşunun başlığında bir koşu cinsi yazar: Maiden, Şartlı, KV, Handikap, Satış ya da G1, G2, G3 gibi. Bu bilgi, o koşuda hangi seviyedeki atların karşılaşacağını anlatır. Aynı at bir koşu cinsinde rahatça öne çıkarken daha üst bir sınıfta zorlanabilir.Koşu cinsinin yanında genellikle başka şartlar da bulunur:Irk ve yaş: Örneğin 3 yaşlı İngilizler ya da 4 yaşlı Araplar.Cinsiyet: Programdaki açıklamalara göre E yalnızca erkek atların, D yalnızca dişi atların katılabildiği koşuları gösterir.Yetiştirme şartları: DH, DHÖ, DHÖW ya da TR gibi kısaltmalar, atın yetiştirildiği yere veya soy kaydına bağlı katılım şartlarını belirtir.Bu yüzden bir atın son koşusunu değerlendirirken yalnızca derecesine değil, o derecenin hangi koşu cinsinde ve hangi şartlarda alındığına da bakmak gerekir.
+
+### Maiden koşusu nedir?
+At Yarışları Yönetmeliği maiden koşuyu, hiç koşu kazanmamış atlara mahsus koşu olarak tanımlar. Kariyerinin başındaki genç atlar da, uzun süredir koştuğu halde galibiyet alamamış atlar da bu koşularda karşılaşır.Maiden koşularının analizi kendine özgüdür:Alanın önemli bir kısmının çok az koşusu ya da hiç koşusu olmayabilir; form verisi sınırlıdır.Bu nedenle idman dereceleri, start yeri ve jokey bilgisi görece daha fazla ağırlık kazanır.Favoriler, form kanıtı az olduğu için diğer koşu cinslerine göre daha belirsiz bir zeminde oynanır.tjkdetay'ın kural tablosunda maiden koşularında alanın en iyi taze idmanını yapan atlar özellikle işaretlenir; çünkü bu koşularda yarış geçmişi çoğu zaman tek başına yeterli bilgi vermez.
+
+### Şartlı koşu nedir?
+Yönetmelik şartlı koşuyu, katılım şartları önceden belirlenen koşu olarak tanımlar. Bu şartlar örneğin belirli bir süre içinde kazanılan koşu sayısı ya da ikramiye miktarı olabilir. Şartlı koşular programda numaralarla ayrılır ve her birinin şartı koşu başlığında yazılıdır.Programlarda şartlı koşuların yanında ilave şart kısaltmaları da görülebilir. Örneğin 2021 programındaki açıklamada X ve X-1, belirli bir tarihten sonra kazanılan ikramiyelerin toplamına ve grup koşusu şartlarına atıf yapan ilave şartlar olarak tanımlanmıştı.Şartlı koşuda atlar aynı şart çerçevesinde karşılaştığı için, aynı numaralı şartlı koşulardaki dereceleri birbirine göre değerlendirmek kolaylaşır. Ama şart metnini okumadan yalnızca koşu adına bakarak sınıf hakkında hüküm vermek yanıltıcı olabilir.
+
+### KV koşuları nedir?
+Programlarda KV-6, KV-7 gibi numaralarla geçen koşulardır. Bu koşulara katılım için bir puan alt sınırı uygulanabilir; yani yalnızca belirli bir puan seviyesinin üzerindeki atlar katılabilir.Örneğin TJK'nın 2024 yılı genel hükümlerindeki değişikliklerde KV-6 için koşuya iştirak alt puan limiti 51, KV-7 için 56 olarak belirtilmişti. Bu limitler yıllık genel hükümlerle güncellenebildiği için güncel değerleri o yılın genel hükümlerinden ve koşu şartından kontrol etmek gerekir.Puan alt sınırı, KV koşularının belirli bir seviyenin üstündeki atlara açık olduğunu gösterir. Bu yüzden düşük seviyeli bir koşudan KV'ye gelen at, rakip kalitesindeki artışı hesaba katmayı gerektirir.
+
+### Handikap, satış ve grup koşuları nedir?
+Handikap koşusu: Yönetmeliğe göre handikaperlerin verdiği puanlara göre ağırlıkların ayarlandığı ve atların kazanma şansının eşitlenmeye çalışıldığı koşudur. 2024 genel hükümlerinde 13, 14, 15, 16, 17, 21, 22 ve 24 numaralı handikaplar ile puan aralığı 71-110 olan G3-Handikap geçer. Ayrıntılar için handikap puanı rehberine bakabilirsiniz.Satış koşusu: Yönetmelikte, yalnızca satışa çıkarılmış atlara mahsus koşu olarak tanımlanır.Grup koşuları: G1, G2 ve G3 olarak işaretlenen, sınıf merdiveninin en üst basamağındaki koşulardır. TJK'nın 2025 uluslararası koşular listesinde örneğin Veliefendi'deki Topkapı Trophy ve Bosphorus Cup G3, Anatolia Trophy ise G2 olarak yer alır. Türkiye'nin en tanınan koşularından Gazi Koşusu da 3 yaşlı İngiliz atları için Veliefendi'de 2400 metre çim pistte koşulur.
+
+### Koşu başlığından sınıf bilgisi nasıl okunur?
+Program açıldığında her koşunun başlığında koşu cinsi, şartlar, mesafe, pist türü ve ikramiyeler yer alır. Sınıf hakkında fikir edinmek için bu bilgileri şu sırayla okumak işe yarar:Koşu cinsini bulun: Maiden, Şartlı, KV, Handikap, Satış ya da grup koşusu.Şart metnini okuyun: Hangi atlar katılabiliyor? Kazanç, puan, yaş, ırk ya da yetiştirme şartı var mı?İlave kısaltmalara bakın: E, D, DHÖ, TR, X gibi kısaltmalar katılımı daraltır ya da genişletir.İkramiyeyi not edin: Aynı hipodromda ikramiyesi yüksek olan koşular, genellikle daha güçlü atları çeker.Atların son koşu cinslerini yazın: Her atın son koşusunun cinsini bugünküyle yan yana koyduğunuzda sınıf yönü ortaya çıkar.Bu sıralama, özellikle farklı hipodromlardan gelen atların bulunduğu koşularda yararlıdır. Bir atın başka bir şehirde aldığı derece, o koşunun cinsi ve şartı bilinmeden doğru yorumlanamaz.Yaş da sınıf okumasının bir parçasıdır. 2 yaşlı koşularında atların çoğu kariyerinin ilk dönemindedir; bu yaşta bir koşudan diğerine gelişim hızlı olabilir. Yaşlı atlarda ise eski dereceler bugünkü kapasiteyi her zaman yansıtmaz.
+
+### Sınıf yükselişi ve düşüşü neden önemlidir?
+Sınıf yönü, atın bugünkü koşusunun son koşusuna göre daha zor mu, daha kolay mı olduğunu anlatır. Aynı derece, zayıf rakiplere karşı alındığında başka, güçlü rakiplere karşı alındığında başka bir anlam taşır.Sınıf düşüşü: At, son koşusuna göre daha alt seviyedeki rakiplerle karşılaşır. Son koşusunda üst sınıfta zorlanan bir at, kendi seviyesine dönünce daha rekabetçi görünebilir.Aynı sınıf: Son koşudaki derece bugünkü koşu için doğrudan bir referanstır.Sınıf yükselişi: At daha güçlü rakiplerle karşılaşır. Son galibiyet tek başına yeterli olmayabilir.Kurgusal örnekSon koşuBugünSınıf yönüÖrnek at AŞartlı, 7.MaidenDüşüşÖrnek at BMaiden, 1.ŞartlıYükselişÖrnek at CKV-7, 4.KV-7Aynıtjkdetay'ın kural tablosunda sınıf düşüşü artı, aynı sınıf nötr, sınıf yükselişi eksi olarak yazılır. Bir istisna vardır: 2 yaşlı koşularında genç atlar hızla geliştiği için sınıf yükselişi eksi sayılmaz. Sınıf düşüşü özellikle son kötü sonucun geçerli bir mazereti de varsa dikkat çekici bir işarettir, ama tek başına sonucu belirlemez.Koşu adlarının sınıf sırası her zaman sezgisel değildir. Pratik bir ipucu olarak, iki koşunun şartlarını ve ikramiyelerini yan yana koymak sınıf farkını görmeyi kolaylaştırır.
+
+S: Maiden koşusu ne demek?
+C: Maiden, hiç koşu kazanmamış atlara mahsus koşudur. Form verisi sınırlı olduğu için bu koşularda idman ve start bilgisi daha fazla önem kazanır.
+
+S: Şartlı koşu ile handikap koşusu arasındaki fark nedir?
+C: Şartlı koşuda katılım ve kilolar önceden ilan edilen şartlara göre belirlenir. Handikapta ise kilolar, handikaperlerin atlara verdiği puana göre ayarlanır.
+
+S: KV koşusu nedir?
+C: Programda KV-6, KV-7 gibi numaralarla geçen ve katılım için puan alt sınırı uygulanabilen koşulardır. Güncel limitler yıllık genel hükümlerde belirtilir.
+
+S: Sınıf düşüşü her zaman avantaj mıdır?
+C: Hayır. Sınıf düşüşü rakiplerin zayıfladığını gösterir, ama atın formu, kilosu, pist ve mesafe uyumu da sonucu etkiler.
+
+S: Grup koşuları hangileridir?
+C: G1, G2 ve G3 olarak işaretlenen en üst seviyedeki koşulardır. Veliefendi'deki Topkapı Trophy, Bosphorus Cup ve Anatolia Trophy uluslararası grup koşularına örnektir.
+
+## Handikap Puanı (HP) Nedir? Kilo İlişkisi ve Handikap Koşusunu Okumak
+https://tjkdetay.com/rehber/handikap-puani-hp-nedir/
+
+Handikap puanı (HP), handikaperlerin bir atın performansına göre verdiği sayısal değerdir. Handikap koşularında kilolar bu puana göre ayarlanır: Puanı yüksek at daha fazla kilo taşır ve böylece atların şansları birbirine yaklaştırılmaya çalışılır. HP tek başına sonucu göstermez; kilo, form ve koşu şartıyla birlikte okunmalıdır.
+
+### Handikap puanı (HP) nedir?
+At Yarışları Yönetmeliği handikap koşusunu, handikaperlerin verdiği puanlara göre ağırlıkların ayarlandığı ve atların kazanma şansının eşitlenmeye çalışıldığı koşu olarak tanımlar. Bu puana handikap puanı denir ve programlarda kısaca HP olarak yazılır.HP, bir atın yarışlardaki performansının sayısal bir özetidir. Puan ne kadar yüksekse, handikaperler o atı o kadar güçlü değerlendiriyor demektir. Ama HP bir tahmin değildir; atın geçmişte gösterdiği performansa dayanan bir derecelendirmedir.Günlük yarış programlarında çim ve kum için ayrı handikap puanı sütunları bulunabilir. Bir at çim pistte başka, kum pistte başka bir puana sahip olabilir. Bu yüzden handikap koşusunu okurken o günkü pist türüne ait puana bakmak gerekir.
+
+### HP ile kilo arasında nasıl bir ilişki vardır?
+Handikap koşusunun mantığı basittir: Güçlü ata daha fazla, zayıf ata daha az kilo verilir. Böylece kâğıt üzerinde atların şansı birbirine yaklaştırılmaya çalışılır. Kısacası handikapta HP yükseldikçe taşınan kilo artar.Aşağıdaki tablo yalnızca yönü göstermek için kurgusaldır; gerçek kilo hesabı koşu şartlarına ve handikaperlerin değerlendirmesine bağlıdır:AtHPSıkletOkumaÖrnek at A9260 kgAlanın en yüksek puanlısı, en ağır kiloyu taşıyorÖrnek at B8556,5 kgOrta sıralardaÖrnek at C7853 kgEn düşük puanlı, en hafif kiloyla koşuyorBu dengenin sınırları vardır. Koşu şartlarında bir azami sıklet bulunabilir. Örneğin TJK'nın 2024 genel hükümlerindeki değişikliklerde Handikap 22, Handikap 24 ve G3-Handikap koşularında azami sıklet 61 kg olarak belirtilmişti. Puanı çok yüksek bir at bu sınıra takılırsa, puanının gerektirdiğinden daha az kilo taşıyor olabilir. Bu durum handikap okumasında dikkat edilen ayrıntılardan biridir.
+
+### Handikap puanı nasıl değişir?
+HP sabit değildir. Handikaperler atların yarış sonuçlarına göre puanları güncel tutar. Genel eğilim şöyledir:İyi koşan, özellikle kazanan bir atın puanı yükselebilir. Bir sonraki handikapta daha fazla kilo taşıyabilir ya da daha üst bir handikapa çıkabilir.Uzun süre beklenenin altında koşan bir atın puanı düşebilir. Bu at daha hafif kiloyla ya da daha alt bir handikapta koşma imkânı bulabilir.Puan değişikliğinin ne zaman ve ne kadar yapılacağı handikaperlerin değerlendirmesine bağlıdır; tek bir formülle tahmin edilemez.Analiz açısından en ilginç durumlardan biri, puanı düşmüş ama formu toparlanma işaretleri veren attır. Daha hafif kilo ve daha uygun rakiplerle karşılaşması onu rekabetçi kılabilir. Tersine, puanı hızla yükselen bir at artık daha zorlu bir görevle karşı karşıyadır.
+
+### Handikap koşuları nasıl ayrılır?
+Handikaplar programda numaralarla ayrılır ve her biri belirli bir puan aralığındaki atlara açıktır. TJK'nın 2024 genel hükümlerindeki değişikliklerde 13, 14, 15, 16, 17, 21, 22 ve 24 numaralı handikaplar ile puan aralığı 71-110 olarak belirlenen G3-Handikap yer alıyordu.Bu numaralar ve aralıklar yıllık genel hükümlerle güncellenebilir. Bir handikapın hangi puan aralığına açık olduğunu öğrenmenin en güvenli yolu, koşu başlığındaki şartı okumaktır.Aynı numaralı bir handikapta koşan atlar benzer puan bandındadır. Bu yüzden handikaplarda favoriler arasındaki fark çoğu zaman küçük olur ve alan sık sık kalabalıktır. Kalabalık ve dengeli alan, sürpriz ihtimalini artıran işaretlerden biridir.
+
+### Handikap koşusu adım adım nasıl okunur?
+Koşu şartını okuyun. Puan aralığı, yaş, ırk, pist türü ve mesafe başlıkta yazar.Doğru HP sütununa bakın. Koşu çimdeyse çim, kumdaysa kum puanını esas alın.HP sıralamasını çıkarın. Alanın en yüksek ve en düşük puanlı atlarını belirleyin.Kilo dağılımını inceleyin. Azami sıklete takılan atları ve alanın en hafif atlarını not edin.Son koşuyla karşılaştırın. Atın puanı ve kilosu son koşusuna göre nasıl değişti? Aynı puanla daha az kilo mu taşıyor, puanı düştüğü için mi hafifledi?Formu ve şartları ekleyin. Pist ve mesafe uyumu, idman, jokey ve son kötü sonucun mazereti olup olmadığına bakın.Bu sıra, HP'yi tek başına bir sıralama aracı olarak kullanmanın önüne geçer. Handikapta en yüksek puanlı at kâğıt üzerinde en iyisidir, ama en ağır kiloyu da o taşır.
+
+### Handikap koşusunda hangi durumlar dikkat çeker?
+Handikap okumasında bazı durumlar, puan ve kilo arasındaki dengeyi bozabildiği için ayrıca not edilir:Puanı düşmüş at: Son koşularında puanı gerileyen ve bu nedenle daha hafif kiloyla koşan at, formunda toparlanma işareti varsa rakiplerine göre daha uygun bir görevle karşılaşabilir.Azami sıklete takılan at: Puanı alanın açık ara en yükseği olan bir at, kilo sınırı nedeniyle puanının gerektirdiğinden hafif kalabilir.Pist türü değişen at: Çimdeki ve kumdaki puanı farklı olan bir at, pist değiştiğinde alan içindeki konumunu da değiştirir. Pist değişikliği günlerinde bu ayrıntı özellikle önem kazanır.Apranti binen at: Bazı handikaplarda apranti indirimi uygulanabilir. TJK'nın 2024 genel hükümlerindeki değişikliklerde indirimin geçerli olduğu handikaplar tek tek sayılmış, kısa vadeli koşu olarak tanımlanan Handikap 22 ve Handikap 24'te ise aprantilerin indirimden yararlanamayacağı belirtilmişti. Güncel listeyi o yılın genel hükümlerinden kontrol etmek gerekir.Son koşusu farklı koşu cinsinde olan at: Şartlı bir koşudan handikapa gelen atın kilo farkı, form değişiminden değil koşu tipinden kaynaklanabilir. Bu fark gerçek bir kilo artışı ya da düşüşü gibi okunmamalıdır.Bu durumların hiçbiri tek başına bir atı öne çıkarmaz. Ama handikapta atlar arasındaki farkların zaten küçük olduğu düşünülürse, küçük bir dengesizlik bile sıralamayı değiştirebilir.
+
+### tjkdetay kural tablosunda HP nasıl kullanılır?
+tjkdetay'da HP, kural tablosundaki girdilerden biridir ve tek başına ilk 4'ü belirlemez. Kilo değişimi, sınıf yönü, idman, jokey, pist ve mesafe uyumu, son koşu ve mazeret ile birlikte değerlendirilir.Eşitlik bozma: Tabloda puanları eşit çıkan iki at arasında, diğer kurallar uygulanamıyorsa HP'si yüksek olan öne alınır.Grup koşuları: Alanın geri kalanından belirgin biçimde yüksek HP'ye sahip bir at, sınıf üstünlüğü işareti olarak artı alır.Handikaplar: Taze ve belirgin biçimde gelişmiş bir uzun galop, düşük puanlı bir at için bile dikkat çekici bir işaret sayılır.Bu kurallar sonucu garanti etmez. Handikaplar, atların şansını eşitlemek için tasarlandığından analiz edilmesi en zor koşular arasındadır ve analizler bilgi amaçlıdır.
+
+S: HP ne demek?
+C: HP, handikap puanı demektir. Handikaperlerin bir atın yarış performansına göre verdiği sayısal değerdir ve handikap koşularında kiloların ayarlanmasında kullanılır.
+
+S: Handikap puanı yüksek olan at avantajlı mıdır?
+C: Kâğıt üzerinde daha güçlüdür, ama handikapta daha fazla kilo taşır. Amaç atların şansını eşitlemek olduğu için yüksek puan tek başına avantaj anlamına gelmez.
+
+S: Çim ve kum için neden ayrı handikap puanı var?
+C: Bir atın performansı pist türüne göre değişebilir. Bu yüzden programlarda çim ve kum için ayrı puan sütunları bulunabilir; o günkü pist türünün puanına bakmak gerekir.
+
+S: Handikap puanı ne zaman değişir?
+C: Handikaperler puanları atların yarış sonuçlarına göre günceller. Değişikliğin zamanı ve miktarı onların değerlendirmesine bağlıdır.
+
+## İdman ve Galop Dereceleri Nasıl Okunur?
+https://tjkdetay.com/rehber/idman-galop-dereceleri-nasil-okunur/
+
+İdman dereceleri, bir atın yarıştan önceki çalışmalarında belirli mesafeleri ne kadar sürede koştuğunu gösterir. Kısa koşularda taze ve hızlı 400-600 metreler, 1400 metre ve üstü koşularda ise 1000 metre gibi uzun galoplar daha çok şey anlatır. İdmanlar yalnızca aynı mesafe ve benzer pist şartlarında karşılaştırıldığında anlamlıdır.
+
+### İdman ve galop nedir?
+Yarış atları koşu günleri dışında düzenli olarak çalıştırılır. Bu çalışmaların bir kısmı hafif tempoda, bir kısmı ise yarış hızına yakın tempoda yapılır. Hızlı tempolu ve süresi ölçülen çalışmalar yarış dilinde galop olarak anılır; genel olarak da idman denir.Ölçülen idmanlar, atın belirli bir mesafeyi ne kadar sürede koştuğunu gösterir. Bu veriler, yarış programıyla birlikte takip edilen en önemli hazırlık göstergelerinden biridir. Bir atın son koşusu kötü olsa bile idmanları güçlüyse ahırın atı hazır gördüğü düşünülebilir; tersine, iyi bir son koşunun ardından gelen zayıf idmanlar soru işareti yaratabilir.Ama idman bir yarış değildir. Atın hangi tempoda çalıştırıldığı, üzerinde kimin olduğu ve çalışmanın amacı her zaman bilinmez. Bu yüzden idman verisi tek başına değil, diğer bilgilerle birlikte okunmalıdır.
+
+### İdman tablosu nasıl okunur?
+Yayımlanan idman listelerinde her satır genellikle bir çalışmayı gösterir. Satırda şu bilgileri görürsünüz:Tarih: İdmanın yapıldığı gün. Koşuya kaç gün kala yapıldığını hesaplamak için önemlidir.Hipodrom ve pist: Çalışmanın hangi hipodromda ve hangi pistte (çim, kum ya da sentetik) yapıldığı.Pist durumu: Zeminin o günkü hali. Islak ya da ağır zeminde yapılan idman, kuru zemindekiyle doğrudan karşılaştırılmaz.Mesafeler ve süreler: 400, 600, 800, 1000 metre gibi mesafeler için ölçülen süreler. Aynı satırda birden çok mesafe varsa, bunlar aynı çalışmanın ölçülen bölümleridir.Süreler çoğunlukla dakika, saniye ve salise olarak yazılır. Örneğin 1.04.20, 1 dakika 4 saniye 20 salise; 0.37.40 ise 37 saniye 40 salise demektir. Süre kısaldıkça çalışma hızlıdır.Tek başına bir süre fazla şey anlatmaz. Asıl bilgi, o sürenin aynı koşudaki diğer atların idmanlarıyla ve atın kendi önceki idmanlarıyla karşılaştırılmasından çıkar.
+
+### Koşu mesafesine göre hangi idman önemlidir?
+Her idman mesafesi farklı bir şey anlatır. Kısa mesafeler hız ve çıkışı, uzun mesafeler dayanıklılığı ve tempoyu sürdürme kapasitesini gösterir. tjkdetay'ın kural tablosunda idman, koşunun mesafesine göre şu şekilde okunur:Koşu mesafesiÖne çıkan idmanNeden1200 m ve altıTaze ve hızlı 400 m ile 600 mKısa koşularda çıkış hızı ve son düzlükteki sürat belirleyicidir1400 m ve üstü1000 m galop; yoksa en uzun ölçülen mesafe (çoğu zaman 800 m)Uzun koşularda temposunu koruyabilme ön plana çıkarBu ayrımın pratik bir sonucu var: 1600 metrelik bir koşuda bir atın çok hızlı bir 400 metresi dikkat çekebilir, ama bu sprint tek başına en güçlü veri sayılmaz. Aynı koşuda alanın en iyi 1000 metresini yapan at, uzun mesafe açısından daha anlamlı bir işaret verir.Tersine, 1200 metrelik bir sprintte uzun galopların değeri sınırlıdır. Burada taze ve hızlı kısa idmanlar, özellikle son 400 metre süreleri daha çok bilgi taşır.
+
+### Taze idman nedir, neden önemsenir?
+Taze idman, koşuya yakın günlerde yapılan idmandır. Atın en güncel durumunu yansıttığı için eski idmanlardan daha fazla bilgi taşır. tjkdetay'ın kural tablosunda koşudan önceki son üç gün içinde yapılan idmanlar taze kabul edilir ve alanın en iyi taze idmanını yapan at ayrıca işaretlenir.Taze idmanın önemi şuradan gelir: Antrenör atı koşudan hemen önce hızlı çalıştırıyorsa, genellikle atın kondisyonundan memnundur. Ama bu bir kural değil, bir yorumdur. Bazı ahırlar atlarını koşudan önce bilinçli olarak hafif çalıştırır.Taze idmanı olmayan at zayıf mıdır?Her zaman değil. Son 7-14 gün içinde yarışmış bir atın yeni bir galop yapmaması normaldir; yarışın kendisi zaten en sert çalışmadır. Bu yüzden yakın tarihte koşmuş bir atın idman eksikliği eksi sayılmaz, nötr kabul edilir.Durum, uzun süredir koşmayan atlar için farklıdır. Programdaki KGS (koşmadığı gün sayısı) sütunu uzun bir ara gösteriyorsa ve atın son idmanları alanın alt yarısındaysa, bu kural tablosunda dikkatle değerlendirilen bir eksidir.
+
+### İdmanlar nasıl doğru karşılaştırılır?
+İdman karşılaştırmasında en sık yapılan hata, farklı şartlarda alınmış süreleri yan yana koymaktır. Doğru karşılaştırma için şu kurallar işe yarar:Aynı mesafe: 600 metre ile 600 metre, 1000 metre ile 1000 metre karşılaştırılır. Son 400 metre süreleri ayrıca değerlendirilir.Aynı pist türü: Çimde yapılan bir idman, kumdaki ya da sentetikteki bir idmanla doğrudan kıyaslanmaz.Benzer pist durumu: Ağır zeminde yapılan çalışmanın süresi doğal olarak daha uzundur.Atın kendi geçmişi: Bir atın 1000 metre süresi önceki galoplarına göre gelişiyor mu, geriliyor mu? Gelişim olumlu, gerileme olumsuz bir işarettir.Alan içindeki yer: Süre, aynı koşudaki diğer atların idmanlarına göre alanın üst mü, alt yarısında mı?Aşağıdaki tablo, aynı koşuya hazırlanan üç kurgusal atın 1000 metre idmanlarını gösterir:AtTarihPist1000 mYorumÖrnek at AKoşudan 2 gün önceKum1.04.10Taze ve alanın en iyisiÖrnek at BKoşudan 6 gün önceKum1.05.30İyi ama taze değilÖrnek at CKoşudan 3 gün önceÇim1.03.80Farklı pist; doğrudan kıyaslanmazÖrnek at C'nin süresi en hızlı görünse de çimde yapıldığı için kum idmanlarıyla aynı terazide tartılmaz.
+
+### İdman verisi ne zaman yanıltabilir?
+İdman tek başına sıralamayı belirlemez: Alanın en iyi idmanını yapan at bile yarışta geride kalabilir. tjkdetay'da idman, atı tek başına bir numaraya taşıyan bir veri değil, kural tablosundaki girdilerden biridir.Yaş ve ara: Yaşlı atlarda ya da uzun aradan dönenlerde, eski parlak dereceler bugünkü kapasiteyi yansıtmayabilir; taze idman bu yüzden daha önemlidir.Bilinmeyen tempo: Hangi tempoda ve hangi amaçla çalışıldığı bilinmeyen idmanlar yanlış yorumlanabilir.Eksik veri: Her atın idmanı ölçülmeyebilir ya da yayında eksik görünebilir. Veri yoksa bu, kötü idman anlamına gelmez.Maiden koşuları: Form verisi az olan maiden koşularında idman daha fazla ağırlık kazanır; ama yine de yarış deneyiminin yerini tutmaz.İdman verisi, doğru okunduğunda programın en değerli parçalarından biridir. Yine de at yarışı şans içerir ve hiçbir idman sonucu önceden belirlemez.
+
+S: 1000 metre galop ne anlatır?
+C: 1000 metre galop, atın uzun bir mesafede temposunu ne kadar koruyabildiğini gösterir. Özellikle 1400 metre ve üstü koşularda daha anlamlı kabul edilir.
+
+S: Taze idman kaç gün içinde yapılan idmandır?
+C: Kullanılan süre kaynaktan kaynağa değişebilir. tjkdetay'ın kural tablosunda koşudan önceki son üç gün içinde yapılan idmanlar taze kabul edilir.
+
+S: Kumda yapılan idman çimdeki koşu için de geçerli midir?
+C: Atın genel kondisyonu hakkında fikir verir, ama süreleri çimdeki idmanlarla doğrudan karşılaştırılmaz. Karşılaştırma aynı pist türünde ve benzer pist durumunda yapılmalıdır.
+
+S: İdmanı olmayan at zayıf mıdır?
+C: Her zaman değil. Son 7-14 gün içinde yarışmış bir atın yeni galop yapmaması normaldir; uzun aradan dönen bir atta ise zayıf ya da eksik idman daha dikkatli değerlendirilmelidir.
+
+S: İdman süreleri nasıl yazılır?
+C: Çoğunlukla dakika, saniye ve salise olarak yazılır. Örneğin 1.04.20, 1 dakika 4 saniye 20 salise anlamına gelir.
+
+## Jokey ve Apranti Etkisi: Jokey Seçimi, Değişikliği ve Kilo İndirimi
+https://tjkdetay.com/rehber/jokey-ve-apranti-etkisi/
+
+Jokey, atın potansiyelini koşuya taşıyan kişidir; deneyimi, start ve taktik kararları sonucu etkileyebilir. Apranti, henüz jokey lisansı almamış binicidir ve yönetmeliğe göre kazandığı koşu sayısına bağlı kademeli bir kilo indiriminden yararlanabilir. Jokey istatistikleri yararlıdır, ama örneklem büyüklüğü ve bağlamla birlikte okunmalıdır.
+
+### Jokeyin yarışa etkisi nedir?
+Atın kapasitesi, hazırlığı ve koşu şartları sonucu belirleyen ana etkenlerdir. Jokey ise bu kapasitenin yarışa ne ölçüde yansıyacağını etkiler. Startta pozisyon almak, tempoyu doğru okumak, sıkışmadan kaçmak ve atı doğru anda zorlamak jokeyin kararlarıdır.Jokey bilgisi analizde iki şekilde kullanılır:Binicinin kendi başarısı: Jokeyin istatistikleri, benzer koşulardaki deneyimini gösterir.Ahırın tercihi: Hangi jokeyin hangi ata bindiği, ahırın o koşuya bakışı hakkında dolaylı bir ipucu olabilir. Başarılı bir jokeyin bir ata binmesi, o atın hazır görüldüğü şeklinde yorumlanabilir; ama bu kesin bir bilgi değildir.Jokey önemli bir değişkendir, ama atın yerini tutmaz. Zayıf hazırlanmış bir atı iyi bir jokey kurtaramayabilir; formda bir at ise daha az tanınan bir jokeyle de iyi koşabilir.
+
+### Jokey istatistikleri nasıl okunur?
+En sık kullanılan gösterge kazanma oranıdır: birincilik sayısının binilen koşu sayısına bölünmesi. Bunun yanında ilk üç ya da ilk dört oranı da jokeyin istikrarı hakkında fikir verir.Bu oranları okurken örneklem büyüklüğü çok önemlidir. Aşağıdaki tablo kurgusal üç jokeyi gösterir:JokeyBinilen koşuBirincilikKazanma oranıYorumÖrnek jokey X406%15Orta büyüklükte örneklemÖrnek jokey Y82%25Oran yüksek ama örneklem çok küçükÖrnek jokey Z30036%12Geniş örneklem, güvenilir ortalamaÖrnek jokey Y'nin oranı en yüksek görünse de sekiz koşu, tek bir iyi haftayla oluşabilecek bir sonuçtur. Z'nin oranı ise yüzlerce koşuya dayanır ve daha güvenilir bir ortalamadır.Bağlamı da kontrol edinHipodrom: Bazı jokeyler belirli hipodromlarda daha sık ve daha başarılı biner.Pist ve mesafe: Kısa koşu ile uzun koşu, çim ile kum farklı beceriler isteyebilir.Dönem: Sezon başındaki birkaç koşu, uzun dönemli performansı yansıtmayabilir.Bindiği atlar: Sürekli favorilere binen bir jokeyin oranı doğal olarak yüksek olur; az oynanan atlarla aldığı sonuçlar ayrıca bilgi verir.
+
+### Jokey değişikliği ne anlatır?
+Programda bir atın bugünkü jokeyi ile son koşudaki jokeyini karşılaştırmak, sık kullanılan bir analiz adımıdır. Üç durum ortaya çıkar:Jokey yükseltmesi: At, son koşusuna göre daha başarılı bir jokeyle koşuyor. Bu, ahırın atı daha iddialı gördüğü şeklinde yorumlanabilir.Aynı jokey: Süreklilik vardır; jokey atı tanıyordur.Jokey düşüşü: At daha az başarılı bir jokeyle koşuyor. Bu her zaman olumsuz değildir; örneğin apranti indirimiyle kilo avantajı sağlamak için de tercih edilebilir.Jokey değişikliğinin nedeni çoğu zaman dışarıdan bilinmez. Başarılı bir jokey aynı koşuda başka bir ata bindiği için değişiklik yapılmış olabilir. Bu yüzden değişikliği tek başına bir sinyal saymak yerine, diğer verilerle birlikte okumak gerekir.
+
+### Jokey bilgisini analize katarken nelere dikkat edilmeli?
+Atla önceki uyum: Jokey bu ata daha önce bindi mi, o koşularda nasıl sonuç aldı? Aynı jokeyle alınmış iyi sonuçlar, uyumun bir işareti olabilir.Kalabalık alanlar: On ve daha fazla atın koştuğu maiden ve handikaplarda start, pozisyon ve sıkışma gibi etkenler artar. Bu koşularda koşunun en başarılı jokeylerinin hangi atlarda olduğu daha fazla dikkat çeker.Şehir değişikliği: Bir jokeyin farklı bir hipodroma özel olarak gelmesi, o koşu için bilinçli bir tercih yapıldığını düşündürebilir; ama nedeni çoğu zaman bilinmez.Son dakika değişiklikleri: Sakatlık, ceza ya da başka nedenlerle jokey koşu günü değişebilir. Bu yüzden son kontrolde jokey sütununu yeniden okumak gerekir.Tek veriyle karar vermemek: Jokey bilgisi, atın kendi verilerinin önüne geçmemelidir. Kural tablosunda jokey, kilo, sınıf, idman, pist ve mesafe gibi diğer girdilerle aynı terazide tartılır.
+
+### Apranti nedir?
+At Yarışları Yönetmeliği aprantiyi, koşularda at binen ve apranti lisansı taşıyan binici olarak tanımlar. Apranti, jokeyliğe giden yolun başındaki binicidir. TJK programlarında aprantilerin adının önünde (Ap.) işareti görülür.Programlarda jokey yamaklarının kazandığı koşu sayısına göre ayrılmış koşular da bulunabilir. TJK'nın 2021 resmî programındaki açıklamaya göre Y-0 hiç yarış kazanmamış, Y-1 0-49 arası, Y-2 0-99 arası ve Y-3 0-149 arası yarış kazanmış jokey yamaklarının binebildiği koşuları gösterir.Yönetmelik ayrıca, belirli sayıda koşu kazanan aprantilerin jokey lisansı için başvurabileceğini düzenler. Bu sayıya ulaşıp başvurmayan aprantilerin, kilo indirimi olmadan apranti olarak binmeye devam edebileceği de aynı düzenlemede yer alır.
+
+### Apranti kilo indirimi nasıl işler?
+Aprantinin bindiği at, koşu için belirlenen sıkletten daha az kiloyla koşabilir. Bu indirim, deneyim farkını dengelemek için tanınan bir avantajdır. At Yarışları Yönetmeliği'nin 2012'de değiştirilen 52. maddesine göre kademeler şöyledir:Aprantinin kazandığı koşu sayısıEn fazla indirim0-495 kg'a kadar50-994 kg'a kadar100-1493 kg'a kadarİndirim 500 gramlık kademelerle uygulanır.Aynı düzenlemeye göre satış, açık ve vadeli koşularda indirim uygulanmaz.2022 değişikliğiyle, Apranti Eğitim Merkezi'nin üçüncü sınıfındaki aprantilere ilk on koşularında 5 kg'a kadar (handikaplarda 4 kg'a kadar) indirim imkânı tanındı; satış, açık, Şart 1 ve vadeli koşular bunun dışında tutuldu.Hangi koşularda indirimin geçerli olduğu yıllık genel hükümlerde de belirtilir. 2024 değişikliklerinde örneğin kısa vadeli koşu sayılan Handikap 22 ve Handikap 24'te aprantilerin indirimden yararlanamayacağı yazılıydı.Kurallar değişebildiği için bir atın o günkü kesin sıkletini her zaman resmî programdan kontrol etmek gerekir.
+
+### Apranti indirimi bir avantaj mıdır?
+İndirim, kâğıt üzerinde açık bir avantajdır: At, rakiplerine göre daha hafif koşar. Özellikle handikaplarda ve kiloların birbirine yakın olduğu koşularda birkaç kilo fark önemli olabilir.Öte yandan indirim, deneyim farkının karşılığı olarak tanınır. Kalabalık bir alanda pozisyon almak, sıkışmadan çıkmak ya da tempoyu okumak deneyim ister. Bu yüzden apranti binişini değerlendirirken iki soruyu birlikte sormak gerekir: Kilo avantajı ne kadar? Aprantinin bu tür koşulardaki geçmişi nasıl?tjkdetay kural tablosunda jokeyKazanma oranına göre koşunun en başarılı jokeylerinin hangi atlara bindiği ayrıca gösterilir ve bu atlar ayrıntılı incelenir.Jokey yükseltmesi tabloda artı olarak işaretlenir.Zayıf istatistikli bir jokey, tek başına bir atı eleme nedeni sayılmaz; idman, kilo ve form gibi verilerle birlikte değerlendirilir.Bu kurallar sonucu garanti etmez. Jokey bilgisi de analizin diğer parçaları gibi bilgi amaçlıdır.
+
+S: Apranti ne demek?
+C: Apranti, apranti lisansıyla koşularda at binen, henüz jokey lisansı almamış binicidir. TJK programlarında adının önünde (Ap.) işareti bulunur.
+
+S: Apranti kilo indirimi kaç kilodur?
+C: Yönetmeliğin 2012'de değişen 52. maddesine göre 0-49 koşu kazananlar 5 kg'a, 50-99 kazananlar 4 kg'a, 100-149 kazananlar 3 kg'a kadar indirimle binebilir. İndirim her koşu türünde geçerli değildir; güncel kuralları kontrol etmek gerekir.
+
+S: Jokey değişikliği olumlu bir işaret midir?
+C: Daha başarılı bir jokeye geçiş olumlu yorumlanabilir, ama nedeni çoğu zaman dışarıdan bilinmez. Değişikliği diğer verilerle birlikte okumak gerekir.
+
+S: Jokeyin kazanma oranı nasıl hesaplanır?
+C: Birincilik sayısı, binilen koşu sayısına bölünür. Oran, az sayıda koşuya dayanıyorsa yanıltıcı olabilir.
+
+## Sıklet ve Kilo Farkı: Kilo Yarış Sonucunu Nasıl Etkiler?
+https://tjkdetay.com/rehber/kilo-sikleti-yarisa-etkisi/
+
+Sıklet, bir atın yarışta taşıdığı ağırlıktır ve koşu şartına ya da handikap puanına göre belirlenir. Analizde asıl önemli olan, atın bugünkü kilosunun rakiplerine ve kendi son koşusuna göre ne kadar değiştiğidir. Kilo tek başına sonucu belirlemez; sınıf, form ve mesafeyle birlikte değerlendirilir.
+
+### Sıklet nedir?
+Sıklet, bir atın yarışta taşıması gereken ağırlıktır. Programda her atın yanında kilogram cinsinden yazılır ve jokey bu ağırlığa göre tartılarak koşuya çıkar. Günlük dilde sıklet yerine çoğu zaman yalnızca kilo denir.Kilo, atın hızını ve dayanıklılığını etkileyen fiziksel bir yüktür. Aynı kapasitedeki iki attan daha hafif olanı, özellikle uzun mesafelerde ve ağır zeminde avantaj elde edebilir. Bu yüzden yarış kuralları, atların şansını dengelemek için kiloyu bir araç olarak kullanır.Analizde sıklet üç açıdan okunur: koşu şartının belirlediği kilo, alan içindeki kilo farkı ve atın son koşusuna göre kilo değişimi.
+
+### Sıklet nasıl belirlenir?
+Atın taşıyacağı kilo koşunun cinsine göre farklı yollarla belirlenir:Şartlı ve benzeri koşular: Kilolar koşu şartına göre belirlenir. Yaş, cinsiyet ya da kazanç gibi ölçütler kiloyu değiştirebilir.Handikap koşuları: Kilolar, handikaperlerin verdiği puana göre ayarlanır. Puanı yüksek at daha fazla kilo taşır.Grup koşuları: Kilolar koşu şartında ilan edilir; yaş gibi ölçütlere göre farklılaşabilir.Yılın dönemine göre ayarlamalar da olabilir. Örneğin TJK'nın 2024 genel hükümlerindeki değişikliklerde, handikaplar dışında, 1 Temmuz öncesinde 3 ve üzeri yaştaki İngiliz atlar ile 4 ve üzeri yaştaki Arap atlar için sıkletlerin belirli şartlarda 2 kg noksan uygulanacağı yazılıydı. Bu tür ayrıntılar her yıl değişebildiği için kesin kiloyu her zaman o günün programından okumak gerekir.Handikaplarda azami sıklet de vardır. 2024 değişikliklerinde Handikap 22, Handikap 24 ve G3-Handikap için azami sıklet 61 kg olarak belirtilmişti.
+
+### Alan içindeki kilo farkı nasıl okunur?
+Bir koşudaki kilo dağılımı, atların birbirine göre durumunu gösterir. En ağır ve en hafif atı bulmak ilk adımdır. Ama kiloyu yorumlarken nedenine bakmak gerekir:Handikapta en ağır at çoğu zaman alanın en yüksek puanlı, yani kâğıt üzerinde en güçlü atıdır. Ağır kilo burada bir zayıflık değil, gücün karşılığıdır.Şartlı koşuda kilo farkı genellikle yaş, cinsiyet ya da kazanç şartından gelir. Aynı yaş ve cinsiyetteki atlar arasında fark varsa, bunun kaynağını şart metninde aramak gerekir.Apranti indirimi bir atın kilosunu alanın geri kalanına göre düşürebilir.Kısacası “en hafif at avantajlıdır” demek yeterli değildir. Hafif kilonun atı gerçekten rakiplerine yaklaştırıp yaklaştırmadığı, sınıf ve form bilgisiyle birlikte anlaşılır.
+
+### Son koşuya göre kilo değişimi neden önemlidir?
+Kilo analizinin en bilgilendirici kısmı, atın bugünkü sıkletini kendi son koşusundaki sıkletle karşılaştırmaktır. At, son koşusunda gösterdiği performansı bugün daha hafif ya da daha ağır bir kiloyla tekrarlamaya çalışır.tjkdetay'ın kural tablosunda her at için ayrı bir kilo değişimi sütunu bulunur ve şu ilkeler uygulanır:Fark her zaman atın gerçek son koşusundaki kiloyla hesaplanır. İyi sonuç aldığı eski bir koşunun kilosunu esas almak, sahte bir kilo farkı yaratır.Son koşu bugünkünden çok farklı bir mesafedeyse, atın bugünkü mesafeye en yakın son koşusundaki kilo da ayrıca karşılaştırılır.Aynı pist ve benzer mesafede belirgin bir kilo düşüşü, örneğin 3 kg ve üzeri, orta formlu bir atı bile dikkat çekici kılar.Belirgin kilo artışı da not edilir; özellikle koşu tipinden kaynaklanmıyorsa eksi olarak değerlendirilir.Kurgusal örnekSon koşuBugünDeğişimOkumaÖrnek at A1400 m kum, 60 kg1400 m kum, 55 kg-5 kgAynı şartta belirgin düşüşÖrnek at B1600 m çim, 56 kg1600 m çim, 57,5 kg+1,5 kgKüçük artışÖrnek at C1200 m kum, 54 kg2000 m kum, 56 kg+2 kg2000 m'ye en yakın son koşusunda 58,5 kg taşımıştı; o koşuya göre -2,5 kgÖrnek at C, kilo değişiminin tek bir sayıyla okunmaması gerektiğini gösterir. Son koşuya göre artış var gibi görünse de, asıl mesafesindeki son koşusuna göre daha hafif koşuyor.
+
+### Fazla kilo nedir?
+Fazla kilo, jokeyin atın taşıması gereken sıkletin altına inememesi nedeniyle atın ilan edilen kilonun üzerinde koşmasıdır. Örneğin bir atın sıkleti 54 kg ise ve binicisi bu kiloya inemiyorsa, at fazla kiloyla koşar.Fazla kilo genellikle sıkletin yanında ayrıca belirtilir. Kilo analizinde hesaba katılması gereken asıl rakam, ilan edilen sıklet değil, fazla kilo eklendikten sonraki toplam ağırlıktır. tjkdetay'ın kural tablosunda fazla kilo her zaman toplam sıklete eklenerek hesaplanır.Fazla kilo, koşu gününe yakın ortaya çıkabilen bir bilgidir. Bu yüzden son kontrolde kilo sütununu yeniden okumak önemlidir. Son kontrolde şu üç soruyu sormak işe yarar:Atın jokeyi değişti mi? Yeni binicinin apranti indirimi ya da fazla kilosu var mı?Toplam sıklet, analizde kullanılan rakamla aynı mı?Kilo farkı yeniden hesaplandığında atın alan içindeki konumu değişiyor mu?
+
+### Apranti indirimi kilo hesabını nasıl etkiler?
+Aprantinin bindiği at, yönetmelikte belirlenen kademelere göre daha az kiloyla koşabilir. Bu indirim, kilo değişimini hesaplarken dikkate alınmalıdır:Son koşusunda jokeyle 58 kg taşıyan bir at, bugün apranti indirimiyle 55 kg taşıyorsa 3 kg'lık düşüşün nedeni binici değişikliğidir.İndirim gerçek bir kilo avantajıdır, ama deneyim farkıyla birlikte gelir.Koşu tipi değişiminden gelen farklar da benzer şekilde ayrıca not edilir. Şartlı bir koşudan handikapa geçen atın kilo farkı, form değişiminin değil kural farkının sonucu olabilir.tjkdetay'ın kural tablosunda büyük bir kilo artışı, apranti indirimi ya da koşu tipi değişiminden kaynaklanmıyorsa ciddi bir eksi olarak değerlendirilir.
+
+### Kilo tek başına neden yeterli değildir?
+Kilo önemli bir değişkendir, ama bir atı tek başına öne çıkarmaz ya da elemez. Birkaç örnek durum:Sınıfı yükselen bir at, kilo düşüşüne rağmen güçlü rakiplerle zorlanabilir.Formu belirgin biçimde düşmüş bir at, hafif kiloyla da toparlanamayabilir.Mesafe ya da pist uyumsuzluğu, kilo avantajını etkisiz bırakabilir.Handikapta en ağır kiloyu taşıyan at, puanı en yüksek at olduğu için yine de alanın en güçlüsü olabilir.Bu yüzden kilo bilgisi kural tablosunda sınıf yönü, idman, jokey, pist ve mesafe uyumu, son koşu ve mazeret ile birlikte okunur. Hiçbir kilo farkı sonucu önceden belirlemez; analizler bilgi amaçlıdır.
+
+S: Sıklet ne demek?
+C: Sıklet, bir atın yarışta taşıması gereken ağırlıktır. Koşu şartına ya da handikap koşularında handikap puanına göre belirlenir.
+
+S: Kilo düşüşü her zaman avantaj mıdır?
+C: Hayır. Kilo düşüşü fiziksel yükü azaltır, ama sınıf, form, mesafe ve pist uyumu da sonucu etkiler; düşüşün nedeni de ayrıca kontrol edilmelidir.
+
+S: Fazla kilo nedir?
+C: Binicinin atın sıkletine inememesi nedeniyle atın ilan edilenden fazla kiloyla koşmasıdır. Analizde fazla kilo toplam sıklete eklenerek hesaplanmalıdır.
+
+S: Kilo değişimi hangi koşuya göre hesaplanmalı?
+C: Önce atın gerçek son koşusuna göre hesaplanır. Son koşu farklı bir mesafedeyse, bugünkü mesafeye en yakın son koşudaki kiloyla da karşılaştırmak gerekir.
+
+## Pist Türleri: Çim, Kum ve Sentetik Pist; Pist Durumu Ne Anlatır?
+https://tjkdetay.com/rehber/pist-turleri-cim-kum-sentetik/
+
+Türkiye'deki yarışlar çim, kum ve sentetik pistlerde koşulur. Her zemin atlardan farklı bir koşu biçimi ister ve aynı at farklı pistte çok farklı sonuç alabilir. Yağmur gibi etkenlerle pist durumu da değişir; bu da dereceleri ve pist uyumunu doğrudan etkiler.
+
+### Türkiye'de hangi pist türleri kullanılır?
+Türkiye'deki hipodromlarda üç tür yarış pisti vardır: çim, kum ve sentetik. Bazı hipodromlarda birden fazla pist bulunur, bazılarında yarışlar tek bir pistte yapılır. TJK'nın hipodrom tanıtım sayfasındaki bilgilere göre yarış pistlerinin dağılımı şöyledir:HipodromYarış pistleriİstanbul VeliefendiÇim ve sentetik (ayrıca kum idman pisti)Ankara 75. YılÇim ve kumİzmir ŞirinyerÇim ve kumBursa OsmangaziÇim ve kumAdana YeşilobaÇim ve kumKocaeli KartepeKumElazığKumDiyarbakırKumŞanlıurfaKumAntalyaSentetikTJK'nın İngilizce sayfasında kum pistlerin bir kısmı fiber kum (fibre sand), bir kısmı toprak esaslı (dirt) pist olarak tanımlanır. Pist bilgileri yenileme çalışmalarıyla değişebileceği için güncel durumu TJK'dan kontrol etmek gerekir.
+
+### Çim pist nasıl bir zemindir?
+Çim pist, doğal çimle kaplı bir zemindir. Türkiye'nin en köklü koşularının önemli bir kısmı çimde koşulur; örneğin Gazi Koşusu Veliefendi'nin çim pistinde, 2400 metrede yapılır.Çim, hava şartlarından en çok etkilenen zemindir. Kuru havada sert ve hızlı olabilir; yağmur aldıkça yumuşar ve atların ilerlemek için daha fazla güç harcamasını gerektirir. Bu nedenle aynı mesafede kuru çimde alınan bir derece ile yumuşak çimde alınan derece arasında belirgin fark olabilir.Bazı atlar çimde belirgin biçimde daha iyi koşar, bazıları çime hiç uyum sağlayamaz. Bir atın çimdeki ve kumdaki sonuçlarını ayrı ayrı okumak, pist uyumunu anlamanın en kolay yoludur.
+
+### Kum pist ve sentetik pist arasındaki fark nedir?
+Kum pist, kum esaslı bir zemindir. Türkiye'de yarış yapılan hipodromların çoğunda kum pist bulunur; Elazığ, Diyarbakır, Şanlıurfa ve Kocaeli'de yarışlar yalnızca kumda koşulur. Kum pist de yağışla değişir; nem alması ya da su tutması atların koşu biçimini etkileyebilir.Sentetik pist, yapay malzemelerin karışımından oluşan bir zemindir. Veliefendi'deki sentetik pist her hava koşulunda yarış yapılabilmesi için kullanılır; Antalya'daki yarış pisti de sentetiktir. Sentetik pistler, hava şartlarına karşı çime göre daha dayanıklı olacak şekilde tasarlanır.Kum ve sentetik birbirine çimden daha yakın zeminler olarak görülse de aynı şey değildir. tjkdetay'ın kural tablosunda bir atın sentetik derecesi, kumdaki performansı için yardımcı bir gösterge olarak okunur; ama doğrudan kum derecesi yerine geçmez.
+
+### Pist durumu ne anlatır? Ağır, yumuşak, nemli ne demek?
+Pist durumu, zeminin o günkü halini anlatır. Aynı pist, kuru bir günde ve yoğun yağmurdan sonra çok farklı davranabilir. Yarış dünyasında pist durumunu anlatmak için yaygın olarak şu ifadeler kullanılır:İfadeGenel anlamıAnalize etkisiNormal / iyiZemin beklenen kıvamdaDereceler karşılaştırma için en sağlıklı referanstırNemliZemin bir miktar su almışEtki sınırlı olabilir, atlara göre değişirYumuşakÖzellikle çimde, zemin belirgin biçimde yumuşamışAtlar daha fazla güç harcar, dereceler yavaşlarAğırZemin çok su almış, koşması zorDereceler belirgin biçimde yavaşlar; ağır zemini seven ve sevmeyen atlar ayrışırResmî pist durumu yarış günü TJK tarafından duyurulur ve gün içinde değişebilir. Pist durumunun pratik sonucu iki yönlüdür:Derece karşılaştırması: Ağır zeminde alınmış bir derece, normal zemindeki bir dereceyle aynı terazide tartılmaz.Mazeret: İstikrarlı bir atın tek kötü sonucu çok yumuşak ya da ağır bir zeminde alınmışsa, bu sonuç kendi şartlarına dönen at için geçerli bir mazeret olabilir.
+
+### Pist değişikliği günleri neyi değiştirir?
+Yoğun yağış gibi durumlarda bazı koşular programda ilan edilen pistten başka bir piste alınabilir. Örneğin çim pistte planlanan bir koşu kum ya da sentetik piste taşınabilir. TJK'nın genel hükümlerinde pist değişikliği yapılamayacak koşular da ayrıca belirtilir; 2024 değişikliklerinde bu listeye Adana ve İzmir'in kış sezonu çim pistindeki G3 koşuları eklenmişti.Pist değişikliği, analizi baştan düşünmeyi gerektirir:Pist uyumu değişir: Çim formuyla öne çıkan bir at kumda aynı avantaja sahip olmayabilir. Tersine, kumda istikrarlı bir at öne çıkabilir.Çıkan atlar olabilir: Bazı ahırlar atlarını yeni pistte koşturmamayı tercih edebilir; alan daralabilir.HP sütunu değişir: Çim ve kum için ayrı handikap puanı olan atlarda, yeni pistin puanına bakmak gerekir.Oyuncu tercihleri değişir: AGF ve muhtemel ganyan yeni şartlara göre kayabilir.tjkdetay'da pist değişikliği olan koşularda kural tablosunun pist uyumu sütunu yeni pist türüne göre yeniden değerlendirilir. Son dakika değişiklikleri her zaman yansıtılamayabileceği için yarış günü resmî duyuruları kontrol etmek önemlidir.
+
+### Pist türü değişen atlarda nelere bakılır?
+Bir atın son koşusu ile bugünkü koşusu farklı pist türlerindeyse, son koşudaki sonuç bugünü doğrudan anlatmayabilir. Aşağıdaki kurgusal örnekler, bu durumun nasıl okunabileceğini gösterir:Kurgusal örnekGeçmişBugünOkumaÖrnek at ASon üç iyi sonucu çimdeKumÇim formu kuma taşınmayabilir; kum geçmişine ayrıca bakılırÖrnek at BKumda istikrarlı, son kötü sonucu yumuşak çimdeKumKötü sonuç pist mazereti sayılabilirÖrnek at CKumda tek koşusu kötü, sentetikte iyi sonuçları varKumSentetik dereceleri yardımcı gösterge olarak okunurÖrnek at DHiç çimde koşmamışÇimBilinmeyen değişken; ne artı ne eksiBu örneklerin ortak noktası şudur: Bir atın formu, hangi zeminde alındığıyla birlikte anlam kazanır. Pist türü değiştiğinde atın programdaki son altı derecesini tek bir dizi gibi okumak yerine, dereceleri pist türüne göre ayırmak daha doğru bir tablo verir.
+
+### Bir atın pist uyumu nasıl kontrol edilir?
+Son koşuları pist türüne göre ayırın: Atın çim, kum ve sentetikteki sonuçlarını ayrı ayrı yazın.Aynı hipodroma bakın: Atın bugünkü hipodromda ve bugünkü pistte koşusu var mı? Aynı hipodrom, aynı pist ve benzer mesafede alınmış iyi bir sonuç güçlü bir işarettir.Pist durumunu not edin: İyi ya da kötü sonuçların hangi zemin durumunda alındığına bakın.Mesafeyi ayırın: Kötü bir sonuç farklı bir pistte ve farklı bir mesafede birlikte geldiyse, hangisinin etkili olduğunu ayırmak zordur; ikisini de not edin.Hiç koşmadığı pisti işaretleyin: At bugünkü pist türünde ilk kez koşuyorsa, bu ne artı ne eksidir; bilinmeyen bir değişkendir.Pist uyumu, kural tablosundaki diğer verilerle birlikte anlam kazanır. Uyumlu bir pist tek başına sonucu belirlemez; analizler bilgi amaçlıdır ve at yarışı şans içerir.
+
+S: Çim ve kum pist arasındaki fark nedir?
+C: Çim doğal çimle kaplı ve hava şartlarından çok etkilenen bir zemindir; kum ise kum esaslıdır. Atlar bu iki zeminde farklı performans gösterebildiği için pist uyumu ayrı ayrı değerlendirilir.
+
+S: Ağır pist ne demek?
+C: Ağır pist, çok su almış ve koşması zorlaşmış zemini anlatır. Bu zeminde dereceler belirgin biçimde yavaşlar ve ağır zemini seven atlar öne çıkabilir.
+
+S: Sentetik pist nedir?
+C: Yapay malzemelerin karışımından oluşan ve hava şartlarına karşı daha dayanıklı olacak şekilde tasarlanan bir zemindir. Türkiye'de Veliefendi ve Antalya'da sentetik yarış pisti bulunur.
+
+S: Pist değişikliği olursa analiz geçerli mi?
+C: Pist uyumu, handikap puanı ve alan değişebileceği için analizin yeni pist türüne göre yeniden değerlendirilmesi gerekir. tjkdetay bu koşularda pist uyumu sütununu yeni piste göre okur.
+
+## Türkiye'deki Hipodromlar: Konumları ve Pist Türleri
+https://tjkdetay.com/rehber/turkiye-hipodromlari/
+
+TJK'nın hipodrom listesinde İstanbul, Ankara, İzmir, Bursa, Adana, Elazığ, Diyarbakır, Şanlıurfa, Kocaeli ve Antalya olmak üzere on hipodrom yer alır. Büyük hipodromlarda çim pistin yanında kum ya da sentetik pist bulunur; Elazığ, Diyarbakır, Şanlıurfa ve Kocaeli'de yarışlar kum pistte, Antalya'da sentetik pistte yapılır. Hipodromu tanımak, pist ve mesafe uyumunu doğru değerlendirmeye yardımcı olur.
+
+### Türkiye'de hangi hipodromlar var?
+TJK'nın hipodrom tanıtım sayfasında on hipodrom yer alır. Aşağıdaki tablo bu sayfadaki pist bilgilerine, konum bilgileri ise belirtilen kaynaklara dayanır:HipodromKonumYarış pistleriİstanbul Veliefendiİstanbul, BakırköyÇim 2020 m, sentetik 1870 mAnkara 75. YılAnkara, Yenimahalle (Batıkent)Çim 2200 m, kum yaklaşık 2055 mİzmir Şirinyerİzmir, BucaÇim 1572 m, kum 1756 mBursa OsmangaziBursaÇim 1860 m, kum 1683 mAdana YeşilobaAdana, YeşilobaÇim 1600 m, kum 1800 mKocaeli KartepeKocaeliKum 1600 mElazığElazığ, Yurtbaşı mevkiiKum 1550 mDiyarbakırDiyarbakırKum 1600 mŞanlıurfaŞanlıurfa, Mardin yolu üzeri, şehir merkezine yaklaşık 18 kmKum 1700 mAntalyaAntalya, DöşemealtıSentetik 1980 mUzunluklar TJK'nın verdiği pist uzunluklarıdır. TJK'nın İngilizce sayfası kum pistlerin bir kısmını fiber kum, bir kısmını toprak esaslı pist olarak tanımlar. Pist bilgileri yenileme çalışmalarıyla değişebileceği için güncel durumu TJK'dan kontrol etmek gerekir.
+
+### İstanbul Veliefendi Hipodromu nasıl bir hipodromdur?
+Veliefendi, İstanbul'un Bakırköy ilçesinde yer alır ve Türkiye'nin en köklü hipodromlarından biridir. Yarış yeri olarak kullanımının geçmişi 1913 yılına uzanır. Hipodromda gece yarışları 27 Temmuz 2008'den itibaren yapılmaya başlanmıştır.Pistler: 2020 metrelik çim pist ve 1870 metrelik sentetik pist yarışlarda kullanılır. 1720 metrelik kum pist ise idman pistidir.Gazi Koşusu: İlki 1927'de Ankara'da koşulan Gazi Koşusu, 1968'den bu yana Veliefendi'de yapılır. 3 yaşlı İngiliz atlarına açık koşu 2400 metre çim pistte koşulur.Uluslararası koşular: TJK'nın 2025 listesinde Veliefendi'de koşulan Topkapı Trophy (1600 m çim) ve Bosphorus Cup (2400 m çim) G3, Anatolia Trophy (2000 m sentetik) G2 olarak yer alır.Veliefendi'de çim ve sentetik pistlerin bir arada kullanılması, aynı gün içinde farklı zeminlerde koşular görmeyi mümkün kılar. Bu yüzden İstanbul analizlerinde pist uyumu sütunu özellikle önemlidir.
+
+### Ankara 75. Yıl Hipodromu'nun özellikleri nelerdir?
+Ankara 75. Yıl Hipodromu, adını Cumhuriyet'in 75. yılından alır ve 1998'de açılmıştır. Ankara'nın Yenimahalle ilçesine bağlı Batıkent bölgesinde yer alır.Pistler: TJK'ya göre 2200 metre uzunluğunda ve 30 metre genişliğinde çim pist ile yaklaşık 2055 metrelik kum pist bulunur. Ayrıca 1900 metrelik bir idman pisti vardır.Kapasite: TJK sayfasında toplam kapasite 8700 kişi olarak verilir.Öne çıkan koşular: Cumhuriyet Koşusu ve Cumhurbaşkanlığı Koşusu Ankara'da koşulur.TJK'nın verdiği ölçülere göre Ankara'nın çim pisti, listedeki çim pistler arasında en uzun olanıdır. Pist ölçüleri hipodromdan hipodroma değiştiği için başka bir hipodromda alınmış dereceleri Ankara'ya taşırken dikkatli olmak gerekir.
+
+### İzmir Şirinyer ve Adana Yeşiloba hipodromları
+İzmir Şirinyer Hipodromu İzmir'in Buca ilçesindedir. TJK'ya göre 1756 metrelik kum pist ve 1572 metrelik çim pist yarışlarda kullanılır; ayrıca 1345 metrelik bir idman pisti bulunur. İzmir'in at yarışı geçmişi eskidir: TJK'nın tarihçe sayfası, 19 Nisan 1909'da İzmir'de büyük kalabalığın izlediği bir yarış gününden söz eder.Adana Yeşiloba Hipodromu Adana'nın Yeşiloba bölgesindedir. TJK'ya göre Adana'da yarışlar 1962'de havalimanı yakınında başlamış, daha sonra bugünkü yerine taşınmıştır. Hipodromda 1800 metrelik kum pist ve 1998'de hizmete giren 1600 metrelik çim pist bulunur; tribün kapasitesi 3000 kişidir.Bu iki hipodromun ortak özelliği kış yarışlarıdır. TJK'nın 2024 genel hükümlerindeki değişikliklerde Adana ve İzmir hipodromlarının kış sezonu çim pistindeki G3 koşuları, pist değişikliği yapılamayan koşular arasına eklenmişti.
+
+### Bursa Osmangazi ve Kocaeli Kartepe hipodromları
+Bursa Osmangazi Hipodromu'nda TJK'ya göre ilk yarışlar Ekim 1984'te yapılmıştır. Hipodromda 1860 metrelik çim pist ve 1683 metrelik kum pist bulunur; ayrıca 980 metrelik bir idman pisti vardır. Tribün kapasitesi 2690 kişi olarak verilir.Kocaeli Kartepe Hipodromu önce bir idman merkezi olarak hizmete girmiştir. TJK'ya göre idman merkezi 1 Nisan 2006'da açılmış, yarışlar ise 17 Aralık 2013'te başlamıştır. Yarışlar 1600 metrelik kum pistte koşulur; hipodromda 478 at boksu bulunur.Her iki hipodromda da kum pist bulunur, ama pist uzunlukları farklıdır. Bir atın Bursa kumundaki formunu Kocaeli kumuna taşırken pist ölçüsü ve zemin farkını akılda tutmak yararlıdır.
+
+### Elazığ, Diyarbakır, Şanlıurfa ve Antalya hipodromları
+Elazığ Hipodromu: Elazığ'ın Yurtbaşı mevkiindedir. TJK'ya göre resmî açılışı 21 Haziran 2002'de yapılmış, ilk resmî yarışlar 7 Ekim 2002'de koşulmuştur. Yarışlar 1550 metrelik kum pistte yapılır.Diyarbakır Hipodromu: Yaklaşık 150 hektarlık bir alanda kuruludur. Yarışlar 1600 metrelik kum pistte koşulur.Şanlıurfa Hipodromu: Şehir merkezine yaklaşık 18 km uzaklıkta, Mardin yolu üzerindedir. Yarışlar 1700 metrelik kum pistte yapılır.Antalya Hipodromu: Döşemealtı ilçesindedir ve 19 Ocak 2022'de açılmıştır. Yarışlar 1980 metrelik sentetik pistte koşulur; hipodromda bir de idman pisti bulunur.Elazığ, Diyarbakır ve Şanlıurfa'da yarışlar tek pistte yapıldığı için pist türü değişkeni bu hipodromlarda daha az belirleyicidir. Burada daha çok mesafe, kilo ve aynı hipodromdaki geçmiş öne çıkar. Başka bir hipodromdan gelen atlarda şehir değişikliği de analizde ayrıca not edilir.
+
+### Hipodrom farkı analizi nasıl etkiler?
+Aynı pist türü bile hipodromdan hipodroma farklı davranabilir. Pistin tur uzunluğu, virajların keskinliği, düzlüğün uzunluğu ve zeminin yapısı atların koşu biçimini etkiler.Ev pisti: Bir atın sürekli koştuğu hipodromdaki sonuçları, başka bir hipodromdaki sonuçlarından daha güvenilir bir referans olabilir.Aynı hipodrom, aynı pist, benzer mesafe: tjkdetay'ın kural tablosunda bir atın bugünkü hipodromda, bugünkü pistte ve benzer mesafede aldığı galibiyet güçlü bir artı olarak değerlendirilir.Şehir değişikliği: İstanbul'da üst sınıfta zorlanan bir atın kendi hipodromuna dönmesi, son kötü sonucu için bir mazeret oluşturabilir.Pist türü: Bir hipodromda çim, diğerinde yalnızca kum olabilir. Atın geçmişini pist türüne göre ayırmak gerekir.Hipodrom bilgisi tek başına bir sonuç göstermez; kural tablosundaki diğer verilerle birlikte anlam kazanır. Analizler bilgi amaçlıdır.
+
+S: Türkiye'de kaç hipodrom var?
+C: TJK'nın hipodrom sayfasında on hipodrom yer alır: İstanbul Veliefendi, Ankara 75. Yıl, İzmir Şirinyer, Bursa Osmangazi, Adana Yeşiloba, Kocaeli Kartepe, Elazığ, Diyarbakır, Şanlıurfa ve Antalya.
+
+S: Veliefendi Hipodromu'nda hangi pistler var?
+C: TJK'ya göre Veliefendi'de 2020 metrelik çim ve 1870 metrelik sentetik yarış pisti ile 1720 metrelik kum idman pisti bulunur.
+
+S: Ankara 75. Yıl Hipodromu ne zaman açıldı?
+C: Ankara 75. Yıl Hipodromu, Cumhuriyet'in 75. yılı olan 1998'de açılmıştır. Ankara'nın Yenimahalle ilçesine bağlı Batıkent bölgesindedir.
+
+S: Hangi hipodromlarda yalnızca kum pistte yarış yapılır?
+C: TJK'nın hipodrom bilgilerine göre Kocaeli Kartepe, Elazığ, Diyarbakır ve Şanlıurfa'da yarışlar kum pistte yapılır. Antalya'da ise yarış pisti sentetiktir.
+
+S: Gazi Koşusu hangi hipodromda koşulur?
+C: Gazi Koşusu 1968'den bu yana İstanbul Veliefendi Hipodromu'nda, 2400 metre çim pistte koşulur. İlk Gazi Koşusu 1927'de Ankara'da yapılmıştır.
+
+## Sorumlu Oyun Rehberi: Bütçe, Sınırlar ve Yardım Kaynakları
+https://tjkdetay.com/rehber/sorumlu-oyun-rehberi/
+
+Sorumlu oyun, at yarışını bir gelir kapısı olarak değil, bütçesi önceden belirlenmiş bir eğlence olarak görmek demektir. Kaybedilen parayı geri almak için oynamak riskleri büyütür ve 18 yaşından küçükler bahis oynayamaz. Kontrolün zorlaştığını hissedenler, Yeşilay'ın ücretsiz 115 YEDAM danışma hattından destek alabilir.
+
+### Sorumlu oyun ne demektir?
+Sorumlu oyun, bahsi hayatın geri kalanını etkilemeyecek sınırlar içinde tutmaktır. At yarışı şans içerir; en ayrıntılı analiz bile bir koşunun sonucunu önceden bilemez. Bu yüzden bahis bir gelir kaynağı ya da borç kapatma yolu olarak görülmemelidir.tjkdetay'daki analizler bilgi amaçlıdır ve bahis tavsiyesi değildir. Bir koşuyu anlamak ile o koşuya para yatırmak ayrı kararlardır. Programı okumak, idmanları karşılaştırmak ya da koşu sonrası analizin neyi doğru, neyi yanlış gördüğünü incelemek, hiç bahis oynamadan da yapılabilecek şeylerdir.Oynamayı seçenler için birkaç basit alışkanlık sınırları korumaya yardımcı olur:Yorgun, gergin, üzgün ya da alkollü olduğunuzda oynamayın.Uzun oturumlar yerine kısa ve planlı oturumlar tercih edin; aralarda mola verin.Kazandığınız bir günün ardından bütçenizi büyütmeyin; kazanç da kayıp kadar karar vermeyi etkileyebilir.
+
+### Bahis bütçesi nasıl belirlenir?
+Önceden belirleyin: Ne kadar harcayacağınıza oynamaya başlamadan karar verin; gün içinde bu tutarı artırmayın.Kaybetmeyi göze alabileceğiniz tutarla sınırlayın: Kira, fatura, mutfak ya da birikim gibi zorunlu harcamalara ayrılan paraya dokunmayın.Borçla oynamayın: Kredi kartı, kredi ya da başkasından alınan borçla bahis yapmak kaybı büyütür.Zaman sınırı koyun: Bütçe kadar zaman da önemlidir. Bahsin işinizi, uykunuzu ya da ailenize ayırdığınız vakti azaltmasına izin vermeyin.Kayıt tutun: Ne kadar yatırdığınızı ve ne kadar geri aldığınızı not edin. Hafızaya güvenmek kayıpları olduğundan küçük gösterebilir.
+
+### Kayıp kovalamak neden tehlikelidir?
+Kayıp kovalamak, kaybedilen parayı geri almak için daha fazla ya da daha riskli oynamaktır. Bu davranış bütçe sınırını fiilen ortadan kaldırır ve kısa sürede kaybı büyütebilir.Her koşu bir öncekinden bağımsızdır. Art arda gelen kayıplar, bir sonraki koşuda kazanma ihtimalini artırmaz. Kaybettikten sonra kuponu büyütme isteği hissettiğinizde, o gün için durmak en sağlıklı karardır.
+
+### 18 yaş sınırı neden önemlidir?
+Türkiye'de at yarışı bahislerine 18 yaşından küçükler katılamaz. TJK'nın yayımladığı bahis kurallarında iştirakçinin 18 yaş ve üzerindeki kişiler olduğu açıkça yazılıdır. tjkdetay da 18 yaşından küçüklerin bahis oynayamayacağını her sayfasında hatırlatır.Ebeveynler, evde kullanılan cihazlarda bahis hesaplarının ve ödeme bilgilerinin çocukların erişimine açık olmamasına dikkat etmelidir.
+
+### Hangi işaretler dikkat gerektirir?
+Aşağıdaki durumlardan birkaçı sizin ya da bir yakınınız için tanıdık geliyorsa, durup değerlendirmek gerekir:Belirlediğiniz bütçeyi sık sık aşıyorsunuz.Kayıpları geri almak için daha fazla oynuyorsunuz.Bahis için borç alıyor ya da bir şeyler satıyorsunuz.Ne kadar oynadığınızı yakınlarınızdan saklıyorsunuz.Oynamadığınız zamanlarda huzursuz ya da gergin hissediyorsunuz.Bahis yüzünden iş, okul ya da aile sorumluluklarınız aksıyor.Bu işaretler bir teşhis değildir, ama yardım istemek için yeterli bir nedendir.Bir yakınınız için endişeleniyorsanızSuçlayıcı olmayan, sakin bir dille konuşmak ilk adımdır. Borçlarını kapatmak çoğu zaman sorunu çözmez, yalnızca erteler. Destek hatlarının yalnızca bağımlı kişiye değil, yakınlarına da hizmet verdiğini hatırlamak, sizin için de bir başlangıç noktası olabilir.
+
+### Nereden yardım alınabilir?
+115 YEDAM Danışma Hattı: Yeşilay Danışmanlık Merkezi (YEDAM), alkol, tütün, madde ve internet bağımlılıklarının yanı sıra kumar bağımlılığı konusunda da destek verir. 115 YEDAM Danışma Hattı'na ücretsiz olarak ulaşılabilir ve hizmetler için ücret alınmaz.Yeşilay'ın 2024'teki açıklamasına göre kumarla ilgili ücretsiz destek, Türkiye genelinde 107 noktada verilmektedir; hizmet gizlilik esasına dayanır.Bağımlı bireylerin yakınları da psikolojik ve sosyal destek alabilir.Ayrıntılı bilgi YEDAM'ın resmî internet sitesinde (yedam.org.tr) bulunur.Bunun yanında aile hekiminize ya da bir hastanenin psikiyatri polikliniğine başvurmak da bir başlangıç olabilir. Yardım istemek için durumun çok kötüleşmesini beklemek gerekmez.
+
+S: Kumar bağımlılığı için nereden ücretsiz destek alabilirim?
+C: Yeşilay'ın 115 YEDAM Danışma Hattı'na ücretsiz olarak ulaşabilirsiniz. YEDAM, kumar bağımlılığı dahil çeşitli bağımlılık türlerinde ücretsiz psikolojik ve sosyal destek verir.
+
+S: At yarışı bahsi için yaş sınırı kaçtır?
+C: 18'dir. TJK'nın bahis kurallarında iştirakçinin 18 yaş ve üzerindeki kişiler olduğu belirtilir.
+
+S: Kaybettiğim parayı geri kazanmak için oynamak doğru mu?
+C: Hayır. Kayıp kovalamak bütçe sınırını ortadan kaldırır ve kaybı büyütebilir; her koşu bir öncekinden bağımsızdır.
+
+## 2026 sezonu jokey istatistikleri (ilk 40, galibiyete göre)
+Kaynak: TJK jokey istatistikleri. Ayrıntı: https://tjkdetay.com/jokeyler/
+
+| Sıra | Jokey | Biniş | 1. | Kazanma % | İlk 3 % |
+|---|---|---|---|---|---|
+| 1 | [Vedat Abiş](https://tjkdetay.com/jokeyler/vedat-abis/) | 1165 | 257 | 22 | 56 |
+| 2 | [Muhammed Mir Bilgin](https://tjkdetay.com/jokeyler/muhammed-mir-bilgin/) | 1190 | 236 | 20 | 51 |
+| 3 | [Nevzat Avci](https://tjkdetay.com/jokeyler/nevzat-avci/) | 968 | 208 | 21 | 52 |
+| 4 | [Ayhan Kurşun](https://tjkdetay.com/jokeyler/ayhan-kursun/) | 985 | 188 | 19 | 45 |
+| 5 | [Mehmet Salih Çelik](https://tjkdetay.com/jokeyler/mehmet-salih-celik/) | 903 | 156 | 17 | 47 |
+| 6 | [İsa Akyavuz](https://tjkdetay.com/jokeyler/isa-akyavuz/) | 756 | 152 | 20 | 50 |
+| 7 | [Gökhan Kocakaya](https://tjkdetay.com/jokeyler/gokhan-kocakaya/) | 618 | 143 | 23 | 53 |
+| 8 | [Mehmet Kaya](https://tjkdetay.com/jokeyler/mehmet-kaya/) | 879 | 133 | 15 | 43 |
+| 9 | [Mustafa Çiçek](https://tjkdetay.com/jokeyler/mustafa-cicek/) | 732 | 122 | 17 | 44 |
+| 10 | [Ali Yıldız](https://tjkdetay.com/jokeyler/ali-yildiz/) | 1089 | 115 | 11 | 36 |
+| 11 | [Müslüm Çelik](https://tjkdetay.com/jokeyler/muslum-celik/) | 886 | 114 | 13 | 39 |
+| 12 | [Ahmet Çelik](https://tjkdetay.com/jokeyler/ahmet-celik/) | 574 | 111 | 19 | 51 |
+| 13 | [Hışman Çizik](https://tjkdetay.com/jokeyler/hisman-cizik/) | 820 | 111 | 14 | 42 |
+| 14 | [Ercan Çankaya](https://tjkdetay.com/jokeyler/ercan-cankaya/) | 839 | 99 | 12 | 40 |
+| 15 | [Ferit Yardımcı](https://tjkdetay.com/jokeyler/ferit-yardimci/) | 516 | 95 | 18 | 47 |
+| 16 | [Halis Karataş](https://tjkdetay.com/jokeyler/halis-karatas/) | 417 | 92 | 22 | 54 |
+| 17 | [Necmi Altın](https://tjkdetay.com/jokeyler/necmi-altin/) | 720 | 91 | 13 | 38 |
+| 18 | [Ömer Faruk Özen](https://tjkdetay.com/jokeyler/omer-faruk-ozen/) | 811 | 88 | 11 | 33 |
+| 19 | [Ertuğrul Cankılıç](https://tjkdetay.com/jokeyler/ertugrul-cankilic/) | 597 | 85 | 14 | 37 |
+| 20 | [Salih Çelik](https://tjkdetay.com/jokeyler/salih-celik/) | 845 | 83 | 10 | 29 |
+| 21 | [Eray Çizik](https://tjkdetay.com/jokeyler/eray-cizik/) | 634 | 78 | 12 | 36 |
+| 22 | [Akın Sözen](https://tjkdetay.com/jokeyler/akin-sozen/) | 692 | 76 | 11 | 38 |
+| 23 | [Mehmet Akyavuz](https://tjkdetay.com/jokeyler/mehmet-akyavuz/) | 618 | 71 | 11 | 38 |
+| 24 | [Aziz Akdemir](https://tjkdetay.com/jokeyler/aziz-akdemir/) | 631 | 69 | 11 | 32 |
+| 25 | [Özcan Yıldırım](https://tjkdetay.com/jokeyler/ozcan-yildirim/) | 473 | 66 | 14 | 46 |
+| 26 | [Yiğitcan Gökçe](https://tjkdetay.com/jokeyler/yigitcan-gokce/) | 778 | 64 | 8 | 28 |
+| 27 | [Erhan Aktuğ](https://tjkdetay.com/jokeyler/erhan-aktug/) | 752 | 61 | 8 | 23 |
+| 28 | [Onur Yıldız](https://tjkdetay.com/jokeyler/onur-yildiz/) | 421 | 60 | 14 | 39 |
+| 29 | [Selim Kaya](https://tjkdetay.com/jokeyler/selim-kaya/) | 217 | 58 | 27 | 53 |
+| 30 | [İsa Katar](https://tjkdetay.com/jokeyler/isa-katar/) | 653 | 58 | 9 | 28 |
+| 31 | [Görkem Özçelik](https://tjkdetay.com/jokeyler/gorkem-ozcelik/) | 764 | 57 | 7 | 29 |
+| 32 | [Bekir Mert Mırık](https://tjkdetay.com/jokeyler/bekir-mert-mirik/) | 546 | 54 | 10 | 30 |
+| 33 | [Ali Mehdi Altın](https://tjkdetay.com/jokeyler/ali-mehdi-altin/) | 539 | 54 | 10 | 34 |
+| 34 | [Recep Ketme](https://tjkdetay.com/jokeyler/recep-ketme/) | 696 | 52 | 7 | 26 |
+| 35 | [Ahmet Hasan Bayar](https://tjkdetay.com/jokeyler/ahmet-hasan-bayar/) | 559 | 47 | 8 | 30 |
+| 36 | [Nizamettin Demir](https://tjkdetay.com/jokeyler/nizamettin-demir/) | 638 | 47 | 7 | 26 |
+| 37 | [Kadir Tokaçoğlu](https://tjkdetay.com/jokeyler/kadir-tokacoglu/) | 394 | 43 | 11 | 35 |
+| 38 | [Yusuf Cengiz](https://tjkdetay.com/jokeyler/yusuf-cengiz/) | 619 | 43 | 7 | 26 |
+| 39 | [Efe Akpınar](https://tjkdetay.com/jokeyler/efe-akpinar/) | 406 | 42 | 10 | 28 |
+| 40 | [Mert Ali Solmaz](https://tjkdetay.com/jokeyler/mert-ali-solmaz/) | 395 | 41 | 10 | 36 |
