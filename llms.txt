@@ -11,6 +11,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Sonuçlar](https://tjkdetay.com/sonuclar/): ganyan, ikili, sıralı üçlü, tabela, 6'lı/5'li/4'lü/3'lü ganyan ödemeleri
 - [Muhtemel ve AGF](https://tjkdetay.com/muhtemel-agf/): koşu öncesi son oranlar
 - [Canlı yayın](https://tjkdetay.com/canli/): TJK TV resmi YouTube yayınları
+- [Hazır kuponlar](https://tjkdetay.com/hazir-kuponlar/): altılı, 5'li, 4'lü, 3'lü ve 7'li ganyan için tam ilk 4 ve teşhis kuponları, canlı durum
 - [Performans](https://tjkdetay.com/performans/): gün gün isabet karnesi
 
 ## Başvuru
