@@ -1595,11 +1595,44 @@
       }
      ],
      "surpriz_olasiligi": "Düşük",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      1,
+      5,
+      4,
+      2,
+      3
+     ],
+     "kazanan_ganyan": 2.55,
+     "kazanan_bizde": "İlk 4 · #2",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "1",
+       "tutar": 2.55
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/5",
+       "tutar": 11.9
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "1/5",
+       "tutar": 20.0
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "1/5/4",
+       "tutar": 188.0
+      },
+      {
+       "oyun": "2. ÇİFTE",
+       "sira": "1/1",
+       "tutar": 40.3,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 1 Melekcan 2. sıramız (8/18 ilk tercih). 2. gelen 5 Berrybella 3. sıramız, 3. gelen 4 Maybe For Us sürprizimiz (8 ile eküri), 4. gelen 2 Adaryam 1. sıramız ve YZ/yorumcu favorisi (alanın en iyi taze sprinti)."
     },
     {
      "kosu": 4,
@@ -1742,14 +1775,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 19,
-  "ilk4": 11,
+  "biten": 20,
+  "ilk4": 12,
   "y": 4,
   "s": 3,
   "dis": 1,
   "bir": 4,
-  "fav": 6,
-  "fav3": 13,
+  "fav": 7,
+  "fav3": 14,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
