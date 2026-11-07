@@ -1326,11 +1326,73 @@
       }
      ],
      "surpriz_olasiligi": "Yüksek",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      3,
+      1,
+      7,
+      10,
+      4
+     ],
+     "kazanan_ganyan": 4.25,
+     "kazanan_bizde": "Y atı",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "3",
+       "tutar": 4.25
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/3",
+       "tutar": 25.05
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "3/1",
+       "tutar": 41.9
+      },
+      {
+       "oyun": "TABELA",
+       "sira": "3/1/7/10",
+       "tutar": 687.52
+      },
+      {
+       "oyun": "SIRALI 5'Lİ",
+       "sira": "3/1/7/10/4",
+       "tutar": 5164.25
+      },
+      {
+       "oyun": "2. 6'LI GANYAN",
+       "sira": "3/5/8/4/4/3",
+       "tutar": 133055.37,
+       "devir": null
+      },
+      {
+       "oyun": "5'Lİ GANYAN",
+       "sira": "5/8/4/4/3",
+       "tutar": 14068.95,
+       "devir": null
+      },
+      {
+       "oyun": "4'LÜ GANYAN",
+       "sira": "8/4/4/3",
+       "tutar": 3072.3,
+       "devir": null
+      },
+      {
+       "oyun": "2. 3'LÜ GANYAN",
+       "sira": "4/4/3",
+       "tutar": 130.2,
+       "devir": null
+      },
+      {
+       "oyun": "7. ÇİFTE",
+       "sira": "4/3",
+       "tutar": 39.65,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 3 Deli Alperin Oğlu Y atımızdı (17/28 yorumcu, 6 ilk tercih). 2. gelen 1 Framez 1. sıramız (YZ favorisi), 3. gelen 7 Lady Esin 2. sıramız ve yorumcu favorisi, 4. gelen 10 Do It For Love 3. sıramız. Tabela 3/1/7/10 tamamen Y + ilk 4'ümüzden."
     }
    ]
   },
@@ -1620,14 +1682,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 16,
+  "biten": 17,
   "ilk4": 11,
-  "y": 2,
+  "y": 3,
   "s": 2,
   "dis": 1,
   "bir": 4,
   "fav": 6,
-  "fav3": 12,
+  "fav3": 13,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
