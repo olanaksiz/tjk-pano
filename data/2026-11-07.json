@@ -113,11 +113,44 @@
       }
      ],
      "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      6,
+      1,
+      9,
+      4,
+      8
+     ],
+     "kazanan_ganyan": 3.2,
+     "kazanan_bizde": "İlk 4 · #3",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "6",
+       "tutar": 3.2
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/6",
+       "tutar": 11.25
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "6/1",
+       "tutar": 18.05
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "6/1/9",
+       "tutar": 228.4
+      },
+      {
+       "oyun": "1. ÇİFTE",
+       "sira": "2/6",
+       "tutar": 20.6,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 6 Günşiray ilk 4'ümüzde 3. sıradaydı; 2. gelen 1 Etman 2. sıramız ve yorumcu favorisiydi, 3. gelen 9 Natrose sürprizimizdi, 4. gelen 4 Harputşahini 4. sıramızdı. 1. sıramız 7 Başkut Ana 8., Y atı 3 Deprem Han 7. oldu."
     },
     {
      "kosu": 3,
@@ -151,11 +184,34 @@
      ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      3,
+      2,
+      4,
+      5,
+      1
+     ],
+     "kazanan_ganyan": 3.35,
+     "kazanan_bizde": "İlk 4 · #1",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "3",
+       "tutar": 3.35
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "3/2",
+       "tutar": 10.85
+      },
+      {
+       "oyun": "2. ÇİFTE",
+       "sira": "6/3",
+       "tutar": 22.7,
+       "devir": null
+      }
+     ],
+     "yorum": "1. sıramız (YZ favorisi) 3 Angle Rising 3,35 ganyanla kazandı; 2. gelen 2 Nine Trees 2. sıramız ve yorumcu favorisiydi, 3. gelen 4 Ice Drops Y atımızdı. Muhtemelde 1,05 görünen Nine Trees koşu kapanışında 1,90'a çıktı."
     },
     {
      "kosu": 4,
@@ -206,11 +262,39 @@
       }
      ],
      "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      8,
+      4,
+      5,
+      7,
+      2
+     ],
+     "kazanan_ganyan": 2.8,
+     "kazanan_bizde": "Y atı",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "8",
+       "tutar": 2.8
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "4/8",
+       "tutar": 18.65
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "8/4",
+       "tutar": 25.75
+      },
+      {
+       "oyun": "3. ÇİFTE",
+       "sira": "3/8",
+       "tutar": 26.4,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 8 Moon Rock Y atımızdı (yorumcuların %80'i yazdı). 2. gelen 4 Leader Tulip sürprizimizdi, 3. gelen 5 Fatma Zeryam 1. sıramız (YZ favorisi), 4. gelen 7 Call Me Free 2. sıramız ve yorumcu favorisiydi."
     },
     {
      "kosu": 5,
@@ -1096,14 +1180,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 1,
-  "ilk4": 0,
-  "y": 1,
+  "biten": 4,
+  "ilk4": 2,
+  "y": 2,
   "s": 0,
   "dis": 0,
-  "bir": 0,
-  "fav": 0,
-  "fav3": 0,
+  "bir": 1,
+  "fav": 1,
+  "fav3": 2,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
