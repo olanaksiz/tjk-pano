@@ -337,11 +337,50 @@
       }
      ],
      "surpriz_olasiligi": "Düşük",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      2,
+      8,
+      1,
+      3,
+      5
+     ],
+     "kazanan_ganyan": 3.65,
+     "kazanan_bizde": "İlk 4 · #3",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "2",
+       "tutar": 3.65
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "2/8",
+       "tutar": 36.3
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "2/8",
+       "tutar": 60.8
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "2/8/1",
+       "tutar": 709.2
+      },
+      {
+       "oyun": "4. ÇİFTE",
+       "sira": "8/2",
+       "tutar": 15.2,
+       "devir": null
+      },
+      {
+       "oyun": "1. 3'LÜ GANYAN",
+       "sira": "3/8/2",
+       "tutar": 166.3,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 2 Pamiralp 3. sıramızdı. 2. gelen 8 Yücealp sıra dışı at uyarımızdaydı (yalnız 5/45 yorumcu yazdı). 3. gelen 1 Ünal Göz 1. sıramız (YZ ve yorumcu favorisi), 4. gelen 3 Ağılmus Aslanı 2. sıramız."
     },
     {
      "kosu": 6,
@@ -1180,14 +1219,14 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 4,
-  "ilk4": 2,
+  "biten": 5,
+  "ilk4": 3,
   "y": 2,
   "s": 0,
   "dis": 0,
   "bir": 1,
   "fav": 1,
-  "fav3": 2,
+  "fav3": 3,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
