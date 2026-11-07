@@ -1759,11 +1759,44 @@
       }
      ],
      "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      1,
+      6,
+      8,
+      5,
+      3
+     ],
+     "kazanan_ganyan": 3.9,
+     "kazanan_bizde": "Y atı",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "1",
+       "tutar": 3.9
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/6",
+       "tutar": 22.75
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "1/6",
+       "tutar": 44.55
+      },
+      {
+       "oyun": "ÜÇLÜ BAHİS",
+       "sira": "1/6/8",
+       "tutar": 470.1
+      },
+      {
+       "oyun": "4. ÇİFTE",
+       "sira": "4/1",
+       "tutar": 11.3,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 1 Kaanhakan Y atımız ve yorumcu favorisiydi (16/18, 6 ilk tercih). 2. gelen 6 Şeşensultanı 4. sıramız, 3. 8 Prenses Dilara ve 4. 5 Arapçelik sürprizlerimiz. 7 Öznilay koşmadı (3. sıramız); 1. sıramız 2 Payidar Kaya 7."
     },
     {
      "kosu": 6,
@@ -1808,9 +1841,9 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 21,
+  "biten": 22,
   "ilk4": 13,
-  "y": 4,
+  "y": 5,
   "s": 3,
   "dis": 1,
   "bir": 4,
