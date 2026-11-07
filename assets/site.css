@@ -889,3 +889,18 @@ a.ic-terim{text-decoration:underline dotted;text-decoration-color:#7FA6E6}
 .ogren-kart p{margin:0;color:var(--soluk);line-height:1.55}
 .ogren-jk li{display:flex;justify-content:space-between;gap:10px}.ogren-jk span{color:var(--soluk);font-size:14px}
 .ogren-tum{margin-top:auto;font-weight:600}
+/* Hipodromlar */
+.hp-kartlar{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:16px}
+.hp-kart{display:flex;flex-direction:column;gap:10px;height:100%;padding:18px 20px;border-radius:18px;background:var(--beyaz);border:1px solid var(--cizgi);color:var(--murekkep);text-decoration:none;box-shadow:0 16px 30px -28px rgba(3,16,42,.7);transition:transform .15s,border-color .15s}
+.hp-kart:hover{transform:translateY(-2px);border-color:#3D8BFF}
+.hp-kart.bugun{border-color:#FFC531;box-shadow:0 0 0 3px rgba(255,197,49,.25)}
+.hp-ust{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hp-ust b{font:700 13px/1 var(--govde);letter-spacing:.08em;text-transform:uppercase;color:#56708F}
+.hp-ust i{font-style:normal;font-size:12.5px;font-weight:700;padding:4px 9px;border-radius:999px;background:#FFC531;color:#3A2800}
+.hp-kart h2{margin:0;font:700 24px/1.1 var(--baslik)}
+.hp-kart p{margin:0;color:var(--soluk);line-height:1.55;font-size:15px}
+.hp-pistler{display:flex;flex-wrap:wrap;gap:6px}
+.hp-pist{font-size:12.5px;font-weight:600;padding:4px 9px;border-radius:7px;background:#F0F4FA;color:#3B4F6B}
+.hp-pist.p-cim{background:#E2F0E9;color:#0D6B4E}.hp-pist.p-kum{background:#FCEFD6;color:#7A5500}.hp-pist.p-sentetik{background:#EEF4FF;color:#1C4FB8}
+.hp-ilk4{font-weight:600;color:#1C5FE0;white-space:nowrap}
+a.hp-link{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
