@@ -1441,11 +1441,33 @@
       }
      ],
      "surpriz_olasiligi": "Düşük",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      8,
+      11,
+      7,
+      5,
+      6
+     ],
+     "kazanan_ganyan": 3.45,
+     "kazanan_bizde": "Sürpriz",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "8",
+       "tutar": 3.45
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "8/11",
+       "tutar": 7.8
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "8/11",
+       "tutar": 20.5
+      }
+     ],
+     "yorum": "Kazanan 8 Zaedno (7 ile eküri) ilk 4 dışındaydı; yorumcuların %83'ü yazdı (15/18, 6 ilk tercih). 2. gelen 11 Sunfyre Y atımız ve yorumcu favorisiydi. İlk 4'ümüzün en iyisi 6 National Hero (5.). 1. sıramız 1 Mira Ceti 8. oldu."
     },
     {
      "kosu": 2,
@@ -1682,10 +1704,10 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 17,
+  "biten": 18,
   "ilk4": 11,
   "y": 3,
-  "s": 2,
+  "s": 3,
   "dis": 1,
   "bir": 4,
   "fav": 6,
