@@ -1830,25 +1830,37 @@
      ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      1,
+      2,
+      8,
+      5,
+      7
+     ],
+     "kazanan_ganyan": 2.95,
+     "kazanan_bizde": "İlk 4 · #1",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "1",
+       "tutar": 2.95
+      }
+     ],
+     "yorum": "Kazanan 1 Feritbatur 1. sıramız ve YZ favorisi. 2. gelen 2 Pirim Özer 2. sıramız ve yorumcu favorisi, 3. gelen 8 Afrika Sultanı ilk 4 dışı, 4. gelen 5 Elmas Gözlüm 3. sıramız."
     }
    ]
   }
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 22,
-  "ilk4": 13,
+  "biten": 23,
+  "ilk4": 14,
   "y": 5,
   "s": 3,
   "dis": 1,
-  "bir": 4,
-  "fav": 8,
-  "fav3": 15,
+  "bir": 5,
+  "fav": 9,
+  "fav3": 16,
   "gazi_binis": 0,
   "gazi_kaz": 0,
   "gazi_ilk3": 0
