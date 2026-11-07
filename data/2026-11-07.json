@@ -1510,11 +1510,49 @@
       }
      ],
      "surpriz_olasiligi": "Orta",
-     "sonuc": [],
-     "kazanan_ganyan": null,
-     "kazanan_bizde": "",
-     "odemeler": [],
-     "yorum": ""
+     "sonuc": [
+      1,
+      10,
+      2,
+      7,
+      5
+     ],
+     "kazanan_ganyan": 9.85,
+     "kazanan_bizde": "Y atı",
+     "odemeler": [
+      {
+       "oyun": "GANYAN",
+       "sira": "1",
+       "tutar": 9.85
+      },
+      {
+       "oyun": "İKİLİ",
+       "sira": "1/10",
+       "tutar": 70.45
+      },
+      {
+       "oyun": "SIRALI İKİLİ",
+       "sira": "1/10",
+       "tutar": 129.65
+      },
+      {
+       "oyun": "TABELA",
+       "sira": "1/10/2/7",
+       "tutar": 6465.52
+      },
+      {
+       "oyun": "SIRALI 5'Lİ",
+       "sira": "1/10/2/7/5",
+       "tutar": 127901.93
+      },
+      {
+       "oyun": "1. ÇİFTE",
+       "sira": "7,8/1",
+       "tutar": 48.9,
+       "devir": null
+      }
+     ],
+     "yorum": "Kazanan 1 Doğantürkbeyi Y atımızdı (10/18 yorumcu, 4 ilk tercih). 2. gelen 10 Halland 3. sıramız, 3. gelen 2 King Ferit ilk 4 dışı, 4. gelen 7 King Lightning 1. sıramız (YZ ve yorumcu favorisi, g1,75)."
     },
     {
      "kosu": 3,
@@ -1704,9 +1742,9 @@
  ],
  "ozet": {
   "kosu": 23,
-  "biten": 18,
+  "biten": 19,
   "ilk4": 11,
-  "y": 3,
+  "y": 4,
   "s": 3,
   "dis": 1,
   "bir": 4,
