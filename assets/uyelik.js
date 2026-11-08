@@ -382,12 +382,81 @@
     }).catch(function () {});
   }
 
+  // ---------- canlı şerit: gerçek anlık ziyaretçi sayısı (supabase_v4_canli.sql; yalnız toplam sayılar) ----------
+  function canli() {
+    if (!HAZIR || document.body.classList.contains('admin-govde')) return;
+    var ua = navigator.userAgent || '';
+    if (navigator.webdriver || /bot|crawl|spider|slurp|lighthouse|headless|preview/i.test(ua)) return;
+    var ESIK = 3;        // canlı satır, şu an sitede en az bu kadar kişi varken görünür
+    var GUN_ESIK = 20;   // daha az kişi varken bugünkü toplam en az bu kadarsa o gösterilir; değilse şerit gizlenir
+    var ARALIK = 60000;  // nabız ve özet dakikada bir
+    var AD = [['bulten', 'bugünün bültenini okuyor'], ['kupon', 'hazır kuponları inceliyor'], ['sonuc', 'sonuçlara bakıyor'],
+      ['muhtemel', "muhtemel ve AGF'ye bakıyor"], ['canli', 'canlı yayında'], ['ozet', 'günün özetinde']];
+    var sayilmaz = navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true;
+    try { if (localStorage.getItem('tjkd-z-kapali') === '1') sayilmaz = true; } catch (e) {}
+    var kucuk = false;
+    try { kucuk = localStorage.getItem('tjkd-canli-kucuk') === '1'; } catch (e) {}
+    var ser = null, son = null, hata = 0, zam = null;
+    function say(n) { return Number(n || 0).toLocaleString('tr-TR'); }
+    function kur() {
+      ser = document.createElement('div');
+      ser.className = 'cs'; ser.hidden = true;
+      ser.innerHTML = '<button type="button" class="cs-ac"><i class="cs-nokta" aria-hidden="true"></i><span class="cs-yazi"></span></button>' +
+        '<button type="button" class="cs-kapat" aria-label="Canlı sayacı küçült" title="Küçült">×</button>';
+      document.body.appendChild(ser);
+      ser.querySelector('.cs-kapat').addEventListener('click', function () { kucuk = true; try { localStorage.setItem('tjkd-canli-kucuk', '1'); } catch (e) {} ciz(son); });
+      ser.querySelector('.cs-ac').addEventListener('click', function () { if (!kucuk) return; kucuk = false; try { localStorage.removeItem('tjkd-canli-kucuk'); } catch (e) {} ciz(son); });
+    }
+    function ciz(o) {
+      son = o;
+      if (!o) { if (ser) ser.hidden = true; return; }
+      var n = Number(o.simdi || 0), gt = Number(o.bugun_tekil || 0), canliMi = n >= ESIK;
+      if (!canliMi && gt < GUN_ESIK) { if (ser) ser.hidden = true; return; }
+      if (!ser) kur();
+      var yazi = ser.querySelector('.cs-yazi'), ac = ser.querySelector('.cs-ac'), h = '';
+      if (canliMi) {
+        h = '<b>' + say(n) + '</b> kişi şu an sitede';
+        var b = o.bolum || {}, ek = AD.filter(function (x) { return b[x[0]] > 0; })
+          .sort(function (x, y) { return b[y[0]] - b[x[0]]; }).slice(0, 2)
+          .map(function (x) { return say(b[x[0]]) + ' kişi ' + x[1]; });
+        if (o.premium > 0) ek.push(say(o.premium) + ' premium üye çevrimiçi');
+        if (ek.length) h += '<span class="cs-ek"> · ' + ek.join(' · ') + '</span>';
+        ac.title = 'Gerçek anlık sayı: son 2,5 dakikada sitede açık olan sayfalar. Kişisel bilgi içermez.';
+      } else {
+        h = 'Bugün <b>' + say(gt) + '</b> kişi ziyaret etti';
+        if (o.bugun_bulten > 0) h += '<span class="cs-ek"> · ' + say(o.bugun_bulten) + ' kişi bülteni açtı</span>';
+        ac.title = 'Gerçek sayı: bugün (Türkiye saatiyle) siteyi açan farklı ziyaretçiler. Kişisel bilgi içermez.';
+      }
+      if (kucuk) h = '<b>' + say(canliMi ? n : gt) + '</b>';
+      yazi.innerHTML = h;
+      ser.classList.toggle('canli', canliMi);
+      ser.classList.toggle('gunluk', !canliMi);
+      ser.classList.toggle('kucuk', kucuk);
+      ac.setAttribute('aria-label', kucuk ? 'Canlı sayacı aç' : yazi.textContent);
+      ser.hidden = false;
+    }
+    function tur() {
+      if (document.hidden) return;
+      var ot = null;
+      try { ot = sessionStorage.getItem('tjkd-z'); } catch (e) {}
+      var nabiz = (sayilmaz || !ot) ? Promise.resolve() : oturum().then(function (s) {
+        return istek('/rest/v1/rpc/canli_nabiz_kaydet', {method: 'POST', token: s ? s.at : null, body: {p_yol: location.pathname.slice(0, 200), p_oturum: ot}});
+      }).catch(function () {});
+      nabiz.then(function () { return istek('/rest/v1/rpc/canli_ozet', {method: 'POST', body: {}}); })
+        .then(function (o) { hata = 0; ciz(o); })
+        .catch(function () { hata++; ciz(null); if (hata >= 3 && zam) { clearInterval(zam); zam = null; } });
+    }
+    setTimeout(tur, 1500);
+    zam = setInterval(tur, ARALIK);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden && zam) tur(); });
+  }
+
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); duyuru(); sayac();
+    ustBar(); premiumSayfa(); duyuru(); sayac(); canli();
   });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
 

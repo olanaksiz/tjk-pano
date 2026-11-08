@@ -970,3 +970,19 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .hk-bilgi h2{margin:0 0 10px;font:700 26px/1.05 var(--baslik)}
 .hk-bilgi ul{margin:0 0 12px;padding-left:20px;line-height:1.6;color:#2B3A4F}
 @media (max-width:560px){.hk-ayaklar li{grid-template-columns:1fr}.hk-sonuc{grid-column:1}.hk-hip-b{font-size:28px}.hk-oyun{padding:14px}.hk-kupon{padding:12px}}
+
+/* Canlı şerit: gerçek anlık ziyaretçi sayısı (sol alt; WhatsApp düğmesi sağ altta) */
+.cs{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:29;display:flex;align-items:center;max-width:calc(100vw - 120px);background:#0F2B22;color:#D9E8E0;border-radius:999px;box-shadow:0 4px 14px rgba(15,43,34,.22);font:500 14px/1.2 var(--govde)}
+.cs-ac{appearance:none;border:0;background:none;color:inherit;font:inherit;display:flex;align-items:center;gap:8px;padding:9px 4px 9px 13px;min-width:0;cursor:default;text-align:left}
+.cs.kucuk .cs-ac{cursor:pointer;padding-right:13px}
+.cs-yazi{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.cs-yazi b{color:#fff;font-weight:600}
+.cs-ek{color:var(--gece-yazi)}
+.cs-nokta{width:8px;height:8px;border-radius:50%;background:#3DDC84;flex:none}
+.cs.gunluk .cs-nokta{background:var(--amber)}
+.cs-kapat{appearance:none;border:0;background:none;cursor:pointer;width:28px;height:28px;display:grid;place-items:center;margin-right:4px;border-radius:50%;color:var(--gece-yazi);font:400 18px/1 var(--govde);flex:none}
+.cs-kapat:hover{color:#fff;background:rgba(255,255,255,.08)}
+.cs-ac:focus-visible,.cs-kapat:focus-visible{outline:2px solid var(--amber);outline-offset:1px}
+.cs.kucuk .cs-kapat{display:none}
+@media (max-width:680px){.cs{font-size:13px;bottom:max(22px,env(safe-area-inset-bottom,0px))}.cs .cs-ek{display:none}}
+@media print{.cs{display:none}}
