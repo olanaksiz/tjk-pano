@@ -1455,7 +1455,7 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .sdk-at.kaz.r-y,.sdk-at.kaz.r-s{box-shadow:none}
 /* sonuç kartı etiketleri: sığsın ve türü renkten anlaşılsın */
 .sk-at{grid-template-columns:30px 32px minmax(0,1fr) auto max-content}
-.sk-g{display:flex;justify-content:flex-end}
+.sk-g{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
 .sk-biz{white-space:normal;text-align:center;line-height:1.15;padding:4px 9px}
 .sk-biz br{display:none}
 .sk-biz-i4{background:#CDEBDD;color:#145A38}
