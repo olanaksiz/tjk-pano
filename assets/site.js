@@ -19,6 +19,7 @@
   });
   if (!sec) return;
   sec.el.classList.add('sirada');
+  var cip = document.querySelector('.ks-c[data-ks="' + sec.el.id + '"]'); if (cip) { cip.classList.add('sirada'); if (cip.parentNode.scrollTo) cip.parentNode.scrollTo({left: cip.offsetLeft - 80}); }
   var kutu = document.querySelector('.siradaki');
   if (kutu) {
     var a = kutu.querySelector('a');
@@ -438,8 +439,8 @@ document.addEventListener('click', function (e) {
   function oku(k) { try { return sessionStorage.getItem(k); } catch (x) { return null; } }
   function yaz(k, v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
   function kapat() { kutu.hidden = true; kutu.classList.remove('acik'); if (aktif) yaz('pp-' + aktif, '1'); aktif = null; }
-  function goster(id) {
-    if (aktif === id || oku('pp-' + id) || oku('pp-hepsi')) return;
+  function goster(id, zorla) {
+    if (!zorla && (aktif === id || oku('pp-' + id) || oku('pp-hepsi'))) return;
     var t = document.querySelector('template[data-pp="' + id + '"]'); if (!t) return;
     kutu.innerHTML = '';
     if (PP_KISIT && !document.documentElement.classList.contains('uye-pp')) {
@@ -463,5 +464,6 @@ document.addEventListener('click', function (e) {
     });
   }, {threshold: [0, 0.1, 0.2, 0.3, 0.35, 0.5, 0.7]});
   tpl.forEach(function (t) { var a = document.getElementById(t.getAttribute('data-pp')); if (a && a.getAttribute('data-bitti') !== '1') io.observe(a); });
+  document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.addEventListener('click', function () { aktif = null; goster(b.getAttribute('data-pp-ac'), true); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
 })();
