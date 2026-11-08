@@ -439,18 +439,35 @@ document.addEventListener('click', function (e) {
   var PP_KISIT = false;
   var tpl = document.querySelectorAll('template[data-pp]');
   if (!tpl.length) document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.hidden = true; });
-  if (!tpl.length || !('IntersectionObserver' in window)) return;
+  /* Premium Plus içeriği açılmamış ziyaretçi: şifreli blok varsa tanıtım penceresi gösterilir */
+  var tanit = [];
+  document.querySelectorAll('article.kosu .kilit-gizli[data-kilit="plus"]').forEach(function (d) { var a = d.closest('article.kosu'); if (a && a.id && !a.querySelector('template[data-pp]')) tanit.push(a); });
+  if ((!tpl.length && !tanit.length) || !('IntersectionObserver' in window)) return;
   var kutu = document.createElement('aside'); kutu.className = 'pp'; kutu.hidden = true; kutu.setAttribute('aria-live', 'polite');
   document.body.appendChild(kutu);
   var gosterilen = {}, aktif = null;
   function oku(k) { try { return sessionStorage.getItem(k); } catch (x) { return null; } }
   function yaz(k, v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
-  function kapat() { kutu.hidden = true; kutu.classList.remove('acik'); if (aktif) yaz('pp-' + aktif, '1'); aktif = null; }
+  var kapandi = {};  /* bu sayfa açıkken kapatılan koşular; sayfa yenilenince pencere yine gelir */
+  function kapat() { kutu.hidden = true; kutu.classList.remove('acik'); if (aktif) kapandi[aktif] = 1; aktif = null; }
   function goster(id, zorla) {
-    if (!zorla && (aktif === id || oku('pp-' + id) || oku('pp-hepsi'))) return;
-    var t = document.querySelector('template[data-pp="' + id + '"]'); if (!t) return;
+    if (!zorla && (aktif === id || kapandi[id] || oku('pp-hepsi'))) return;
+    var t = document.querySelector('template[data-pp="' + id + '"]');
+    var art = document.getElementById(id);
+    if (!t && !(art && art.querySelector('.kilit-gizli[data-kilit="plus"]'))) return;
     kutu.innerHTML = '';
-    if (PP_KISIT && !document.documentElement.classList.contains('uye-pp')) {
+    if (!t) {
+      var uye = document.documentElement.classList.contains('uye');
+      var bas = art.querySelector('.kx-no'), hip = art.querySelector('.kx-hip'), sa = art.querySelector('.kx-saat');
+      var d0 = document.createElement('div'); d0.className = 'pp-k pp-tanit';
+      d0.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium Plus</span><span class="pp-kosu"></span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div>' +
+        '<p class="pp-bas">Bu koşu için sürpriz adaylarımız hazır.</p>' +
+        '<p class="pp-not">Az sayıda yorumcunun öne çıkardığı atlar, kimin uyardığı ve kendi sürpriz listemiz Premium Plus üyelerde. Kazanma tahmini değildir.</p>' +
+        (uye ? '<p class="pp-not"><a href="/premium/">Premium Plus\'ı incele →</a></p>'
+             : '<p class="pp-tanit-alt"><a class="dugme" href="/uye-ol/" data-uyelik="kayit">Ücretsiz üye ol</a><span>Yeni üyelere 7 gün Premium + Premium Plus ücretsiz</span></p>');
+      var pk = d0.querySelector('.pp-kosu'); if (pk) pk.textContent = [hip && hip.textContent, bas && bas.textContent].filter(Boolean).join(' ') + (sa ? ' · ' + sa.textContent : '');
+      kutu.appendChild(d0);
+    } else if (PP_KISIT && !document.documentElement.classList.contains('uye-pp')) {
       var d = document.createElement('div'); d.className = 'pp-k';
       d.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium Plus</span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div><p class="pp-bas">Bu koşunun sürpriz adayları Premium Plus üyelere özel.</p><p class="pp-not"><a href="/premium/">Premium Plus\'ı incele →</a></p>';
       kutu.appendChild(d);
@@ -471,6 +488,7 @@ document.addEventListener('click', function (e) {
     });
   }, {threshold: [0, 0.1, 0.2, 0.3, 0.35, 0.5, 0.7]});
   tpl.forEach(function (t) { var a = document.getElementById(t.getAttribute('data-pp')); if (a && a.getAttribute('data-bitti') !== '1') io.observe(a); });
+  tanit.forEach(function (a) { if (a.getAttribute('data-bitti') !== '1') io.observe(a); });
   document.querySelectorAll('[data-pp-ac]').forEach(function (b) { if (!document.querySelector('template[data-pp="' + b.getAttribute('data-pp-ac') + '"]')) { b.hidden = true; return; } b.addEventListener('click', function () { aktif = null; goster(b.getAttribute('data-pp-ac'), true); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
 })();
