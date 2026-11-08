@@ -509,3 +509,42 @@ document.addEventListener('click', function (e) {
   if (document.querySelector('.kilit[data-kilit]') && !window.__tjkdAcildi) { document.addEventListener('tjkd-acildi', calis, {once: true}); setTimeout(calis, 15000); }
   else calis();
 })();
+
+/* ---- Koşu kartlarında başlama saatine canlı geri sayım (saniyelik) ---- */
+(function () {
+  var gun = document.body.getAttribute('data-gun');
+  var kartlar = [].slice.call(document.querySelectorAll('article.kx[data-bas]'));
+  if (!gun || !kartlar.length) return;
+  function iki(n) { return (n < 10 ? '0' : '') + n; }
+  function yazi(s) {
+    var sa = Math.floor(s / 3600), dk = Math.floor((s % 3600) / 60), sn = s % 60;
+    return (sa ? sa + ' sa ' + iki(dk) + ' dk ' : dk + ' dk ') + iki(sn) + ' sn';
+  }
+  var L = [];
+  kartlar.forEach(function (k) {
+    var t = Date.parse(gun + 'T' + k.getAttribute('data-bas') + ':00+03:00'); if (isNaN(t)) return;
+    var ust = k.querySelector('.kx-ust'), saat = k.querySelector('.kx-saat'); if (!ust) return;
+    var el = document.createElement('span'); el.className = 'kx-geri'; el.setAttribute('role', 'timer');
+    if (saat && saat.nextSibling) ust.insertBefore(el, saat.nextSibling); else ust.appendChild(el);
+    L.push({k: k, t: t, el: el});
+  });
+  var sira = document.querySelector('.siradaki');
+  var sg = null;
+  if (sira) { sg = document.createElement('b'); sg.className = 'siradaki-geri'; sira.appendChild(sg); }
+  function tik() {
+    var now = Date.now(), ilk = null;
+    L.forEach(function (o) {
+      var bitti = o.k.getAttribute('data-bitti') === '1', s = Math.round((o.t - now) / 1000);
+      o.el.classList.remove('yakin', 'cok-yakin', 'basladi');
+      if (bitti) { o.el.textContent = 'Koşu bitti'; o.el.classList.add('bitti'); return; }
+      if (s > 0) {
+        o.el.textContent = 'Başlamasına ' + yazi(s);
+        if (s <= 120) o.el.classList.add('cok-yakin'); else if (s <= 600) o.el.classList.add('yakin');
+        if (!ilk || o.t < ilk.t) ilk = o;
+      } else if (s > -1800) { o.el.textContent = 'Start saati geldi · sonuç bekleniyor'; o.el.classList.add('basladi'); }
+      else { o.el.textContent = 'Sonuç bekleniyor'; o.el.classList.add('basladi'); }
+    });
+    if (sg) sg.textContent = ilk ? ' · ' + yazi(Math.round((ilk.t - now) / 1000)) + ' kaldı' : '';
+  }
+  tik(); setInterval(tik, 1000);
+})();

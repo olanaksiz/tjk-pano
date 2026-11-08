@@ -1391,3 +1391,14 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .pp-tanit-alt{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:10px 0 2px}
 .pp-tanit-alt .dugme{background:#F2C14E;color:#13231C;border-radius:999px;padding:9px 16px;font:700 14px/1 var(--govde);text-decoration:none}
 .pp-tanit-alt span{font-size:12.5px;color:#C9D6EE}
+/* geri sayım */
+.kx-geri{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:var(--cim-acik);color:var(--cim);font:700 13px/1.2 var(--govde);font-variant-numeric:tabular-nums;white-space:nowrap}
+.kx-geri::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.kx-geri.yakin{background:var(--amber-acik);color:var(--amber-koyu)}
+.kx-geri.cok-yakin{background:var(--kirmizi-acik);color:var(--kirmizi);animation:kxNabiz 1s ease-in-out infinite}
+.kx-geri.basladi{background:var(--turuncu-acik);color:var(--turuncu)}
+.kx-geri.bitti{background:transparent;color:var(--soluk);padding-left:0}
+.kx-geri.bitti::before{display:none}
+.siradaki-geri{font-variant-numeric:tabular-nums;color:var(--amber-koyu)}
+@keyframes kxNabiz{50%{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.kx-geri.cok-yakin{animation:none}}
