@@ -89,7 +89,7 @@
        "at": "Myboyfriend"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -165,8 +165,8 @@
      ],
      "y": [
       {
-       "no": 6,
-       "at": "Super Nata"
+       "no": 5,
+       "at": "Rising Warrior"
       }
      ],
      "surpriz_listesi": [],
@@ -208,7 +208,7 @@
       }
      ],
      "surpriz_listesi": [],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -387,7 +387,7 @@
        "at": "Finally Its Time"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -426,8 +426,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Odabaşı"
+       "no": 1,
+       "at": "Fundo"
       }
      ],
      "surpriz_listesi": [
@@ -436,7 +436,7 @@
        "at": "Odabaşı"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -469,8 +469,8 @@
      ],
      "y": [
       {
-       "no": 6,
-       "at": "Mi Ojos Oliva"
+       "no": 7,
+       "at": "Roller Değişti"
       }
      ],
      "surpriz_listesi": [
@@ -605,8 +605,8 @@
      ],
      "y": [
       {
-       "no": 1,
-       "at": "Andromeda Star"
+       "no": 7,
+       "at": "Hizli Gör"
       }
      ],
      "surpriz_listesi": [
@@ -623,7 +623,7 @@
        "at": "Veragorn"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -656,8 +656,8 @@
      ],
      "y": [
       {
-       "no": 6,
-       "at": "Naziko"
+       "no": 4,
+       "at": "Kılıç Kızı"
       }
      ],
      "surpriz_listesi": [
@@ -674,7 +674,7 @@
        "at": "Eparven"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -758,8 +758,8 @@
      ],
      "y": [
       {
-       "no": 3,
-       "at": "Boucheron"
+       "no": 1,
+       "at": "Lupelyan"
       }
      ],
      "surpriz_listesi": [
@@ -768,7 +768,7 @@
        "at": "Lupelyan"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -815,7 +815,7 @@
        "at": "Mori Paşa"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Yüksek",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",

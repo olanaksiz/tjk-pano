@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611080853">
+<link rel="stylesheet" href="/assets/site.css?v=202611080912">
 <link rel="alternate" type="application/json" href="/data/2026-11-08.json" title="Günün verisi (JSON)">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sonuçlar", "item": "https://tjkdetay.com/sonuclar/"}]}</script>
 </head>
@@ -51,108 +51,235 @@
   <p class="tarih">8 Kasım 2026, Pazar</p>
   <h1>Sonuçlar ve ödemeler</h1>
   <p class="giris">Koşu koşu kazananlar ve TJK'nın ilan ettiği ödemeler. Tutarlar 1 misli içindir.</p>
-  <form class="st-form" data-sonuc-tarih data-gunler="2026-11-06,2026-11-07,2026-11-08" data-bugun="2026-11-08" action="#" role="search" aria-label="Tarihe göre sonuçlar">
-    <a class="st-ok" data-st-git="-1" href="#" aria-label="Önceki gün">‹ Önceki</a>
-    <label class="st-lab"><span>Tarih seç</span><input type="date" name="t" value="2026-11-08" min="2026-01-01" max="2026-11-08" required></label>
-    <button type="submit" class="dugme">Sonuçları göster</button>
-    <a class="st-ok" data-st-git="1" href="#" aria-label="Sonraki gün">Sonraki ›</a>
-    <p class="st-not" data-st-not hidden></p>
-  </form>
-  <nav class="atlamalar" aria-label="Hipodromlar"><a href="#istanbul">İstanbul</a><a href="#adana">Adana</a></nav>
+  <div class="st-bar" data-sonuc-tarih data-sayfa="2026-11-08" data-bugun="2026-11-08" data-analizli="2026-11-06,2026-11-07,2026-11-08">
+    <button type="button" class="st-ok" data-st-git="-1" aria-label="Önceki yarış günü">‹</button>
+    <label class="st-tarih"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h2M12 13.5h2M16 13.5h.5M8 17h2M12 17h2"/></svg><span class="st-tarih-m"><span class="st-gun" data-st-yazi>8 Kasım 2026</span><span class="st-hgun" data-st-hgun>Pazar</span></span><span class="st-tarih-ip">Takvimden seç</span><input type="date" value="2026-11-08" min="2026-01-01" max="2026-11-08" aria-label="Tarih seç"></label>
+    <button type="button" class="st-ok" data-st-git="1" aria-label="Sonraki yarış günü">›</button>
+    <button type="button" class="st-bugun" data-st-bugun>Bugün</button>
+  </div>
+  <div class="st-seri" data-st-seri aria-label="Yarış günleri"></div>
+  <p class="st-durum" data-st-durum aria-live="polite" hidden></p>
 </section>
+<div data-st-icerik>
+<div class="st-bugun-ic">
+  <nav class="st-hip" aria-label="Hipodromlar"><a class="st-hip-b" href="#istanbul"><b>İstanbul</b><span>9 koşu · 14:00</span></a><a class="st-hip-b" href="#adana"><b>Adana</b><span>9 koşu · 17:15</span></a></nav>
 
-<section class="bolum" id="istanbul" aria-labelledby="istanbul-b">
+<section class="st-gb" id="istanbul" aria-labelledby="istanbul-b">
   <h2 id="istanbul-b">İstanbul</h2>
-  <div class="tablo-kaydir"><table class="tablo yigin">
-    <caption>Koşu bahisleri</caption>
-    <thead><tr><th scope="col">Koşu</th><th scope="col">Kazanan</th><th scope="col">Ganyan</th><th scope="col">İkili</th><th scope="col">Sıralı ikili</th><th scope="col">Sıralı üçlü</th><th scope="col">Tabela</th><th scope="col">Tabela (sırasız)</th><th scope="col">Sıralı beşli</th><th scope="col">Plase</th><th scope="col">Plase ikili</th></tr></thead>
-    <tbody><tr>
-      <td><a href="/kosular/#istanbul-1">1. koşu</a> <span class="not">14:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-2">2. koşu</a> <span class="not">14:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-3">3. koşu</a> <span class="not">15:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-4">4. koşu</a> <span class="not">15:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-5">5. koşu</a> <span class="not">16:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-6">6. koşu</a> <span class="not">16:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-7">7. koşu</a> <span class="not">17:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-8">8. koşu</a> <span class="not">17:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#istanbul-9">9. koşu</a> <span class="not">18:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr></tbody>
-  </table></div>
+  <div class="sk-izgara">
+  
+  <article class="sk" id="s-istanbul-1">
+    <header class="sk-bas">
+      <div class="sk-no"><b>1</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">14:00 · LONG RUNNER KOŞUSU ŞARTLI 1 · 1400 m çim</p><p class="sk-alt">2 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 14:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-1">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-2">
+    <header class="sk-bas">
+      <div class="sk-no"><b>2</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">14:30 · Handikap 16 · 1500 m sentetik</p><p class="sk-alt">3 ve Yukarı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 14:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-2">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-3">
+    <header class="sk-bas">
+      <div class="sk-no"><b>3</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">15:00 · Handikap 15 · 1400 m çim</p><p class="sk-alt">DHÖ, Dişi, 3 Yaşlı Araplar</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 15:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-3">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-4">
+    <header class="sk-bas">
+      <div class="sk-no"><b>4</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">15:30 · LONG RUNNER KOŞUSU ŞARTLI 1 · 1400 m çim</p><p class="sk-alt">2 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 15:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-4">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-5">
+    <header class="sk-bas">
+      <div class="sk-no"><b>5</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">16:00 · LÖSEV KOŞUSU KV-6 · 1900 m çim</p><p class="sk-alt">DHÖW, 4 ve Yukarı Araplar</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 16:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-5">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-6">
+    <header class="sk-bas">
+      <div class="sk-no"><b>6</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">16:30 · DOLMABAHÇE KOŞUSU G 2 · 2000 m sentetik</p><p class="sk-alt">Dişi, 3 ve Yukarı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 16:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-6">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-7">
+    <header class="sk-bas">
+      <div class="sk-no"><b>7</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">17:00 · Kısa Vade Handikap 24 · 2000 m sentetik</p><p class="sk-alt">3 ve Yukarı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 17:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-7">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-8">
+    <header class="sk-bas">
+      <div class="sk-no"><b>8</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">17:30 · KV-7 · 1400 m sentetik</p><p class="sk-alt">2 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 17:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-8">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-istanbul-9">
+    <header class="sk-bas">
+      <div class="sk-no"><b>9</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">18:00 · Handikap 16 · 1900 m çim</p><p class="sk-alt">3 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 18:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#istanbul-9">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  </div>
   
 </section>
 
-<section class="bolum" id="adana" aria-labelledby="adana-b">
+<section class="st-gb" id="adana" aria-labelledby="adana-b">
   <h2 id="adana-b">Adana</h2>
-  <div class="tablo-kaydir"><table class="tablo yigin">
-    <caption>Koşu bahisleri</caption>
-    <thead><tr><th scope="col">Koşu</th><th scope="col">Kazanan</th><th scope="col">Ganyan</th><th scope="col">İkili</th><th scope="col">Sıralı ikili</th><th scope="col">Sıralı üçlü</th><th scope="col">Tabela</th><th scope="col">Tabela (sırasız)</th><th scope="col">Sıralı beşli</th><th scope="col">Plase</th><th scope="col">Plase ikili</th></tr></thead>
-    <tbody><tr>
-      <td><a href="/kosular/#adana-1">1. koşu</a> <span class="not">17:15</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-2">2. koşu</a> <span class="not">17:45</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-3">3. koşu</a> <span class="not">18:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-4">4. koşu</a> <span class="not">19:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-5">5. koşu</a> <span class="not">19:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-6">6. koşu</a> <span class="not">20:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-7">7. koşu</a> <span class="not">20:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-8">8. koşu</a> <span class="not">21:00</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr><tr>
-      <td><a href="/kosular/#adana-9">9. koşu</a> <span class="not">21:30</span></td>
-      <td data-l="Kazanan"><span class="not">bekleniyor</span></td>
-      <td data-l="Ganyan"></td><td data-l="İkili"></td><td data-l="Sıralı ikili"></td><td data-l="Sıralı üçlü"></td><td data-l="Tabela"></td><td data-l="Tabela (sırasız)"></td><td data-l="Sıralı beşli"></td><td data-l="Plase"></td><td data-l="Plase ikili"></td>
-    </tr></tbody>
-  </table></div>
+  <div class="sk-izgara">
+  
+  <article class="sk" id="s-adana-1">
+    <header class="sk-bas">
+      <div class="sk-no"><b>1</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">17:15 · ŞARTLI 4 · 1300 m kum</p><p class="sk-alt">DHÖW, 4 ve Yukarı Araplar</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 17:15</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-1">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-2">
+    <header class="sk-bas">
+      <div class="sk-no"><b>2</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">17:45 · Maiden · 1300 m kum</p><p class="sk-alt">Dişi, 2 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 17:45</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-2">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-3">
+    <header class="sk-bas">
+      <div class="sk-no"><b>3</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">18:30 · Handikap 16 · 2000 m kum</p><p class="sk-alt">3 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 18:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-3">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-4">
+    <header class="sk-bas">
+      <div class="sk-no"><b>4</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">19:00 · ŞARTLI 5 · 1300 m sentetik</p><p class="sk-alt">DHÖ, 4 Yaşlı Araplar</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 19:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-4">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-5">
+    <header class="sk-bas">
+      <div class="sk-no"><b>5</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">19:30 · Handikap 16 · 1400 m sentetik</p><p class="sk-alt">Dişi, 3 ve Yukarı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 19:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-5">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-6">
+    <header class="sk-bas">
+      <div class="sk-no"><b>6</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">20:00 · KV-7 · 1300 m sentetik</p><p class="sk-alt">DHÖW, Dişi, 4 ve Yukarı Araplar</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 20:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-6">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-7">
+    <header class="sk-bas">
+      <div class="sk-no"><b>7</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">20:30 · Maiden · 1300 m kum</p><p class="sk-alt">Dişi, 2 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 20:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-7">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-8">
+    <header class="sk-bas">
+      <div class="sk-no"><b>8</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">21:00 · ŞARTLI 5 · 1500 m sentetik</p><p class="sk-alt">3 ve Yukarı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 21:00</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-8">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  <article class="sk" id="s-adana-9">
+    <header class="sk-bas">
+      <div class="sk-no"><b>9</b><span>Koşu</span></div>
+      <div class="sk-bilgi"><p class="sk-ust">21:30 · ŞARTLI 19 · 2000 m sentetik</p><p class="sk-alt">3 Yaşlı İngilizler</p></div>
+      
+    </header>
+    <p class="sk-bekle"><span aria-hidden="true">⏱</span> Sonuç bekleniyor · koşu saati 21:30</p>
+    
+    <p class="sk-not"><a href="/kosular/#adana-9">Koşu analizi ve ilk 4'ümüz →</a></p>
+  </article>
+  
+  </div>
   
 </section>
 
+</div>
+</div>
 </div>
 
 </main>
@@ -187,7 +314,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 8 Kasım 2026, 08:53 · <a href="/data/2026-11-08.json">Günün verisi (JSON)</a></span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 8 Kasım 2026, 09:12 · <a href="/data/2026-11-08.json">Günün verisi (JSON)</a></span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -229,8 +356,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611080853" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611080853" defer></script>
-<script src="/assets/uyelik.js?v=202611080853" defer></script>
+<script src="/assets/site.js?v=202611080912" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611080912" defer></script>
+<script src="/assets/uyelik.js?v=202611080912" defer></script>
 </body>
 </html>
