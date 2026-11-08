@@ -225,3 +225,44 @@ document.addEventListener('click', function (e) {
   if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(bitti, function () {});
   else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); bitti(); } catch (x) {} a.remove(); }
 });
+
+/* ---- Sonuçlar: tarihe göre geçmiş günler (arşivde olan gün açılır; olmayan gün için TJK bağlantısı) ---- */
+(function () {
+  var f = document.querySelector('[data-sonuc-tarih]');
+  if (!f) return;
+  var gunler = (f.getAttribute('data-gunler') || '').split(',').filter(Boolean).sort();
+  var bugun = f.getAttribute('data-bugun') || '';
+  var inp = f.querySelector('input[type=date]'), not = f.querySelector('[data-st-not]');
+  var son = gunler[gunler.length - 1] || bugun;
+  function yol(t) { return t === son ? '/sonuclar/' : '/gun/' + t + '/sonuclar/'; }
+  function tjk(t) { var p = t.split('-'); return 'https://www.tjk.org/TR/YarisSever/Info/Page/GunlukYarisSonuclari?QueryParameter_Tarih=' + p[2] + '%2F' + p[1] + '%2F' + p[0]; }
+  function yazi(t) { var p = t.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
+  function git(t) {
+    if (!t) return;
+    if (gunler.indexOf(t) >= 0) { location.href = yol(t); return; }
+    not.hidden = false;
+    not.innerHTML = '';
+    not.appendChild(document.createTextNode(yazi(t) + ' için sitemizde sonuç sayfası yok. '));
+    var a = document.createElement('a'); a.href = tjk(t); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'O günün sonuçlarını TJK sitesinde aç';
+    not.appendChild(a);
+    if (gunler.length) {
+      not.appendChild(document.createTextNode(' · Arşivimizdeki günler: '));
+      gunler.slice(-10).forEach(function (g, i) { var b = document.createElement('a'); b.href = yol(g); b.textContent = yazi(g); not.appendChild(b); if (i < Math.min(10, gunler.length) - 1) not.appendChild(document.createTextNode(', ')); });
+    }
+  }
+  f.addEventListener('submit', function (e) { e.preventDefault(); git(inp.value); });
+  inp.addEventListener('change', function () { if (inp.value) git(inp.value); });
+  f.querySelectorAll('[data-st-git]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var yon = Number(a.getAttribute('data-st-git'));
+      var simdi = inp.defaultValue || bugun;
+      var i = gunler.indexOf(simdi);
+      var hedef = i >= 0 ? gunler[i + yon] : null;
+      if (hedef) { location.href = yol(hedef); return; }
+      var d = new Date(simdi + 'T12:00:00'); d.setDate(d.getDate() + yon);
+      var t = d.toISOString().slice(0, 10);
+      inp.value = t; git(t);
+    });
+  });
+})();

@@ -31,7 +31,12 @@
        "at": "Break My Heart"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Iron Angel"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -64,7 +69,12 @@
        "at": "Sarilar Kizi"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Wolf Brothers"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 5,
@@ -79,7 +89,7 @@
        "at": "Myboyfriend"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -110,14 +120,19 @@
        "at": "Bilge Hatun"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Haydi Sevda"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 2,
        "at": "Haydi Sevda"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -148,7 +163,12 @@
        "at": "Demir Pala"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Super Nata"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -181,7 +201,12 @@
        "at": "Ersanşah"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Lostra"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -214,7 +239,12 @@
        "at": "Whisper Of Victory"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 1,
+       "at": "Beauty Of Darkness"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -225,7 +255,7 @@
        "at": "Beauty Of Darkness"
       }
      ],
-     "surpriz_olasiligi": "Düşük",
+     "surpriz_olasiligi": "Orta",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -256,7 +286,12 @@
        "at": "Bikati"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Super Tomo"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -294,7 +329,12 @@
        "at": "Somewhat Cloudy"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Asil Kraliçe"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -327,7 +367,12 @@
        "at": "Darkrok"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 7,
+       "at": "Valtrox"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 6,
@@ -379,7 +424,12 @@
        "at": "Güngeldi Ağa"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Odabaşı"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 3,
@@ -417,7 +467,12 @@
        "at": "Bittersweet"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Mi Ojos Oliva"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 6,
@@ -459,7 +514,12 @@
        "at": "El Quimico"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 5,
+       "at": "Dinamit Kiz"
+      }
+     ],
      "surpriz_listesi": [],
      "surpriz_olasiligi": "Düşük",
      "sonuc": [],
@@ -492,7 +552,12 @@
        "at": "Dicle Fırat"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 2,
+       "at": "Özgünvera"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 7,
@@ -538,7 +603,12 @@
        "at": "You And Me"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 1,
+       "at": "Andromeda Star"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 5,
@@ -553,7 +623,7 @@
        "at": "Veragorn"
       }
      ],
-     "surpriz_olasiligi": "Orta",
+     "surpriz_olasiligi": "Düşük",
      "sonuc": [],
      "kazanan_ganyan": null,
      "kazanan_bizde": "",
@@ -584,7 +654,12 @@
        "at": "Kayıp İnci"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 6,
+       "at": "Naziko"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 4,
@@ -630,7 +705,12 @@
        "at": "North Shine"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 8,
+       "at": "Signomi"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 7,
@@ -676,7 +756,12 @@
        "at": "Madam Oracle"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 3,
+       "at": "Boucheron"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 1,
@@ -714,7 +799,12 @@
        "at": "Shining Fame"
       }
      ],
-     "y": [],
+     "y": [
+      {
+       "no": 5,
+       "at": "Runner On River"
+      }
+     ],
      "surpriz_listesi": [
       {
        "no": 5,
