@@ -1572,3 +1572,4 @@ article.kx{scroll-margin-top:84px}
 .sdk-ikr span{font:700 11px/1 var(--govde);letter-spacing:.06em;text-transform:uppercase;color:#1F7A49}
 .sdk-ikr b{font:700 22px/1.1 var(--baslik);color:#14532D}
 .sdk-ikr small{font:600 12px/1.2 var(--govde);color:#1F7A49}
+@media (max-width:600px){.sdk-alt{flex-wrap:wrap}.sdk-ikr{flex:1 1 100%;align-items:flex-start}}
