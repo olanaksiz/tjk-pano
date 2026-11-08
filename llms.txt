@@ -21,6 +21,6 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Hakkımızda ve yöntem](https://tjkdetay.com/hakkimizda/)
 
 ## Veri
-- [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-07.json)
+- [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-08.json)
 - [Gün listesi ve isabet (JSON)](https://tjkdetay.com/data/gunler.json)
 - [Tam metin (llms-full.txt)](https://tjkdetay.com/llms-full.txt)
