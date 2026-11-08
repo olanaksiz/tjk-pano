@@ -226,43 +226,201 @@ document.addEventListener('click', function (e) {
   else { var a = document.createElement('textarea'); a.value = t; document.body.appendChild(a); a.select(); try { document.execCommand('copy'); bitti(); } catch (x) {} a.remove(); }
 });
 
-/* ---- Sonuçlar: tarihe göre geçmiş günler (arşivde olan gün açılır; olmayan gün için TJK bağlantısı) ---- */
+/* ---- Sonuçlar: tarih şeridi + TJK arşivinden günün tüm sonuçları (sayfa içinde) ---- */
 (function () {
-  var f = document.querySelector('[data-sonuc-tarih]');
-  if (!f) return;
-  var gunler = (f.getAttribute('data-gunler') || '').split(',').filter(Boolean).sort();
-  var bugun = f.getAttribute('data-bugun') || '';
-  var inp = f.querySelector('input[type=date]'), not = f.querySelector('[data-st-not]');
-  var son = gunler[gunler.length - 1] || bugun;
-  function yol(t) { return t === son ? '/sonuclar/' : '/gun/' + t + '/sonuclar/'; }
+  var bar = document.querySelector('[data-sonuc-tarih]');
+  if (!bar) return;
+  var AY = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
+  var AYK = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+  var GUN = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi'];
+  var GUNK = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+  var canli = bar.getAttribute('data-bugun');
+  var sayfa = bar.getAttribute('data-sayfa') || canli;
+  var ist = ''; try { ist = new Date().toLocaleDateString('sv-SE', {timeZone: 'Europe/Istanbul'}); } catch (x) {}
+  var bugun = [canli, sayfa, /^\d{4}-\d\d-\d\d$/.test(ist) ? ist : ''].sort().pop();
+  var anaSayfa = location.pathname === '/sonuclar/';
+  var analizli = (bar.getAttribute('data-analizli') || '').split(',').filter(Boolean);
+  var inp = bar.querySelector('input[type=date]');
+  var yaziEl = bar.querySelector('[data-st-yazi]'), hgunEl = bar.querySelector('[data-st-hgun]');
+  var seri = document.querySelector('[data-st-seri]');
+  var durum = document.querySelector('[data-st-durum]');
+  var icerik = document.querySelector('[data-st-icerik]');
+  var ustTarih = document.querySelector('.bas .tarih');
+  var bugunHTML = icerik ? icerik.innerHTML : '';
+  var bugunUst = ustTarih ? ustTarih.textContent : '';
+  var gunler = [], hipler = {}, secili = sayfa, onbellek = {};
+
+  function d(t) { var p = t.split('-'); return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])); }
+  function uzun(t) { var x = d(t); return x.getUTCDate() + ' ' + AY[x.getUTCMonth()] + ' ' + x.getUTCFullYear(); }
+  function hg(t) { return GUN[d(t).getUTCDay()]; }
   function tjk(t) { var p = t.split('-'); return 'https://www.tjk.org/TR/YarisSever/Info/Page/GunlukYarisSonuclari?QueryParameter_Tarih=' + p[2] + '%2F' + p[1] + '%2F' + p[0]; }
-  function yazi(t) { var p = t.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
-  function git(t) {
-    if (!t) return;
-    if (gunler.indexOf(t) >= 0) { location.href = yol(t); return; }
-    not.hidden = false;
-    not.innerHTML = '';
-    not.appendChild(document.createTextNode(yazi(t) + ' için sitemizde sonuç sayfası yok. '));
-    var a = document.createElement('a'); a.href = tjk(t); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'O günün sonuçlarını TJK sitesinde aç';
-    not.appendChild(a);
-    if (gunler.length) {
-      not.appendChild(document.createTextNode(' · Arşivimizdeki günler: '));
-      gunler.slice(-10).forEach(function (g, i) { var b = document.createElement('a'); b.href = yol(g); b.textContent = yazi(g); not.appendChild(b); if (i < Math.min(10, gunler.length) - 1) not.appendChild(document.createTextNode(', ')); });
-    }
-  }
-  f.addEventListener('submit', function (e) { e.preventDefault(); git(inp.value); });
-  inp.addEventListener('change', function () { if (inp.value) git(inp.value); });
-  f.querySelectorAll('[data-st-git]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var yon = Number(a.getAttribute('data-st-git'));
-      var simdi = inp.defaultValue || bugun;
-      var i = gunler.indexOf(simdi);
-      var hedef = i >= 0 ? gunler[i + yon] : null;
-      if (hedef) { location.href = yol(hedef); return; }
-      var d = new Date(simdi + 'T12:00:00'); d.setDate(d.getDate() + yon);
-      var t = d.toISOString().slice(0, 10);
-      inp.value = t; git(t);
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+  function tl(x) { return x ? x + ' ₺' : ''; }
+
+  function seriCiz() {
+    if (!seri) return;
+    seri.innerHTML = '';
+    var tum = gunler.slice();
+    if (tum.indexOf(bugun) < 0) tum.push(bugun);
+    var i = tum.indexOf(secili); if (i < 0) i = tum.length - 1;
+    var bas = Math.max(0, Math.min(i - 7, tum.length - 12));
+    tum.slice(bas, bas + 12).forEach(function (t) {
+      var x = d(t), b = el('button', 'st-cip');
+      b.type = 'button'; b.setAttribute('data-t', t);
+      if (t === secili) b.setAttribute('aria-current', 'date');
+      b.appendChild(el('span', 'st-cip-g', GUNK[x.getUTCDay()]));
+      b.appendChild(el('b', '', String(x.getUTCDate())));
+      b.appendChild(el('span', 'st-cip-a', AYK[x.getUTCMonth()]));
+      var h = hipler[t]; if (h) b.title = h;
+      b.addEventListener('click', function () { git(t); });
+      seri.appendChild(b);
     });
-  });
+    var akt = seri.querySelector('[aria-current]');
+    if (akt && seri.scrollTo) seri.scrollTo({left: akt.offsetLeft - seri.clientWidth / 2 + akt.clientWidth / 2});
+  }
+
+  function basliklar(t) {
+    if (yaziEl) yaziEl.textContent = uzun(t);
+    if (hgunEl) hgunEl.textContent = hg(t) + (t === bugun ? ' · bugün' : '');
+    if (inp) inp.value = t;
+    if (ustTarih) ustTarih.textContent = t === sayfa ? bugunUst : uzun(t) + ', ' + hg(t);
+  }
+
+  function kilo(k) { var m = /^([\d,\.]+)\+([\d,\.]+)Fazla Kilo/i.exec(k || ''); return m ? m[1] + ' +' + m[2].replace('.', ',') : (k || ''); }
+  function jk(x) { return (x || '').replace(/\s*AP\s*Apranti.*$/i, ' (AP)').replace(/\s*Apranti.*$/i, ' (AP)'); }
+  function agf(a) { var m = /%(\d+)/.exec(a || ''); return m ? '%' + m[1] : ''; }
+  var COK = /(6'LI|5'Lİ|4'LÜ|3'LÜ|7'Lİ) (GANYAN|PLASE)/;
+
+  function kosuKart(k, hipAd) {
+    var art = el('article', 'sk');
+    var bas = el('header', 'sk-bas');
+    var no = el('div', 'sk-no'); no.appendChild(el('b', '', String(k.no))); no.appendChild(el('span', '', 'Koşu')); bas.appendChild(no);
+    var bil = el('div', 'sk-bilgi');
+    var cfg = (k.cfg || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+    var eid = ''; cfg = cfg.filter(function (x) { if (/^E\.İ\.D/.test(x)) { eid = x.replace(/\s*:\s*/, ' '); return false; } return true; });
+    var msf = cfg.length ? cfg[cfg.length - 1] : '';
+    bil.appendChild(el('p', 'sk-ust', [k.saat, cfg[0], msf].filter(Boolean).join(' · ')));
+    var alt = cfg.slice(1, -1).join(', '); if (eid) alt = (alt ? alt + ' · ' : '') + eid;
+    if (alt) bil.appendChild(el('p', 'sk-alt', alt));
+    if (k.ozel) bil.appendChild(el('p', 'sk-ozel', k.ozel));
+    bas.appendChild(bil);
+    var g = (k.o || []).filter(function (o) { return o[0] === 'GANYAN'; })[0];
+    if (g) { var gy = el('div', 'sk-gny'); gy.appendChild(el('span', '', 'Ganyan')); gy.appendChild(el('b', '', tl(g[2]))); bas.appendChild(gy); }
+    art.appendChild(bas);
+
+    var ol = el('ol', 'sk-liste');
+    (k.a || []).forEach(function (a) {
+      var li = el('li', 'sk-at' + (a[0] === '1' ? ' p1' : a[0] === '2' ? ' p2' : a[0] === '3' ? ' p3' : '') + (a[0] ? '' : ' kosmadi'));
+      li.appendChild(el('span', 'sk-s', a[0] || '–'));
+      li.appendChild(el('span', 'sk-atno', String(a[1] || '')));
+      var ad = el('div', 'sk-ad');
+      var nm = el('b', '', a[2]); if (a[3]) nm.appendChild(el('i', '', ' ' + a[3])); ad.appendChild(nm);
+      ad.appendChild(el('small', '', [jk(a[7]), kilo(a[6]) ? kilo(a[6]) + ' kg' : '', a[9] ? 'Ant. ' + a[9] : ''].filter(Boolean).join(' · ')));
+      li.appendChild(ad);
+      var dr = el('div', 'sk-der'); dr.appendChild(el('b', '', a[10] || '')); if (a[14]) dr.appendChild(el('small', '', a[14])); li.appendChild(dr);
+      var gy2 = el('div', 'sk-g'); gy2.appendChild(el('b', '', a[11] || '')); if (agf(a[12])) gy2.appendChild(el('small', '', 'AGF ' + agf(a[12]))); li.appendChild(gy2);
+      ol.appendChild(li);
+    });
+    art.appendChild(ol);
+
+    var ayr = el('details', 'sk-ayr'); ayr.appendChild(el('summary', '', 'Ayrıntılar: orijin, sahip, start, HP'));
+    var kay = el('div', 'tablo-kaydir'); var tb = el('table', 'tablo sk-tablo');
+    var th = el('tr'); ['S', 'No', 'At', 'Yaş', 'Orijin (Baba - Anne)', 'Sıklet', 'Jokey', 'Sahip', 'Antrenör', 'Derece', 'Gny', 'AGF', 'St', 'Fark', 'G.Çık.', 'HP'].forEach(function (x) { th.appendChild(el('th', '', x)); });
+    var thd = el('thead'); thd.appendChild(th); tb.appendChild(thd); var tbd = el('tbody');
+    (k.a || []).forEach(function (a) { var tr = el('tr'); [a[0], a[1], a[2] + (a[3] ? ' ' + a[3] : ''), a[4], a[5], kilo(a[6]), jk(a[7]), a[8], a[9], a[10], a[11], agf(a[12]), a[13], a[14], a[15], a[16]].forEach(function (x) { tr.appendChild(el('td', '', x == null ? '' : String(x))); }); tbd.appendChild(tr); });
+    tb.appendChild(tbd); kay.appendChild(tb); ayr.appendChild(kay); art.appendChild(ayr);
+
+    var od = (k.o || []).filter(function (o) { return o[0] !== 'GANYAN' && o.length >= 3; });
+    if (od.length) {
+      var ow = el('div', 'sk-odeme');
+      od.sort(function (x, y) { return (COK.test(y[0]) ? 1 : 0) - (COK.test(x[0]) ? 1 : 0); });
+      od.forEach(function (o) {
+        var c = el('div', 'sk-o' + (COK.test(o[0]) ? ' cok' : ''));
+        c.appendChild(el('span', 'sk-o-ad', o[0])); c.appendChild(el('span', 'sk-o-k', o[1])); c.appendChild(el('b', 'sk-o-t', tl(o[2])));
+        ow.appendChild(c);
+      });
+      art.appendChild(ow);
+    }
+    var notlar = (k.n || []).concat(k.e ? [k.e] : []);
+    if (notlar.length) art.appendChild(el('p', 'sk-not', notlar.join(' · ')));
+    return art;
+  }
+
+  function gunCiz(v, t) {
+    icerik.innerHTML = '';
+    var sar = el('div', 'st-arsiv');
+    if (!v.h || !v.h.length) {
+      sar.appendChild(el('p', 'st-bos', uzun(t) + ' günü yurt içinde yarış yok.'));
+      icerik.appendChild(sar); return;
+    }
+    var cok = [];
+    v.h.forEach(function (h) { (h.k || []).forEach(function (k) { (k.o || []).forEach(function (o) { if (/6'LI GANYAN/.test(o[0])) cok.push([h.ad, o[0].replace(/6'LI GANYAN/, 'altılı'), o[1], o[2]]); }); }); });
+    if (cok.length) {
+      var oz = el('section', 'st-ozet'); oz.appendChild(el('h2', '', 'Günün altılıları'));
+      var ul = el('div', 'st-ozet-l');
+      cok.forEach(function (c) { var x = el('div', 'st-ozet-k'); x.appendChild(el('span', '', c[0] + ' · ' + c[1])); x.appendChild(el('b', '', tl(c[3]))); x.appendChild(el('small', '', c[2])); ul.appendChild(x); });
+      oz.appendChild(ul); sar.appendChild(oz);
+    }
+    if (analizli.indexOf(t) >= 0) {
+      var an = el('p', 'st-analiz'); var aa = el('a', '', 'Bu günün koşu analizlerimiz: ilk 4, Y ve sürpriz →'); aa.href = '/gun/' + t + '/kosular/'; an.appendChild(aa); sar.appendChild(an);
+    }
+    var sek = el('div', 'st-hip'); sek.setAttribute('role', 'tablist'); sek.setAttribute('aria-label', 'Hipodromlar');
+    var paneller = [];
+    v.h.forEach(function (h, i) {
+      var b = el('button', 'st-hip-b'); b.type = 'button'; b.setAttribute('role', 'tab'); b.id = 'sth-' + i;
+      b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+      b.appendChild(el('b', '', h.ad)); b.appendChild(el('span', '', (h.k || []).length + ' koşu' + (h.yg ? ' · ' + h.yg : '')));
+      var p = el('div', 'sk-izgara'); p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', b.id); if (i) p.hidden = true;
+      (h.k || []).forEach(function (k) { p.appendChild(kosuKart(k, h.ad)); });
+      b.addEventListener('click', function () { sek.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', 'false'); }); b.setAttribute('aria-selected', 'true'); paneller.forEach(function (x) { x.hidden = x !== p; }); });
+      sek.appendChild(b); paneller.push(p);
+    });
+    sar.appendChild(sek); paneller.forEach(function (p) { sar.appendChild(p); });
+    var kay = el('p', 'not st-kaynak'); kay.appendChild(document.createTextNode('Kaynak: TJK resmi sonuçları. Tutarlar 1 misli içindir. '));
+    var ta = el('a', '', 'Bu günü TJK sitesinde aç'); ta.href = tjk(t); ta.target = '_blank'; ta.rel = 'noopener'; kay.appendChild(ta); sar.appendChild(kay);
+    icerik.appendChild(sar);
+  }
+
+  function git(t, gecmisYok) {
+    if (!t) return;
+    if (t > bugun) t = bugun;
+    secili = t; basliklar(t); seriCiz();
+    if (t !== sayfa && !anaSayfa && t >= canli) { location.href = t === bugun ? '/sonuclar/' : '/sonuclar/?t=' + t; return; }
+    if (!gecmisYok && history.replaceState) { var u = t === sayfa ? location.pathname : location.pathname + '?t=' + t; history.replaceState(null, '', u); }
+    if (t === sayfa && bugunHTML) { icerik.innerHTML = bugunHTML; durum.hidden = true; return; }
+    durum.hidden = false; durum.textContent = uzun(t) + ' sonuçları yükleniyor…';
+    var yukle = onbellek[t] ? Promise.resolve(onbellek[t]) : fetch('/veri/sonuc/' + t + '.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    yukle.then(function (v) {
+      if (secili !== t) return;
+      onbellek[t] = v; durum.hidden = true; gunCiz(v, t);
+    }).catch(function () {
+      if (secili !== t) return;
+      icerik.innerHTML = '';
+      durum.hidden = false; durum.textContent = '';
+      durum.appendChild(document.createTextNode(uzun(t) + ' için arşivimizde sonuç yok. '));
+      var a = el('a', '', 'TJK sitesinde aç'); a.href = tjk(t); a.target = '_blank'; a.rel = 'noopener'; durum.appendChild(a);
+    });
+  }
+
+  function adim(yon) {
+    var tum = gunler.slice(); if (tum.indexOf(bugun) < 0) tum.push(bugun);
+    var i = tum.indexOf(secili);
+    if (i < 0) { i = 0; while (i < tum.length && tum[i] < secili) i++; if (yon < 0) i--; else i = i - 1; }
+    var h = tum[i + yon]; if (h) git(h);
+  }
+  bar.querySelectorAll('[data-st-git]').forEach(function (b) { b.addEventListener('click', function () { adim(Number(b.getAttribute('data-st-git'))); }); });
+  var bb = bar.querySelector('[data-st-bugun]'); if (bb) bb.addEventListener('click', function () { if (!anaSayfa && sayfa !== bugun) { location.href = '/sonuclar/'; return; } git(bugun); });
+  if (inp) {
+    inp.addEventListener('change', function () { if (inp.value) git(inp.value); });
+    var lab = bar.querySelector('.st-tarih');
+    if (lab) lab.addEventListener('click', function (e) { if (inp.showPicker && e.target !== inp) { try { inp.showPicker(); } catch (x) {} } });
+  }
+  fetch('/veri/sonuc/gunler.json').then(function (r) { return r.ok ? r.json() : []; }).then(function (l) {
+    gunler = l.map(function (x) { hipler[x[0]] = x[1]; return x[0]; }).sort();
+    if (gunler.length && inp) inp.min = gunler[0];
+    if (inp) inp.max = bugun;
+    seriCiz();
+  }).catch(function () { seriCiz(); });
+  var q = new URLSearchParams(location.search).get('t');
+  if (q && /^\d{4}-\d\d-\d\d$/.test(q) && q !== sayfa) git(q, true); else { basliklar(sayfa); seriCiz(); }
 })();
