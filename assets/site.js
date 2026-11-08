@@ -548,3 +548,33 @@ document.addEventListener('click', function (e) {
   }
   tik(); setInterval(tik, 1000);
 })();
+
+/* Canlı güncelleme: yeni sonuç ya da son dakika kuponu yayınlanınca "Yeni sonuç geldi · Yenile" şeridi */
+(function () {
+  var gun = document.body && document.body.getAttribute('data-gun');
+  var bugun = new Date(Date.now() + 3 * 3600e3).toISOString().slice(0, 10);
+  if (!gun || gun !== bugun) return;
+  var ilk = null, serit = null;
+  function sor() {
+    if (document.hidden) return;
+    fetch('/veri/surum.json?v=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.h) return;
+        if (ilk === null) { ilk = d.h; return; }
+        if (d.h !== ilk && !serit) goster(d.t);
+      })
+      .catch(function () {});
+  }
+  function goster(t) {
+    serit = document.createElement('div');
+    serit.className = 'canli-serit';
+    serit.setAttribute('role', 'status');
+    serit.innerHTML = '<span><b>Yeni sonuç geldi</b>' + (t ? ' · ' + t : '') + '</span><button type="button">Yenile</button>';
+    serit.querySelector('button').addEventListener('click', function () { location.reload(); });
+    document.body.appendChild(serit);
+  }
+  sor();
+  setInterval(sor, 60000);
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) sor(); });
+})();
