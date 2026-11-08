@@ -1356,3 +1356,34 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .hesap button.dugme{background:none;color:#EAF1FB;border:1.5px solid #34507E;cursor:pointer;font-family:var(--govde)}
 .hesap button.dugme:hover,.hesap button.dugme[aria-expanded="true"]{border-color:#86C8FF;color:#86C8FF}
 .hesap .hesap-foto+div{margin-left:0}
+/* Biz ve yorumcular karşılaştırması (08.11) */
+.kx-kars.iki{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:4px;align-items:start}
+.kx-kars.iki .kx-ilk4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kx-baslik span{margin-left:6px;font-weight:600;text-transform:none;letter-spacing:0;color:var(--soluk)}
+.kx-jok,.kx-yyuz{display:block;font-size:12.5px;line-height:1.35;color:var(--murekkep)}
+.kx-jok i,.kx-yyuz i{font-style:normal;font-weight:700;color:var(--soluk);margin-right:3px}
+.kx-jok b{color:var(--cim)}
+.kx-jok.ust em{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:999px;background:var(--cim-acik);color:var(--cim);font:700 11px/1.5 var(--govde);font-style:normal}
+.kx-yyuz{color:var(--soluk)}
+.kx-yor{padding:14px 18px 6px}
+.kx-ybar{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.kx-ybar li{display:grid;gap:4px;padding:7px 10px 8px;border-radius:10px;border:1px solid var(--cizgi);background:var(--beyaz)}
+.kx-ybar li.biz{border-color:var(--cim)}
+.kx-ybar li.yf{border-color:var(--amber)}
+.kx-ybar li.kazandi{border:2px solid var(--amber);background:var(--amber-acik)}
+.kx-yust{display:flex;align-items:center;gap:8px;min-width:0}
+.kx-yust .kx-forma{min-width:26px;height:26px;font-size:15px;border-radius:7px}
+.kx-f-d{background:var(--soluk)}
+.kx-ybar li.yf .kx-f-d{background:var(--amber);color:var(--murekkep)}
+.kx-yad{flex:1;min-width:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kx-yp{font:700 15px/1 var(--baslik);color:var(--murekkep)}
+.kx-bar{display:block;height:6px;border-radius:999px;background:var(--cizgi-acik);overflow:hidden}
+.kx-bar i{display:block;height:100%;border-radius:999px;background:var(--soluk)}
+.kx-ybar li.biz .kx-bar i{background:var(--cim)}
+.kx-ybar li.yf .kx-bar i{background:var(--amber)}
+.kx-yalt{font-size:12px;color:var(--soluk)}
+.kx-yalt em{font-style:normal;font-weight:700;color:var(--murekkep)}
+.kx-ybar li.yok .kx-yalt em{color:var(--kirmizi)}
+.kx-kozet{margin:10px 0 6px;font-size:13px;line-height:1.45;color:var(--murekkep)}
+@media (max-width:900px){.kx-kars.iki{grid-template-columns:1fr}}
+@media (max-width:640px){.kx-yor{padding:10px 14px 4px}}
