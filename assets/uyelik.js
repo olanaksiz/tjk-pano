@@ -394,18 +394,15 @@
       ['muhtemel', "muhtemel ve AGF'ye bakıyor"], ['canli', 'canlı yayında'], ['ozet', 'günün özetinde']];
     var sayilmaz = navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true;
     try { if (localStorage.getItem('tjkd-z-kapali') === '1') sayilmaz = true; } catch (e) {}
-    var kucuk = false;
-    try { kucuk = localStorage.getItem('tjkd-canli-kucuk') === '1'; } catch (e) {}
+    var acik = false;    // varsayılan: en küçük hali; dokununca ayrıntı açılır
     var ser = null, son = null, hata = 0, zam = null;
     function say(n) { return Number(n || 0).toLocaleString('tr-TR'); }
     function kur() {
-      ser = document.createElement('div');
-      ser.className = 'cs'; ser.hidden = true;
-      ser.innerHTML = '<button type="button" class="cs-ac"><i class="cs-nokta" aria-hidden="true"></i><span class="cs-yazi"></span></button>' +
-        '<button type="button" class="cs-kapat" aria-label="Canlı sayacı küçült" title="Küçült">×</button>';
+      ser = document.createElement('button');
+      ser.type = 'button'; ser.className = 'cs'; ser.hidden = true;
+      ser.innerHTML = '<i class="cs-nokta" aria-hidden="true"></i><span class="cs-yazi"></span>';
       document.body.appendChild(ser);
-      ser.querySelector('.cs-kapat').addEventListener('click', function () { kucuk = true; try { localStorage.setItem('tjkd-canli-kucuk', '1'); } catch (e) {} ciz(son); });
-      ser.querySelector('.cs-ac').addEventListener('click', function () { if (!kucuk) return; kucuk = false; try { localStorage.removeItem('tjkd-canli-kucuk'); } catch (e) {} ciz(son); });
+      ser.addEventListener('click', function () { acik = !acik; ciz(son); });
     }
     function ciz(o) {
       son = o;
@@ -413,26 +410,27 @@
       var n = Number(o.simdi || 0), gt = Number(o.bugun_tekil || 0), canliMi = n >= ESIK;
       if (!canliMi && gt < GUN_ESIK) { if (ser) ser.hidden = true; return; }
       if (!ser) kur();
-      var yazi = ser.querySelector('.cs-yazi'), ac = ser.querySelector('.cs-ac'), h = '';
+      var yazi = ser.querySelector('.cs-yazi'), h = '', ek = [];
       if (canliMi) {
-        h = '<b>' + say(n) + '</b> kişi şu an sitede';
-        var b = o.bolum || {}, ek = AD.filter(function (x) { return b[x[0]] > 0; })
+        h = '<b>' + say(n) + '</b> çevrimiçi';
+        var b = o.bolum || {};
+        ek = AD.filter(function (x) { return b[x[0]] > 0; })
           .sort(function (x, y) { return b[y[0]] - b[x[0]]; }).slice(0, 2)
           .map(function (x) { return say(b[x[0]]) + ' kişi ' + x[1]; });
         if (o.premium > 0) ek.push(say(o.premium) + ' premium üye çevrimiçi');
-        if (ek.length) h += '<span class="cs-ek"> · ' + ek.join(' · ') + '</span>';
-        ac.title = 'Gerçek anlık sayı: son 2,5 dakikada sitede açık olan sayfalar. Kişisel bilgi içermez.';
+        ser.title = 'Şu an sitede ' + say(n) + ' kişi (gerçek anlık sayı, son 2,5 dk). ' + (ek.length ? ek.join(', ') + '. ' : '') + 'Ayrıntı için dokun.';
       } else {
-        h = 'Bugün <b>' + say(gt) + '</b> kişi ziyaret etti';
-        if (o.bugun_bulten > 0) h += '<span class="cs-ek"> · ' + say(o.bugun_bulten) + ' kişi bülteni açtı</span>';
-        ac.title = 'Gerçek sayı: bugün (Türkiye saatiyle) siteyi açan farklı ziyaretçiler. Kişisel bilgi içermez.';
+        h = 'Bugün <b>' + say(gt) + '</b> ziyaretçi';
+        if (o.bugun_bulten > 0) ek.push(say(o.bugun_bulten) + ' kişi bülteni açtı');
+        ser.title = 'Bugün (Türkiye saatiyle) siteyi açan farklı ziyaretçi: ' + say(gt) + ' (gerçek sayı). Ayrıntı için dokun.';
       }
-      if (kucuk) h = '<b>' + say(canliMi ? n : gt) + '</b>';
+      if (acik && ek.length) h += '<span class="cs-ek"> · ' + ek.join(' · ') + '</span>';
       yazi.innerHTML = h;
       ser.classList.toggle('canli', canliMi);
       ser.classList.toggle('gunluk', !canliMi);
-      ser.classList.toggle('kucuk', kucuk);
-      ac.setAttribute('aria-label', kucuk ? 'Canlı sayacı aç' : yazi.textContent);
+      ser.classList.toggle('acik', acik);
+      ser.setAttribute('aria-expanded', acik ? 'true' : 'false');
+      ser.setAttribute('aria-label', ser.title);
       ser.hidden = false;
     }
     function tur() {
