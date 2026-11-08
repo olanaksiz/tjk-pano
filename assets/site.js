@@ -11,12 +11,42 @@ function tjkdBaslat() {
     if (g.year + '-' + g.month + '-' + g.day !== gun) return;
     simdi = Number(g.hour) * 60 + Number(g.minute);
   } catch (e) { return; }
-  var sec = null;
-  kosular.forEach(function (k) {
-    if (k.getAttribute('data-bitti') === '1') return;
-    var t = k.getAttribute('data-bas').split(':');
-    var dk = Number(t[0]) * 60 + Number(t[1]);
-    if (dk + 3 >= simdi && (!sec || dk < sec.dk)) sec = {el: k, dk: dk};
+  function siradaki(kapsam) {
+    var s = null;
+    [].forEach.call(kapsam, function (k) {
+      if (k.getAttribute('data-bitti') === '1') return;
+      var t = k.getAttribute('data-bas').split(':');
+      var dk = Number(t[0]) * 60 + Number(t[1]);
+      if (dk + 3 >= simdi && (!s || dk < s.dk)) s = {el: k, dk: dk};
+    });
+    return s;
+  }
+  var sec = siradaki(kosular);
+  // Sayfaya bir hipodrom (#adana) ya da koşu (#adana-3) bağlantısıyla gelindiyse oraya git; hipodromsa o hipodromun sıradaki koşusuna.
+  // Kilitli içerik açılınca sayfa uzadığı için tarayıcının ilk atlaması kayar; bu yüzden içerik açıldıktan sonra yeniden kaydırılır.
+  var hedef = null, hs = decodeURIComponent(location.hash.slice(1));
+  if (hs) {
+    var he = document.getElementById(hs);
+    if (he && he.classList.contains('hip-bolum')) {
+      var hsec = siradaki(he.querySelectorAll('.kosu[data-bas]'));
+      hedef = hsec ? hsec.el : he;
+    } else if (he) hedef = he;
+  } else if (sec && sec.el.matches('article.kx')) hedef = sec.el;
+  if (hedef) {
+    var elle = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) { window.addEventListener(e, function () { elle = true; }, {once: true, passive: true}); });
+    var git = function () { if (!elle) hedef.scrollIntoView({block: 'start'}); };
+    git(); setTimeout(git, 400); setTimeout(git, 1200);
+  }
+  // Sayfa içindeki hipodrom adına (İstanbul / Adana) tıklayınca o hipodromun sıradaki koşusuna git
+  [].forEach.call(document.querySelectorAll('a.ks-serit-ad[href^="#"]'), function (a) {
+    a.addEventListener('click', function (e) {
+      var bol = document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1))); if (!bol) return;
+      var s2 = siradaki(bol.querySelectorAll('.kosu[data-bas]')); if (!s2) return;
+      e.preventDefault();
+      try { history.replaceState(null, '', '#' + s2.el.id); } catch (er) {}
+      s2.el.scrollIntoView({block: 'start', behavior: 'smooth'});
+    });
   });
   if (!sec) return;
   sec.el.classList.add('sirada');
@@ -45,13 +75,6 @@ function tjkdBaslat() {
     a.textContent = sec.el.getAttribute('data-ad');
     kutu.classList.add('var');
   }
-  // Bugünün koşuları açılınca sıradaki koşuya kendiliğinden git (kullanıcı belirli bir koşu bağlantısıyla gelmediyse)
-  if (!location.hash && sec.el.matches('article.kx')) {
-    var elle = false;
-    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) { window.addEventListener(e, function () { elle = true; }, {once: true, passive: true}); });
-    var git = function () { if (!elle) sec.el.scrollIntoView({block: 'start'}); };
-    git(); setTimeout(git, 400); setTimeout(git, 1200);
-  }
 })();
 
 // Hipodrom saat şeridi (mobil ana sayfa): sıradaki koşu saati, 15 dk kala kırmızı
@@ -78,6 +101,8 @@ function tjkdBaslat() {
     if (!sira) { rozet.textContent = 'Sonuçlandı'; rozet.classList.add('bitti'); return; }
     rozet.textContent = sira.s;
     if (sira.dk - simdi <= 15) rozet.classList.add('yakin');
+    var idler = (c.getAttribute('data-idler') || '').split(','), sa = c.getAttribute('data-saatler').split(',');
+    var i = sa.indexOf(sira.s); if (i >= 0 && idler[i]) c.href = c.href.split('#')[0] + '#' + idler[i];
   });
 })();
 
