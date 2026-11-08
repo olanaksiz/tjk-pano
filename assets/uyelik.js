@@ -571,6 +571,8 @@
       document.documentElement.classList.add('uye');
       if (d.premium) document.documentElement.classList.add('uye-premium');
       if (d.plus) document.documentElement.classList.add('uye-pp');
+      /* yönetici kendi cihazında sayaca girmesin: bu tarayıcıda sayaç kalıcı kapanır (çerez sayfasındaki düğmeyle açılabilir) */
+      if (d.admin) { try { if (localStorage.getItem('tjkd-z-kapali') !== '1') { localStorage.setItem('tjkd-z-kapali', '1'); localStorage.removeItem('tjkd-z-gordu'); } } catch (e) {} }
       $$('[data-uye-gizle]').forEach(function (x) { x.hidden = true; });
       if (d.deneme && d.deneme_bitis) {
         var gun = Math.max(1, Math.ceil((new Date(d.deneme_bitis) - new Date()) / 864e5));
