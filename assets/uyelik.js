@@ -449,13 +449,72 @@
     document.addEventListener('visibilitychange', function () { if (!document.hidden && zam) tur(); });
   }
 
+
+  // ---------- üyelik kilidi: korunan bölümleri üyenin anahtarıyla aç ----------
+  function b64b(t) { var b = atob(t), x = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) x[i] = b.charCodeAt(i); return x; }
+  var anahtarSoz = null;
+  function anahtarlar() {
+    if (anahtarSoz) return anahtarSoz;
+    anahtarSoz = oturum().then(function (s) {
+      if (!s) return {};
+      return istek('/rest/v1/rpc/icerik_anahtarlarim', {method: 'POST', token: s.at, body: {}}).then(function (j) { return j || {}; }).catch(function () { return {}; });
+    });
+    return anahtarSoz;
+  }
+  var anahtarOnbellek = {};
+  function anahtar(sev) {
+    if (anahtarOnbellek[sev]) return anahtarOnbellek[sev];
+    anahtarOnbellek[sev] = anahtarlar().then(function (k) {
+      if (!k[sev] || !window.crypto || !crypto.subtle) return null;
+      return crypto.subtle.importKey('raw', b64b(k[sev]), 'AES-GCM', false, ['decrypt']);
+    }).catch(function () { return null; });
+    return anahtarOnbellek[sev];
+  }
+  function coz(sev, iv, ct) {
+    return anahtar(sev).then(function (key) {
+      if (!key) return null;
+      return crypto.subtle.decrypt({name: 'AES-GCM', iv: b64b(iv)}, key, b64b(ct)).then(function (b) { return new TextDecoder().decode(b); });
+    }).catch(function () { return null; });
+  }
+  window.tjkdCoz = coz;
+  function kilitBitti() { window.__tjkdAcildi = true; try { document.dispatchEvent(new Event('tjkd-acildi')); } catch (e) {} }
+  function kilitAc() {
+    var L = $$('.kilit[data-kilit]');
+    if (!L.length) { kilitBitti(); return; }
+    oturum().then(function (s) {
+      if (s) L.forEach(function (el) { $$('[data-kilit-misafir]', el).forEach(function (x) { x.hidden = true; }); $$('[data-kilit-yukleniyor]', el).forEach(function (x) { x.hidden = false; }); });
+      return Promise.all(L.map(function (el) {
+        return coz(el.getAttribute('data-kilit'), el.getAttribute('data-iv'), el.getAttribute('data-ct')).then(function (h) {
+          if (h == null) {
+            $$('[data-kilit-yukleniyor]', el).forEach(function (x) { x.hidden = true; });
+            if (s) $$('[data-kilit-uye]', el).forEach(function (x) { x.hidden = false; });
+            return;
+          }
+          var t = document.createElement('template'); t.innerHTML = h; el.replaceWith(t.content);
+        });
+      }));
+    }).then(kilitBitti, kilitBitti);
+  }
+  function denemeYaz() {
+    anahtarlar().then(function (k) {
+      var d = k && k._durum; if (!d) return;
+      document.documentElement.classList.add('uye');
+      if (d.premium) document.documentElement.classList.add('uye-premium');
+      if (d.plus) document.documentElement.classList.add('uye-pp');
+      $$('[data-uye-gizle]').forEach(function (x) { x.hidden = true; });
+      if (d.deneme && d.deneme_bitis) {
+        var gun = Math.max(1, Math.ceil((new Date(d.deneme_bitis) - new Date()) / 864e5));
+        $$('[data-deneme]').forEach(function (x) { x.hidden = false; x.textContent = 'Ücretsiz Premium denemen: ' + gun + ' gün kaldı'; });
+      }
+    });
+  }
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); duyuru(); sayac(); canli();
-  });
+    ustBar(); premiumSayfa(); duyuru(); sayac(); canli(); kilitAc(); denemeYaz();
+  }, function () { kilitAc(); });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
 
   // admin paneli ve modüller için ortak arayüz

@@ -1,3 +1,4 @@
+function tjkdBaslat() {
 // TJK Detay — yalnız "sıradaki koşu" vurgusu (sayfa içeriği HTML'de hazırdır)
 (function () {
   var kosular = document.querySelectorAll('.kosu[data-bas]');
@@ -390,14 +391,19 @@ document.addEventListener('click', function (e) {
     if (!gecmisYok && history.replaceState) { var u = t === sayfa ? location.pathname : location.pathname + '?t=' + t; history.replaceState(null, '', u); }
     if (t === sayfa && bugunHTML) { icerik.innerHTML = bugunHTML; durum.hidden = true; return; }
     durum.hidden = false; durum.textContent = uzun(t) + ' sonuçları yükleniyor…';
-    var yukle = onbellek[t] ? Promise.resolve(onbellek[t]) : fetch('/veri/sonuc/' + t + '.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+    var yukle = onbellek[t] ? Promise.resolve(onbellek[t]) : fetch('/veri/sonuc/' + t + '.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (v) {
+      if (!v || !v.ct) return v;
+      if (!window.tjkdCoz) throw new Error('uye');
+      return window.tjkdCoz(v.seviye || 'uye', v.iv, v.ct).then(function (m) { if (m == null) throw new Error('uye'); return JSON.parse(m); });
+    });
     yukle.then(function (v) {
       if (secili !== t) return;
       onbellek[t] = v; durum.hidden = true; gunCiz(v, t);
-    }).catch(function () {
+    }).catch(function (hata) {
       if (secili !== t) return;
       icerik.innerHTML = '';
       durum.hidden = false; durum.textContent = '';
+      if (hata && hata.message === 'uye') { durum.appendChild(document.createTextNode('Geçmiş sonuçlar üyelerimize açık. ')); var u = el('a', '', 'Ücretsiz üye ol ya da giriş yap'); u.href = '/uye-ol/'; durum.appendChild(u); return; }
       durum.appendChild(document.createTextNode(uzun(t) + ' için arşivimizde sonuç yok. '));
       var a = el('a', '', 'TJK sitesinde aç'); a.href = tjk(t); a.target = '_blank'; a.rel = 'noopener'; durum.appendChild(a);
     });
@@ -473,4 +479,11 @@ document.addEventListener('click', function (e) {
   var KISIT = false;
   var s = document.querySelector('[data-pp-sayfa]'); if (!s) return;
   if (KISIT && !document.documentElement.classList.contains('uye-pp')) { s.hidden = true; var k = document.querySelector('[data-pp-kilit]'); if (k) k.hidden = false; }
+})();
+
+}
+(function () {
+  function calis() { if (window.__tjkdBasladi) return; window.__tjkdBasladi = true; tjkdBaslat(); }
+  if (document.querySelector('.kilit[data-kilit]') && !window.__tjkdAcildi) { document.addEventListener('tjkd-acildi', calis, {once: true}); setTimeout(calis, 15000); }
+  else calis();
 })();

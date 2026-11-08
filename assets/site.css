@@ -1312,3 +1312,22 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
   .kx-etiket{min-width:0;flex-basis:100%}
   .kx .ks-tum>summary{padding:12px 14px}
 }
+/* Üyelik kilidi */
+.kilit{max-width:var(--olcu);margin:0 auto;padding:40px 20px 56px}
+.kilit-kart{max-width:620px;margin:0 auto;text-align:center;padding:34px 26px 30px;border-radius:22px;background:linear-gradient(180deg,#0E1E44,#071330);color:#EAF1FB;border:1px solid #1F3B70;box-shadow:0 26px 60px -30px rgba(7,19,48,.9)}
+.kilit-kart h2{margin:6px 0 10px;color:#fff;font:700 clamp(26px,4vw,36px)/1.08 var(--baslik)}
+.kilit-rozet{display:inline-block;margin:0;font:700 13px/1 var(--govde);color:#13231C;background:linear-gradient(180deg,#F6D77A,#D3A12C);border-radius:999px;padding:6px 11px}
+.kilit-a{margin:0 auto 18px;max-width:46ch;color:#B9CBEA;font-size:16.5px}
+.kilit-dugme{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.dugme-cizgi-koyu{border:1.5px solid #34507E;color:#EAF1FB}
+.dugme-cizgi-koyu:hover{border-color:#86C8FF;color:#86C8FF}
+.deneme-serit{margin:0;padding:8px 20px;text-align:center;background:linear-gradient(90deg,#F6D77A,#D3A12C);color:#13231C;font:700 14px/1.2 var(--govde)}
+/* Ana sayfa üye ol bandı */
+.uye-bant{background:linear-gradient(90deg,#0B1A3C,#102A5C);border-top:1px solid #1F3B70;border-bottom:1px solid #1F3B70;color:#EAF1FB}
+.uye-bant-ic{display:flex;align-items:center;justify-content:space-between;gap:18px 28px;padding-top:22px;padding-bottom:22px;flex-wrap:wrap}
+.uye-bant-rozet{margin:0 0 4px;font:700 12.5px/1 var(--govde);text-transform:uppercase;letter-spacing:.6px;color:#F6D77A}
+.uye-bant h2{margin:0 0 6px;color:#fff;font:700 clamp(26px,3.6vw,38px)/1.05 var(--baslik)}
+.uye-bant h2 span{color:#F6D77A}
+.uye-bant p{margin:0;max-width:62ch;color:#B9CBEA;font-size:15.5px}
+.uye-bant-dugme{display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:680px){.uye-bant-dugme{width:100%}.uye-bant-dugme .dugme{flex:1}.kilit{padding:24px 14px 40px}.kilit-kart{padding:26px 18px 24px}}
