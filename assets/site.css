@@ -1402,3 +1402,10 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .siradaki-geri{font-variant-numeric:tabular-nums;color:var(--amber-koyu)}
 @keyframes kxNabiz{50%{opacity:.6}}
 @media (prefers-reduced-motion:reduce){.kx-geri.cok-yakin{animation:none}}
+/* son dakika kuponları */
+.sd-liste{display:grid;gap:16px;margin:8px 0 24px;max-width:760px}
+.sd-zaman{margin:2px 0 8px;font-size:13.5px;color:var(--soluk)}
+.sd-zaman b{color:var(--murekkep)}
+.sd-rozet{display:inline-block;margin-right:6px;padding:2px 8px;border-radius:999px;background:#FFF1C9;color:#8A5A00;font:700 12px/1.5 var(--govde)}
+.kutu.kutu-sd{border-color:#D3A12C;box-shadow:0 0 0 1px rgba(242,193,78,.35) inset}
+.kutu.kutu-sd span{color:#F6D77A}
