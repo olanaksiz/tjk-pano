@@ -424,3 +424,44 @@ document.addEventListener('click', function (e) {
   var q = new URLSearchParams(location.search).get('t');
   if (q && /^\d{4}-\d\d-\d\d$/.test(q) && q !== sayfa) git(q, true); else { basliklar(sayfa); seriCiz(); }
 })();
+
+/* ---- Premium Plus: koşuya gelince sürpriz adayları penceresi ----
+   PP_KISIT=false: üyelik açılana kadar herkese görünür. Üyelik açılınca true yapılır;
+   o zaman yalnız <html class="uye-pp"> (uyelik.js, Premium Plus profil) olanlara içerik, diğerlerine tanıtım gösterilir. */
+(function () {
+  var PP_KISIT = false;
+  var tpl = document.querySelectorAll('template[data-pp]');
+  if (!tpl.length || !('IntersectionObserver' in window)) return;
+  var kutu = document.createElement('aside'); kutu.className = 'pp'; kutu.hidden = true; kutu.setAttribute('aria-live', 'polite');
+  document.body.appendChild(kutu);
+  var gosterilen = {}, aktif = null;
+  function oku(k) { try { return sessionStorage.getItem(k); } catch (x) { return null; } }
+  function yaz(k, v) { try { sessionStorage.setItem(k, v); } catch (x) {} }
+  function kapat() { kutu.hidden = true; kutu.classList.remove('acik'); if (aktif) yaz('pp-' + aktif, '1'); aktif = null; }
+  function goster(id) {
+    if (aktif === id || oku('pp-' + id) || oku('pp-hepsi')) return;
+    var t = document.querySelector('template[data-pp="' + id + '"]'); if (!t) return;
+    kutu.innerHTML = '';
+    if (PP_KISIT && !document.documentElement.classList.contains('uye-pp')) {
+      var d = document.createElement('div'); d.className = 'pp-k';
+      d.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium Plus</span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div><p class="pp-bas">Bu koşunun sürpriz adayları Premium Plus üyelere özel.</p><p class="pp-not"><a href="/premium/">Premium Plus\'ı incele →</a></p>';
+      kutu.appendChild(d);
+    } else kutu.appendChild(t.content.cloneNode(true));
+    var dk = document.createElement('button'); dk.type = 'button'; dk.className = 'pp-sus'; dk.textContent = 'Bugün başka gösterme';
+    dk.addEventListener('click', function () { yaz('pp-hepsi', '1'); kapat(); });
+    var k = kutu.querySelector('.pp-k'); if (k) k.appendChild(dk);
+    kutu.querySelectorAll('[data-pp-kapat]').forEach(function (b) { b.addEventListener('click', kapat); });
+    aktif = id; kutu.hidden = false; requestAnimationFrame(function () { kutu.classList.add('acik'); });
+  }
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var id = e.target.id;
+      if (e.isIntersecting && (e.intersectionRatio >= 0.35 || e.intersectionRect.height >= innerHeight * 0.45)) {
+        clearTimeout(gosterilen[id]);
+        gosterilen[id] = setTimeout(function () { goster(id); }, 700);
+      } else { clearTimeout(gosterilen[id]); if (aktif === id && !e.isIntersecting) { kutu.hidden = true; kutu.classList.remove('acik'); aktif = null; } }
+    });
+  }, {threshold: [0, 0.1, 0.2, 0.3, 0.35, 0.5, 0.7]});
+  tpl.forEach(function (t) { var a = document.getElementById(t.getAttribute('data-pp')); if (a && a.getAttribute('data-bitti') !== '1') io.observe(a); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
+})();

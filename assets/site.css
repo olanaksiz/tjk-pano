@@ -1099,3 +1099,24 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
   .sk-odeme{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px}
   .st-ozet-k{max-width:none}
 }
+/* Premium Plus: sürpriz adayları penceresi */
+.pp{position:fixed;right:20px;bottom:96px;z-index:30;width:min(380px,calc(100vw - 32px));opacity:0;transform:translateY(14px);transition:opacity .25s ease,transform .25s ease}
+.pp.acik{opacity:1;transform:none}
+.pp-k{position:relative;padding:14px 16px 12px;border-radius:18px;background:linear-gradient(180deg,#14234A,#0A1430);border:1px solid #2B4C8C;color:#EAF1FB;box-shadow:0 22px 50px -18px rgba(3,10,30,.85)}
+.pp-ust{display:flex;align-items:center;gap:8px;margin:0 0 6px}
+.pp-rozet{flex:none;font:700 12px/1 var(--govde);letter-spacing:.3px;color:#13231C;background:linear-gradient(180deg,#F6D77A,#D3A12C);border-radius:999px;padding:5px 9px}
+.pp-kosu{font:600 13px/1.2 var(--govde);color:#9FB6DD;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pp-kapat{margin-left:auto;flex:none;width:32px;height:32px;border-radius:10px;border:1px solid #2B4C8C;background:transparent;color:#CFE0FF;font:400 22px/1 var(--govde);cursor:pointer}
+.pp-kapat:hover{background:#1B2F5E}
+.pp-bas{margin:4px 0 8px;font:700 21px/1.1 var(--baslik);color:#fff}
+.pp-l{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.pp-l li{display:flex;gap:10px;align-items:center;padding:8px 10px;border-radius:12px;background:#0F1D40;border:1px solid #1E3566}
+.pp-no{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:9px;background:var(--amber);color:#13231C;font:700 18px/1 var(--baslik)}
+.pp-ad{min-width:0}
+.pp-ad b{display:block;font:600 16px/1.2 var(--govde);color:#fff}
+.pp-ad small{display:block;font-size:12.5px;line-height:1.3;color:#9FB6DD}
+.pp-not{margin:9px 0 0;font-size:12.5px;line-height:1.35;color:#8EA6CF}
+.pp-not a{color:#86C8FF;font-weight:600}
+.pp-sus{margin:8px 0 0;padding:0;border:0;background:none;color:#86C8FF;font:600 12.5px/1.2 var(--govde);cursor:pointer;text-decoration:underline}
+@media (max-width:560px){.pp{left:12px;right:12px;bottom:84px;width:auto}.pp-k{padding:12px 12px 10px}.pp-bas{font-size:18px;margin:2px 0 6px}.pp-l{gap:5px}.pp-l li{padding:6px 8px}.pp-no{width:28px;height:28px;font-size:16px}.pp-ad b{font-size:15px}.pp-not{font-size:12px;margin-top:7px}}
+@media (prefers-reduced-motion:reduce){.pp{transition:none}}
