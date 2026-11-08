@@ -467,3 +467,10 @@ document.addEventListener('click', function (e) {
   document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.addEventListener('click', function () { aktif = null; goster(b.getAttribute('data-pp-ac'), true); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
 })();
+
+/* ---- Premium Plus sayfası: üyelik açılınca KISIT=true (yalnız <html class="uye-pp"> görür) ---- */
+(function () {
+  var KISIT = false;
+  var s = document.querySelector('[data-pp-sayfa]'); if (!s) return;
+  if (KISIT && !document.documentElement.classList.contains('uye-pp')) { s.hidden = true; var k = document.querySelector('[data-pp-kilit]'); if (k) k.hidden = false; }
+})();
