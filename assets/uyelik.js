@@ -412,7 +412,7 @@
       if (!ser) kur();
       var yazi = ser.querySelector('.cs-yazi'), h = '', ek = [];
       if (canliMi) {
-        h = '<b>' + say(n) + '</b> çevrimiçi';
+        h = '<b>' + say(n) + '</b> kişi çevrimiçi';
         var b = o.bolum || {};
         ek = AD.filter(function (x) { return b[x[0]] > 0; })
           .sort(function (x, y) { return b[y[0]] - b[x[0]]; }).slice(0, 2)
