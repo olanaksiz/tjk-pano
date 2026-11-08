@@ -1466,3 +1466,14 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
   .sk-biz{font-size:11px;padding:3px 7px}
   .sk-biz br{display:inline}
 }
+/* Premium Plus WhatsApp grubu */
+.wa-grup{margin:18px 0;padding:16px 18px;border-radius:16px;background:linear-gradient(180deg,#0B1D42,#071533);border:1px solid #2B4C8C;color:#E6EEF9;max-width:760px}
+.wa-ust{display:flex;align-items:center;gap:12px}
+.wa-ust svg{width:44px;height:44px;flex:none}
+.wa-rozet{margin:0 0 2px;font:700 12px/1.3 var(--govde);color:#F6D77A}
+.wa-grup h2{margin:0;font:700 20px/1.2 var(--baslik);color:#fff}
+.wa-acik{margin:10px 0 12px;font-size:14.5px;line-height:1.5;color:#C9D6EE}
+.wa-dugme{display:inline-block;background:#25D366;color:#06301A;border-radius:999px;padding:11px 20px;font:700 15px/1 var(--govde);text-decoration:none}
+.wa-yakinda{display:inline-block;margin:0;padding:9px 14px;border:1px dashed #4B6FA8;border-radius:12px;color:#9FB6DD;font-size:14px}
+.wa-not{margin:12px 0 0;font-size:12.5px;line-height:1.45;color:#8EA3C6}
+.wa-kilit{margin:18px 0}
