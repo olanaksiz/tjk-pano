@@ -1482,3 +1482,4 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .ks-anahtar span{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--cizgi);border-radius:12px;background:var(--beyaz);line-height:1.35}
 .ks-k{flex:none;white-space:nowrap;height:auto;min-width:0;padding:6px 11px;border-radius:999px;font:700 14px/1.1 var(--baslik);letter-spacing:.2px}
 @media (max-width:640px){.ks-anahtar{grid-template-columns:1fr;gap:6px}.ks-anahtar span{padding:7px 10px}}
+.pp-verdik{display:inline-block;margin-top:4px;padding:2px 9px;border-radius:999px;background:#FFF1C9;color:#8A5A00;font:700 12px/1.5 var(--govde);text-decoration:none;white-space:nowrap}
