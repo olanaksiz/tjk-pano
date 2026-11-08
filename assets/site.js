@@ -22,7 +22,24 @@ function tjkdBaslat() {
   sec.el.classList.add('sirada');
   var cip = document.querySelector('.ks-c[data-ks="' + sec.el.id + '"]'); if (cip) { cip.classList.add('sirada'); if (cip.parentNode.scrollTo) cip.parentNode.scrollTo({left: cip.offsetLeft - 80}); }
   var kutu = document.querySelector('.siradaki');
-  if (kutu) {
+  if (kutu && kutu.classList.contains('sra')) {
+    var no = sec.el.querySelector('.kx-no'), hp = sec.el.querySelector('.kx-hip'), mt = sec.el.querySelector('.kx-meta');
+    kutu.querySelector('.sra-no').textContent = no ? no.textContent : '';
+    kutu.querySelector('.sra-hip').textContent = hp ? hp.textContent : '';
+    kutu.querySelector('.sra-meta').textContent = mt ? mt.textContent.replace(/\s+/g, ' ').trim() : '';
+    kutu.querySelector('.sra-saat b').textContent = sec.el.getAttribute('data-bas');
+    kutu.querySelector('.sra-git').href = '#' + sec.el.id;
+    var sonra = null;
+    kosular.forEach(function (k) {
+      if (k === sec.el || k.getAttribute('data-bitti') === '1') return;
+      var t = k.getAttribute('data-bas').split(':'), dk = Number(t[0]) * 60 + Number(t[1]);
+      if (dk >= sec.dk && (!sonra || dk < sonra.dk)) sonra = {el: k, dk: dk};
+    });
+    if (sonra) kutu.querySelector('.sra-sonra').innerHTML = 'Sonra: <a href="#' + sonra.el.id + '">' + ((sonra.el.querySelector('.kx-hip') || {}).textContent || '') + ' ' + ((sonra.el.querySelector('.kx-no') || {}).textContent || '') + ' · ' + sonra.el.getAttribute('data-bas') + '</a>';
+    kutu.setAttribute('data-hedef', sec.el.id);
+    kutu.classList.add('var');
+    document.dispatchEvent(new Event('tjkd-sra'));
+  } else if (kutu) {
     var a = kutu.querySelector('a');
     a.href = '#' + sec.el.id;
     a.textContent = sec.el.getAttribute('data-ad');
@@ -536,8 +553,28 @@ document.addEventListener('click', function (e) {
     L.push({k: k, t: t, el: el});
   });
   var sira = document.querySelector('.siradaki');
-  var sg = null;
-  if (sira) { sg = document.createElement('b'); sg.className = 'siradaki-geri'; sira.appendChild(sg); }
+  var sg = null, SK = sira && sira.classList.contains('sra') ? sira : null;
+  if (sira && !SK) { sg = document.createElement('b'); sg.className = 'siradaki-geri'; sira.appendChild(sg); }
+  function skYaz(now) {
+    if (!SK) return;
+    var id = SK.getAttribute('data-hedef'); if (!id) return;
+    var o = null; L.forEach(function (x) { if (x.k.id === id) o = x; }); if (!o) return;
+    var s = Math.round((o.t - now) / 1000), d = SK.querySelector('.sra-durum');
+    SK.classList.remove('yakin', 'cok-yakin', 'basladi');
+    if (s > 0) {
+      var sa = Math.floor(s / 3600), dk = Math.floor((s % 3600) / 60), sn = s % 60;
+      SK.querySelector('.sra-sa').hidden = !sa;
+      SK.querySelector('.sra-sa b').textContent = sa;
+      SK.querySelector('.sra-dk').textContent = iki(dk);
+      SK.querySelector('.sra-sn').textContent = iki(sn);
+      d.textContent = 'Başlamasına kalan süre';
+      if (s <= 120) SK.classList.add('cok-yakin'); else if (s <= 600) SK.classList.add('yakin');
+    } else {
+      SK.classList.add('basladi');
+      d.textContent = 'Start verildi · sonuç bekleniyor';
+    }
+  }
+  document.addEventListener('tjkd-sra', function () { skYaz(Date.now()); });
   function tik() {
     var now = Date.now(), ilk = null;
     L.forEach(function (o) {
@@ -552,6 +589,7 @@ document.addEventListener('click', function (e) {
       else { o.el.textContent = 'Sonuç bekleniyor'; o.el.classList.add('basladi'); }
     });
     if (sg) sg.textContent = ilk ? ' · ' + yazi(Math.round((ilk.t - now) / 1000)) + ' kaldı' : '';
+    skYaz(now);
   }
   tik(); setInterval(tik, 1000);
 })();
