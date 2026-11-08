@@ -28,6 +28,13 @@ function tjkdBaslat() {
     a.textContent = sec.el.getAttribute('data-ad');
     kutu.classList.add('var');
   }
+  // Bugünün koşuları açılınca sıradaki koşuya kendiliğinden git (kullanıcı belirli bir koşu bağlantısıyla gelmediyse)
+  if (!location.hash && sec.el.matches('article.kx')) {
+    var elle = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (e) { window.addEventListener(e, function () { elle = true; }, {once: true, passive: true}); });
+    var git = function () { if (!elle) sec.el.scrollIntoView({block: 'start'}); };
+    git(); setTimeout(git, 400); setTimeout(git, 1200);
+  }
 })();
 
 // Hipodrom saat şeridi (mobil ana sayfa): sıradaki koşu saati, 15 dk kala kırmızı
