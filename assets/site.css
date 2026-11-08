@@ -1477,3 +1477,8 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .wa-yakinda{display:inline-block;margin:0;padding:9px 14px;border:1px dashed #4B6FA8;border-radius:12px;color:#9FB6DD;font-size:14px}
 .wa-not{margin:12px 0 0;font-size:12.5px;line-height:1.45;color:#8EA3C6}
 .wa-kilit{margin:18px 0}
+/* Koşular üst açıklama: taşmayan, düzenli kartlar */
+.ks-anahtar{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:8px 0 10px;font-size:13.5px;color:var(--soluk)}
+.ks-anahtar span{display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--cizgi);border-radius:12px;background:var(--beyaz);line-height:1.35}
+.ks-k{flex:none;white-space:nowrap;height:auto;min-width:0;padding:6px 11px;border-radius:999px;font:700 14px/1.1 var(--baslik);letter-spacing:.2px}
+@media (max-width:640px){.ks-anahtar{grid-template-columns:1fr;gap:6px}.ks-anahtar span{padding:7px 10px}}
