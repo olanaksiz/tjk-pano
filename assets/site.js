@@ -478,12 +478,15 @@ document.addEventListener('click', function (e) {
     kutu.querySelectorAll('[data-pp-kapat]').forEach(function (b) { b.addEventListener('click', kapat); });
     aktif = id; kutu.hidden = false; requestAnimationFrame(function () { kutu.classList.add('acik'); });
   }
+  var gorunen = {};  /* aynı anda iki koşu görünürse ekranda en çok yer kaplayanın penceresi açılır */
+  function enIyi() { var b = null, h = -1; Object.keys(gorunen).forEach(function (k) { if (gorunen[k] > h) { h = gorunen[k]; b = k; } }); return b; }
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) {
       var id = e.target.id;
+      if (e.isIntersecting) gorunen[id] = e.intersectionRect.height; else delete gorunen[id];
       if (e.isIntersecting && (e.intersectionRatio >= 0.35 || e.intersectionRect.height >= innerHeight * 0.45)) {
         clearTimeout(gosterilen[id]);
-        gosterilen[id] = setTimeout(function () { goster(id); }, 700);
+        gosterilen[id] = setTimeout(function () { if (enIyi() === id) goster(id); }, 700);
       } else { clearTimeout(gosterilen[id]); if (aktif === id && !e.isIntersecting) { kutu.hidden = true; kutu.classList.remove('acik'); aktif = null; } }
     });
   }, {threshold: [0, 0.1, 0.2, 0.3, 0.35, 0.5, 0.7]});
