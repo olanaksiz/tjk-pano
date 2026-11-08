@@ -387,8 +387,8 @@
     if (!HAZIR || document.body.classList.contains('admin-govde')) return;
     var ua = navigator.userAgent || '';
     if (navigator.webdriver || /bot|crawl|spider|slurp|lighthouse|headless|preview/i.test(ua)) return;
-    var ESIK = 3;        // canlı satır, şu an sitede en az bu kadar kişi varken görünür
-    var GUN_ESIK = 20;   // daha az kişi varken bugünkü toplam en az bu kadarsa o gösterilir; değilse şerit gizlenir
+    var ESIK = 2;        // canlı satır, şu an sitede en az bu kadar kişi varken görünür
+    var GUN_ESIK = 1;    // daha az kişi varken bugünkü toplam gösterilir (şerit her zaman görünür)
     var ARALIK = 60000;  // nabız ve özet dakikada bir
     var AD = [['bulten', 'bugünün bültenini okuyor'], ['kupon', 'hazır kuponları inceliyor'], ['sonuc', 'sonuçlara bakıyor'],
       ['muhtemel', "muhtemel ve AGF'ye bakıyor"], ['canli', 'canlı yayında'], ['ozet', 'günün özetinde']];
