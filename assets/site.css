@@ -1568,3 +1568,7 @@ article.kx{scroll-margin-top:84px}
 @media (max-width:600px){.rakam{padding:40px 0}.rakam-l,.rakam-slogan{grid-template-columns:1fr}.rakam-l li{padding:18px 16px}}
 .rakam-rozet{display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 12px;border-radius:999px;background:#FFF1C9;border:1px solid #F1D27A;color:#8A5A00;font:700 12px/1 var(--govde);letter-spacing:.1em;text-transform:uppercase}
 .rakam-rozet::before{content:"";width:7px;height:7px;border-radius:50%;background:#D3A12C}
+.sdk-ikr{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding:8px 12px;border-radius:10px;background:#E3F4EA;border:1px solid #9FD8B5}
+.sdk-ikr span{font:700 11px/1 var(--govde);letter-spacing:.06em;text-transform:uppercase;color:#1F7A49}
+.sdk-ikr b{font:700 22px/1.1 var(--baslik);color:#14532D}
+.sdk-ikr small{font:600 12px/1.2 var(--govde);color:#1F7A49}
