@@ -1331,3 +1331,10 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .uye-bant p{margin:0;max-width:62ch;color:#B9CBEA;font-size:15.5px}
 .uye-bant-dugme{display:flex;flex-wrap:wrap;gap:10px}
 @media (max-width:680px){.uye-bant-dugme{width:100%}.uye-bant-dugme .dugme{flex:1}.kilit{padding:24px 14px 40px}.kilit-kart{padding:26px 18px 24px}}
+.kilit-k{max-width:none;margin:0;padding:12px 18px 16px}
+.kilit-kucuk{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:14px 16px;border-radius:14px;background:linear-gradient(180deg,#0E1E44,#071330);color:#EAF1FB;border:1px solid #1F3B70}
+.kilit-kucuk p{margin:0;flex:1 1 280px;color:#B9CBEA;font-size:15px}
+.kilit-kucuk p b{color:#fff;font-weight:600}
+.kilit-kucuk .kilit-dugme{justify-content:flex-start}
+.kilit-kucuk .dugme{min-height:42px;padding:0 18px;font-size:15px}
+@media (max-width:680px){.kilit-k{padding:10px 12px 14px}.kilit-kucuk .kilit-dugme{width:100%}.kilit-kucuk .dugme{flex:1}}

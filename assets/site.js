@@ -438,6 +438,7 @@ document.addEventListener('click', function (e) {
 (function () {
   var PP_KISIT = false;
   var tpl = document.querySelectorAll('template[data-pp]');
+  if (!tpl.length) document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.hidden = true; });
   if (!tpl.length || !('IntersectionObserver' in window)) return;
   var kutu = document.createElement('aside'); kutu.className = 'pp'; kutu.hidden = true; kutu.setAttribute('aria-live', 'polite');
   document.body.appendChild(kutu);
@@ -470,7 +471,7 @@ document.addEventListener('click', function (e) {
     });
   }, {threshold: [0, 0.1, 0.2, 0.3, 0.35, 0.5, 0.7]});
   tpl.forEach(function (t) { var a = document.getElementById(t.getAttribute('data-pp')); if (a && a.getAttribute('data-bitti') !== '1') io.observe(a); });
-  document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.addEventListener('click', function () { aktif = null; goster(b.getAttribute('data-pp-ac'), true); }); });
+  document.querySelectorAll('[data-pp-ac]').forEach(function (b) { if (!document.querySelector('template[data-pp="' + b.getAttribute('data-pp-ac') + '"]')) { b.hidden = true; return; } b.addEventListener('click', function () { aktif = null; goster(b.getAttribute('data-pp-ac'), true); }); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
 })();
 

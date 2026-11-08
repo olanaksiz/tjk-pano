@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 8 Kasım 2026, 09:53. Kaynak: https://tjkdetay.com/
+Güncelleme: 8 Kasım 2026, 09:57. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -602,3 +602,49 @@ C: 18'dir. TJK'nın bahis kurallarında iştirakçinin 18 yaş ve üzerindeki ki
 
 S: Kaybettiğim parayı geri kazanmak için oynamak doğru mu?
 C: Hayır. Kayıp kovalamak bütçe sınırını ortadan kaldırır ve kaybı büyütebilir; her koşu bir öncekinden bağımsızdır.
+
+## 2026 sezonu jokey istatistikleri (ilk 40, galibiyete göre)
+Kaynak: TJK jokey istatistikleri. Ayrıntı: https://tjkdetay.com/jokeyler/
+
+| Sıra | Jokey | Biniş | 1. | Kazanma % | İlk 3 % |
+|---|---|---|---|---|---|
+| 1 | [Vedat Abiş](https://tjkdetay.com/jokeyler/vedat-abis/) | 1165 | 257 | 22 | 56 |
+| 2 | [Muhammed Mir Bilgin](https://tjkdetay.com/jokeyler/muhammed-mir-bilgin/) | 1190 | 236 | 20 | 51 |
+| 3 | [Nevzat Avci](https://tjkdetay.com/jokeyler/nevzat-avci/) | 968 | 208 | 21 | 52 |
+| 4 | [Ayhan Kurşun](https://tjkdetay.com/jokeyler/ayhan-kursun/) | 985 | 188 | 19 | 45 |
+| 5 | [Mehmet Salih Çelik](https://tjkdetay.com/jokeyler/mehmet-salih-celik/) | 903 | 156 | 17 | 47 |
+| 6 | [İsa Akyavuz](https://tjkdetay.com/jokeyler/isa-akyavuz/) | 756 | 152 | 20 | 50 |
+| 7 | [Gökhan Kocakaya](https://tjkdetay.com/jokeyler/gokhan-kocakaya/) | 618 | 143 | 23 | 53 |
+| 8 | [Mehmet Kaya](https://tjkdetay.com/jokeyler/mehmet-kaya/) | 879 | 133 | 15 | 43 |
+| 9 | [Mustafa Çiçek](https://tjkdetay.com/jokeyler/mustafa-cicek/) | 732 | 122 | 17 | 44 |
+| 10 | [Ali Yıldız](https://tjkdetay.com/jokeyler/ali-yildiz/) | 1089 | 115 | 11 | 36 |
+| 11 | [Müslüm Çelik](https://tjkdetay.com/jokeyler/muslum-celik/) | 886 | 114 | 13 | 39 |
+| 12 | [Ahmet Çelik](https://tjkdetay.com/jokeyler/ahmet-celik/) | 574 | 111 | 19 | 51 |
+| 13 | [Hışman Çizik](https://tjkdetay.com/jokeyler/hisman-cizik/) | 820 | 111 | 14 | 42 |
+| 14 | [Ercan Çankaya](https://tjkdetay.com/jokeyler/ercan-cankaya/) | 839 | 99 | 12 | 40 |
+| 15 | [Ferit Yardımcı](https://tjkdetay.com/jokeyler/ferit-yardimci/) | 516 | 95 | 18 | 47 |
+| 16 | [Halis Karataş](https://tjkdetay.com/jokeyler/halis-karatas/) | 417 | 92 | 22 | 54 |
+| 17 | [Necmi Altın](https://tjkdetay.com/jokeyler/necmi-altin/) | 720 | 91 | 13 | 38 |
+| 18 | [Ömer Faruk Özen](https://tjkdetay.com/jokeyler/omer-faruk-ozen/) | 811 | 88 | 11 | 33 |
+| 19 | [Ertuğrul Cankılıç](https://tjkdetay.com/jokeyler/ertugrul-cankilic/) | 597 | 85 | 14 | 37 |
+| 20 | [Salih Çelik](https://tjkdetay.com/jokeyler/salih-celik/) | 845 | 83 | 10 | 29 |
+| 21 | [Eray Çizik](https://tjkdetay.com/jokeyler/eray-cizik/) | 634 | 78 | 12 | 36 |
+| 22 | [Akın Sözen](https://tjkdetay.com/jokeyler/akin-sozen/) | 692 | 76 | 11 | 38 |
+| 23 | [Mehmet Akyavuz](https://tjkdetay.com/jokeyler/mehmet-akyavuz/) | 618 | 71 | 11 | 38 |
+| 24 | [Aziz Akdemir](https://tjkdetay.com/jokeyler/aziz-akdemir/) | 631 | 69 | 11 | 32 |
+| 25 | [Özcan Yıldırım](https://tjkdetay.com/jokeyler/ozcan-yildirim/) | 473 | 66 | 14 | 46 |
+| 26 | [Yiğitcan Gökçe](https://tjkdetay.com/jokeyler/yigitcan-gokce/) | 778 | 64 | 8 | 28 |
+| 27 | [Erhan Aktuğ](https://tjkdetay.com/jokeyler/erhan-aktug/) | 752 | 61 | 8 | 23 |
+| 28 | [Onur Yıldız](https://tjkdetay.com/jokeyler/onur-yildiz/) | 421 | 60 | 14 | 39 |
+| 29 | [Selim Kaya](https://tjkdetay.com/jokeyler/selim-kaya/) | 217 | 58 | 27 | 53 |
+| 30 | [İsa Katar](https://tjkdetay.com/jokeyler/isa-katar/) | 653 | 58 | 9 | 28 |
+| 31 | [Görkem Özçelik](https://tjkdetay.com/jokeyler/gorkem-ozcelik/) | 764 | 57 | 7 | 29 |
+| 32 | [Bekir Mert Mırık](https://tjkdetay.com/jokeyler/bekir-mert-mirik/) | 546 | 54 | 10 | 30 |
+| 33 | [Ali Mehdi Altın](https://tjkdetay.com/jokeyler/ali-mehdi-altin/) | 539 | 54 | 10 | 34 |
+| 34 | [Recep Ketme](https://tjkdetay.com/jokeyler/recep-ketme/) | 696 | 52 | 7 | 26 |
+| 35 | [Ahmet Hasan Bayar](https://tjkdetay.com/jokeyler/ahmet-hasan-bayar/) | 559 | 47 | 8 | 30 |
+| 36 | [Nizamettin Demir](https://tjkdetay.com/jokeyler/nizamettin-demir/) | 638 | 47 | 7 | 26 |
+| 37 | [Kadir Tokaçoğlu](https://tjkdetay.com/jokeyler/kadir-tokacoglu/) | 394 | 43 | 11 | 35 |
+| 38 | [Yusuf Cengiz](https://tjkdetay.com/jokeyler/yusuf-cengiz/) | 619 | 43 | 7 | 26 |
+| 39 | [Efe Akpınar](https://tjkdetay.com/jokeyler/efe-akpinar/) | 406 | 42 | 10 | 28 |
+| 40 | [Mert Ali Solmaz](https://tjkdetay.com/jokeyler/mert-ali-solmaz/) | 395 | 41 | 10 | 36 |

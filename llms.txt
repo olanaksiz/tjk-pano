@@ -21,5 +21,5 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Hakkımızda ve yöntem](https://tjkdetay.com/hakkimizda/)
 
 ## Veri
-Günlük tahmin ve sonuç verileri üyelere açıktır.
+Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
 - [Tam metin (llms-full.txt)](https://tjkdetay.com/llms-full.txt)
