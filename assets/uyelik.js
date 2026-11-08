@@ -424,7 +424,8 @@
         if (o.bugun_bulten > 0) ek.push(say(o.bugun_bulten) + ' kişi bülteni açtı');
         ser.title = 'Bugün (Türkiye saatiyle) siteyi açan farklı ziyaretçi: ' + say(gt) + ' (gerçek sayı). Ayrıntı için dokun.';
       }
-      if (acik && ek.length) h += '<span class="cs-ek"> · ' + ek.join(' · ') + '</span>';
+      if (!acik) h = '<b>' + say(canliMi ? n : gt) + '</b>';  // kapalı: yalnız sayı (bayrak)
+      else if (ek.length) h += '<span class="cs-ek"><br>' + ek.join('<br>') + '</span>';
       yazi.innerHTML = h;
       ser.classList.toggle('canli', canliMi);
       ser.classList.toggle('gunluk', !canliMi);
