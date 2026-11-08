@@ -1,12 +1,12 @@
 # TJK Detay
 
-> Türkiye at yarışları (TJK) için bağımsız günlük koşu analizi: her koşu için kural tablosundan çıkan ilk 4, Y atı ve sürpriz olasılığı; koşu sonrası sonuç ve ödemeler. Ayrıca at yarışı sözlüğü, rehber yazıları ve jokey istatistikleri. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur, bahis kabul etmez.
+> Türkiye at yarışları (TJK) için bağımsız günlük koşu analizi: her koşu için kural tablosundan çıkan ilk 4, yorumcu favorisi ve sürpriz olasılığı; koşu sonrası sonuç ve ödemeler. Ayrıca at yarışı sözlüğü, rehber yazıları ve jokey istatistikleri. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur, bahis kabul etmez.
 
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
 
 ## Günlük
 - [Günün özeti](https://tjkdetay.com/): sonuç tabelası, isabet, çok ayaklı oyun ödemeleri
-- [Bugünkü tahminler](https://tjkdetay.com/kosular/): koşu koşu ilk 4, Y atı, sürpriz olasılığı
+- [Bugünkü tahminler](https://tjkdetay.com/kosular/): koşu koşu ilk 4, yorumcu favorisi, sürpriz olasılığı
 - [Yarış programı](https://tjkdetay.com/program/): atlar, jokeyler, kilolar, son 6 koşu
 - [Sonuçlar](https://tjkdetay.com/sonuclar/): ganyan, ikili, sıralı üçlü, tabela, 6'lı/5'li/4'lü/3'lü ganyan ödemeleri
 - [Muhtemel ve AGF](https://tjkdetay.com/muhtemel-agf/): koşu öncesi son oranlar
@@ -21,6 +21,6 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Hakkımızda ve yöntem](https://tjkdetay.com/hakkimizda/)
 
 ## Veri
-- [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-08.json)
+- [Günlük veri (JSON)](https://tjkdetay.com/data/2026-11-07.json)
 - [Gün listesi ve isabet (JSON)](https://tjkdetay.com/data/gunler.json)
 - [Tam metin (llms-full.txt)](https://tjkdetay.com/llms-full.txt)
