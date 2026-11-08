@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   var AYAR = window.TJKD_UYELIK || {};
-  var URL = String(AYAR.url || '').replace(/\/+$/, '');
+  var URL_ = String(AYAR.url || '').replace(/\/+$/, ''), URL = URL_;
   var KEY = String(AYAR.anon || '');
   var HAZIR = /^https:\/\/.+/.test(URL) && KEY.length > 20;
   var SK = 'tjkd-oturum';
@@ -218,7 +218,11 @@
   function ustBar() {
     profil().then(function (p) {
       $$('[data-uye-giris]').forEach(function (x) {
-        if (p) { x.textContent = 'Hesabım'; x.setAttribute('href', '/premium/#hesap'); x.removeAttribute('data-uyelik'); }
+        if (p) {
+          x.textContent = ''; x.setAttribute('href', '/premium/#hesap'); x.removeAttribute('data-uyelik'); x.classList.add('hesabim');
+          var f = document.createElement('span'); f.className = 'hesap-foto mini'; f.setAttribute('aria-hidden', 'true'); fotoGoster(f, p.foto_url, p.ad_soyad || p.eposta);
+          x.appendChild(f); x.appendChild(document.createTextNode('Hesabım'));
+        }
       });
       $$('[data-uye-premium]').forEach(function (x) {
         if (premiumMu(p)) { x.textContent = '★ Premium üyesin'; x.classList.add('aktif'); x.setAttribute('href', '/premium/#hesap'); x.removeAttribute('data-uyelik'); }
@@ -288,6 +292,7 @@
           $('[data-hesap-eposta]', hesap).textContent = p.eposta || '';
           $('[data-hesap-durum]', hesap).textContent = premiumMu(p) ? ('Premium' + (p.premium_bitis ? ' · bitiş ' + new Date(p.premium_bitis).toLocaleDateString('tr-TR') : '')) : 'Ücretsiz üye';
         }
+        profilDuzenle(p);
       }
       if (q.get('neden') === 'kupon') { var u = $('[data-kupon-not]', kok); if (u) u.hidden = false; }
     });
@@ -451,6 +456,70 @@
   }
 
 
+
+  // ---------- profil düzenleme: ad, soyad, telefon, fotoğraf ----------
+  function fotoGoster(el, url, ad) {
+    if (!el) return;
+    el.textContent = ''; el.style.backgroundImage = '';
+    if (url) el.style.backgroundImage = 'url("' + url.replace(/"/g, '') + '")';
+    else el.textContent = (String(ad || '?').trim().charAt(0) || '?').toLocaleUpperCase('tr-TR');
+  }
+  function kareKucult(dosya, boy) {
+    return new Promise(function (ok, red) {
+      var img = new Image(), u = window.URL.createObjectURL(dosya);
+      img.onload = function () {
+        var k = Math.min(img.width, img.height), c = document.createElement('canvas'); c.width = c.height = boy;
+        c.getContext('2d').drawImage(img, (img.width - k) / 2, (img.height - k) / 2, k, k, 0, 0, boy, boy);
+        window.URL.revokeObjectURL(u); c.toBlob(function (b) { b ? ok(b) : red(new Error('resim')); }, 'image/jpeg', 0.85);
+      };
+      img.onerror = function () { window.URL.revokeObjectURL(u); red(new Error('Resim okunamadı.')); };
+      img.src = u;
+    });
+  }
+  function profilDuzenle(p) {
+    var f = $('[data-profil-form]'), ac = $('[data-profil-ac]'); if (!f || !ac || !p) return;
+    var on = $('[data-pf-onizleme]', f), dosyaG = $('[data-pf-dosya]', f), kaldir = $('[data-pf-kaldir]', f), m = $('[data-pf-mesaj]', f);
+    var yeniFoto = null, fotoSil = false;
+    fotoGoster($('[data-hesap-foto]'), p.foto_url, p.ad_soyad || p.eposta);
+    function doldur() {
+      var parca = String(p.ad_soyad || '').trim().split(/\s+/);
+      f.ad.value = parca.length > 1 ? parca.slice(0, -1).join(' ') : (parca[0] || '');
+      f.soyad.value = parca.length > 1 ? parca[parca.length - 1] : '';
+      f.telefon.value = p.telefon || '';
+      yeniFoto = null; fotoSil = false; fotoGoster(on, p.foto_url, p.ad_soyad || p.eposta); kaldir.hidden = !p.foto_url; m.hidden = true;
+    }
+    function goster(a) { f.hidden = !a; ac.setAttribute('aria-expanded', a ? 'true' : 'false'); if (a) { doldur(); f.ad.focus(); } }
+    ac.addEventListener('click', function () { goster(f.hidden); });
+    $('[data-profil-kapat]', f).addEventListener('click', function () { goster(false); });
+    dosyaG.addEventListener('change', function () {
+      var d = dosyaG.files && dosyaG.files[0]; if (!d) return;
+      if (!/^image\/(jpeg|png|webp)$/.test(d.type)) { m.hidden = false; m.className = 'odeme-sonuc hata'; m.textContent = 'Yalnız JPG, PNG ya da WEBP fotoğraf yükleyebilirsin.'; return; }
+      kareKucult(d, 320).then(function (b) { yeniFoto = b; fotoSil = false; on.textContent = ''; on.style.backgroundImage = 'url("' + window.URL.createObjectURL(b) + '")'; kaldir.hidden = false; m.hidden = true; })
+        .catch(function (e) { m.hidden = false; m.className = 'odeme-sonuc hata'; m.textContent = e.message; });
+    });
+    kaldir.addEventListener('click', function () { yeniFoto = null; fotoSil = true; fotoGoster(on, '', f.ad.value); kaldir.hidden = true; });
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var ad = (f.ad.value.trim() + ' ' + f.soyad.value.trim()).trim().slice(0, 120), tel = f.telefon.value.trim().slice(0, 30);
+      var btn = f.querySelector('[type=submit]'); btn.disabled = true; m.hidden = false; m.className = 'odeme-sonuc bekle'; m.textContent = 'Kaydediliyor…';
+      oturum().then(function (s) {
+        if (!s || !s.user) throw new Error('Oturumun kapanmış; tekrar giriş yap.');
+        var yol = s.user.id + '/foto.jpg', adim = Promise.resolve(p.foto_url || null);
+        if (yeniFoto) adim = fetch(URL_ + '/storage/v1/object/avatarlar/' + yol, {method: 'POST', headers: {apikey: KEY, Authorization: 'Bearer ' + s.at, 'x-upsert': 'true', 'Content-Type': 'image/jpeg'}, body: yeniFoto})
+          .then(function (r) { if (!r.ok) return r.text().then(function (t) { throw new Error('Fotoğraf yüklenemedi (' + r.status + ').'); }); return URL_ + '/storage/v1/object/public/avatarlar/' + yol + '?v=' + Date.now(); });
+        else if (fotoSil) adim = fetch(URL_ + '/storage/v1/object/avatarlar/' + yol, {method: 'DELETE', headers: {apikey: KEY, Authorization: 'Bearer ' + s.at}}).then(function () { return null; }, function () { return null; });
+        return adim.then(function (foto) {
+          return istek('/rest/v1/profiller?id=eq.' + encodeURIComponent(s.user.id), {method: 'PATCH', token: s.at, prefer: 'return=minimal', body: {ad_soyad: ad || null, telefon: tel || null, foto_url: foto}})
+            .then(function () { p.ad_soyad = ad; p.telefon = tel; p.foto_url = foto; });
+        });
+      }).then(function () {
+        profilSoz = null; m.className = 'odeme-sonuc tamam'; m.textContent = 'Profilin kaydedildi.';
+        var h = $('#hesap'); if (h) $('[data-hesap-ad]', h).textContent = p.ad_soyad || '';
+        fotoGoster($('[data-hesap-foto]'), p.foto_url, p.ad_soyad || p.eposta); ustBar();
+        setTimeout(function () { goster(false); }, 900);
+      }).catch(function (e2) { m.className = 'odeme-sonuc hata'; m.textContent = hataYazi(e2); }).then(function () { btn.disabled = false; });
+    });
+  }
   // ---------- üyelik kilidi: korunan bölümleri üyenin anahtarıyla aç ----------
   function b64b(t) { var b = atob(t), x = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) x[i] = b.charCodeAt(i); return x; }
   var anahtarSoz = null;

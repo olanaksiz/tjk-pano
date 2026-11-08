@@ -1,4 +1,4 @@
-// Modül: Üyeler — arama, filtre, CSV, premium verme/kaldırma
+// Modül: Üyeler — arama, filtre, CSV, premium verme/kaldırma, şifre sıfırlama/değiştirme
 TJKDAdmin.modul({
   id: 'uyeler', ad: 'Üyeler', grup: 'Üyelik', sira: 20,
   ikon: '<circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/>',
@@ -38,6 +38,28 @@ TJKDAdmin.modul({
             .catch(function (e) { A.bildir(A.hata(e), 'hata'); ver.disabled = false; });
         });
         d.appendChild(sec); d.appendChild(ver);
+        // şifre işlemleri: önerilen yol sıfırlama e-postası; gerekirse admin yeni şifre belirler
+        var sif = A.el('button', 'ad-dugme kucuk ikincil', 'Şifre sıfırlama e-postası'); sif.type = 'button';
+        sif.title = 'Üyeye şifresini kendisinin belirleyeceği bir bağlantı gönderir (önerilen).';
+        sif.addEventListener('click', function () {
+          if (!confirm(u.eposta + ' adresine şifre sıfırlama bağlantısı gönderilsin mi?')) return;
+          sif.disabled = true;
+          window.TJKD.istek('/auth/v1/recover?redirect_to=' + encodeURIComponent(location.origin + '/uye-ol/'), {method: 'POST', body: {email: u.eposta}})
+            .then(function () { A.bildir('Sıfırlama bağlantısı gönderildi: ' + u.eposta, 'tamam'); })
+            .catch(function (e) { A.bildir(A.hata(e), 'hata'); }).then(function () { sif.disabled = false; });
+        });
+        var yeni = A.el('button', 'ad-dugme kucuk ikincil', 'Yeni şifre belirle'); yeni.type = 'button';
+        yeni.title = 'Üyenin şifresini doğrudan değiştirir. Yeni şifreyi üyeye güvenli bir yoldan iletmen gerekir.';
+        yeni.addEventListener('click', function () {
+          var s1 = prompt(u.eposta + ' için yeni şifre (en az 8 karakter):'); if (s1 === null) return;
+          if (s1.length < 8) { A.bildir('Şifre en az 8 karakter olmalı.', 'hata'); return; }
+          var s2 = prompt('Yeni şifreyi tekrar yaz:'); if (s2 === null) return;
+          if (s1 !== s2) { A.bildir('İki şifre aynı değil.', 'hata'); return; }
+          yeni.disabled = true;
+          A.api.rpc('admin_sifre_ayarla', {hedef: u.id, yeni: s1}).then(function () { A.bildir('Şifre güncellendi: ' + u.eposta + '. Yeni şifreyi üyeye güvenli bir yoldan ilet.', 'tamam'); })
+            .catch(function (e) { A.bildir(A.hata(e), 'hata'); }).then(function () { yeni.disabled = false; });
+        });
+        d.appendChild(sif); d.appendChild(yeni);
         if (A.premiumMu(u)) {
           var kal = A.el('button', 'ad-dugme kucuk tehlike', 'Kaldır'); kal.type = 'button';
           kal.addEventListener('click', function () {
@@ -51,7 +73,7 @@ TJKDAdmin.modul({
       function ciz() {
         var L = liste(); yer.textContent = ''; say.textContent = L.length + ' üye';
         A.tablo(yer, [
-          {ad: 'Ad soyad', deger: function (u) { return u.ad_soyad || '—'; }},
+          {ad: 'Ad soyad', deger: function (u) { var w = A.el('span', 'ad-uye'); if (u.foto_url) { var i = A.el('img', 'ad-uye-foto'); i.src = u.foto_url; i.alt = ''; i.width = 28; i.height = 28; w.appendChild(i); } w.appendChild(document.createTextNode(u.ad_soyad || '—')); return w; }},
           {ad: 'E-posta', deger: function (u) { return u.eposta; }},
           {ad: 'Telefon', deger: function (u) { return u.telefon || '—'; }},
           {ad: 'Kayıt', deger: function (u) { return A.tarih(u.created_at); }},

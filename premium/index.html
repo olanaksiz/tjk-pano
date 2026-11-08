@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611081008">
+<link rel="stylesheet" href="/assets/site.css?v=202611081011">
 </head>
 <body data-gun="2026-11-08">
 <a class="atla" href="#icerik">İçeriğe geç</a>
@@ -53,10 +53,26 @@
     <p class="uy-uyari" data-kupon-not hidden>Hazır kuponlar premium üyelere açılacak. Aşağıdan premium'a geçebilirsin.</p>
   </div>
   <div class="hesap" id="hesap" hidden>
+    <span class="hesap-foto" data-hesap-foto aria-hidden="true"></span>
     <div><span>Hesabın</span><b data-hesap-ad></b><small data-hesap-eposta></small></div>
     <div><span>Üyelik durumu</span><b data-hesap-durum></b></div>
+    <button type="button" class="dugme dugme-cizgi" data-profil-ac aria-expanded="false" aria-controls="profil-form">Profili düzenle</button>
     <a class="dugme dugme-cizgi" href="#" data-uye-cikis>Çıkış yap</a>
   </div>
+  <form class="profil-form" id="profil-form" data-profil-form hidden novalidate>
+    <h2>Profilini düzenle</h2>
+    <div class="pf-foto"><span class="hesap-foto buyuk" data-pf-onizleme aria-hidden="true"></span>
+      <div><label class="dugme dugme-cizgi pf-yukle">Fotoğraf seç<input type="file" accept="image/jpeg,image/png,image/webp" data-pf-dosya hidden></label>
+      <button type="button" class="pf-kaldir" data-pf-kaldir hidden>Fotoğrafı kaldır</button>
+      <p class="pf-not">İsteğe bağlı. Kare olarak küçültülüp yüklenir; sitede yalnız hesabında görünür.</p></div></div>
+    <div class="pf-alanlar">
+      <label>Ad<input type="text" name="ad" maxlength="60" autocomplete="given-name"></label>
+      <label>Soyad<input type="text" name="soyad" maxlength="60" autocomplete="family-name"></label>
+      <label>Telefon<input type="tel" name="telefon" maxlength="30" autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+    </div>
+    <div class="pf-dugmeler"><button type="submit" class="dugme dugme-altin">Kaydet</button><button type="button" class="dugme dugme-cizgi" data-profil-kapat>Vazgeç</button></div>
+    <p class="odeme-sonuc" data-pf-mesaj hidden role="status"></p>
+  </form>
   <p class="odeme-sonuc" data-odeme-sonuc hidden role="status"></p>
   <div class="planlar" data-planlar>
     <article class="plan">
@@ -124,7 +140,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 8 Kasım 2026, 10:08</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 8 Kasım 2026, 10:11</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -166,8 +182,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611081008" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611081008" defer></script>
-<script src="/assets/uyelik.js?v=202611081008" defer></script>
+<script src="/assets/site.js?v=202611081011" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611081011" defer></script>
+<script src="/assets/uyelik.js?v=202611081011" defer></script>
 </body>
 </html>

@@ -139,3 +139,5 @@ input.ad-girdi[type=search]{flex:1 1 260px}
 .ad-g-sutun2{fill:#1F64E0}
 .ad-lej{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-right:4px}
 .ad-lej.a{background:#BFD6FF}.ad-lej.b{background:#1F64E0}
+
+.ad-uye{display:inline-flex;align-items:center;gap:8px}.ad-uye-foto{width:28px;height:28px;border-radius:50%;object-fit:cover}

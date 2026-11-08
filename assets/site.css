@@ -1337,3 +1337,22 @@ li.tut .hk-sonuc{color:var(--cim)} li.yan .hk-sonuc{color:var(--kirmizi)}
 .kilit-kucuk .kilit-dugme{justify-content:flex-start}
 .kilit-kucuk .dugme{min-height:42px;padding:0 18px;font-size:15px}
 @media (max-width:680px){.kilit-k{padding:10px 12px 14px}.kilit-kucuk .kilit-dugme{width:100%}.kilit-kucuk .dugme{flex:1}}
+/* Profil */
+.hesap-foto{flex:none;display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#1B2F5E center/cover no-repeat;color:#F6D77A;font:700 22px/1 var(--baslik);border:2px solid #2B4C8C}
+.hesap-foto.buyuk{width:84px;height:84px;font-size:34px}
+.hesap-foto.mini{width:24px;height:24px;font-size:12px;border-width:1px;margin-right:7px;vertical-align:middle}
+.profil-form{margin:0 0 24px;padding:20px;border:1px solid #1A3566;border-radius:14px;background:#06122B;color:#EAF1FB}
+.profil-form h2{margin:0 0 14px;color:#fff;font:700 24px/1.1 var(--baslik)}
+.pf-foto{display:flex;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.pf-yukle{cursor:pointer;min-height:40px}
+.pf-kaldir{margin-left:10px;border:0;background:none;color:#FF9C8F;font:600 14px var(--govde);cursor:pointer;text-decoration:underline}
+.pf-not{margin:8px 0 0;font-size:13px;color:#8FA3C0}
+.pf-alanlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.pf-alanlar label{display:flex;flex-direction:column;gap:5px;font:600 13px/1.2 var(--govde);color:#9FB3D1}
+.pf-alanlar input{font:500 16px/1.2 var(--govde);padding:10px 12px;border-radius:9px;border:1px solid #2B4C8C;background:#0B1A3A;color:#fff;min-height:44px}
+.pf-alanlar input:focus{outline:2px solid #86C8FF;outline-offset:1px}
+.pf-dugmeler{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+@media (max-width:680px){.pf-alanlar{grid-template-columns:1fr}}
+.hesap button.dugme{background:none;color:#EAF1FB;border:1.5px solid #34507E;cursor:pointer;font-family:var(--govde)}
+.hesap button.dugme:hover,.hesap button.dugme[aria-expanded="true"]{border-color:#86C8FF;color:#86C8FF}
+.hesap .hesap-foto+div{margin-left:0}
