@@ -1574,3 +1574,9 @@ article.kx{scroll-margin-top:84px}
 .sdk-ikr small{font:600 12px/1.2 var(--govde);color:#1F7A49}
 @media (max-width:600px){.sdk-alt{flex-wrap:wrap}.sdk-ikr{flex:1 1 100%;align-items:flex-start}}
 .sdk-gec{font-style:normal;font-size:12px;color:#8A5A00}
+.kx-guclu{font-weight:700;color:#B45309}
+.kx-guclu-s{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:10px 0 0;padding:8px 12px;border-radius:12px;background:#FFF4E5;border:1px solid #F5C77E;font:500 13.5px/1.4 var(--govde);color:#5C3B00}
+.kx-guclu-s b{color:#B45309}
+.kx-guclu-s span{font-weight:600}
+.kx-guclu-s small{font-weight:500;color:#8A6A2A}
+.kx-guclu-s em{flex-basis:100%;font-style:normal;font-size:12px;color:#8A6A2A}
