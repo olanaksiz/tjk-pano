@@ -671,6 +671,7 @@ document.addEventListener('click', function (e) {
    Aynı ziyaretçiye 7 günde bir. Kapatmak: localStorage 'tjkd-kisneme' = 'kapali'. */
 (function () {
   var A = 'tjkd-kisneme3';
+  try { var _ist = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Istanbul'}).format(new Date()); if (_ist.slice(5) === '11-10') return; } catch (e) {}
   try {
     var v = localStorage.getItem(A);
     if (v === 'kapali') return;
@@ -687,4 +688,36 @@ document.addEventListener('click', function (e) {
     if (p && p.then) p.then(tamam, function () {}); else tamam();
   }
   olaylar.forEach(function (t) { document.addEventListener(t, kisne, true); });
+})();
+
+
+/* 10 Kasım anma ekranı: yalnız 10 Kasım (İstanbul saati), her ziyaretçiye bir kez. */
+(function () {
+  var gun; try { gun = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Istanbul'}).format(new Date()); } catch (e) { return; }
+  if (gun.slice(5) !== '11-10') return;
+  var A = 'tjkd-10kasim-' + gun.slice(0, 4);
+  try { if (localStorage.getItem(A)) return; } catch (e) {}
+  if (/\/admin\//.test(location.pathname)) return;
+  var yil = +gun.slice(0, 4) - 1938;
+  function ac() {
+    var o = document.createElement('div');
+    o.className = 'ak-splash'; o.setAttribute('role', 'dialog'); o.setAttribute('aria-modal', 'true'); o.setAttribute('aria-labelledby', 'ak-b');
+    o.innerHTML = '<div class="ak-ic">' +
+      '<svg class="ak-bayrak" viewBox="0 -30000 90000 60000" aria-label="Türk bayrağı" role="img"><path fill="#E30A17" d="M0-30000h90000v60000H0z"/><path fill="#fff" d="m41750 0 13568-4409-8386 11541V-7132l8386 11541zm925 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"/></svg>' +
+      '<p class="ak-tarih">10 Kasım 1938 · 09.05</p>' +
+      '<h2 id="ak-b">Gazi Mustafa Kemal Atatürk</h2>' +
+      '<p class="ak-metin">Cumhuriyetimizin kurucusu, Ulu Önder Gazi Mustafa Kemal Atatürk\'ü aramızdan ayrılışının ' + yil + '. yıl dönümünde saygı, sevgi, minnet ve özlemle anıyoruz.</p>' +
+      '<p class="ak-soz">“Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.”</p>' +
+      '<div class="ak-alt"><span class="ak-logo"></span><button type="button" class="ak-kapat">Siteye devam et</button></div></div>';
+    var m = document.querySelector('.marka'); var lg = o.querySelector('.ak-logo');
+    if (m) { var c = m.cloneNode(true); c.removeAttribute('href'); c.removeAttribute('aria-label'); var sp = document.createElement('span'); sp.className = 'marka ak-marka'; sp.innerHTML = c.innerHTML; lg.appendChild(sp); } else lg.textContent = 'tjkdetay';
+    function kapat() { try { localStorage.setItem(A, '1'); } catch (e) {} o.classList.add('kapan'); document.documentElement.classList.remove('ak-acik'); setTimeout(function () { if (o.parentNode) o.parentNode.removeChild(o); }, 450); document.removeEventListener('keydown', tus); }
+    function tus(e) { if (e.key === 'Escape') kapat(); }
+    o.querySelector('.ak-kapat').addEventListener('click', kapat);
+    o.addEventListener('click', function (e) { if (e.target === o) kapat(); });
+    document.addEventListener('keydown', tus);
+    document.body.appendChild(o); document.documentElement.classList.add('ak-acik');
+    setTimeout(function () { try { o.querySelector('.ak-kapat').focus({preventScroll: true}); } catch (e) {} }, 60);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ac); else ac();
 })();

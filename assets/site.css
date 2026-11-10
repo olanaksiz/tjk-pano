@@ -2137,3 +2137,19 @@ article.kx{scroll-margin-top:84px}
 .sk-vid[open] summary{border-radius:11px 11px 0 0}
 .sk-vid video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:0 0 11px 11px}
 .sk-medya small{color:var(--soluk);font-size:12px;text-align:right}
+/* 10 Kasım anma ekranı */
+html.ak-acik{overflow:hidden}
+.ak-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px;background:radial-gradient(120% 90% at 50% 20%,#1b1f27 0%,#07090d 70%);color:#E9ECF1;animation:akGir .6s ease both}
+.ak-splash.kapan{animation:akCik .45s ease both}
+@keyframes akGir{from{opacity:0}to{opacity:1}}@keyframes akCik{to{opacity:0}}
+.ak-ic{width:min(560px,100%);text-align:center;display:grid;justify-items:center;gap:14px}
+.ak-bayrak{width:min(220px,58vw);height:auto;border-radius:3px;box-shadow:0 18px 40px -18px rgba(227,10,23,.55)}
+.ak-tarih{margin:6px 0 0;font:600 12px/1 var(--govde);letter-spacing:.26em;text-transform:uppercase;color:#9AA3B2}
+.ak-splash h2{margin:0;font:700 clamp(26px,4.4vw,38px)/1.1 var(--baslik);color:#fff;letter-spacing:.01em}
+.ak-metin{margin:0;font-size:16.5px;line-height:1.6;color:#C9CFD9;max-width:480px}
+.ak-soz{margin:4px 0 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:14.5px;line-height:1.6;font-style:italic;color:#9AA3B2;max-width:480px}
+.ak-alt{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:10px}
+.ak-marka{display:inline-flex;align-items:center;gap:8px;opacity:.9;pointer-events:none}
+.ak-kapat{min-height:46px;padding:0 26px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 15px/1 var(--govde);cursor:pointer}
+.ak-kapat:hover,.ak-kapat:focus-visible{background:rgba(255,255,255,.08);border-color:#fff;outline:none}
+@media (prefers-reduced-motion:reduce){.ak-splash,.ak-splash.kapan{animation:none}}
