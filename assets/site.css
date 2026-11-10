@@ -2158,3 +2158,10 @@ html.ak-acik{overflow:hidden}
 .ak-splash .ak-tarih{margin-top:0}
 @media (max-height:700px){.ak-gorsel{height:38vh}.ak-soz{display:none}}
 .tablo-sar{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}.tablo-sar .sy-tablo{min-width:520px}
+.yz-kl{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:6px}
+.yz-kl a{display:grid;grid-template-columns:34px 52px 1fr auto;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--cizgi);border-radius:12px;background:#fff;color:inherit;text-decoration:none}
+.yz-kl a:hover{border-color:#0E1B3A}
+.yz-no{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:#0E1B3A;color:#fff;font:700 14px/1 var(--govde)}
+.yz-sa{font:700 15px/1 var(--govde);font-variant-numeric:tabular-nums}
+.yz-ci{font-size:14px;line-height:1.35;color:var(--soluk)}
+@media (max-width:560px){.yz-kl a{grid-template-columns:30px 46px 1fr}.yz-kl .kx-svd{grid-column:3;justify-self:start}}
