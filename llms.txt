@@ -18,7 +18,28 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [At yarışı sözlüğü](https://tjkdetay.com/sozluk/): terimlerin kısa tanımları
 - [Rehber](https://tjkdetay.com/rehber/): altılı ganyan, AGF, koşu cinsleri, idman, pist türleri
 - [Jokey istatistikleri](https://tjkdetay.com/jokeyler/): sezon sıralaması ve jokey profilleri
+- [Hipodromlar](https://tjkdetay.com/hipodromlar/): 10 hipodromun pistleri ve jokeyleri
+- [Atlar](https://tjkdetay.com/atlar/): koşan atların 2026 koşu kaydı ve dereceleri
 - [Hakkımızda ve yöntem](https://tjkdetay.com/hakkimizda/)
+
+## Kelime sayfaları
+- [Altılı ganyan tahminleri](https://tjkdetay.com/altili-ganyan-tahminleri/): bugünkü altılı ayakları, saatler, ikramiyeler
+- [At yarışı tahmin siteleri](https://tjkdetay.com/at-yarisi-tahmin-siteleri/): tahmin sitesi seçerken bakılacak 6 ölçüt ve açık karnemiz
+- [İstanbul at yarışı tahminleri](https://tjkdetay.com/istanbul-at-yarisi-tahminleri/)
+- [Ankara at yarışı tahminleri](https://tjkdetay.com/ankara-at-yarisi-tahminleri/)
+- [İzmir at yarışı tahminleri](https://tjkdetay.com/izmir-at-yarisi-tahminleri/)
+- [Bursa at yarışı tahminleri](https://tjkdetay.com/bursa-at-yarisi-tahminleri/)
+- [Adana at yarışı tahminleri](https://tjkdetay.com/adana-at-yarisi-tahminleri/)
+- [Kocaeli at yarışı tahminleri](https://tjkdetay.com/kocaeli-at-yarisi-tahminleri/)
+- [Elazığ at yarışı tahminleri](https://tjkdetay.com/elazig-at-yarisi-tahminleri/)
+- [Diyarbakır at yarışı tahminleri](https://tjkdetay.com/diyarbakir-at-yarisi-tahminleri/)
+- [Şanlıurfa at yarışı tahminleri](https://tjkdetay.com/sanliurfa-at-yarisi-tahminleri/)
+- [Antalya at yarışı tahminleri](https://tjkdetay.com/antalya-at-yarisi-tahminleri/)
+
+## Bugün (10 Kasım 2026)
+- Adana: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
+- Kocaeli: 9 koşu, 17:15–21:30; 1. altılı 1.–6. koşular (17:15); 2. altılı 4.–9. koşular (19:00)
+- Açık karne: 5 yarış gününde biten 75 koşunun 40'ında kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
