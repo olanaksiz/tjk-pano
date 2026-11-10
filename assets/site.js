@@ -696,8 +696,16 @@ document.addEventListener('click', function (e) {
   var gun; try { gun = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Istanbul'}).format(new Date()); } catch (e) { return; }
   if (gun.slice(5) !== '11-10') return;
   var A = 'tjkd-10kasim-g-' + gun.slice(0, 4);
-  try { if (localStorage.getItem(A)) return; } catch (e) {}
+  var goruldu = false;
+  try { if (localStorage.getItem(A)) goruldu = true; } catch (e) {}
+  try { if (sessionStorage.getItem(A)) goruldu = true; } catch (e) {}
+  if (document.cookie.indexOf(A + '=1') >= 0) goruldu = true;
+  if (goruldu) return;
   if (/\/admin\//.test(location.pathname)) return;
+  /* Gösterildiği anda kaydet: kapatılmasa, sayfa yenilense ya da başka sayfaya geçilse bile bir daha açılmaz. */
+  try { localStorage.setItem(A, '1'); } catch (e) {}
+  try { sessionStorage.setItem(A, '1'); } catch (e) {}
+  try { document.cookie = A + '=1; max-age=172800; path=/; SameSite=Lax'; } catch (e) {}
   var yil = +gun.slice(0, 4) - 1938;
   function ac() {
     var o = document.createElement('div');
