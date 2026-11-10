@@ -2111,4 +2111,4 @@ article.kx{scroll-margin-top:84px}
 .dv2 .dv-kopya{padding:0 14px}.dv2 .dv-dugmeler{grid-template-columns:repeat(3,minmax(0,1fr))}.dv2 .dv-d{font-size:13.5px;gap:6px;padding:0 8px}.dv-kpi b{font-size:20px}.dv-kpi span{font-size:11.5px}}
 .dv2 .dv-link input{font:600 15px/1 var(--govde);letter-spacing:.01em}
 @media (max-width:640px){.dv2 .dv-link input{font-size:14px;padding:0 12px}}
-@media (max-width:480px){.dv-satir{flex-direction:column}.dv2 .dv-link input{height:48px;text-align:center}.dv2 .dv-kopya{justify-content:center;height:46px}}
+@media (max-width:480px){.dv-satir{flex-direction:column}.dv2 .dv-link input{flex:none;height:50px;text-align:center}.dv2 .dv-kopya{justify-content:center;height:46px}}
