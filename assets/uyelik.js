@@ -606,8 +606,10 @@
           $$('[data-davet-panel]', k).forEach(function (x) { x.hidden = false; });
           var inp = $('[data-davet-link]', k); if (inp) { inp.value = link; inp.addEventListener('focus', function () { inp.select(); }); }
           var wa = $('[data-davet-wa]', k); if (wa) { wa.href = 'https://wa.me/?text=' + encodeURIComponent(metin + link); wa.addEventListener('click', function () { olay('davet_paylas_wa'); }); }
+          var ku = $('[data-davet-k-uye]', k), kg = $('[data-davet-k-gun]', k), kb2 = $('[data-davet-k-bek]', k);
+          if (ku) ku.textContent = j.uye || 0; if (kg) kg.textContent = j.gun || 0; if (kb2) kb2.textContent = j.bekleyen || 0;
           var sy = $('[data-davet-sayi]', k);
-          if (sy) sy.textContent = j.uye ? (j.uye + ' arkadaşın davetinle üye oldu · ' + (j.gun || 0) + ' gün Premium kazandın' + (j.bekleyen ? ' · ' + j.bekleyen + ' kişinin e-posta doğrulaması bekleniyor' : '') + '.') : 'Henüz davetinle gelen üye yok. İlk davetini şimdi gönder.';
+          if (sy) sy.textContent = j.uye ? (j.uye + ' arkadaşın davetinle üye oldu · ' + (j.gun || 0) + ' gün Premium kazandın' + (j.bekleyen ? ' · ' + j.bekleyen + ' kişinin e-posta doğrulaması bekleniyor' : '') + '.') : 'Henüz davetinle gelen üye yok. Linkini paylaşarak ilk davetini gönderebilirsin.';
           var kb = $('[data-davet-kopya]', k);
           if (kb) kb.addEventListener('click', function () { kopyala(link).then(function () { yazMesaj(k, 'Link kopyalandı. İstediğin yere yapıştırıp paylaşabilirsin.'); olay('davet_kopya'); }, function () { if (inp) inp.select(); yazMesaj(k, 'Link seçildi; kopyalamak için Ctrl+C ya da uzun basıp Kopyala.'); }); });
           var ig = $('[data-davet-ig]', k);

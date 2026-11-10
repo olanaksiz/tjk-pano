@@ -2070,3 +2070,42 @@ article.kx{scroll-margin-top:84px}
 .kx-svd-dusuk{background:#E8F6EF;color:#126B47;border-color:#9ED6B5}
 .kx-svd-orta{background:#FFF4D6;color:#8A5A00;border-color:#F1D27A}
 .kx-svd-yuksek{background:#FDE8E4;color:#A3291A;border-color:#F2A99C}
+/* ===== Davet kartı v2 — kurumsal (10.11 08:35) ===== */
+.davet-kart.dv2{padding:28px 28px 22px;border-radius:18px;background:linear-gradient(180deg,#0E1B3A 0%,#0A142C 100%);border:1px solid rgba(214,174,82,.35);box-shadow:0 1px 0 rgba(255,255,255,.04) inset,0 30px 60px -40px rgba(3,10,30,.9)}
+.davet-kart.dv2::after{content:"";position:absolute;inset:7px;right:7px;top:7px;width:auto;height:auto;border-radius:13px;border:1px solid rgba(214,174,82,.12);background:none;pointer-events:none}
+.dv2 .dv-ust{gap:18px;align-items:center}
+.dv2 .dv-ikon{width:52px;height:52px;border-radius:50%;background:transparent;border:1px solid rgba(214,174,82,.6);color:#E2BE62;box-shadow:none}
+.dv2 .dv-svg{width:24px;height:24px;stroke-width:1.5}
+.dv2 .dv-rozet{display:flex;align-items:center;gap:10px;margin:0 0 8px;font:600 11px/1 var(--govde);letter-spacing:.22em;color:#D6AE52}
+.dv2 .dv-rozet::after{content:"";flex:0 0 36px;height:1px;background:rgba(214,174,82,.5)}
+.dv2 h2{margin:0 0 6px;font:700 clamp(22px,2.3vw,28px)/1.15 var(--baslik);letter-spacing:-.005em;color:#F4F7FC}
+.dv2 h2 span{color:#E2BE62}
+.dv2 .dv-ust p:not(.dv-rozet){font-size:15px;line-height:1.55;color:#AEBBD3;max-width:600px}
+.dv-sart{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:22px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.dv-sart div{padding:14px 16px 14px 0}.dv-sart div+div{padding-left:16px;border-left:1px solid rgba(255,255,255,.08)}
+.dv-sart dt{font:700 22px/1.1 var(--baslik);color:#E2BE62;font-variant-numeric:tabular-nums}
+.dv-sart dd{margin:4px 0 0;font-size:13px;line-height:1.4;color:#93A3C0}
+.dv2 .dv-panel{margin-top:20px}
+.dv2 .dv-link{gap:8px;font:600 11px/1 var(--govde);letter-spacing:.16em;color:#8A9BBB}
+.dv-satir{display:flex;align-items:stretch;border:1px solid rgba(214,174,82,.45);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.03)}
+.dv2 .dv-link input{flex:1;min-width:0;height:50px;border:0;border-radius:0;background:transparent;padding:0 14px;color:#F4F7FC;font:500 15px/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:0;text-transform:none}
+.dv2 .dv-link input:focus{box-shadow:none;outline:none}
+.dv2 .dv-kopya{display:inline-flex;align-items:center;gap:8px;flex:none;padding:0 18px;border:0;background:linear-gradient(180deg,#E8C56C,#C99A2E);color:#14110A;font:700 14.5px/1 var(--govde);letter-spacing:.01em;text-transform:none;cursor:pointer}
+.dv2 .dv-kopya svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.dv2 .dv-kopya:hover{filter:brightness(1.05)}
+.dv2 .dv-mesaj{min-height:0;margin:8px 0 0;font-size:13.5px;color:#8FD9AE}.dv2 .dv-mesaj:empty{margin:0}
+.dv-ara{margin:18px 0 8px;font:600 11px/1 var(--govde);letter-spacing:.16em;text-transform:uppercase;color:#8A9BBB}
+.dv2 .dv-dugmeler{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin:0}
+.dv2 .dv-d{min-height:46px;border-radius:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);color:#E8EDF6;font:600 14.5px/1 var(--govde);filter:none}
+.dv2 .dv-d:hover{background:rgba(255,255,255,.08);border-color:rgba(214,174,82,.5);color:#fff}
+.dv2 .dv-wa svg{color:#3FCB74}.dv2 .dv-ig svg{color:#F06A9F}.dv2 .dv-diger svg{color:#C4CEDF}
+.dv-kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px}
+.dv-kpi div{padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
+.dv-kpi b{display:block;font:700 24px/1 var(--baslik);color:#F4F7FC;font-variant-numeric:tabular-nums}
+.dv-kpi span{display:block;margin-top:6px;font-size:12.5px;line-height:1.3;color:#8A9BBB}
+.dv2 .dv-sayi{margin:10px 0 0;font-size:13.5px;color:#93A3C0}
+.dv2 .dv-giris{margin-top:20px}.dv2 .dv-giris p{color:#AEBBD3}
+.dv-dip{position:relative;z-index:1;margin:16px 0 0;padding-top:12px;border-top:1px solid rgba(255,255,255,.07);font-size:12px;line-height:1.45;color:#6F80A0}
+@media (max-width:640px){.davet-kart.dv2{padding:22px 18px 18px}.dv2 .dv-ust{flex-direction:row;align-items:flex-start}.dv2 .dv-ikon{width:44px;height:44px}
+.dv-sart{grid-template-columns:1fr}.dv-sart div,.dv-sart div+div{display:flex;align-items:baseline;gap:12px;padding:10px 0;border-left:0}.dv-sart div+div{border-top:1px solid rgba(255,255,255,.08)}.dv-sart dt{flex:0 0 84px;font-size:19px}.dv-sart dd{margin:0}
+.dv2 .dv-kopya{padding:0 14px}.dv2 .dv-dugmeler{grid-template-columns:repeat(3,minmax(0,1fr))}.dv2 .dv-d{font-size:13.5px;gap:6px;padding:0 8px}.dv-kpi b{font-size:20px}.dv-kpi span{font-size:11.5px}}
