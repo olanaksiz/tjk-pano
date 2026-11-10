@@ -649,43 +649,25 @@ document.addEventListener('click', function (e) {
   document.addEventListener('visibilitychange', function () { if (!document.hidden) sor(); });
 })();
 
-/* Karşılama: çok kısa, kısık sesli at kişnemesi (Web Audio ile üretilir, ses dosyası yok).
-   Tarayıcılar sesi kullanıcı etkileşimi olmadan çalmaz; bu yüzden ziyaretçinin ilk dokunuşunda/tıklamasında
-   bir kez çalar. Aynı ziyaretçiye 7 günde bir kez. Kapatmak için: localStorage 'tjkd-kisneme' = 'kapali'. */
+/* Karşılama: çok kısa at kişnemesi (/assets/kisneme.mp3, 1 sn).
+   Tarayıcılar sesi kullanıcı dokunmadan çalmaz; ziyaretçinin ilk tıklamasında/dokunuşunda bir kez çalar.
+   Aynı ziyaretçiye 7 günde bir. Kapatmak: localStorage 'tjkd-kisneme' = 'kapali'. */
 (function () {
   var A = 'tjkd-kisneme';
   try {
     var v = localStorage.getItem(A);
     if (v === 'kapali') return;
     if (v && Date.now() - (+v) < 7 * 864e5) return;
-  } catch (e) { return; }
-  var C = window.AudioContext || window.webkitAudioContext;
-  if (!C) return;
-  var calindi = false;
+  } catch (e) {}
+  var ses = new Audio('/assets/kisneme.mp3');
+  ses.preload = 'auto'; ses.volume = 0.6;
+  var olaylar = ['click', 'touchend', 'keydown'];
+  function kaldir() { olaylar.forEach(function (t) { document.removeEventListener(t, kisne, true); }); }
   function kisne() {
-    if (calindi) return; calindi = true;
-    ['pointerdown', 'keydown', 'touchstart'].forEach(function (t) { window.removeEventListener(t, kisne, true); });
-    try { localStorage.setItem(A, String(Date.now())); } catch (e) {}
-    try {
-      var c = new C(); if (c.resume) c.resume(); var t0 = c.currentTime + 0.05, T = 1.1;
-      var o = c.createOscillator(); o.type = 'sawtooth';
-      var f = o.frequency;
-      f.setValueAtTime(700, t0); f.linearRampToValueAtTime(1350, t0 + 0.18);
-      f.linearRampToValueAtTime(1150, t0 + 0.55); f.exponentialRampToValueAtTime(520, t0 + T);
-      var lfo = c.createOscillator(), ld = c.createGain(); lfo.frequency.value = 24; ld.gain.value = 70;
-      lfo.connect(ld); ld.connect(f);
-      var am = c.createOscillator(), ag = c.createGain(), g = c.createGain();
-      am.frequency.setValueAtTime(14, t0); am.frequency.linearRampToValueAtTime(22, t0 + T);
-      ag.gain.value = 0.45; am.connect(ag); ag.connect(g.gain);
-      g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(0.5, t0 + 0.06);
-      g.gain.setValueAtTime(0.5, t0 + 0.6); g.gain.exponentialRampToValueAtTime(0.0001, t0 + T);
-      var b1 = c.createBiquadFilter(); b1.type = 'bandpass'; b1.frequency.value = 1500; b1.Q.value = 1.4;
-      var b2 = c.createBiquadFilter(); b2.type = 'lowpass'; b2.frequency.value = 3200;
-      var son = c.createGain(); son.gain.value = 0.4;
-      o.connect(b1); b1.connect(b2); b2.connect(g); g.connect(son); son.connect(c.destination);
-      [o, lfo, am].forEach(function (n) { n.start(t0); n.stop(t0 + T + 0.05); });
-      setTimeout(function () { try { c.close(); } catch (e) {} }, (T + 0.4) * 1000);
-    } catch (e) {}
+    var p;
+    try { p = ses.play(); } catch (e) { return; }
+    var tamam = function () { kaldir(); try { localStorage.setItem(A, String(Date.now())); } catch (e) {} };
+    if (p && p.then) p.then(tamam, function () {}); else tamam();
   }
-  ['pointerdown', 'keydown', 'touchstart'].forEach(function (t) { window.addEventListener(t, kisne, { capture: true, passive: true }); });
+  olaylar.forEach(function (t) { document.addEventListener(t, kisne, true); });
 })();
