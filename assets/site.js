@@ -653,7 +653,7 @@ document.addEventListener('click', function (e) {
    Tarayıcılar sesi kullanıcı dokunmadan çalmaz; ziyaretçinin ilk tıklamasında/dokunuşunda bir kez çalar.
    Aynı ziyaretçiye 7 günde bir. Kapatmak: localStorage 'tjkd-kisneme' = 'kapali'. */
 (function () {
-  var A = 'tjkd-kisneme';
+  var A = 'tjkd-kisneme2';
   try {
     var v = localStorage.getItem(A);
     if (v === 'kapali') return;
