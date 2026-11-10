@@ -44,7 +44,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - Adana 1. 6'lı ganyan: 5/3/5/1/3/9 · 7.235,87 TL (1 misli, TJK)
 - Adana 2. 6'lı ganyan: 1/3/9,10,12/8/5/1 · 9.027,00 TL (1 misli, TJK)
 - Kocaeli 1. 6'lı ganyan: 3/6/1,3/5/2/5 · 664.570,50 TL (1 misli, TJK)
-- Açık karne: 5 yarış gününde biten 92 koşunun 51'inde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 5 yarış gününde biten 93 koşunun 52'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
