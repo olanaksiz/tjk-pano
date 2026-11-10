@@ -667,7 +667,7 @@ document.addEventListener('click', function (e) {
     ['pointerdown', 'keydown', 'touchstart'].forEach(function (t) { window.removeEventListener(t, kisne, true); });
     try { localStorage.setItem(A, String(Date.now())); } catch (e) {}
     try {
-      var c = new C(), t0 = c.currentTime + 0.02, T = 1.1;
+      var c = new C(); if (c.resume) c.resume(); var t0 = c.currentTime + 0.05, T = 1.1;
       var o = c.createOscillator(); o.type = 'sawtooth';
       var f = o.frequency;
       f.setValueAtTime(700, t0); f.linearRampToValueAtTime(1350, t0 + 0.18);
@@ -681,7 +681,7 @@ document.addEventListener('click', function (e) {
       g.gain.setValueAtTime(0.5, t0 + 0.6); g.gain.exponentialRampToValueAtTime(0.0001, t0 + T);
       var b1 = c.createBiquadFilter(); b1.type = 'bandpass'; b1.frequency.value = 1500; b1.Q.value = 1.4;
       var b2 = c.createBiquadFilter(); b2.type = 'lowpass'; b2.frequency.value = 3200;
-      var son = c.createGain(); son.gain.value = 0.12;
+      var son = c.createGain(); son.gain.value = 0.4;
       o.connect(b1); b1.connect(b2); b2.connect(g); g.connect(son); son.connect(c.destination);
       [o, lfo, am].forEach(function (n) { n.start(t0); n.stop(t0 + T + 0.05); });
       setTimeout(function () { try { c.close(); } catch (e) {} }, (T + 0.4) * 1000);
