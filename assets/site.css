@@ -2157,3 +2157,4 @@ html.ak-acik{overflow:hidden}
 .ak-gorsel{display:block;width:auto;height:min(46vh,430px);max-width:100%;object-fit:contain}
 .ak-splash .ak-tarih{margin-top:0}
 @media (max-height:700px){.ak-gorsel{height:38vh}.ak-soz{display:none}}
+.tablo-sar{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 6px}.tablo-sar .sy-tablo{min-width:520px}
