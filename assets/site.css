@@ -1671,3 +1671,4 @@ article.kx{scroll-margin-top:84px}
 .ana-sehir a{padding:7px 12px;border:1px solid var(--cizgi);border-radius:999px;background:var(--beyaz);font-size:14.5px;font-weight:600;color:#0B2A55;text-decoration:none}
 .ana-sehir a:hover{border-color:#1C5FE0}
 .seo-cta .dugme{text-decoration:none;margin-right:8px}.seo-cta .dugme-mavi{color:#fff}.seo-cta .dugme-altin{color:#13231C}
+.pk-at{color:inherit;text-decoration:none}.pk-at:hover{text-decoration:underline;color:#1C5FE0}
