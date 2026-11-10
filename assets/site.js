@@ -695,7 +695,7 @@ document.addEventListener('click', function (e) {
 (function () {
   var gun; try { gun = new Intl.DateTimeFormat('en-CA', {timeZone: 'Europe/Istanbul'}).format(new Date()); } catch (e) { return; }
   if (gun.slice(5) !== '11-10') return;
-  var A = 'tjkd-10kasim-' + gun.slice(0, 4);
+  var A = 'tjkd-10kasim-g-' + gun.slice(0, 4);
   try { if (localStorage.getItem(A)) return; } catch (e) {}
   if (/\/admin\//.test(location.pathname)) return;
   var yil = +gun.slice(0, 4) - 1938;
