@@ -2201,3 +2201,6 @@ html.ak-acik{overflow:hidden}
 .oc-kc b{font:700 14px/1.2 var(--govde)}.oc-kc small{font-size:12px;line-height:1.35;color:var(--soluk)}
 .oc-kc[aria-pressed="true"]{border-color:#D6AE52;background:#FFF9EA;box-shadow:0 0 0 2px rgba(214,174,82,.25)}
 .oc-pbas{margin:6px 0 10px;font-size:14px;color:#3B4A63}.oc-pbas b{color:#0A142C}
+.sd-gorsel{margin:0 0 22px;border:1px solid var(--cizgi,#DDE3EC);border-radius:14px;overflow:hidden;background:#fff;max-width:560px}
+.sd-gorsel figcaption{padding:10px 14px;font-size:14px;line-height:1.4;color:#22324D;border-bottom:1px solid var(--cizgi,#E6EAF0)}
+.sd-gorsel img{display:block;width:100%;height:auto}
