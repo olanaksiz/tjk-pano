@@ -342,7 +342,23 @@ document.addEventListener('click', function (e) {
   function agf(a) { var m = /%(\d+)/.exec(a || ''); return m ? '%' + m[1] : ''; }
   var COK = /(6'LI|5'Lİ|4'LÜ|3'LÜ|7'Lİ) (GANYAN|PLASE)/;
 
-  function kosuKart(k, hipAd) {
+  function medya(t, sid, no, hipAd) {
+    if (!t || !sid || !no) return null;
+    var kod = t.slice(2, 4) + t.slice(5, 7) + t.slice(8, 10) + String(sid) + String(no);
+    var foto = 'https://foto-cdn.tjk.org/fotoftp/' + t.slice(0, 4) + '/' + kod + '.jpg';
+    var mp4 = 'https://video-cdn.tjk.org/videoftp/' + t.slice(0, 4) + '/' + t.slice(5, 7) + '/' + kod + '.mp4';
+    var w = el('div', 'sk-medya');
+    var a = el('a', 'sk-ff'); a.href = foto; a.target = '_blank'; a.rel = 'noopener';
+    var im = el('img'); im.loading = 'lazy'; im.decoding = 'async'; im.width = 1920; im.height = 1080; im.alt = hipAd + ' ' + no + '. koşu foto finiş'; im.src = foto;
+    im.onerror = function () { if (w.parentNode) w.parentNode.removeChild(w); };
+    a.appendChild(im); a.appendChild(el('span', '', 'Foto finiş')); w.appendChild(a);
+    var d = el('details', 'sk-vid'); var sm = el('summary', '', '▶  Koşu videosunu izle'); d.appendChild(sm);
+    d.addEventListener('toggle', function () { if (d.open && !d.querySelector('video')) { var v = el('video'); v.controls = true; v.preload = 'metadata'; v.playsInline = true; v.setAttribute('playsinline', ''); v.src = mp4 + '#t=3'; d.appendChild(v); } });
+    w.appendChild(d); w.appendChild(el('small', '', 'Kaynak: TJK'));
+    return w;
+  }
+
+  function kosuKart(k, hipAd, sid, t) {
     var art = el('article', 'sk');
     var bas = el('header', 'sk-bas');
     var no = el('div', 'sk-no'); no.appendChild(el('b', '', String(k.no))); no.appendChild(el('span', '', 'Koşu')); bas.appendChild(no);
@@ -373,6 +389,7 @@ document.addEventListener('click', function (e) {
       ol.appendChild(li);
     });
     art.appendChild(ol);
+    var md = medya(t, sid, k.no, hipAd); if (md) art.appendChild(md);
 
     var ayr = el('details', 'sk-ayr'); ayr.appendChild(el('summary', '', 'Ayrıntılar: orijin, sahip, start, HP'));
     var kay = el('div', 'tablo-kaydir'); var tb = el('table', 'tablo sk-tablo');
@@ -422,7 +439,7 @@ document.addEventListener('click', function (e) {
       b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
       b.appendChild(el('b', '', h.ad)); b.appendChild(el('span', '', (h.k || []).length + ' koşu' + (h.yg ? ' · ' + h.yg : '')));
       var p = el('div', 'sk-izgara'); p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', b.id); if (i) p.hidden = true;
-      (h.k || []).forEach(function (k) { p.appendChild(kosuKart(k, h.ad)); });
+      (h.k || []).forEach(function (k) { p.appendChild(kosuKart(k, h.ad, h.sid, t)); });
       b.addEventListener('click', function () { sek.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-selected', 'false'); }); b.setAttribute('aria-selected', 'true'); paneller.forEach(function (x) { x.hidden = x !== p; }); });
       sek.appendChild(b); paneller.push(p);
     });
