@@ -2112,3 +2112,10 @@ article.kx{scroll-margin-top:84px}
 .dv2 .dv-link input{font:600 15px/1 var(--govde);letter-spacing:.01em}
 @media (max-width:640px){.dv2 .dv-link input{font-size:14px;padding:0 12px}}
 @media (max-width:480px){.dv-satir{flex-direction:column}.dv2 .dv-link input{flex:none;height:50px;text-align:center}.dv2 .dv-kopya{justify-content:center;height:46px}}
+/* Sonuç: TJK video ve foto finiş bağlantıları */
+.ks-medya{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:8px 0 0}
+.ks-m{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:0 14px;border-radius:10px;border:1px solid var(--cizgi);background:#fff;color:#0E1B3A;font:600 14px/1 var(--govde);text-decoration:none}
+.ks-m:hover{border-color:#0E1B3A}
+.ks-m svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ks-m-v svg{color:#D2462F}.ks-m-f svg{color:#1C5FE0}
+.ks-medya small{color:var(--soluk);font-size:12.5px}
