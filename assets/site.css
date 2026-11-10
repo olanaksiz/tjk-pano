@@ -2064,3 +2064,9 @@ article.kx{scroll-margin-top:84px}
 .kx-jok{display:flex;width:max-content;margin:4px 0 0 auto;font:700 11.5px/1.3 var(--govde);padding:2px 8px;border-radius:999px}
 .e-jok{display:inline-flex;vertical-align:middle;font:600 13px/1 var(--govde);padding:4px 7px;border-radius:5px;gap:4px}
 .jok{width:13px;height:13px;fill:currentColor;flex:none}
+/* Sürpriz olasılığı etiketi (uyarı alanı) */
+.kx-svd{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:999px;font:600 11.5px/1.3 var(--govde);border:1px solid;white-space:nowrap;vertical-align:middle}
+.kx-svd b{font-weight:800}
+.kx-svd-dusuk{background:#E8F6EF;color:#126B47;border-color:#9ED6B5}
+.kx-svd-orta{background:#FFF4D6;color:#8A5A00;border-color:#F1D27A}
+.kx-svd-yuksek{background:#FDE8E4;color:#A3291A;border-color:#F2A99C}
