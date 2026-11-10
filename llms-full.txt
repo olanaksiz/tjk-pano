@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 11 Kasım 2026, 00:16. Kaynak: https://tjkdetay.com/
+Güncelleme: 11 Kasım 2026, 00:18. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -257,6 +257,47 @@ C: Aynı atlar üç sıraya da yazılırsa 3 at için 3 × 2 × 1 = 6, 4 at içi
 
 S: Her koşuda bütün bahis türleri oynanır mı?
 C: Hayır. Bazı bahisler için yönetmelikte en az at sayısı şartı vardır ve hangi bahislerin açık olduğu o günün programında belirtilir.
+
+## Çifte, 3'lü, 4'lü, 5'li ve 7'li Ganyan, 7'li Plase, Sıralı 5'li: Çok Ayaklı Bahisler Rehberi
+https://tjkdetay.com/rehber/cifte-uclu-dortlu-besli-yedili-ganyan/
+
+Çifte iki koşunun, 3'lü ganyan üç koşunun, 4'lü dört, 5'li beş, altılı altı, 7'li ganyan yedi koşunun birincilerini birlikte bilmeyi ister. 'n'li plase'de ise her ayakta seçtiğin atın birinci ya da ikinci gelmesi yeter. Sıralı 5'li tek koşuda ilk beş atı doğru sırayla tahmin etmektir. Kupon tutarı her ayaktaki at sayılarının çarpımı × birim fiyat × misli ile hesaplanır.
+
+### Çok ayaklı bahis nedir?
+Çok ayaklı bahislerde tek bir koşu değil, art arda gelen birkaç koşu (ayak) birlikte tahmin edilir. Kazanmak için her ayağı bilmek gerekir; bir ayak yanarsa kupon kaybeder. Bu bahisler de müşterek bahistir: ikramiye sabit bir oran değildir, o bahse yatırılan toplam tutardan dağıtılacak kısım bütün ayakları bilenler arasında paylaştırılır.BahisAyakNe tahmin edilir?Çifte2İki koşunun birincileri3'lü ganyan3Üç koşunun birincileri4'lü ganyan4Dört koşunun birincileri5'li ganyan5Beş koşunun birincileriAltılı ganyan6Altı koşunun birincileri7'li ganyan7Yedi koşunun birincileri'n'li plase (ör. 7'li plase)nHer koşuda seçilen atın birinci ya da ikinci gelmesiTanımlar At Yarışları Müşterek Bahisler Yönetmeliği'nin 5. maddesindendir. Hangi gün hangi bahislerin açık olduğunu TJK belirler; günün programında her koşunun altında başlayan bahisler yazılır.
+
+### Çifte ve 3'lü ganyan nasıl oynanır?
+Çifte en kısa çok ayaklı bahistir: art arda iki koşunun kazananlarını yazarsın. 3'lü ganyan aynı mantıkla üç koşuyu kapsar. Ayak sayısı az olduğu için bilme ihtimali altılıya göre yüksek, ikramiye ise genelde daha düşüktür.Örnek: 3'lü ganyanda 1. ayağa 2 at, 2. ayağa 1 at, 3. ayağa 3 at yazarsan 2 × 1 × 3 = 6 kombinasyon oynamış olursun.
+
+### 4'lü, 5'li ve 7'li ganyan farkı nedir?
+Fark yalnızca ayak sayısıdır. Ayak arttıkça kuponu tutturmak zorlaşır, aynı bütçeyle her ayağa yazabileceğin at sayısı azalır ve ikramiye genellikle büyür. Altılı ganyan bu ailenin en çok oynanan bahsidir; 7'li ganyan bir ayak daha ekler.Kombinasyon hesabı hepsinde aynıdır: ayaklardaki at sayılarının çarpımı. 7 ayakta her ayağa 2 at yazmak 27 = 128 kombinasyon eder. Hızlı hesap için altılı ganyan hesaplama aracı 3'lü, 4'lü, 5'li ve 7'li ganyanı da hesaplar.
+
+### 7'li plase nedir?
+Yönetmelik bunu genel olarak 'n'li plase diye tanımlar: belirli sayıdaki koşunun her birinde seçtiğin atın birinci ya da ikinci gelmesini tahmin etmek. 7'li plasede yedi koşunun hepsinde yazdığın atlardan biri ilk ikide bitmelidir. Kazanma ihtimali 7'li ganyandan yüksek, ikramiyesi genelde düşüktür.
+
+### Sıralı 5'li nedir?
+Sıralı 5'li (sıralı beşli) çok ayaklı değil, tek koşuluk bir bahistir: koşunun ilk beş atını doğru sırayla bilmek gerekir. Kalabalık koşularda bilmek çok zor olduğu için ikramiye büyük olabilir; bilen çıkmazsa havuz devredebilir.
+
+### Ayakta at koşmazsa ne olur?
+Çok ayaklı bahislerde bir ayaktaki atın koşmaması (koşmaz) ya da eküri durumları için uygulanacak kurallar yönetmelikte ve TJK bahis kurallarında ayrıca düzenlenir. Kupon yatırmadan önce ve sonra günün programındaki KOŞMAZ ve eküri bilgilerini kontrol et; ayrıntılı ve güncel kural için TJK'nın resmi bahis kurallarına bak.
+
+### Hangisini seçmeli?
+Kesin bir doğru yoktur. Az ayaklı bahisler daha sık tutar ama az öder; çok ayaklı bahisler nadir tutar ama büyük ödeyebilir. Bütçeni önceden belirle ve kaybetmeyi göze alamayacağın parayla oynama. Bahis yalnız 18 yaş üstü kişilerce, TJK yetkili kanallarından oynanabilir; sorumlu oyun rehberimize göz at.
+
+S: Çifte nedir?
+C: Art arda iki koşunun birincilerini birlikte tahmin etme bahsidir. İki ayağı da bilen kuponlar ikramiyeyi paylaşır.
+
+S: 3'lü ganyan kaç ayaktır?
+C: Üç ayaktır; üç koşunun birincilerini birlikte bilmek gerekir.
+
+S: 7'li ganyan ile 7'li plase farkı nedir?
+C: 7'li ganyanda her ayakta yazdığın atın birinci gelmesi gerekir; 7'li plasede birinci ya da ikinci gelmesi yeter.
+
+S: Sıralı 5'li çok ayaklı bir bahis mi?
+C: Hayır. Tek koşuda ilk beş atı doğru sırayla bilmeyi ister.
+
+S: Kupon tutarı nasıl hesaplanır?
+C: Her ayaktaki at sayıları çarpılır (kombinasyon); bu sayı birim fiyat ve misliyle çarpılınca kupon tutarı bulunur.
 
 ## TJK Yarış Programı Nasıl Okunur? Sütun Sütun Rehber
 https://tjkdetay.com/rehber/yaris-programi-nasil-okunur/
