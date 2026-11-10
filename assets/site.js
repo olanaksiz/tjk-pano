@@ -653,14 +653,14 @@ document.addEventListener('click', function (e) {
    Tarayıcılar sesi kullanıcı dokunmadan çalmaz; ziyaretçinin ilk tıklamasında/dokunuşunda bir kez çalar.
    Aynı ziyaretçiye 7 günde bir. Kapatmak: localStorage 'tjkd-kisneme' = 'kapali'. */
 (function () {
-  var A = 'tjkd-kisneme2';
+  var A = 'tjkd-kisneme3';
   try {
     var v = localStorage.getItem(A);
     if (v === 'kapali') return;
     if (v && Date.now() - (+v) < 7 * 864e5) return;
   } catch (e) {}
-  var ses = new Audio('/assets/kisneme.mp3');
-  ses.preload = 'auto'; ses.volume = 0.6;
+  var ses = new Audio('/assets/kisneme.mp3?v=2');
+  ses.preload = 'auto'; ses.volume = 0.7;
   var olaylar = ['click', 'touchend', 'keydown'];
   function kaldir() { olaylar.forEach(function (t) { document.removeEventListener(t, kisne, true); }); }
   function kisne() {
