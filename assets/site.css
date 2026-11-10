@@ -2109,3 +2109,5 @@ article.kx{scroll-margin-top:84px}
 @media (max-width:640px){.davet-kart.dv2{padding:22px 18px 18px}.dv2 .dv-ust{flex-direction:row;align-items:flex-start}.dv2 .dv-ikon{width:44px;height:44px}
 .dv-sart{grid-template-columns:1fr}.dv-sart div,.dv-sart div+div{display:flex;align-items:baseline;gap:12px;padding:10px 0;border-left:0}.dv-sart div+div{border-top:1px solid rgba(255,255,255,.08)}.dv-sart dt{flex:0 0 84px;font-size:19px}.dv-sart dd{margin:0}
 .dv2 .dv-kopya{padding:0 14px}.dv2 .dv-dugmeler{grid-template-columns:repeat(3,minmax(0,1fr))}.dv2 .dv-d{font-size:13.5px;gap:6px;padding:0 8px}.dv-kpi b{font-size:20px}.dv-kpi span{font-size:11.5px}}
+.dv2 .dv-link input{font:600 15px/1 var(--govde);letter-spacing:.01em}
+@media (max-width:640px){.dv2 .dv-link input{font-size:14px;padding:0 12px}}

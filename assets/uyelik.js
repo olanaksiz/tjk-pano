@@ -604,7 +604,7 @@
         var metin = "tjkdetay.com'da günlük at yarışı analizleri ve hazır kuponlar var. Bu linkle ücretsiz üye ol, 7 gün Premium'u dene: ";
         kutular.forEach(function (k) {
           $$('[data-davet-panel]', k).forEach(function (x) { x.hidden = false; });
-          var inp = $('[data-davet-link]', k); if (inp) { inp.value = link; inp.addEventListener('focus', function () { inp.select(); }); }
+          var inp = $('[data-davet-link]', k); if (inp) { inp.value = link.replace(/^https?:\/\//, ''); inp.addEventListener('focus', function () { inp.select(); }); }
           var wa = $('[data-davet-wa]', k); if (wa) { wa.href = 'https://wa.me/?text=' + encodeURIComponent(metin + link); wa.addEventListener('click', function () { olay('davet_paylas_wa'); }); }
           var ku = $('[data-davet-k-uye]', k), kg = $('[data-davet-k-gun]', k), kb2 = $('[data-davet-k-bek]', k);
           if (ku) ku.textContent = j.uye || 0; if (kg) kg.textContent = j.gun || 0; if (kb2) kb2.textContent = j.bekleyen || 0;
