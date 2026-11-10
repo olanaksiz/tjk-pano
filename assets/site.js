@@ -703,9 +703,9 @@ document.addEventListener('click', function (e) {
     var o = document.createElement('div');
     o.className = 'ak-splash'; o.setAttribute('role', 'dialog'); o.setAttribute('aria-modal', 'true'); o.setAttribute('aria-labelledby', 'ak-b');
     o.innerHTML = '<div class="ak-ic">' +
-      '<svg class="ak-bayrak" viewBox="0 -30000 90000 60000" aria-label="Türk bayrağı" role="img"><path fill="#E30A17" d="M0-30000h90000v60000H0z"/><path fill="#fff" d="m41750 0 13568-4409-8386 11541V-7132l8386 11541zm925 8021a15000 15000 0 1 1 0-16042 12000 12000 0 1 0 0 16042z"/></svg>' +
+      '<img class="ak-gorsel" src="/assets/ataturk-10-kasim.jpg?v=1" width="596" height="800" alt="Gazi Mustafa Kemal Atatürk, imzası ve 1881–1938">' +
       '<p class="ak-tarih">10 Kasım 1938 · 09.05</p>' +
-      '<h2 id="ak-b">Gazi Mustafa Kemal Atatürk</h2>' +
+      '<h2 id="ak-b" class="gizli">Gazi Mustafa Kemal Atatürk</h2>' +
       '<p class="ak-metin">Cumhuriyetimizin kurucusu, Ulu Önder Gazi Mustafa Kemal Atatürk\'ü aramızdan ayrılışının ' + yil + '. yıl dönümünde saygı, sevgi, minnet ve özlemle anıyoruz.</p>' +
       '<p class="ak-soz">“Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.”</p>' +
       '<div class="ak-alt"><span class="ak-logo"></span><button type="button" class="ak-kapat">Siteye devam et</button></div></div>';

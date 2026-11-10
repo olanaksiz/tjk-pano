@@ -2153,3 +2153,7 @@ html.ak-acik{overflow:hidden}
 .ak-kapat{min-height:46px;padding:0 26px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:600 15px/1 var(--govde);cursor:pointer}
 .ak-kapat:hover,.ak-kapat:focus-visible{background:rgba(255,255,255,.08);border-color:#fff;outline:none}
 @media (prefers-reduced-motion:reduce){.ak-splash,.ak-splash.kapan{animation:none}}
+.ak-splash{background:#000}
+.ak-gorsel{display:block;width:auto;height:min(46vh,430px);max-width:100%;object-fit:contain}
+.ak-splash .ak-tarih{margin-top:0}
+@media (max-height:700px){.ak-gorsel{height:38vh}.ak-soz{display:none}}
