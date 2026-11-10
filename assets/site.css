@@ -2227,3 +2227,11 @@ html.ak-acik{overflow:hidden}
 .ilg-sayfa .ilg-hip{font:700 24px/1.1 var(--baslik);margin:26px 0 8px}
 .ilg-sayfa .ilg{margin:0 0 12px}
 .ilg-b a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.uy-google{display:grid;gap:8px;margin:2px 0 4px}
+.g-dugme{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:46px;border-radius:10px;border:1px solid #DADCE0;background:#fff;color:#1F1F1F;font:600 15px/1 var(--govde);cursor:pointer}
+.g-dugme:hover{background:#F7F8F8}
+.g-dugme:focus-visible{outline:2px solid #3D8BFF;outline-offset:2px}
+.g-not{margin:0;font-size:12px;line-height:1.45;color:#8FA3C0}
+.g-not a{color:#C3D1E8}
+.g-ayrac{display:flex;align-items:center;gap:10px;margin:4px 0 0;font-size:12px;color:#8FA3C0}
+.g-ayrac::before,.g-ayrac::after{content:"";flex:1;height:1px;background:#23406F}

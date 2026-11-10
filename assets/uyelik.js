@@ -634,13 +634,34 @@
       kutular.forEach(function (k) { $$('[data-davet-panel]', k).forEach(function (x) { x.hidden = true; }); $$('[data-davet-yakinda]', k).forEach(function (x) { x.hidden = false; }); });
     });
   }
+  // ---------- Google ile giriş (Supabase Auth, Google sağlayıcısı açıksa düğme görünür) ----------
+  function googleHazirla() {
+    if (!HAZIR) return;
+    istek('/auth/v1/settings').then(function (j) {
+      if (!j || !j.external || !j.external.google) return;
+      $$('[data-google]').forEach(function (x) { x.hidden = false; });
+      $$('[data-google-giris]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          try { sessionStorage.setItem('tjkd-google', '1'); } catch (e) {}
+          var don = location.origin + (location.pathname.indexOf('/uye-ol') === 0 ? '/premium/' : location.pathname);
+          location.href = URL_ + '/auth/v1/authorize?provider=google&redirect_to=' + encodeURIComponent(don);
+        });
+      });
+    }).catch(function () {});
+  }
+  function googleDavet() {
+    var g = null; try { g = sessionStorage.getItem('tjkd-google'); sessionStorage.removeItem('tjkd-google'); } catch (e) {}
+    var dk = davetKodu(); if (!g || !dk) return;
+    oturum().then(function (s) { if (s) return istek('/rest/v1/rpc/davet_bagla', {method: 'POST', token: s.at, body: {p_kod: dk}}); }).catch(function () {});
+  }
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); duyuru(); sayac(); canli(); kilitAc(); denemeYaz(); davetPanel();
-  }, function () { kilitAc(); });
+    if (h && !h.hata) googleDavet();
+    ustBar(); premiumSayfa(); duyuru(); sayac(); canli(); kilitAc(); denemeYaz(); davetPanel(); googleHazirla();
+  }, function () { kilitAc(); googleHazirla(); });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
 
   // admin paneli ve modüller için ortak arayüz
