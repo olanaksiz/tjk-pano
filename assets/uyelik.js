@@ -366,13 +366,15 @@
     });
   }
 
+  // Anonim sayaç yalnız çerez/izin bandında "Tümünü kabul et" denince çalışır (KVKK: zorunlu olmayan kayıtlar için açık rıza)
+  function cerezIzni() { try { return localStorage.getItem('tjkd-cerez') === 'kabul' && localStorage.getItem('tjkd-z-kapali') !== '1'; } catch (e) { return false; } }
   // ---------- ziyaret sayacı (çerezsiz; IP saklanmaz; Do Not Track / GPC açıksa sayılmaz) ----------
   function sayac() {
     if (!HAZIR || document.body.classList.contains('admin-govde')) return;
     var ua = navigator.userAgent || '';
     if (navigator.webdriver || /bot|crawl|spider|slurp|lighthouse|headless|preview/i.test(ua)) return;
     if (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true) return;
-    try { if (localStorage.getItem('tjkd-z-kapali') === '1') return; } catch (e) {}
+    if (!cerezIzni()) { document.addEventListener('tjkd-cerez-kabul', function () { sayac(); }, {once: true}); return; }
     var oturumNo = null, yeni = false;
     try {
       oturumNo = sessionStorage.getItem('tjkd-z');
@@ -450,7 +452,7 @@
       if (document.hidden) return;
       var ot = null;
       try { ot = sessionStorage.getItem('tjkd-z'); } catch (e) {}
-      var nabiz = (sayilmaz || !ot) ? Promise.resolve() : oturum().then(function (s) {
+      var nabiz = (sayilmaz || !cerezIzni() || !ot) ? Promise.resolve() : oturum().then(function (s) {
         return istek('/rest/v1/rpc/canli_nabiz_kaydet', {method: 'POST', token: s ? s.at : null, body: {p_yol: location.pathname.slice(0, 200), p_oturum: ot}});
       }).catch(function () {});
       nabiz.then(function () { return istek('/rest/v1/rpc/canli_ozet', {method: 'POST', body: {}}); })

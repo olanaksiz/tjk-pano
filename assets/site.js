@@ -212,14 +212,44 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-/* ---- Çerez politikası: bu tarayıcıda ziyaret sayacını kapat/aç ---- */
+/* ---- Çerez / izin bandı (KVKK): zorunlu kayıtlar her zaman; anonim ziyaret sayacı yalnız onayla ---- */
 (function () {
-  var b = document.querySelector('[data-sayac-kapat]'); if (!b) return;
-  var d = document.querySelector('[data-sayac-durum]');
-  function kapali() { try { return localStorage.getItem('tjkd-z-kapali') === '1'; } catch (e) { return false; } }
-  function ciz() { var k = kapali(); b.textContent = k ? 'Sayacı yeniden aç' : 'Bu tarayıcıda sayacı kapat'; if (d) d.textContent = k ? 'Bu tarayıcıda ziyaret sayacı kapalı; sayfa açılışlarınız sayılmıyor.' : 'Sayılmak istemiyorsanız aşağıdaki düğmeyle bu tarayıcıda sayacı kapatabilirsiniz.'; }
-  b.addEventListener('click', function () { try { if (kapali()) { localStorage.removeItem('tjkd-z-kapali'); } else { localStorage.setItem('tjkd-z-kapali', '1'); try { localStorage.removeItem('tjkd-z-gordu'); sessionStorage.removeItem('tjkd-z'); } catch (e) {} } } catch (e) {} ciz(); });
-  ciz();
+  var K = 'tjkd-cerez';
+  function al() { try { return localStorage.getItem(K); } catch (e) { return null; } }
+  function koy(v) {
+    try {
+      localStorage.setItem(K, v);
+      if (v === 'kabul') localStorage.removeItem('tjkd-z-kapali');
+      else { localStorage.setItem('tjkd-z-kapali', '1'); localStorage.removeItem('tjkd-z-gordu'); sessionStorage.removeItem('tjkd-z'); }
+    } catch (e) {}
+    if (v === 'kabul') { try { document.dispatchEvent(new Event('tjkd-cerez-kabul')); } catch (e) {} }
+  }
+  function bant() {
+    if (document.querySelector('.cz-bant')) return;
+    var b = document.createElement('div');
+    b.className = 'cz-bant'; b.setAttribute('role', 'region'); b.setAttribute('aria-label', 'Çerez ve gizlilik tercihi');
+    b.innerHTML = '<p><b>Çerez tercihin</b> Reklam ya da takip çerezi kullanmıyoruz. Oturum ve site tercihleri gibi zorunlu kayıtlar her zaman açıktır. İzin verirsen hangi sayfaların okunduğunu görmek için anonim bir ziyaret sayacı da çalışır. <a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a></p>' +
+      '<div class="cz-dugmeler"><button type="button" class="cz-d" data-cz="red">Yalnız zorunlu</button><button type="button" class="cz-d" data-cz="kabul">Tümünü kabul et</button></div>';
+    b.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-cz]'); if (!t) return;
+      koy(t.getAttribute('data-cz')); b.remove(); ciz();
+    });
+    document.body.appendChild(b);
+  }
+  window.TJKDCerez = {ac: bant, durum: al};
+  if (!al() && !/\/admin\//.test(location.pathname)) {
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bant); else bant();
+  }
+  /* Çerez politikası sayfasındaki düğme: tercihi değiştir */
+  var pb = document.querySelector('[data-sayac-kapat]');
+  var pd = document.querySelector('[data-sayac-durum]');
+  function ciz() {
+    if (!pb) return;
+    var k = al() === 'kabul';
+    pb.textContent = k ? 'Sayaca verdiğim izni geri al' : 'Anonim sayaca izin ver';
+    if (pd) pd.textContent = k ? 'Bu tarayıcıda anonim ziyaret sayacına izin verdin. İstediğin zaman geri alabilirsin.' : (al() ? 'Bu tarayıcıda yalnız zorunlu kayıtlar açık; ziyaret sayacı çalışmıyor.' : 'Henüz tercih yapmadın; ziyaret sayacı izin verene kadar çalışmaz.');
+  }
+  if (pb) { pb.addEventListener('click', function () { koy(al() === 'kabul' ? 'red' : 'kabul'); var e = document.querySelector('.cz-bant'); if (e) e.remove(); ciz(); }); ciz(); }
 })();
 
 /* ---- Sözlük: arama ve kategori ---- */
@@ -699,13 +729,11 @@ document.addEventListener('click', function (e) {
   var goruldu = false;
   try { if (localStorage.getItem(A)) goruldu = true; } catch (e) {}
   try { if (sessionStorage.getItem(A)) goruldu = true; } catch (e) {}
-  if (document.cookie.indexOf(A + '=1') >= 0) goruldu = true;
   if (goruldu) return;
   if (/\/admin\//.test(location.pathname)) return;
   /* Gösterildiği anda kaydet: kapatılmasa, sayfa yenilense ya da başka sayfaya geçilse bile bir daha açılmaz. */
   try { localStorage.setItem(A, '1'); } catch (e) {}
   try { sessionStorage.setItem(A, '1'); } catch (e) {}
-  try { document.cookie = A + '=1; max-age=172800; path=/; SameSite=Lax'; } catch (e) {}
   var yil = +gun.slice(0, 4) - 1938;
   function ac() {
     var o = document.createElement('div');
