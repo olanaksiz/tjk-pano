@@ -41,7 +41,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (10 Kasım 2026)
 - Adana: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
 - Kocaeli: 9 koşu, 17:15–21:30; 1. altılı 1.–6. koşular (17:15); 2. altılı 4.–9. koşular (19:00)
-- Açık karne: 5 yarış gününde biten 76 koşunun 41'inde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 5 yarış gününde biten 78 koşunun 42'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
