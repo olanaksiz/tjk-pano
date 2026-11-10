@@ -38,14 +38,10 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Şanlıurfa at yarışı tahminleri](https://tjkdetay.com/sanliurfa-at-yarisi-tahminleri/) · [Şanlıurfa at yarışı sonuçları](https://tjkdetay.com/sanliurfa-at-yarisi-sonuclari/)
 - [Antalya at yarışı tahminleri](https://tjkdetay.com/antalya-at-yarisi-tahminleri/) · [Antalya at yarışı sonuçları](https://tjkdetay.com/antalya-at-yarisi-sonuclari/)
 
-## Bugün (10 Kasım 2026)
-- Adana: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
-- Kocaeli: 9 koşu, 17:15–21:30; 1. altılı 1.–6. koşular (17:15); 2. altılı 4.–9. koşular (19:00)
-- Adana 1. 6'lı ganyan: 5/3/5/1/3/9 · 7.235,87 TL (1 misli, TJK)
-- Adana 2. 6'lı ganyan: 1/3/9,10,12/8/5/1 · 9.027,00 TL (1 misli, TJK)
-- Kocaeli 1. 6'lı ganyan: 3/6/1,3/5/2/5 · 664.570,50 TL (1 misli, TJK)
-- Kocaeli 2. 6'lı ganyan: 5/2/5/1/3/4 · 227.945,25 TL (1 misli, TJK)
-- Açık karne: 5 yarış gününde biten 93 koşunun 52'sinde kazanan ilk 4'ümüzdeydi.
+## Bugün (11 Kasım 2026)
+- İstanbul: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
+- Elazığ: 8 koşu, 17:45–21:30; 1. altılı 1.–6. koşular (17:45); 2. altılı 3.–8. koşular (19:00)
+- Açık karne: 6 yarış gününde biten 93 koşunun 52'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
