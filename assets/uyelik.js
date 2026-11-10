@@ -11,6 +11,11 @@
   var $ = function (s, k) { return (k || document).querySelector(s); };
   var $$ = function (s, k) { return Array.prototype.slice.call((k || document).querySelectorAll(s)); };
 
+  // ---------- davet (?ref=KOD): 30 gün hatırlanır, kayıtta davet edene iletilir ----------
+  var DK = 'tjkd-davet';
+  (function () { try { var r = (new URLSearchParams(location.search)).get('ref'); if (r && /^[A-Za-z0-9]{5,12}$/.test(r)) localStorage.setItem(DK, JSON.stringify({k: r.toUpperCase(), t: Date.now()})); } catch (e) {} })();
+  function davetKodu() { try { var d = JSON.parse(localStorage.getItem(DK) || 'null'); if (d && d.k && Date.now() - d.t < 30 * 864e5) return d.k; } catch (e) {} return ''; }
+
   // ---------- oturum ----------
   function oku() { try { return JSON.parse(localStorage.getItem(SK) || 'null'); } catch (e) { return null; } }
   function yaz(s) { try { if (s) localStorage.setItem(SK, JSON.stringify(s)); else localStorage.removeItem(SK); } catch (e) {} }
@@ -152,7 +157,7 @@
       kilitle(fk, true); mesaj(fk, 'Kaydın oluşturuluyor…');
       var neden = (new URLSearchParams(location.search)).get('neden') || sonNeden || 'site';
       istek('/auth/v1/signup?redirect_to=' + encodeURIComponent(location.origin + '/premium/'), {method: 'POST', body: {email: ep, password: sf, data: {
-        ad_soyad: ad, telefon: tel, kvkk_onay: true, sartlar_onay: true, ileti_onay: !!d.get('ileti'), kaynak: neden}}})
+        ad_soyad: ad, telefon: tel, kvkk_onay: true, sartlar_onay: true, ileti_onay: !!d.get('ileti'), kaynak: (davetKodu() ? 'davet' : neden), davet: davetKodu()}}})
         .then(function (j) {
           if (j && j.access_token) { oturumKaydet(j); mesaj(fk, 'Üyeliğin açıldı, hoş geldin!', 'tamam'); setTimeout(function () { location.href = '/premium/'; }, 700); }
           else { fk.reset(); mesaj(fk, 'Neredeyse tamam: ' + ep + ' adresine bir doğrulama bağlantısı gönderdik. Bağlantıya tıklayınca üyeliğin açılır.', 'tamam'); }
@@ -580,12 +585,52 @@
       }
     });
   }
+  // ---------- arkadaşını davet et ----------
+  function davetPanel() {
+    var dk = davetKodu();
+    $$('[data-davet-geldi]').forEach(function (x) { x.hidden = !dk; });
+    var kutular = $$('[data-davet]'); if (!kutular.length) return;
+    function yazMesaj(k, t) { var m = $('[data-davet-mesaj]', k); if (m) { m.textContent = t; clearTimeout(m._t); m._t = setTimeout(function () { m.textContent = ''; }, 6000); } }
+    function kopyala(metin) {
+      if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(metin);
+      return new Promise(function (ok, red) { try { var t = document.createElement('textarea'); t.value = metin; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select(); var b = document.execCommand('copy'); t.remove(); b ? ok() : red(); } catch (e) { red(e); } });
+    }
+    oturum().then(function (s) {
+      kutular.forEach(function (k) { $$('[data-davet-giris]', k).forEach(function (x) { x.hidden = !!s; }); });
+      if (!s) return;
+      return istek('/rest/v1/rpc/davet_kodum', {method: 'POST', token: s.at, body: {}}).then(function (j) {
+        if (!j || !j.kod) throw new Error('kod yok');
+        var link = location.origin + '/uye-ol/?ref=' + j.kod;
+        var metin = "tjkdetay.com'da günlük at yarışı analizleri ve hazır kuponlar var. Bu linkle ücretsiz üye ol, 7 gün Premium'u dene: ";
+        kutular.forEach(function (k) {
+          $$('[data-davet-panel]', k).forEach(function (x) { x.hidden = false; });
+          var inp = $('[data-davet-link]', k); if (inp) { inp.value = link; inp.addEventListener('focus', function () { inp.select(); }); }
+          var wa = $('[data-davet-wa]', k); if (wa) { wa.href = 'https://wa.me/?text=' + encodeURIComponent(metin + link); wa.addEventListener('click', function () { olay('davet_paylas_wa'); }); }
+          var sy = $('[data-davet-sayi]', k);
+          if (sy) sy.textContent = j.uye ? (j.uye + ' arkadaşın davetinle üye oldu · ' + (j.gun || 0) + ' gün Premium kazandın' + (j.bekleyen ? ' · ' + j.bekleyen + ' kişinin e-posta doğrulaması bekleniyor' : '') + '.') : 'Henüz davetinle gelen üye yok. İlk davetini şimdi gönder.';
+          var kb = $('[data-davet-kopya]', k);
+          if (kb) kb.addEventListener('click', function () { kopyala(link).then(function () { yazMesaj(k, 'Link kopyalandı. İstediğin yere yapıştırıp paylaşabilirsin.'); olay('davet_kopya'); }, function () { if (inp) inp.select(); yazMesaj(k, 'Link seçildi; kopyalamak için Ctrl+C ya da uzun basıp Kopyala.'); }); });
+          var ig = $('[data-davet-ig]', k);
+          if (ig) ig.addEventListener('click', function () {
+            olay('davet_paylas_ig');
+            if (navigator.share) { navigator.share({title: 'tjkdetay.com', text: metin, url: link}).catch(function () {}); return; }
+            kopyala(metin + link).then(function () { yazMesaj(k, "Link kopyalandı. Instagram'da hikâyene bağlantı çıkartmasıyla ya da mesajla yapıştır."); }, function () {});
+            window.open('https://www.instagram.com/', '_blank', 'noopener');
+          });
+          var dg = $('[data-davet-paylas]', k);
+          if (dg && navigator.share) { dg.hidden = false; dg.addEventListener('click', function () { olay('davet_paylas_diger'); navigator.share({title: 'tjkdetay.com', text: metin, url: link}).catch(function () {}); }); }
+        });
+      });
+    }).catch(function () {
+      kutular.forEach(function (k) { $$('[data-davet-panel]', k).forEach(function (x) { x.hidden = true; }); $$('[data-davet-yakinda]', k).forEach(function (x) { x.hidden = false; }); });
+    });
+  }
   // ---------- başlat ----------
   hashIsle().then(function (h) {
     if (h && h.hata) { ac('giris'); var f = pencere ? $('[data-form=giris]', pencere) : $('[data-form=giris]'); if (f) mesaj(f, h.hata, 'hata'); }
     else if (h && h.tur === 'recovery') { var k = sayfaForm || pencere; if (pencere && !sayfaForm) ac('yeni-sifre'); else if (k) sekme('yeni-sifre', k); }
     else if (h && (h.tur === 'signup' || h.tur === 'email' || h.tur === 'magiclink')) { profilSoz = null; }
-    ustBar(); premiumSayfa(); duyuru(); sayac(); canli(); kilitAc(); denemeYaz();
+    ustBar(); premiumSayfa(); duyuru(); sayac(); canli(); kilitAc(); denemeYaz(); davetPanel();
   }, function () { kilitAc(); });
   $$('[data-uye-cikis]').forEach(function (x) { x.addEventListener('click', function (e) { e.preventDefault(); cikis(); }); });
 
