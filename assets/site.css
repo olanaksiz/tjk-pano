@@ -2204,3 +2204,5 @@ html.ak-acik{overflow:hidden}
 .sd-gorsel{margin:0 0 22px;border:1px solid var(--cizgi,#DDE3EC);border-radius:14px;overflow:hidden;background:#fff;max-width:560px}
 .sd-gorsel figcaption{padding:10px 14px;font-size:14px;line-height:1.4;color:#22324D;border-bottom:1px solid var(--cizgi,#E6EAF0)}
 .sd-gorsel img{display:block;width:100%;height:auto}
+.uy-form label.uy-hatirla{display:flex;align-items:center;gap:10px;font:400 14px/1.3 var(--govde);color:#C3D1E8;cursor:pointer}
+.uy-form label.uy-hatirla input{width:18px;height:18px;margin:0;accent-color:#3D8BFF;flex:none}

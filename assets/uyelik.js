@@ -165,10 +165,12 @@
         .catch(function (err) { mesaj(fk, hataYazi(err), 'hata'); })
         .then(function () { kilitle(fk, false); });
     });
-    var fg = $('[data-form=giris]', kapsam);
+    var fg = $('[data-form=giris]', kapsam), HK = 'tjkd-hatirla-ep';
+    if (fg) { try { var hep = localStorage.getItem(HK); if (hep) { fg.eposta.value = hep; if (fg.hatirla) fg.hatirla.checked = true; } } catch (e0) {} }
     if (fg) fg.addEventListener('submit', function (e) {
       e.preventDefault();
       var d = new FormData(fg);
+      try { if (d.get('hatirla')) localStorage.setItem(HK, kimlik(d.get('eposta'))); else localStorage.removeItem(HK); } catch (e1) {}
       kilitle(fg, true); mesaj(fg, 'Giriş yapılıyor…');
       istek('/auth/v1/token?grant_type=password', {method: 'POST', body: {email: kimlik(d.get('eposta')), password: String(d.get('sifre') || '')}})
         .then(function (j) { oturumKaydet(j); profilSoz = null; olay('giris'); mesaj(fg, 'Giriş yapıldı.', 'tamam'); setTimeout(function () { kapat(); if (location.pathname.indexOf('/uye-ol') === 0) location.href = '/premium/'; else location.reload(); }, 400); })
@@ -511,7 +513,8 @@
         if (!s || !s.user) throw new Error('Oturumun kapanmış; tekrar giriş yap.');
         var yol = s.user.id + '/foto.jpg', adim = Promise.resolve(p.foto_url || null);
         if (yeniFoto) adim = fetch(URL_ + '/storage/v1/object/avatarlar/' + yol, {method: 'POST', headers: {apikey: KEY, Authorization: 'Bearer ' + s.at, 'x-upsert': 'true', 'Content-Type': 'image/jpeg'}, body: yeniFoto})
-          .then(function (r) { if (!r.ok) return r.text().then(function (t) { throw new Error('Fotoğraf yüklenemedi (' + r.status + ').'); }); return URL_ + '/storage/v1/object/public/avatarlar/' + yol + '?v=' + Date.now(); });
+          .then(function (r) { if (r.ok) return r; return fetch(URL_ + '/storage/v1/object/avatarlar/' + yol, {method: 'PUT', headers: {apikey: KEY, Authorization: 'Bearer ' + s.at, 'Content-Type': 'image/jpeg'}, body: yeniFoto}); })
+          .then(function (r) { if (!r.ok) return r.text().then(function (t) { var x = ''; try { x = JSON.parse(t).message || ''; } catch (e3) {} throw new Error('Fotoğraf yüklenemedi (' + r.status + (x ? ': ' + x : '') + '). Lütfen biraz sonra tekrar dene.'); }); return URL_ + '/storage/v1/object/public/avatarlar/' + yol + '?v=' + Date.now(); });
         else if (fotoSil) adim = fetch(URL_ + '/storage/v1/object/avatarlar/' + yol, {method: 'DELETE', headers: {apikey: KEY, Authorization: 'Bearer ' + s.at}}).then(function () { return null; }, function () { return null; });
         return adim.then(function (foto) {
           return istek('/rest/v1/profiller?id=eq.' + encodeURIComponent(s.user.id), {method: 'PATCH', token: s.at, prefer: 'return=minimal', body: {ad_soyad: ad || null, telefon: tel || null, foto_url: foto}})
