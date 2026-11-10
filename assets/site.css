@@ -2170,3 +2170,24 @@ html.ak-acik{overflow:hidden}
 .kx-taze{display:flex;width:max-content;margin:4px 0 0 auto;font:700 11.5px/1.3 var(--govde);padding:2px 8px;border-radius:999px}
 .e-taze{display:inline-flex;vertical-align:middle;font:600 13px/1 var(--govde);padding:4px 7px;border-radius:5px;gap:4px}
 .tz{width:12px;height:12px;fill:currentColor;flex:none}
+/* Öne çıkan atlar */
+.oc-lis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.oc-k{position:relative;padding:14px 16px 12px;border:1px solid var(--cizgi);border-radius:16px;background:#fff;display:flex;flex-direction:column;gap:6px}
+.oc-k.kaz{border-color:#0E9F6E;box-shadow:0 0 0 2px rgba(14,159,110,.15)}
+.oc-bas{display:flex;align-items:center;gap:10px}
+.oc-bas h3{margin:0;font:700 17px/1.2 var(--baslik);color:#0A142C}.oc-bas p{margin:2px 0 0;font-size:13px;color:var(--soluk)}
+.oc-sira{font:700 12px/1 var(--govde);color:#8A6A1E;width:18px}
+.oc-no{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:9px;background:#0E1B3A;color:#fff;font:700 15px/1 var(--govde)}
+.oc-dur{margin-left:auto;padding:3px 9px;border-radius:999px;font:700 12px/1.3 var(--govde)}
+.oc-dur-kazandi{background:#E8F6EF;color:#126B47}.oc-dur-tabela{background:#FFF4D6;color:#8A5A00}.oc-dur-dis{background:#F1F3F6;color:#6B7A90}
+.oc-kos,.oc-jk{margin:0;font-size:13.5px;color:#3B4A63}.oc-jk{color:var(--soluk)}
+.oc-et{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.oc-y{font:600 12.5px/1.3 var(--govde);color:#1C5FE0;background:#EEF4FF;border-radius:999px;padding:3px 9px}
+.oc-b{font:700 11.5px/1.3 var(--govde);color:#fff;border-radius:999px;padding:3px 9px}
+.oc-jok{background:#6D28D9}.oc-orj{background:#B7791F}.oc-taze{background:#047857}.oc-gazi{background:#B91C1C}
+.oc-git{margin-top:auto;align-self:flex-start;font:600 13.5px/1 var(--govde);color:#1C5FE0;text-decoration:none;padding-top:6px}
+.oc-hip{margin:18px 0 8px;font:700 18px/1.2 var(--baslik)}
+.oc-tab{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.oc-r{display:flex;flex-direction:column;gap:3px;padding:10px 12px;border:1px solid var(--cizgi);border-radius:12px;background:#fff;color:inherit;text-decoration:none}
+.oc-r b{font:700 14px/1.2 var(--govde)}.oc-r small{color:var(--soluk);font-size:12.5px}
+.oc-r span{display:flex;flex-direction:column;gap:2px}.oc-r em{font-style:normal;font-size:14px;color:#0A142C}
