@@ -2119,3 +2119,10 @@ article.kx{scroll-margin-top:84px}
 .ks-m svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .ks-m-v svg{color:#D2462F}.ks-m-f svg{color:#1C5FE0}
 .ks-medya small{color:var(--soluk);font-size:12.5px}
+/* Sonuç: koşu videosu + foto finiş (kaynak TJK) */
+.ks-medya2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0 4px}
+.ks-medya2 figure{margin:0;border-radius:14px;overflow:hidden;background:#0A142C;border:1px solid #1C2C52}
+.ks-medya2 video,.ks-medya2 img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;background:#0A142C}
+.ks-medya2 figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 12px;font-size:13px;color:#AEBBD3}
+.ks-medya2 figcaption b{color:#F4F7FC;font-weight:600}
+@media (max-width:640px){.ks-medya2{grid-template-columns:1fr}}
