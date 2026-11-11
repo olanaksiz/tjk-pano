@@ -45,7 +45,8 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (11 Kasım 2026)
 - İstanbul: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
 - Elazığ: 8 koşu, 17:45–21:30; 1. altılı 1.–6. koşular (17:45); 2. altılı 3.–8. koşular (19:00)
-- Açık karne: 6 yarış gününde biten 98 koşunun 56'sında kazanan ilk 4'ümüzdeydi.
+- İstanbul 1. 6'lı ganyan: 7/3/1/3/2/1 · 17.909,18 TL (1 misli, TJK)
+- Açık karne: 6 yarış gününde biten 99 koşunun 57'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
