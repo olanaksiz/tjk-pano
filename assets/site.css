@@ -2252,3 +2252,7 @@ html.ak-acik{overflow:hidden}
 .banka-kutu{margin:22px 0 0;max-width:820px;padding:20px 22px;border-radius:16px;background:#06122B;border:1px solid #1A3566}
 .banka-kutu h2{font:700 26px/1.1 var(--baslik);margin:0 0 6px;color:#fff}
 .banka-giris{color:#CFE0FF;margin:0 0 14px;font-size:15px}
+.hava-kutu{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:6px 0 14px;padding:10px 14px;border-radius:12px;background:rgba(46,107,219,.08);border:1px solid rgba(46,107,219,.22);font-size:.95rem}
+.hava-kutu small{opacity:.65;font-size:.78rem;margin-left:auto}
+.hv-pist{font-weight:600}
+.tb-hava{display:block;font-size:.78rem;opacity:.8;margin-top:2px}
