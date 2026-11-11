@@ -2256,3 +2256,7 @@ html.ak-acik{overflow:hidden}
 .hava-kutu small{opacity:.65;font-size:.78rem;margin-left:auto}
 .hv-pist{font-weight:600}
 .tb-hava{display:block;font-size:.78rem;opacity:.8;margin-top:2px}
+.kx-yoy{margin:10px 0;padding:10px 12px;border-radius:10px;background:rgba(242,193,78,.08);border:1px solid rgba(242,193,78,.3)}
+.kx-yoy ol{margin:6px 0 4px 20px;padding:0}.kx-yoy li{margin:2px 0;font-size:.92rem}
+.kx-yoy-biz{font-style:normal;font-size:.75rem;padding:1px 6px;border-radius:8px;background:rgba(46,107,219,.15);margin-left:4px}
+.kx-yoy-not{margin:4px 0 0;font-size:.85rem;font-weight:600}
