@@ -271,6 +271,14 @@
   }
 
   // ---------- premium sayfası ----------
+  // Veritabanında fiyat/banka ayarı yoksa da sayfa çalışsın diye varsayılanlar (panelden değiştirilince onlar geçerli olur)
+  var VARSAYILAN_PLANLAR = [
+    {kod: 'haftalik', ad: 'Haftalık', gun: 7, fiyat: 500},
+    {kod: 'onbes', ad: '15 günlük', gun: 15, fiyat: 900},
+    {kod: 'aylik', ad: 'Aylık', gun: 30, fiyat: 1500, one_cikan: true, etiket: 'En çok tercih edilen'},
+    {kod: 'ucaylik', ad: '3 aylık', gun: 90, fiyat: 4000},
+    {kod: 'yillik', ad: 'Yıllık', gun: 365, fiyat: 12000, etiket: 'En avantajlı plan'}];
+  var VARSAYILAN_HAVALE = {aktif: true, banka: 'Türkiye Ekonomi Bankası', alici: 'Elyapa E-Ticaret Hizmetleri Limited Şirketi', iban: 'TR94 0003 2000 0000 0142 2619 21'};
   var PLAN_OZELLIK = ['Her altılı için küçük, orta ve büyük hazır kupon', 'Ayak ayak gerekçe ve kupon tutarı', 'Koşu öncesi sürpriz uyarıları', 'Altılı sonrası kupon karnesi'];
   function planKart(p, odemeAcik) {
     var art = document.createElement('article'); art.className = 'plan' + (p.one_cikan ? ' plan-one' : '');
@@ -319,9 +327,25 @@
     }
     ayarlar().then(function (m) {
       ODEME = (m.odeme_yontemleri || {});
+      if (!ODEME.havale || !ODEME.havale.iban) ODEME.havale = VARSAYILAN_HAVALE;
       var L = Array.isArray(m.premium_planlar) ? m.premium_planlar.filter(function (p) { return p && p.aktif !== false; }) : null;
+      if (!L || !L.some(function (p) { return Number(p.fiyat) > 0; })) L = VARSAYILAN_PLANLAR;
+      bankaKutu(ODEME.havale);
       if (L && L.length && planKok) { planKok.textContent = ''; L.forEach(function (p) { PLANLAR[p.kod] = p; planKok.appendChild(planKart(p)); }); }
       $$('[data-plan]', kok).forEach(function (b) { b.addEventListener('click', function () { planSec(b.getAttribute('data-plan')); }); });
+    });
+    function bankaKutu(hv) {
+      var bk = $('[data-banka-kutu]', kok); if (!bk || !hv || !hv.iban) return;
+      $$('[data-bk]', bk).forEach(function (x) { x.textContent = hv[x.getAttribute('data-bk')] || ''; });
+      bk.hidden = false;
+    }
+    var bk0 = $('[data-banka-kutu]', kok);
+    if (bk0) $$('[data-bk-kopyala]', bk0).forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = b.getAttribute('data-bk-kopyala'); var el = $('[data-bk="' + k + '"]', bk0); var v = (el && el.textContent || '').trim();
+        if (k === 'iban') v = v.replace(/\s+/g, '');
+        try { navigator.clipboard.writeText(v); b.textContent = 'Kopyalandı'; setTimeout(function () { b.textContent = 'Kopyala'; }, 1500); } catch (e) {}
+      });
     });
     function planSec(kod) {
       oturum().then(function (s) {
@@ -375,8 +399,15 @@
           $('[data-havale-adim1]', hk0).hidden = true; $('[data-havale-bilgi]', hk0).hidden = false;
           ms.className = 'uy-mesaj'; ms.textContent = j.bildirildi ? 'Bu sipariş için ödeme bildirimini daha önce yapmışsın; onay bekleniyor.' : '';
         }).catch(function (e) {
-          ms.className = 'uy-mesaj hata';
-          ms.textContent = (e && e.durum === 401) ? 'Oturumun sona ermiş; yeniden giriş yap.' : 'Sipariş kodu alınamadı (' + hataYazi(e) + '). WhatsApp\'tan yazarsan elle yardımcı oluruz.';
+          if (e && e.durum === 401) { ms.className = 'uy-mesaj hata'; ms.textContent = 'Oturumun sona ermiş; yeniden giriş yap.'; return; }
+          // sipariş kodu üretilemedi: banka bilgisi yine gösterilir, açıklamaya üyenin e-postası yazılır
+          return profil().then(function (pf) {
+            var kod = (pf && pf.eposta) || 'üye e-posta adresin';
+            HV.oid = null; hvYaz('tutar', tl(Math.round(Number(HV.plan.fiyat) * 100))); hvYaz('kod', kod); hvYaz('kod2', kod);
+            $('[data-havale-adim1]', hk0).hidden = true; $('[data-havale-bilgi]', hk0).hidden = false;
+            $('[data-havale-bildir]', hk0).hidden = true; var gn = $('[data-havale-gonderen]', hk0); if (gn) gn.parentNode.hidden = true;
+            ms.className = 'uy-mesaj'; ms.textContent = 'Havaleyi yaptıktan sonra dekontu WhatsApp\'tan gönder; üyeliğin onaydan sonra açılır.';
+          });
         }).then(function () { bt.disabled = false; });
       });
       $$('[data-kopyala]', hk0).forEach(function (b) {
