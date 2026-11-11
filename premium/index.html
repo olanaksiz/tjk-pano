@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611110933">
+<link rel="stylesheet" href="/assets/site.css?v=202611111000">
 </head>
 <body data-gun="2026-11-11">
 <a class="atla" href="#icerik">İçeriğe geç</a>
@@ -98,17 +98,38 @@
     <article class="plan">
       <h2>Haftalık</h2>
       <p class="plan-sure">7 gün</p>
-      <p class="plan-fiyat">Fiyat yakında</p>
+      <p class="plan-fiyat">500 TL</p>
       <ul><li>Her altılı için küçük, orta ve büyük hazır kupon</li><li>Ayak ayak gerekçe ve kupon tutarı</li><li>Koşu öncesi sürpriz uyarıları</li><li>Altılı sonrası kupon karnesi</li></ul>
       
       <button type="button" class="dugme dugme-mavi" data-plan="haftalik">Premium'a geç</button>
+    </article><article class="plan">
+      <h2>15 günlük</h2>
+      <p class="plan-sure">15 gün</p>
+      <p class="plan-fiyat">900 TL</p>
+      <ul><li>Her altılı için küçük, orta ve büyük hazır kupon</li><li>Ayak ayak gerekçe ve kupon tutarı</li><li>Koşu öncesi sürpriz uyarıları</li><li>Altılı sonrası kupon karnesi</li></ul>
+      
+      <button type="button" class="dugme dugme-mavi" data-plan="onbes">Premium'a geç</button>
     </article><article class="plan plan-one">
       <h2>Aylık</h2>
       <p class="plan-sure">30 gün</p>
-      <p class="plan-fiyat">Fiyat yakında</p>
+      <p class="plan-fiyat">1.500 TL</p>
+      <ul><li>Her altılı için küçük, orta ve büyük hazır kupon</li><li>Ayak ayak gerekçe ve kupon tutarı</li><li>Koşu öncesi sürpriz uyarıları</li><li>Altılı sonrası kupon karnesi</li></ul>
+      <p class="plan-not">En çok tercih edilen</p>
+      <button type="button" class="dugme dugme-mavi" data-plan="aylik">Premium'a geç</button>
+    </article><article class="plan">
+      <h2>3 aylık</h2>
+      <p class="plan-sure">90 gün</p>
+      <p class="plan-fiyat">4.000 TL</p>
+      <ul><li>Her altılı için küçük, orta ve büyük hazır kupon</li><li>Ayak ayak gerekçe ve kupon tutarı</li><li>Koşu öncesi sürpriz uyarıları</li><li>Altılı sonrası kupon karnesi</li></ul>
+      
+      <button type="button" class="dugme dugme-mavi" data-plan="ucaylik">Premium'a geç</button>
+    </article><article class="plan">
+      <h2>Yıllık</h2>
+      <p class="plan-sure">365 gün</p>
+      <p class="plan-fiyat">12.000 TL</p>
       <ul><li>Her altılı için küçük, orta ve büyük hazır kupon</li><li>Ayak ayak gerekçe ve kupon tutarı</li><li>Koşu öncesi sürpriz uyarıları</li><li>Altılı sonrası kupon karnesi</li></ul>
       <p class="plan-not">En avantajlı plan</p>
-      <button type="button" class="dugme dugme-mavi" data-plan="aylik">Premium'a geç</button>
+      <button type="button" class="dugme dugme-mavi" data-plan="yillik">Premium'a geç</button>
     </article>
   </div>
   <section class="odeme" data-odeme hidden aria-labelledby="odeme-b">
@@ -119,6 +140,28 @@
     <p class="uy-mesaj" data-odeme-mesaj role="status" aria-live="polite"></p>
     <div class="odeme-cerceve" data-odeme-cerceve></div>
     <p class="odeme-guven">Kart bilgilerin ödeme kuruluşunun güvenli ödeme sayfasında işlenir. tjkdetay kart bilgisi görmez ve saklamaz.</p>
+  </section>
+  <section class="odeme havale" data-havale hidden aria-labelledby="havale-b">
+    <h2 id="havale-b">Havale / EFT ile öde</h2>
+    <p class="odeme-ozet" data-havale-ozet></p>
+    <div data-havale-adim1>
+      <label class="uy-onay"><input type="checkbox" data-havale-onay><span><a href="/hakkimizda/on-bilgilendirme-formu/" target="_blank" rel="noopener">Ön bilgilendirme formunu</a> ve <a href="/hakkimizda/mesafeli-satis-sozlesmesi/" target="_blank" rel="noopener">mesafeli satış sözleşmesini</a> okudum, onaylıyorum. Dijital hizmetin ödeme onaylanınca hemen başlatılmasını kabul ediyorum; bu nedenle <a href="/hakkimizda/iptal-ve-iade/" target="_blank" rel="noopener">cayma hakkının</a> kullanılamayacağını biliyorum.</span></label>
+      <button type="button" class="dugme dugme-mavi" data-havale-baslat>Havale bilgilerini göster</button>
+    </div>
+    <div class="havale-bilgi" data-havale-bilgi hidden>
+      <dl class="havale-dl">
+        <div><dt>Banka</dt><dd data-hv="banka"></dd></div>
+        <div><dt>Hesap adı</dt><dd><span data-hv="alici"></span> <button type="button" class="dugme dugme-cizgi kucuk" data-kopyala="alici">Kopyala</button></dd></div>
+        <div><dt>IBAN</dt><dd><span class="mono" data-hv="iban"></span> <button type="button" class="dugme dugme-cizgi kucuk" data-kopyala="iban">Kopyala</button></dd></div>
+        <div><dt>Tutar</dt><dd data-hv="tutar"></dd></div>
+        <div class="havale-kod"><dt>Açıklama</dt><dd><span class="mono" data-hv="kod"></span> <button type="button" class="dugme dugme-cizgi kucuk" data-kopyala="kod">Kopyala</button></dd></div>
+      </dl>
+      <p class="havale-uyari">Açıklama alanına yalnız <b data-hv="kod2"></b> yaz; ödemen bu kodla eşleştirilir. Tutarı tam olarak gönder.</p>
+      <label class="havale-gonderen">Gönderen ad soyad (bankada görünen)<input type="text" maxlength="80" data-havale-gonderen autocomplete="name"></label>
+      <button type="button" class="dugme dugme-altin" data-havale-bildir>Ödemeyi yaptım</button>
+    </div>
+    <p class="uy-mesaj" data-havale-mesaj role="status" aria-live="polite"></p>
+    <p class="odeme-guven">Ödemen hesabımıza ulaşınca Premium üyeliğin açılır; mesai saatlerinde genellikle kısa sürede, en geç 1 iş günü içinde. Sorun olursa <a href="https://wa.me/905458506838?text=Merhaba%2C%20tjkdetay.com%20%C3%BCzerinden%20yaz%C4%B1yorum." target="_blank" rel="noopener">WhatsApp'tan yaz</a>.</p>
   </section>
   <div class="odeme-bilgi" data-odeme-bilgi hidden role="status">
     <h2>Talebin alındı</h2>
@@ -162,7 +205,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 11 Kasım 2026, 09:33</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 11 Kasım 2026, 10:00</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -208,8 +251,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611110933" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611110933" defer></script>
-<script src="/assets/uyelik.js?v=202611110933" defer></script>
+<script src="/assets/site.js?v=202611111000" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611111000" defer></script>
+<script src="/assets/uyelik.js?v=202611111000" defer></script>
 </body>
 </html>

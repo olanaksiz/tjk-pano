@@ -279,7 +279,7 @@
     var fi = document.createElement('p'); fi.className = 'plan-fiyat'; fi.textContent = Number(p.fiyat) > 0 ? tl(Math.round(Number(p.fiyat) * 100)) : 'Fiyat yakında'; art.appendChild(fi);
     if (Number(p.fiyat) > 0) { var kd = document.createElement('p'); kd.className = 'plan-kdv'; kd.textContent = 'KDV dahil · otomatik yenileme yok'; art.appendChild(kd); }
     var ul = document.createElement('ul'); (p.ozellikler && p.ozellikler.length ? p.ozellikler : PLAN_OZELLIK).forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); }); art.appendChild(ul);
-    if (p.one_cikan) { var n = document.createElement('p'); n.className = 'plan-not'; n.textContent = p.etiket || 'En avantajlı plan'; art.appendChild(n); }
+    if (p.one_cikan || p.etiket) { var n = document.createElement('p'); n.className = 'plan-not'; n.textContent = p.etiket || 'En avantajlı plan'; art.appendChild(n); }
     var b = document.createElement('button'); b.type = 'button'; b.className = 'dugme dugme-mavi'; b.setAttribute('data-plan', p.kod); b.textContent = 'Premium\'a geç'; art.appendChild(b);
     return art;
   }
@@ -327,8 +327,13 @@
       oturum().then(function (s) {
         if (!s) { ac('kayit', 'premium'); return; }
         olay('odemeye_gecti', {plan: kod});
-        var p = PLANLAR[kod], paytr = ODEME.paytr || {};
-        var bilgi = $('[data-odeme-bilgi]', kok);
+        var p = PLANLAR[kod], paytr = ODEME.paytr || {}, hv = ODEME.havale || {};
+        var bilgi = $('[data-odeme-bilgi]', kok), hk = $('[data-havale]', kok);
+        if (hk) hk.hidden = true;
+        if (p && Number(p.fiyat) > 0 && hv.aktif && hv.iban && hk && !paytr.aktif) {
+          if (odeme) odeme.hidden = true; if (bilgi) bilgi.hidden = true;
+          havaleAc(p, hv); return;
+        }
         if (!p || !(Number(p.fiyat) > 0) || !paytr.aktif || !odeme) {
           if (odeme) odeme.hidden = true;
           if (bilgi) { bilgi.hidden = false; bilgi.scrollIntoView({behavior: 'smooth', block: 'center'}); }
@@ -341,6 +346,55 @@
         $('[data-odeme-onay]', odeme).checked = false;
         var bt = $('[data-odeme-baslat]', odeme); bt.hidden = false; bt.disabled = false;
         odeme.scrollIntoView({behavior: 'smooth', block: 'start'});
+      });
+    }
+    // ---------- Havale / EFT ----------
+    var HV = {plan: null, oid: null};
+    function hvYaz(k, v) { $$('[data-hv="' + k + '"]', kok).forEach(function (x) { x.textContent = v; }); }
+    function havaleAc(p, hv) {
+      var hk = $('[data-havale]', kok); HV.plan = p; HV.oid = null;
+      hk.hidden = false;
+      $('[data-havale-ozet]', hk).textContent = 'tjkdetay Premium · ' + p.ad + ' (' + p.gun + ' gün) · ' + tl(Math.round(Number(p.fiyat) * 100)) + ' (KDV dahil)';
+      $('[data-havale-adim1]', hk).hidden = false; $('[data-havale-bilgi]', hk).hidden = true;
+      $('[data-havale-onay]', hk).checked = false; $('[data-havale-mesaj]', hk).textContent = '';
+      hvYaz('banka', hv.banka || ''); hvYaz('alici', hv.alici || ''); hvYaz('iban', hv.iban || '');
+      hk.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+    var hk0 = $('[data-havale]', kok);
+    if (hk0) {
+      $('[data-havale-baslat]', hk0).addEventListener('click', function () {
+        var bt = this, ms = $('[data-havale-mesaj]', hk0);
+        if (!$('[data-havale-onay]', hk0).checked) { ms.className = 'uy-mesaj hata'; ms.textContent = 'Devam etmek için ön bilgilendirme formu ve mesafeli satış sözleşmesini onayla.'; return; }
+        bt.disabled = true; ms.className = 'uy-mesaj'; ms.textContent = 'Sipariş kodun hazırlanıyor…';
+        oturum().then(function (s) {
+          return istek('/rest/v1/rpc/havale_siparis', {method: 'POST', token: s && s.at, body: {p_plan: HV.plan.kod}});
+        }).then(function (j) {
+          if (!j || !j.oid) throw new Error('Sipariş oluşturulamadı');
+          HV.oid = j.oid; olay('havale_siparis', {plan: HV.plan.kod});
+          hvYaz('tutar', tl(j.tutar_kurus)); hvYaz('kod', j.oid); hvYaz('kod2', j.oid);
+          $('[data-havale-adim1]', hk0).hidden = true; $('[data-havale-bilgi]', hk0).hidden = false;
+          ms.className = 'uy-mesaj'; ms.textContent = j.bildirildi ? 'Bu sipariş için ödeme bildirimini daha önce yapmışsın; onay bekleniyor.' : '';
+        }).catch(function (e) {
+          ms.className = 'uy-mesaj hata';
+          ms.textContent = (e && e.durum === 401) ? 'Oturumun sona ermiş; yeniden giriş yap.' : 'Sipariş kodu alınamadı (' + hataYazi(e) + '). WhatsApp\'tan yazarsan elle yardımcı oluruz.';
+        }).then(function () { bt.disabled = false; });
+      });
+      $$('[data-kopyala]', hk0).forEach(function (b) {
+        b.addEventListener('click', function () {
+          var el = $('[data-hv="' + b.getAttribute('data-kopyala') + '"]', hk0); var v = (el && el.textContent || '').replace(/\s+/g, b.getAttribute('data-kopyala') === 'iban' ? '' : ' ').trim();
+          try { navigator.clipboard.writeText(v); b.textContent = 'Kopyalandı'; setTimeout(function () { b.textContent = 'Kopyala'; }, 1500); } catch (e) {}
+        });
+      });
+      $('[data-havale-bildir]', hk0).addEventListener('click', function () {
+        var bt = this, ms = $('[data-havale-mesaj]', hk0);
+        if (!HV.oid) return;
+        bt.disabled = true; ms.className = 'uy-mesaj'; ms.textContent = 'Bildirimin gönderiliyor…';
+        oturum().then(function (s) {
+          return istek('/rest/v1/rpc/havale_bildir', {method: 'POST', token: s && s.at, body: {p_oid: HV.oid, p_gonderen: $('[data-havale-gonderen]', hk0).value}});
+        }).then(function () {
+          olay('havale_bildirildi', {plan: HV.plan && HV.plan.kod});
+          ms.className = 'uy-mesaj tamam'; ms.textContent = 'Teşekkürler! Bildirimin alındı. Ödemen hesabımızda görününce Premium üyeliğin açılacak; bu sayfayı yenileyerek durumunu görebilirsin.';
+        }).catch(function (e) { bt.disabled = false; ms.className = 'uy-mesaj hata'; ms.textContent = 'Bildirim gönderilemedi: ' + hataYazi(e); });
       });
     }
     if (odeme) $('[data-odeme-baslat]', odeme).addEventListener('click', function () {

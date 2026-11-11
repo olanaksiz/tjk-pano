@@ -2235,3 +2235,15 @@ html.ak-acik{overflow:hidden}
 .g-not a{color:#C3D1E8}
 .g-ayrac{display:flex;align-items:center;gap:10px;margin:4px 0 0;font-size:12px;color:#8FA3C0}
 .g-ayrac::before,.g-ayrac::after{content:"";flex:1;height:1px;background:#23406F}
+
+/* havale / EFT */
+.havale-dl{display:grid;gap:8px;margin:0 0 14px}
+.havale-dl>div{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;background:#0A1B3D;border:1px solid #1A3566}
+.havale-dl dt{color:#8FA6C8;font-size:13px}.havale-dl dd{margin:0;color:#fff;font-weight:600;word-break:break-word}
+.havale-dl .mono{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em}
+.havale-kod{border-color:#B68A1E!important;background:#1E1A08!important}.havale-kod dd{color:#F6D77A}
+.havale-uyari{color:#F6D77A;font-size:14px;margin:0 0 12px}
+.havale-gonderen{display:block;color:#B9C8DE;font-size:14px;margin:0 0 12px}
+.havale-gonderen input{display:block;width:100%;max-width:420px;margin-top:6px;padding:10px 12px;border-radius:10px;border:1px solid #2A4A80;background:#020B1F;color:#fff;font:inherit}
+.dugme.kucuk{padding:4px 10px;font-size:12.5px;min-height:0}
+@media (max-width:560px){.havale-dl>div{grid-template-columns:1fr;gap:2px}}
