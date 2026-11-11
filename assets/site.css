@@ -2247,3 +2247,5 @@ html.ak-acik{overflow:hidden}
 .havale-gonderen input{display:block;width:100%;max-width:420px;margin-top:6px;padding:10px 12px;border-radius:10px;border:1px solid #2A4A80;background:#020B1F;color:#fff;font:inherit}
 .dugme.kucuk{padding:4px 10px;font-size:12.5px;min-height:0}
 @media (max-width:560px){.havale-dl>div{grid-template-columns:1fr;gap:2px}}
+.hv-kopya{display:inline-block;margin-left:6px;padding:4px 12px;border-radius:999px;border:1px solid #3D8BFF;background:#0E2A5C;color:#CFE6FF;font:600 12.5px/1.3 var(--govde);cursor:pointer;vertical-align:middle}
+.hv-kopya:hover{background:#163C80;color:#fff}
