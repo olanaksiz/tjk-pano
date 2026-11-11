@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611111747">
+<link rel="stylesheet" href="/assets/site.css?v=202611111812">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Tahmin kanıtı", "item": "https://tjkdetay.com/tahmin-kaniti/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Tahmin kanıtı (mühür) nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Koşudan önce ilk 4 tahminimizi SHA-256 ile özetleyip yayımlarız. Koşudan sonra açıkladığımız metin aynı özeti verirse tahminin değiştirilmediği kanıtlanır."}}, {"@type": "Question", "name": "Mühürden tahmini çıkarabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Her koşuya özel gizli bir tuz kullanılır; tuz koşu bitince açıklanır. O zamana kadar özet tahmin hakkında bilgi vermez."}}, {"@type": "Question", "name": "Koşmaz olursa ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Mühür ilk yayımlandığı haliyle kalır ve değiştirilmez. Sonradan koşmaz nedeniyle listeye giren at, mühürde yer almaz."}}, {"@type": "Question", "name": "Bütün tahminleriniz tutuyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Kaçırdıklarımızı da aynı şekilde gösteriyoruz; bütün gün sonuçları performans sayfasında. At yarışı belirsizdir ve hiçbir tahmin kesin değildir."}}]}</script>
 </head>
@@ -74,7 +74,7 @@
       <td><code style="word-break:break-all;font-size:.78em">e3d96f66ae8bb21e|2026-11-11|İstanbul|6|2,1,5,4</code><br><small>Kazanan: 1 · ilk 4'te</small></td></tr><tr><td><b>İstanbul 7</b><br><small>17:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">268bb9de371d419f441faf029966e42e8e6f5bf6217894e87ec867e07402e713</code></td>
       <td><code style="word-break:break-all;font-size:.78em">b92b4ed4ef46ca3a|2026-11-11|İstanbul|7|2,1,4,3</code><br><small>Kazanan: 4 · ilk 4'te</small></td></tr><tr><td><b>İstanbul 8</b><br><small>17:30 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">5d81cee029adae30a4b657ec0ca46b628d28593b9a7637be7ff52efff300a74d</code></td>
       <td><code style="word-break:break-all;font-size:.78em">1ebed0a360ea8c51|2026-11-11|İstanbul|8|2,13,1,10</code><br><small>Kazanan: 1 · ilk 4'te</small></td></tr><tr><td><b>Elazığ 1</b><br><small>17:45 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">6ffe638b82933d29a442a6abf8941abc1cb6532ae304f5fc942dcca8344621de</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 9</b><br><small>18:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">df1cc603c39443ea8dbd733d933d91b142ce4e8571b7e77100aa497dbbb28e07</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">45e650bc250831b8|2026-11-11|Elazığ|1|3,6,5,1</code><br><small>Kazanan: 2</small></td></tr><tr><td><b>İstanbul 9</b><br><small>18:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">df1cc603c39443ea8dbd733d933d91b142ce4e8571b7e77100aa497dbbb28e07</code></td>
       <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Elazığ 2</b><br><small>18:30 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">ce1f79fb17e0531e6e13a5a3f808d0963aa2dc383b2ec5368ece46c9c0fa4f48</code></td>
       <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Elazığ 3</b><br><small>19:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">ee25a003669cc193b350adb25e91411550c90e063223503b96bb3505b3c84245</code></td>
       <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Elazığ 4</b><br><small>19:30 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">26d85892d14ba119fbf2e695738bb7ad43bcccf27e6dc78a53fc22ab2677acf0</code></td>
@@ -86,7 +86,7 @@
     </section>
 <script>document.getElementById('mh-btn').addEventListener('click',async()=>{const t=document.getElementById('mh-in').value;const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));document.getElementById('mh-out').textContent=[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')});</script>
     <section aria-labelledby="yon-b"><h2 id="yon-b">Veri ve yöntem</h2><div class="ic-metin"><p>Mühür = SHA-256(tuz|tarih|hipodrom|koşu|ilk4). Tuz her koşu için gizli anahtardan türetilir ve yalnız koşu bittikten sonra yayımlanır.</p>
-      <p class="sy-not">Güncelleme: 11 Kasım 2026, 17:47. Kaynak: TJK resmi yarış sonuçları (TJK Detay kendi tahmin kayıtları). Bu sayfa istatistik bilgisi verir; bahis tavsiyesi değildir. At yarışı belirsizdir, geçmiş oranlar gelecekteki sonucu garanti etmez.</p></div></section>
+      <p class="sy-not">Güncelleme: 11 Kasım 2026, 18:12. Kaynak: TJK resmi yarış sonuçları (TJK Detay kendi tahmin kayıtları). Bu sayfa istatistik bilgisi verir; bahis tavsiyesi değildir. At yarışı belirsizdir, geçmiş oranlar gelecekteki sonucu garanti etmez.</p></div></section>
     <section class="ic-sss" aria-labelledby="sss-b"><h2 id="sss-b">Sık sorulan sorular</h2>
   <details open><summary>Tahmin kanıtı (mühür) nedir?</summary><p>Koşudan önce ilk 4 tahminimizi SHA-256 ile özetleyip yayımlarız. Koşudan sonra açıkladığımız metin aynı özeti verirse tahminin değiştirilmediği kanıtlanır.</p></details><details><summary>Mühürden tahmini çıkarabilir miyim?</summary><p>Hayır. Her koşuya özel gizli bir tuz kullanılır; tuz koşu bitince açıklanır. O zamana kadar özet tahmin hakkında bilgi vermez.</p></details><details><summary>Koşmaz olursa ne olur?</summary><p>Mühür ilk yayımlandığı haliyle kalır ve değiştirilmez. Sonradan koşmaz nedeniyle listeye giren at, mühürde yer almaz.</p></details><details><summary>Bütün tahminleriniz tutuyor mu?</summary><p>Hayır. Kaçırdıklarımızı da aynı şekilde gösteriyoruz; bütün gün sonuçları <a href="/performans/">performans</a> sayfasında. At yarışı belirsizdir ve hiçbir tahmin kesin değildir.</p></details>
 </section>
@@ -132,7 +132,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 11 Kasım 2026, 17:47</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 11 Kasım 2026, 18:12</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -178,8 +178,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611111747" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611111747" defer></script>
-<script src="/assets/uyelik.js?v=202611111747" defer></script>
+<script src="/assets/site.js?v=202611111812" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611111812" defer></script>
+<script src="/assets/uyelik.js?v=202611111812" defer></script>
 </body>
 </html>
