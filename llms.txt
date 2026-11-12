@@ -45,7 +45,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (12 Kasım 2026)
 - Ankara: 10 koşu, 12:30–17:00; 1. altılı 1.–6. koşular (12:30); 2. altılı 5.–10. koşular (14:30)
 - İzmir: 8 koşu, 18:00–21:30; 1. altılı 1.–6. koşular (18:00); 2. altılı 3.–8. koşular (19:00)
-- Açık karne: 7 yarış gününde biten 113 koşunun 65'inde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 7 yarış gününde biten 114 koşunun 65'inde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
