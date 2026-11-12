@@ -671,7 +671,13 @@
       /* yönetici kendi cihazında sayaca girmesin: bu tarayıcıda sayaç kalıcı kapanır (çerez sayfasındaki düğmeyle açılabilir) */
       if (d.admin) { try { if (localStorage.getItem('tjkd-z-kapali') !== '1') { localStorage.setItem('tjkd-z-kapali', '1'); localStorage.removeItem('tjkd-z-gordu'); } } catch (e) {} }
       $$('[data-uye-gizle]').forEach(function (x) { x.hidden = true; });
-      if (d.deneme && d.deneme_bitis) {
+      /* tanımlı/ödenmiş premium varsa deneme sayacı yerine gerçek üyelik süresi gösterilir */
+      if (d.ucretli) {
+        if (d.premium_bitis) {
+          var kalan = Math.max(1, Math.ceil((new Date(d.premium_bitis) - new Date()) / 864e5));
+          $$('[data-deneme]').forEach(function (x) { x.hidden = false; x.textContent = 'Premium üyeliğin: ' + kalan + ' gün kaldı'; });
+        }
+      } else if (d.deneme && d.deneme_bitis) {
         var gun = Math.max(1, Math.ceil((new Date(d.deneme_bitis) - new Date()) / 864e5));
         $$('[data-deneme]').forEach(function (x) { x.hidden = false; x.textContent = 'Ücretsiz Premium denemen: ' + gun + ' gün kaldı'; });
       }
