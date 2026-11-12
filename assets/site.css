@@ -2378,3 +2378,7 @@ html.ak-acik{overflow:hidden}
 .ig-dugme{flex:0 0 auto;padding:12px 22px;border-radius:999px;background:#fff;color:#C0266F;font:700 15px/1 var(--govde);text-decoration:none;box-shadow:0 8px 20px -10px rgba(0,0,0,.4)}
 .ig-dugme:hover{transform:translateY(-1px)}
 @media (max-width:600px){.ig-ic{flex-wrap:wrap}.ig-dugme{width:100%;text-align:center}}
+
+.kx-pik{display:inline-flex;align-items:center;gap:6px;margin-left:8px;padding:4px 10px;border-radius:999px;background:#FFF3D6;color:#7A4B00;border:1px solid #E9B949;font-weight:700;font-size:.82rem;white-space:nowrap}
+.pk-pik{color:#7A4B00;font-weight:700}
+@media (prefers-color-scheme:dark){.kx-pik{background:#3A2C0C;color:#F4CF7A;border-color:#8A6A1E}.pk-pik{color:#F4CF7A}}
