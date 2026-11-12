@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 12 Kasım 2026, 22:01. Kaynak: https://tjkdetay.com/
+Güncelleme: 13 Kasım 2026, 00:12. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -713,6 +713,6 @@ https://tjkdetay.com/favori-analizi/
 https://tjkdetay.com/derece-analizi/
 2026 TJK en iyi dereceleri: İstanbul, Ankara, İzmir, Bursa, Adana, Kocaeli, Elazığ, Diyarbakır, Şanlıurfa ve Antalya'da mesafe, pist ve ırka göre en hızlı kazananlar ve ortanca dereceler.
 
-### Kafa kafaya: bugünkü atların önceki karşılaşmaları (12 Kasım 2026)
+### Kafa kafaya: bugünkü atların önceki karşılaşmaları (13 Kasım 2026)
 https://tjkdetay.com/kafa-kafaya/
-12 Kasım 2026 TJK koşularında yarışacak atların 2026'daki önceki karşılaşmaları: hangi at kimi kaç kez geçti, son karşılaşma ne zamandı. 157 karşılaşma çifti.
+13 Kasım 2026 TJK koşularında yarışacak atların 2026'daki önceki karşılaşmaları: hangi at kimi kaç kez geçti, son karşılaşma ne zamandı. 141 karşılaşma çifti.
