@@ -2394,3 +2394,13 @@ html.ak-acik{overflow:hidden}
 .sab-l em{font-style:normal;font-weight:700;color:#9a7416}
 .sab-l strong{color:#0F5132}
 @media (prefers-color-scheme:dark){.sab-l em{color:#D8B04A}.sab-l strong{color:#7fd6a5}}
+.yi-l{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.yi-k{border:1px solid rgba(127,140,160,.3);border-radius:14px;padding:12px 14px}
+.yi-k header{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-bottom:8px}
+.yi-k header small{margin-left:auto;opacity:.75}
+.yi-k ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.yi-k li{display:grid;grid-template-columns:28px 1fr 70px 40px;grid-template-areas:"no ad bar p" "no alt alt em";gap:2px 8px;align-items:center;padding:6px 8px;border-radius:10px}
+.yi-k li.yi-12{background:rgba(216,176,74,.13)}
+.yi-no{grid-area:no;font-weight:800;text-align:center}.yi-ad{grid-area:ad;font-weight:600}.yi-bar{grid-area:bar;height:7px;border-radius:4px;background:rgba(127,140,160,.25);overflow:hidden}.yi-bar i{display:block;height:100%;background:#D8B04A}
+.yi-p{grid-area:p;font-weight:800;text-align:right}.yi-k li small{grid-area:alt;opacity:.7;font-size:.8rem}.yi-k li em{grid-area:em;font-style:normal;text-align:right;font-size:.85rem}
+.yi-ok{color:#1d8a4e}.yi-no2{opacity:.6}.yi-bos{opacity:.7;font-size:.9rem}
