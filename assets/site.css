@@ -2386,3 +2386,11 @@ html.ak-acik{overflow:hidden}
 .kx-sab-var{color:#0F2B22;background:#D8B04A;border-color:#D8B04A}
 .kx-sab-yok{color:#8a8f8c;background:transparent;border-color:#c9cdca}
 @media (prefers-color-scheme:dark){.kx-sab-yok{color:#9aa39e;border-color:#3a4a43}}
+.sab-blok{margin:18px 0 6px;padding:16px 18px;border-radius:16px;border:1.5px solid #D8B04A;background:rgba(216,176,74,.08)}
+.sab-blok h2{font-size:1.15rem;margin:0 0 6px}
+.sab-kural,.sab-not{font-size:.85rem;opacity:.8;margin:4px 0}
+.sab-l{list-style:none;margin:8px 0;padding:0;display:grid;gap:6px}
+.sab-l a{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;padding:8px 12px;border-radius:10px;background:rgba(216,176,74,.14);color:inherit;text-decoration:none}
+.sab-l em{font-style:normal;font-weight:700;color:#9a7416}
+.sab-l strong{color:#0F5132}
+@media (prefers-color-scheme:dark){.sab-l em{color:#D8B04A}.sab-l strong{color:#7fd6a5}}
