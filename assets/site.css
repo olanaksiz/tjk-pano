@@ -2404,3 +2404,7 @@ html.ak-acik{overflow:hidden}
 .yi-no{grid-area:no;font-weight:800;text-align:center}.yi-ad{grid-area:ad;font-weight:600}.yi-bar{grid-area:bar;height:7px;border-radius:4px;background:rgba(127,140,160,.25);overflow:hidden}.yi-bar i{display:block;height:100%;background:#D8B04A}
 .yi-p{grid-area:p;font-weight:800;text-align:right}.yi-k li small{grid-area:alt;opacity:.7;font-size:.8rem}.yi-k li em{grid-area:em;font-style:normal;text-align:right;font-size:.85rem}
 .yi-ok{color:#1d8a4e}.yi-no2{opacity:.6}.yi-bos{opacity:.7;font-size:.9rem}
+.kx-agf{display:inline-flex;gap:4px;align-items:center;font-size:.8rem;padding:3px 9px;border-radius:999px;background:rgba(46,107,219,.12);border:1px solid rgba(46,107,219,.35)}
+.yi-agf{margin:-2px 0 8px;font-size:.85rem;padding:5px 9px;border-radius:9px;background:rgba(46,107,219,.1)}
+.yi-agfx{grid-area:em;justify-self:start;font-size:.75rem;padding:1px 6px;border-radius:6px;background:rgba(46,107,219,.14)}
+.yi-k li em{justify-self:end}
