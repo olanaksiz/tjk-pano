@@ -2408,3 +2408,5 @@ html.ak-acik{overflow:hidden}
 .yi-agf{margin:-2px 0 8px;font-size:.85rem;padding:5px 9px;border-radius:9px;background:rgba(46,107,219,.1)}
 .yi-agfx{grid-area:em;justify-self:start;font-size:.75rem;padding:1px 6px;border-radius:6px;background:rgba(46,107,219,.14)}
 .yi-k li em{justify-self:end}
+.yi-k li{grid-template-columns:28px 1fr 78px 44px;grid-template-areas:"no ad bar p" "no alt agf em"}
+.yi-agfx{grid-area:agf;justify-self:end}
