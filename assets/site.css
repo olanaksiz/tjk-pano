@@ -2420,3 +2420,5 @@ html.ak-acik{overflow:hidden}
 .pd-k{padding:5px 8px;border-radius:8px;background:rgba(127,140,160,.12);display:flex;align-items:center;gap:6px}.pd-k small{opacity:.6}
 .pd-k.k1{grid-column:1;grid-row:span 4;font-weight:700}.pd-k.k2{grid-column:2;grid-row:span 2}.pd-k.k3{grid-column:3}
 .pd-k.b{border-left:3px solid #2E6BDB}.pd-k.a{border-left:3px solid #D8B04A}
+.kx-pdg{display:inline-flex;gap:4px;align-items:center;font-size:.8rem;padding:3px 9px;border-radius:999px;background:rgba(120,80,200,.12);border:1px solid rgba(120,80,200,.35);color:inherit;text-decoration:none}
+.pd-en{padding:10px 12px;border-radius:12px;background:rgba(120,80,200,.1);border:1px solid rgba(120,80,200,.3)}.pd-sira{margin:4px 0 10px}
