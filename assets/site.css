@@ -2410,3 +2410,7 @@ html.ak-acik{overflow:hidden}
 .yi-k li em{justify-self:end}
 .yi-k li{grid-template-columns:28px 1fr 78px 44px;grid-template-areas:"no ad bar p" "no alt agf em"}
 .yi-agfx{grid-area:agf;justify-self:end}
+.ek-ok{color:#1d8a4e;font-weight:700}.ek-no{opacity:.65}.ek-bek{opacity:.6;font-size:.85em}
+.ek-en{background:rgba(216,176,74,.25);font-weight:700}
+.ek-gun{border:1px solid rgba(127,140,160,.3);border-radius:12px;padding:8px 12px;margin:8px 0}.ek-gun summary{cursor:pointer}
+.ek-makale .tablo td small{opacity:.7}
