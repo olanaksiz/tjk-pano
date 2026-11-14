@@ -46,7 +46,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - Ankara: 9 koşu, 13:00–17:00; 1. altılı 1.–6. koşular (13:00); 2. altılı 4.–9. koşular (14:30)
 - İzmir: 8 koşu, 16:45–20:30; 1. altılı 1.–6. koşular (16:45); 2. altılı 3.–8. koşular (18:00)
 - Diyarbakır: 6 koşu, 21:00–23:30; Altılı 1.–6. koşular (21:00)
-- Açık karne: 9 yarış gününde biten 144 koşunun 81'inde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 9 yarış gününde biten 145 koşunun 82'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
