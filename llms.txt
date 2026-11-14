@@ -49,7 +49,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - Ankara 1. 6'lı ganyan: 1/1/1/4/6,8,11/2 · 406,87 TL (1 misli, TJK)
 - Ankara 2. 6'lı ganyan: 4/6,8,11/2/4/6/6 · 1.088,81 TL (1 misli, TJK)
 - İzmir 2. 6'lı ganyan: 4/7/2/2/1/7 · 2.512,75 TL (1 misli, TJK)
-- Açık karne: 9 yarış gününde biten 164 koşunun 95'inde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 9 yarış gününde biten 165 koşunun 95'inde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
