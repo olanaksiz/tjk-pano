@@ -2427,3 +2427,5 @@ html.ak-acik{overflow:hidden}
 .yi-hb{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:10px 14px;margin:0 0 14px;border-left:4px solid var(--altin,#D8B04A);background:rgba(216,176,74,.08);border-radius:10px}
 .yi-hb span{font-size:.8rem;font-weight:500;opacity:.75}
 .yi-k{scroll-margin-top:90px}
+.yi-k li.yi-5{border-top:1px dashed rgba(216,176,74,.6);background:rgba(216,176,74,.10)}
+.yi-kaz{font-style:normal;font-weight:700;color:#b8860b;white-space:nowrap}
