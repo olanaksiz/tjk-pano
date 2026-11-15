@@ -50,7 +50,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - İstanbul 1. 6'lı ganyan: 9/5/9/7/2/7 · 120.287,43 TL (1 misli, TJK)
 - İstanbul 2. 6'lı ganyan: 7/2/7/3,6/6/4 · 101.750,56 TL (1 misli, TJK)
 - Adana 1. 6'lı ganyan: 4/5/8/2/3/1 · 91.921,68 TL (1 misli, TJK)
-- Açık karne: 10 yarış gününde biten 182 koşunun 103'ünde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 10 yarış gününde biten 183 koşunun 104'ünde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
