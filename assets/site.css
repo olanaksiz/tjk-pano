@@ -2429,3 +2429,14 @@ html.ak-acik{overflow:hidden}
 .yi-k{scroll-margin-top:90px}
 .yi-k li.yi-5{border-top:1px dashed rgba(216,176,74,.6);background:rgba(216,176,74,.10)}
 .yi-kaz{font-style:normal;font-weight:700;color:#b8860b;white-space:nowrap}
+
+/* Bugünkü yorumcu sayısı şeridi (tüm sayfalar) */
+.ysay-serit{background:linear-gradient(90deg,#0B2A55,#123E7A);border-bottom:1px solid rgba(216,176,74,.35)}
+.ysay-serit a{display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;padding:9px 0;color:#EAF2FF;text-decoration:none;font:500 13.5px/1.35 var(--govde)}
+.ysay-ik svg{width:20px;height:20px;fill:none;stroke:#D8B04A;stroke-width:1.8;stroke-linecap:round;display:block}
+.ysay-ana{font:700 16px/1 var(--baslik,inherit);letter-spacing:.2px;color:#fff}
+.ysay-ana b{color:#F2C94C;font-size:20px;margin-right:2px}
+.ysay-alt{color:#B9CBE8}.ysay-alt b{color:#fff}
+.ysay-serit a:hover .ysay-alt{color:#fff}
+.kx-ysay{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:999px;background:#FFF6DA;border:1px solid #E9C766;color:#5A4300;font:700 12.5px/1.2 var(--govde);white-space:nowrap}
+@media (max-width:560px){.ysay-serit a{font-size:12.5px;gap:2px 8px}.ysay-ana b{font-size:18px}}
