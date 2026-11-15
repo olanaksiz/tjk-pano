@@ -9,7 +9,7 @@ TJKDAdmin.modul({
       var son = {}, odemeci = {}; O.forEach(function (o) { if (!son[o.user_id]) son[o.user_id] = o; if (o.tur === 'odemeye_gecti' && !odemeci[o.user_id]) odemeci[o.user_id] = o; });
       var ust = A.el('div', 'ad-arac');
       var ara = A.el('input', 'ad-girdi'); ara.type = 'search'; ara.placeholder = 'Ad, e-posta ya da telefon ara'; ara.setAttribute('aria-label', 'Üye ara');
-      var fil = A.el('select', 'ad-girdi'); [['', 'Tüm üyeler'], ['premium', 'Premium üyeler'], ['ucretsiz', 'Ücretsiz üyeler'], ['odeme', 'Ödemeye geçenler'], ['ileti', 'İleti onayı verenler'], ['kupon', 'Hazır kuponlardan gelenler']].forEach(function (x) { var o = A.el('option', '', x[1]); o.value = x[0]; fil.appendChild(o); });
+      var fil = A.el('select', 'ad-girdi'); [['', 'Tüm üyeler'], ['premium', 'Premium üyeler'], ['plus', 'Premium Plus üyeler'], ['ucretsiz', 'Ücretsiz üyeler'], ['odeme', 'Ödemeye geçenler'], ['ileti', 'İleti onayı verenler'], ['kupon', 'Hazır kuponlardan gelenler']].forEach(function (x) { var o = A.el('option', '', x[1]); o.value = x[0]; fil.appendChild(o); });
       var say = A.el('span', 'ad-not');
       var csv = A.el('button', 'ad-dugme ikincil', 'CSV indir'); csv.type = 'button';
       [ara, fil, say, csv].forEach(function (x) { ust.appendChild(x); });
@@ -19,13 +19,15 @@ TJKDAdmin.modul({
         var q = (ara.value || '').toLocaleLowerCase('tr-TR'), f = fil.value;
         return U.filter(function (u) {
           if (f === 'premium' && !A.premiumMu(u)) return false;
-          if (f === 'ucretsiz' && A.premiumMu(u)) return false;
+          if (f === 'plus' && !plusMu(u)) return false;
+          if (f === 'ucretsiz' && (A.premiumMu(u) || plusMu(u))) return false;
           if (f === 'odeme' && !odemeci[u.id]) return false;
           if (f === 'ileti' && !u.ileti_onay) return false;
           if (f === 'kupon' && u.kaynak !== 'kupon') return false;
           return !q || [u.ad_soyad, u.eposta, u.telefon].join(' ').toLocaleLowerCase('tr-TR').indexOf(q) >= 0;
         });
       }
+      function plusMu(u) { return !!(u && u.premium_plus && (!u.plus_bitis || new Date(u.plus_bitis) > new Date())); }
       function islem(u) {
         var d = A.el('div', 'ad-islem');
         var sec = A.el('select', 'ad-girdi kucuk'); [[7, '7 gün'], [30, '30 gün'], [90, '90 gün'], [365, '1 yıl']].forEach(function (x) { var o = A.el('option', '', x[1]); o.value = x[0]; if (x[0] === 30) o.selected = true; sec.appendChild(o); });
@@ -38,6 +40,24 @@ TJKDAdmin.modul({
             .catch(function (e) { A.bildir(A.hata(e), 'hata'); ver.disabled = false; });
         });
         d.appendChild(sec); d.appendChild(ver);
+        // Premium Plus (sürpriz adayları): ayrı seviye, aynı süre seçicisini kullanır
+        var plusVer = A.el('button', 'ad-dugme kucuk', plusMu(u) ? 'Plus süresini ayarla' : 'Premium Plus ver'); plusVer.type = 'button';
+        plusVer.addEventListener('click', function () {
+          var gun = Number(sec.value);
+          if (!confirm(u.eposta + ' için ' + gun + ' gün Premium Plus tanımlansın mı? (Bugünden başlar; Premium içeriği de açar)')) return;
+          plusVer.disabled = true;
+          A.api.rpc('admin_plus_ayarla', {hedef: u.id, gun: gun}).then(function () { u.premium_plus = true; u.plus_bitis = new Date(Date.now() + gun * 864e5).toISOString(); A.bildir('Premium Plus tanımlandı: ' + u.eposta, 'tamam'); ciz(); })
+            .catch(function (e) { A.bildir(A.hata(e), 'hata'); plusVer.disabled = false; });
+        });
+        d.appendChild(plusVer);
+        if (plusMu(u)) {
+          var plusKal = A.el('button', 'ad-dugme kucuk tehlike', 'Plus kaldır'); plusKal.type = 'button';
+          plusKal.addEventListener('click', function () {
+            if (!confirm(u.eposta + ' Premium Plus üyeliği kaldırılsın mı?')) return;
+            A.api.rpc('admin_plus_ayarla', {hedef: u.id, gun: 0}).then(function () { u.premium_plus = false; u.plus_bitis = null; A.bildir('Premium Plus kaldırıldı.', 'tamam'); ciz(); }).catch(function (e) { A.bildir(A.hata(e), 'hata'); });
+          });
+          d.appendChild(plusKal);
+        }
         // şifre işlemleri: önerilen yol sıfırlama e-postası; gerekirse admin yeni şifre belirler
         var sif = A.el('button', 'ad-dugme kucuk ikincil', 'Şifre sıfırlama e-postası'); sif.type = 'button';
         sif.title = 'Üyeye şifresini kendisinin belirleyeceği bir bağlantı gönderir (önerilen).';
@@ -77,7 +97,7 @@ TJKDAdmin.modul({
           {ad: 'E-posta', deger: function (u) { return u.eposta; }},
           {ad: 'Telefon', deger: function (u) { return u.telefon || '—'; }},
           {ad: 'Kayıt', deger: function (u) { return A.tarih(u.created_at); }},
-          {ad: 'Durum', deger: function (u) { return A.premiumMu(u) ? A.rozet('Premium · ' + A.tarih(u.premium_bitis, 1), 'odendi') : A.rozet('Ücretsiz', ''); }},
+          {ad: 'Durum', deger: function (u) { if (plusMu(u)) return A.rozet('Premium Plus · ' + (u.plus_bitis ? A.tarih(u.plus_bitis, 1) : 'Süresiz'), 'odendi'); return A.premiumMu(u) ? A.rozet('Premium · ' + A.tarih(u.premium_bitis, 1), 'odendi') : A.rozet('Ücretsiz', ''); }},
           {ad: 'Ödemeye geçti', deger: function (u) { return odemeci[u.id] ? A.tarih(odemeci[u.id].created_at) : '—'; }},
           {ad: 'İleti onayı', deger: function (u) { return u.ileti_onay ? 'Var' : 'Yok'; }},
           {ad: 'Son hareket', deger: function (u) { return son[u.id] ? (A.OLAY_AD[son[u.id].tur] || son[u.id].tur) + ' · ' + A.tarih(son[u.id].created_at) : '—'; }},
