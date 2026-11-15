@@ -528,14 +528,14 @@ document.addEventListener('click', function (e) {
   if (q && /^\d{4}-\d\d-\d\d$/.test(q) && q !== sayfa) git(q, true); else { basliklar(sayfa); seriCiz(); }
 })();
 
-/* ---- Premium Plus: koşuya gelince sürpriz adayları penceresi ----
+/* ---- Premium: koşuya gelince sürpriz adayları penceresi ----
    PP_KISIT=false: üyelik açılana kadar herkese görünür. Üyelik açılınca true yapılır;
-   o zaman yalnız <html class="uye-pp"> (uyelik.js, Premium Plus profil) olanlara içerik, diğerlerine tanıtım gösterilir. */
+   o zaman yalnız <html class="uye-pp"> (uyelik.js, Premium profil) olanlara içerik, diğerlerine tanıtım gösterilir. */
 (function () {
   var PP_KISIT = false;
   var tpl = document.querySelectorAll('template[data-pp]');
   if (!tpl.length) document.querySelectorAll('[data-pp-ac]').forEach(function (b) { b.hidden = true; });
-  /* Premium Plus içeriği açılmamış ziyaretçi: şifreli blok varsa tanıtım penceresi gösterilir */
+  /* Premium içeriği açılmamış ziyaretçi: şifreli blok varsa tanıtım penceresi gösterilir */
   var tanit = [];
   document.querySelectorAll('article.kosu .kilit-gizli[data-kilit="plus"]').forEach(function (d) { var a = d.closest('article.kosu'); if (a && a.id && !a.querySelector('template[data-pp]')) tanit.push(a); });
   if ((!tpl.length && !tanit.length) || !('IntersectionObserver' in window)) return;
@@ -556,16 +556,16 @@ document.addEventListener('click', function (e) {
       var uye = document.documentElement.classList.contains('uye');
       var bas = art.querySelector('.kx-no'), hip = art.querySelector('.kx-hip'), sa = art.querySelector('.kx-saat');
       var d0 = document.createElement('div'); d0.className = 'pp-k pp-tanit';
-      d0.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium Plus</span><span class="pp-kosu"></span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div>' +
+      d0.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium</span><span class="pp-kosu"></span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div>' +
         '<p class="pp-bas">Bu koşu için sürpriz adaylarımız hazır.</p>' +
-        '<p class="pp-not">Az sayıda yorumcunun öne çıkardığı atlar, kimin uyardığı ve kendi sürpriz listemiz Premium Plus üyelerde. Kazanma tahmini değildir.</p>' +
-        (uye ? '<p class="pp-not"><a href="/premium/">Premium Plus\'ı incele →</a></p>'
-             : '<p class="pp-tanit-alt"><a class="dugme" href="/uye-ol/" data-uyelik="kayit">Ücretsiz üye ol</a><span>Yeni üyelere 7 gün Premium + Premium Plus ücretsiz</span></p>');
+        '<p class="pp-not">Az sayıda yorumcunun öne çıkardığı atlar, kimin uyardığı ve kendi sürpriz listemiz Premium üyelerde. Kazanma tahmini değildir.</p>' +
+        (uye ? '<p class="pp-not"><a href="/premium/">Premium\'u incele →</a></p>'
+             : '<p class="pp-tanit-alt"><a class="dugme" href="/uye-ol/" data-uyelik="kayit">Ücretsiz üye ol</a><span>Yeni üyelere 7 gün Premium ücretsiz</span></p>');
       var pk = d0.querySelector('.pp-kosu'); if (pk) pk.textContent = [hip && hip.textContent, bas && bas.textContent].filter(Boolean).join(' ') + (sa ? ' · ' + sa.textContent : '');
       kutu.appendChild(d0);
     } else if (PP_KISIT && !document.documentElement.classList.contains('uye-pp')) {
       var d = document.createElement('div'); d.className = 'pp-k';
-      d.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium Plus</span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div><p class="pp-bas">Bu koşunun sürpriz adayları Premium Plus üyelere özel.</p><p class="pp-not"><a href="/premium/">Premium Plus\'ı incele →</a></p>';
+      d.innerHTML = '<div class="pp-ust"><span class="pp-rozet">★ Premium</span><button type="button" class="pp-kapat" data-pp-kapat aria-label="Kapat">×</button></div><p class="pp-bas">Bu koşunun sürpriz adayları Premium üyelere özel.</p><p class="pp-not"><a href="/premium/">Premium\'u incele →</a></p>';
       kutu.appendChild(d);
     } else kutu.appendChild(t.content.cloneNode(true));
     var dk = document.createElement('button'); dk.type = 'button'; dk.className = 'pp-sus'; dk.textContent = 'Bugün başka gösterme';
@@ -592,7 +592,7 @@ document.addEventListener('click', function (e) {
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !kutu.hidden) kapat(); });
 })();
 
-/* ---- Premium Plus sayfası: üyelik açılınca KISIT=true (yalnız <html class="uye-pp"> görür) ---- */
+/* ---- Premium sayfası: üyelik açılınca KISIT=true (yalnız <html class="uye-pp"> görür) ---- */
 (function () {
   var KISIT = false;
   var s = document.querySelector('[data-pp-sayfa]'); if (!s) return;
