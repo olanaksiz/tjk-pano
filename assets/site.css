@@ -2448,3 +2448,8 @@ html.ak-acik{overflow:hidden}
 .yi-ust .yi-bar i{background:#D8B04A}
 .yi-ilk{font-size:12px;color:#5B6B85;white-space:nowrap}
 .yi-ok{font-size:12px;font-weight:700;color:#137A3B;white-space:nowrap}
+/* yorumcu kuponları (18.11) */
+.yk-bolum{margin:40px 0 10px}.yk-giris{color:var(--metin2,#475569);margin:6px 0 18px;max-width:900px}
+.yk-liste{margin-top:14px}.yk-liste>summary{cursor:pointer;font-weight:700;padding:12px 16px;border-radius:12px;background:var(--zemin2,#f1f5f9);border:1px solid var(--cizgi);list-style:none}
+.yk-liste>summary::-webkit-details-marker{display:none}.yk-liste>summary::before{content:"▸ ";}.yk-liste[open]>summary::before{content:"▾ "}
+.yk-liste[open]>.hk-kuponlar{margin-top:14px}
