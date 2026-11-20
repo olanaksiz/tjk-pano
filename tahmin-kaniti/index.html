@@ -26,11 +26,11 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611201239">
+<link rel="stylesheet" href="/assets/site.css?v=202611210013">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Tahmin kanıtı", "item": "https://tjkdetay.com/tahmin-kaniti/"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Tahmin kanıtı (mühür) nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Koşudan önce ilk 4 tahminimizi SHA-256 ile özetleyip yayımlarız. Koşudan sonra açıkladığımız metin aynı özeti verirse tahminin değiştirilmediği kanıtlanır."}}, {"@type": "Question", "name": "Mühürden tahmini çıkarabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Her koşuya özel gizli bir tuz kullanılır; tuz koşu bitince açıklanır. O zamana kadar özet tahmin hakkında bilgi vermez."}}, {"@type": "Question", "name": "Koşmaz olursa ne olur?", "acceptedAnswer": {"@type": "Answer", "text": "Mühür ilk yayımlandığı haliyle kalır ve değiştirilmez. Sonradan koşmaz nedeniyle listeye giren at, mühürde yer almaz."}}, {"@type": "Question", "name": "Bütün tahminleriniz tutuyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Kaçırdıklarımızı da aynı şekilde gösteriyoruz; bütün gün sonuçları performans sayfasında. At yarışı belirsizdir ve hiçbir tahmin kesin değildir."}}]}</script>
 </head>
-<body data-gun="2026-11-20">
+<body data-gun="2026-11-21">
 <a class="atla" href="#icerik">İçeriğe geç</a>
 <header class="ust"><div class="kap">
   <a class="marka" href="/" aria-label="tjkdetay ana sayfa"><svg class="marka-hiz" viewBox="0 0 120 90" aria-hidden="true" focusable="false"><defs><linearGradient id="mg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2CC63"/><stop offset="1" stop-color="#B98418"/></linearGradient></defs><g fill="url(#mg)"><rect x="20" y="22" width="96" height="10" rx="5"/><rect x="42" y="40" width="74" height="10" rx="5"/><rect x="62" y="58" width="54" height="10" rx="5"/></g></svg><span class="marka-ad">tjkdetay</span></a>
@@ -46,7 +46,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>51</b> yorumcu</span><span class="ysay-alt">20 Kasım analizine giren yorumcu sayısı · Antalya <b>42</b> · İzmir <b>37</b> · 481 koşu tahmini · güncelleme 12:39</span></a></div></div>
+
 <p class="deneme-serit" data-deneme hidden></p>
 
 <section class="koyu-bolum ic-bas sy-bas"><div class="kap">
@@ -54,7 +54,7 @@
   <p class="kahraman-rozet"><i aria-hidden="true"></i>Şeffaflık · SHA-256</p>
   <h1>Tahmin kanıtı: <span>mühürlü ilk 4</span></h1>
   <p class="ic-giris">İlk 4 tahminlerimizi koşudan önce mühürlüyoruz; koşu bitince mühürü açıp tahminin değişmediğini herkesin doğrulamasına izin veriyoruz.</p>
-  <dl class="sy-istat"><div class="altin"><dt>Bugün mühür</dt><dd>14</dd></div><div><dt>Gün</dt><dd>7</dd></div></dl>
+  <dl class="sy-istat"><div class="altin"><dt>Bugün mühür</dt><dd>17</dd></div><div><dt>Gün</dt><dd>7</dd></div></dl>
 </div></section>
 <div class="kap ic-govde ic-iki">
   <article class="ic-makale">
@@ -65,24 +65,44 @@
       <p>Mühürlenen metin biçimi: <code>tuz|tarih|hipodrom|koşu|ilk4</code>. Tuz her koşu için ayrı, rastgele bir koddur ve koşu bitince açıklanır.</p></div>
       <div class="ic-kart"><b>Kendin dene</b><p><label>Metin <input id="mh-in" style="width:100%" placeholder="tuz|tarih|hipodrom|koşu|ilk4"></label></p><p><button type="button" id="mh-btn" class="sy-link">SHA-256 hesapla</button></p><p><code id="mh-out" style="word-break:break-all"></code></p></div>
     </section>
-    <section aria-labelledby="mg1-b"><h2 id="mg1-b">20 Kasım 2026 mühürleri</h2>
+    <section aria-labelledby="mg1-b"><h2 id="mg1-b">21 Kasım 2026 mühürleri</h2>
+      <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
+      <tbody><tr><td><b>Adana 1</b><br><small>14:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">cffde7d60a61256964cf0aa3e503954f5f587cb0d97a5f2e48e43bcb12ba5e01</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 2</b><br><small>14:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">fb66c5e7fe8cdec124a483857a6fd7738f2b9cc32c93999f659ec316e8f5d422</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 3</b><br><small>15:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">525ff0a71cd3d981ebc816276faeeac94415ac7cdd71df99afc2e59b8996b0d9</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 4</b><br><small>15:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">379b7abed89620f8126b6f800cdf2b3697695dfa0458380b389e99ced69b40d8</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 5</b><br><small>16:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">ac28e422d62a36809180af8185a6c4480ccadcc54a5a4374b521942cee42bb14</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 6</b><br><small>16:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">8e54200d8e2b63726a5804338b7436859056c822f3221d03bba96d6126151e84</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 7</b><br><small>17:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">258a1a213c337a5290f2c5fe8c8131b7dcecf6b731ae47322589aef36f8e3a8c</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 8</b><br><small>17:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">b12b7ae3984289af69334ad2103d6759dd8ccdbc5c8c98564734eddf6fd76cfa</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 1</b><br><small>17:45 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">aaf0ecb04a5d2b24ca6c0f889e20a8568944c88144f36ceb91a3005266328b8d</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Adana 9</b><br><small>18:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">c8261c6e11cf53ad4a0b10e5e7d65719587213be5381f7beb680c82ffbf360f3</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 2</b><br><small>18:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">c963b50368a7e354cd1d8b7dec75ed7994c5ae73e10e039a833d33386b6d979e</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 3</b><br><small>19:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">eb571cd2396d5ae1195ea4f8dd4bdabfea20da6e8887a1dc8ebe029dab212376</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 4</b><br><small>19:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">8b80c8a12e66f1182070640ef59e361bed7ce1c96d13164d198c1c8218738614</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 5</b><br><small>20:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">16c79523af7fd2509c585da6fdf687a7b84dd7a613f64c600127c1d4433c9fd1</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 6</b><br><small>20:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">8b2069fc1cfe5bd6d8fd3989288ff268f07394649781a36b29f05fbf9c52373c</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 7</b><br><small>21:00 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">d8473e811f93595856ef80d798455fa4dd923e4f5976d070f7c6f079347ea966</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İstanbul 8</b><br><small>21:30 · mühür 00:14</small></td><td><code style="word-break:break-all;font-size:.78em">74bf8254713c49d89c0907e679cb9dfbe3886fdde62423e1c126efe5ef7a0e25</code></td>
+      <td><small>Koşu bitince açıklanır</small></td></tr></tbody></table></div>
+    </section><section aria-labelledby="mg2-b"><h2 id="mg2-b">20 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>Antalya 1</b><br><small>15:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">12846243bee916f86c22bf266e84f1adabb84eaab200468d8325a09b47c9bcec</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 2</b><br><small>15:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">03b7f584e6ac0802619693309e6aaca4fb53ea8c2983182333cf7658b976b655</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 3</b><br><small>16:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c45750020b5a3c86e56a1b4123f676a497283c8b3a7bceed7fa894421d6f9a43</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 4</b><br><small>16:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">fe13dd4dff94d99a67a6a859dffe41e4afbbdbbe7a3259c4505bcc40eb9c77b6</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 5</b><br><small>17:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a07cc3308b8278b04d454e68a58c9ceb7917611bea715a32deab73e8c9ce4b8c</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 6</b><br><small>17:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">08fbe3e1dec68087b056eec00081656546c661488bae481d8492f97d37a14d28</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>Antalya 7</b><br><small>18:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c59de1602073d8da4ed372facb35669039fdbb172f7f329d71edc72884971c19</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 1</b><br><small>18:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a48197a549f120410afd77f4a47db916a5d282192dadeb8c69c7cf8fd467f0b3</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 2</b><br><small>19:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a3e301aa668e5baa46e819ee2dfcf288f68aa14c273c69686318939176dd4439</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 3</b><br><small>19:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c4e382bb7f4377fbb5d92902291f7532b3560d727429259335533772e87145ca</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 4</b><br><small>20:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">326e7696eb1a5e879a256da9f63a55cf792668c3bf9b47e9e0f01168d4b295d1</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 5</b><br><small>20:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">5081a1a639bb780d3fb355e8325604bdbea6a439046fec813ffd21cf7d0c7a2e</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 6</b><br><small>21:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">d74496d80444ae840992a93dd4096ca3a360193f591ffc181f9932dc6c78631d</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr><tr><td><b>İzmir 7</b><br><small>21:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">4a56dfddb5c7df24c5dae954545a12636863ac4893c8408df676c19944d017f8</code></td>
-      <td><small>Koşu bitince açıklanır</small></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg2-b"><h2 id="mg2-b">19 Kasım 2026 mühürleri</h2>
+      <td><code style="word-break:break-all;font-size:.78em">dc5c6e4b249e1244|2026-11-20|Antalya|1|1,3,4,2</code></td></tr><tr><td><b>Antalya 2</b><br><small>15:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">03b7f584e6ac0802619693309e6aaca4fb53ea8c2983182333cf7658b976b655</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">ce41fbda9174496c|2026-11-20|Antalya|2|4,3,7,1</code></td></tr><tr><td><b>Antalya 3</b><br><small>16:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c45750020b5a3c86e56a1b4123f676a497283c8b3a7bceed7fa894421d6f9a43</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">35f868f9047f5251|2026-11-20|Antalya|3|3,1,13,6</code></td></tr><tr><td><b>Antalya 4</b><br><small>16:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">fe13dd4dff94d99a67a6a859dffe41e4afbbdbbe7a3259c4505bcc40eb9c77b6</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">0bc40b9e4ec42f1d|2026-11-20|Antalya|4|1,3,10,7</code></td></tr><tr><td><b>Antalya 5</b><br><small>17:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a07cc3308b8278b04d454e68a58c9ceb7917611bea715a32deab73e8c9ce4b8c</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">7288de86e9914860|2026-11-20|Antalya|5|1,2,5,3</code></td></tr><tr><td><b>Antalya 6</b><br><small>17:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">08fbe3e1dec68087b056eec00081656546c661488bae481d8492f97d37a14d28</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">c94cd9b9654e05be|2026-11-20|Antalya|6|2,4,6,7</code></td></tr><tr><td><b>Antalya 7</b><br><small>18:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c59de1602073d8da4ed372facb35669039fdbb172f7f329d71edc72884971c19</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">d166bd329e1026f0|2026-11-20|Antalya|7|3,2,8,5</code></td></tr><tr><td><b>İzmir 1</b><br><small>18:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a48197a549f120410afd77f4a47db916a5d282192dadeb8c69c7cf8fd467f0b3</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">e6e9821758e61ddd|2026-11-20|İzmir|1|1,2,3,5</code></td></tr><tr><td><b>İzmir 2</b><br><small>19:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">a3e301aa668e5baa46e819ee2dfcf288f68aa14c273c69686318939176dd4439</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">c7319a57ab192e2f|2026-11-20|İzmir|2|7,5,1,8</code></td></tr><tr><td><b>İzmir 3</b><br><small>19:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">c4e382bb7f4377fbb5d92902291f7532b3560d727429259335533772e87145ca</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">41bc245e7b79893e|2026-11-20|İzmir|3|2,1,4,5</code></td></tr><tr><td><b>İzmir 4</b><br><small>20:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">326e7696eb1a5e879a256da9f63a55cf792668c3bf9b47e9e0f01168d4b295d1</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">f390041a9a5b0525|2026-11-20|İzmir|4|6,8,4,3</code></td></tr><tr><td><b>İzmir 5</b><br><small>20:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">5081a1a639bb780d3fb355e8325604bdbea6a439046fec813ffd21cf7d0c7a2e</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">0047af4cc09cc461|2026-11-20|İzmir|5|2,5,4,3</code></td></tr><tr><td><b>İzmir 6</b><br><small>21:00 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">d74496d80444ae840992a93dd4096ca3a360193f591ffc181f9932dc6c78631d</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">569b38b2b5b8afe1|2026-11-20|İzmir|6|3,2,7,4</code></td></tr><tr><td><b>İzmir 7</b><br><small>21:30 · mühür 00:15</small></td><td><code style="word-break:break-all;font-size:.78em">4a56dfddb5c7df24c5dae954545a12636863ac4893c8408df676c19944d017f8</code></td>
+      <td><code style="word-break:break-all;font-size:.78em">81b99e354d22fe5e|2026-11-20|İzmir|7|3,8,5,6</code></td></tr></tbody></table></div>
+    </section><section aria-labelledby="mg3-b"><h2 id="mg3-b">19 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>İzmir 1</b><br><small>15:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">bb59a03bd3b47de13722557a7747efb63872c41d9b33485b660544f7d3307ee2</code></td>
       <td><code style="word-break:break-all;font-size:.78em">5e4edc1fa2b79097|2026-11-19|İzmir|1|3,2,5,6</code></td></tr><tr><td><b>İzmir 2</b><br><small>15:30 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">f2cf3e1d28abdb5561a0896f665e8eef01450c7c0e56c23defa8b118b2287832</code></td>
@@ -100,7 +120,7 @@
       <td><code style="word-break:break-all;font-size:.78em">7370f0bee5da6747|2026-11-19|Antalya|6|6,3,5,2</code></td></tr><tr><td><b>Antalya 7</b><br><small>21:00 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">33c683bb6e058cf27d687abddd10bdf85fbe6ae73ceda8397cad1a7b9b55c2e0</code></td>
       <td><code style="word-break:break-all;font-size:.78em">67756908fb73846d|2026-11-19|Antalya|7|3,5,4,2</code></td></tr><tr><td><b>Antalya 8</b><br><small>21:30 · mühür 00:19</small></td><td><code style="word-break:break-all;font-size:.78em">0e577359b76d6fe1037c839dc9f4d1cb5af9e51e06b95a246fb0dedf0112dd88</code></td>
       <td><code style="word-break:break-all;font-size:.78em">e631122044d50476|2026-11-19|Antalya|8|6,3,2,4</code></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg3-b"><h2 id="mg3-b">18 Kasım 2026 mühürleri</h2>
+    </section><section aria-labelledby="mg4-b"><h2 id="mg4-b">18 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>İstanbul 1</b><br><small>14:00 · mühür 00:21</small></td><td><code style="word-break:break-all;font-size:.78em">af673cae82a761c7a7a34389423609ad8edfe0090aea2eef25e91063b5f94baf</code></td>
       <td><code style="word-break:break-all;font-size:.78em">258afa0080efc198|2026-11-18|İstanbul|1|6,2,8,4</code></td></tr><tr><td><b>İstanbul 2</b><br><small>14:30 · mühür 00:21</small></td><td><code style="word-break:break-all;font-size:.78em">9709412049ab08669bd3c22ea63346aeb94c520a81225b8394217250e8b91461</code></td>
@@ -120,7 +140,7 @@
       <td><code style="word-break:break-all;font-size:.78em">d08bbad603f1ac06|2026-11-18|Elazığ|6|4,6,2,1</code></td></tr><tr><td><b>Elazığ 7</b><br><small>21:00 · mühür 00:21</small></td><td><code style="word-break:break-all;font-size:.78em">cda87a2c8370b4849f93e93068af5a62f2ab986ddd228d46a8a92d1175cd2655</code></td>
       <td><code style="word-break:break-all;font-size:.78em">5fbe85c8a8fdb2c0|2026-11-18|Elazığ|7|2,11,1,4</code></td></tr><tr><td><b>Elazığ 8</b><br><small>21:30 · mühür 00:21</small></td><td><code style="word-break:break-all;font-size:.78em">d45f59cfa6097a398fd978f633385b96a558e15f348a3519f36a6ca8be0e2e04</code></td>
       <td><code style="word-break:break-all;font-size:.78em">e89f29c55999b104|2026-11-18|Elazığ|8|5,7,2,1</code></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg4-b"><h2 id="mg4-b">17 Kasım 2026 mühürleri</h2>
+    </section><section aria-labelledby="mg5-b"><h2 id="mg5-b">17 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>Adana 1</b><br><small>14:30 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">543193a9564e5a3b0c0c77d0d81de065ce2d5dfff34940ebab20ae5f4406de57</code></td>
       <td><code style="word-break:break-all;font-size:.78em">1a66dcdf68ef83c8|2026-11-17|Adana|1|1,6,9,2</code></td></tr><tr><td><b>Adana 2</b><br><small>15:00 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">4ff932bdc6c2c93a157a7ee54787584e2c14d95bce640d2aa159e1f544094fdd</code></td>
@@ -139,7 +159,7 @@
       <td><code style="word-break:break-all;font-size:.78em">8739607ec09ee3a5|2026-11-17|Antalya|6|2,4,1,3</code></td></tr><tr><td><b>Antalya 7</b><br><small>21:00 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">9972c33c655c73927d9e022ed562e62fa7f0f25ddec652bfee200a75c02f43bd</code></td>
       <td><code style="word-break:break-all;font-size:.78em">bd12ff7738267554|2026-11-17|Antalya|7|8,2,3,6</code></td></tr><tr><td><b>Antalya 8</b><br><small>21:30 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">d39a9510a9e0895bc0b16f2e37118cabe07b9573f42b6be1ccbb049a33e734c7</code></td>
       <td><code style="word-break:break-all;font-size:.78em">a66e1fa011992d56|2026-11-17|Antalya|8|1,2,3,5</code></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg5-b"><h2 id="mg5-b">16 Kasım 2026 mühürleri</h2>
+    </section><section aria-labelledby="mg6-b"><h2 id="mg6-b">16 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>Bursa 1</b><br><small>14:30 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">4ab646409d12483f14ec4bdde4bd5c06825df02d210e35e907aca823fd4fa18b</code></td>
       <td><code style="word-break:break-all;font-size:.78em">f3e6dd07d38d374e|2026-11-16|Bursa|1|6,5,9,4</code></td></tr><tr><td><b>Bursa 2</b><br><small>15:00 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">7e68b3f65e49c0138c2db1f9c6e0e3b03f9f20005b24c5e584c8175657eccb16</code></td>
@@ -157,7 +177,7 @@
       <td><code style="word-break:break-all;font-size:.78em">e287e140551cf256|2026-11-16|Şanlıurfa|6|1,4,12,9</code></td></tr><tr><td><b>Şanlıurfa 7</b><br><small>21:00 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">378f0b44f5fb37af2d4e859fdb0afd16187a078f45f345190175908feb97d039</code></td>
       <td><code style="word-break:break-all;font-size:.78em">02a24f21a0cb7702|2026-11-16|Şanlıurfa|7|1,2,7,10</code></td></tr><tr><td><b>Şanlıurfa 8</b><br><small>21:30 · mühür 00:23</small></td><td><code style="word-break:break-all;font-size:.78em">1b0a803e45dcf965781801016c4241567e2868cd6a9c96a7228b5851e3f43eae</code></td>
       <td><code style="word-break:break-all;font-size:.78em">3f269be2e013dcb0|2026-11-16|Şanlıurfa|8|2,8,7,12</code></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg6-b"><h2 id="mg6-b">15 Kasım 2026 mühürleri</h2>
+    </section><section aria-labelledby="mg7-b"><h2 id="mg7-b">15 Kasım 2026 mühürleri</h2>
       <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
       <tbody><tr><td><b>İstanbul 1</b><br><small>14:00 · mühür 00:11</small></td><td><code style="word-break:break-all;font-size:.78em">0be1189c77a1eb53c25dbaa9c4465714b70002ecb4373f7a5c4ed35eb811efcd</code></td>
       <td><code style="word-break:break-all;font-size:.78em">a67ea1785b5aa8f4|2026-11-15|İstanbul|1|2,3,8,4</code></td></tr><tr><td><b>İstanbul 2</b><br><small>14:30 · mühür 00:11</small></td><td><code style="word-break:break-all;font-size:.78em">85619cb0e6eb4dd4770477a2078f206b4240e726b191195ab7b78af26e890ca0</code></td>
@@ -177,36 +197,10 @@
       <td><code style="word-break:break-all;font-size:.78em">ff6b6a2e3a16a249|2026-11-15|Adana|6|8,3,7,1</code></td></tr><tr><td><b>Adana 7</b><br><small>21:00 · mühür 00:11</small></td><td><code style="word-break:break-all;font-size:.78em">3d312453e1faae24bbd5f361aea979a5dea4ffe90e5fd93b955d2c4e890d8ff8</code></td>
       <td><code style="word-break:break-all;font-size:.78em">e98be7fe85764d0b|2026-11-15|Adana|7|1,3,7,6</code></td></tr><tr><td><b>Adana 8</b><br><small>21:30 · mühür 00:11</small></td><td><code style="word-break:break-all;font-size:.78em">fa4847fc104774f223c07bda43033bb46766e6cdd5bd11898b859b10c0813e82</code></td>
       <td><code style="word-break:break-all;font-size:.78em">2aa3793bcfdbac3e|2026-11-15|Adana|8|2,9,1,6</code></td></tr></tbody></table></div>
-    </section><section aria-labelledby="mg7-b"><h2 id="mg7-b">14 Kasım 2026 mühürleri</h2>
-      <div class="tablo-kaydir"><table class="jk-tablo kucuk sy-tablo"><thead><tr><th scope="col">Koşu</th><th scope="col">Mühür (SHA-256)</th><th scope="col">Açıklama</th></tr></thead>
-      <tbody><tr><td><b>Ankara 1</b><br><small>13:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">dcda64b0ddf0ad6fd7061412743a0ab33c80d45758c66a4eb4c167eebfd0d667</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">5ddba6be547f4a2d|2026-11-14|Ankara|1|2,3,7,1</code></td></tr><tr><td><b>Ankara 2</b><br><small>13:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">39e9da32063fcdb39dc81455dcb854dc5641e06b28d0bb1532c3fe3b0f5a109d</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">484851ddc77053f9|2026-11-14|Ankara|2|1,10,3,4</code></td></tr><tr><td><b>Ankara 3</b><br><small>14:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">791d1c38a0290c5db7002820c9ea09d8bfc8a0cfa7056c54b0bdf6c2c9c972ec</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">3b7f8cc652fdd218|2026-11-14|Ankara|3|1,3,5,2</code></td></tr><tr><td><b>Ankara 4</b><br><small>14:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">eb83a7303b3de21891321ebfa10aa8df6babd0320f1becebc47784485b0d65a0</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">a29081e0e5f58112|2026-11-14|Ankara|4|1,2,3,4</code></td></tr><tr><td><b>Ankara 5</b><br><small>15:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">5833f31b32ab41352081c68dfd6ad186033da9509dc977066a4a01be711b2eb0</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">bd2db685920af167|2026-11-14|Ankara|5|2,1,3,12</code></td></tr><tr><td><b>Ankara 6</b><br><small>15:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">9ae3781b9948348461800fce324f1d21f648aee458365cf6f3e135b985bb17ea</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">00eece90d70f300c|2026-11-14|Ankara|6|5,2,8,1</code></td></tr><tr><td><b>Ankara 7</b><br><small>16:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">1fcac8eb23af423c0da10caaf0e8bbcfba49ac8c2e413d45a99715eb35e4b5d5</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">0fd113e8d25f7835|2026-11-14|Ankara|7|2,3,1,6</code></td></tr><tr><td><b>Ankara 8</b><br><small>16:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">0d70285a4d059b2ca5a44cdc10519a7f4a41c078f7724e5abbfbfd75fa031eb2</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">5d34fa6eaa21069a|2026-11-14|Ankara|8|2,6,1,5</code></td></tr><tr><td><b>İzmir 1</b><br><small>16:45 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">d17fe6b76fd801bf8925b12b7c338e850df9d3623e2c9c0b8f31fc97930dfaa7</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">78512614bc303513|2026-11-14|İzmir|1|11,1,4,3</code></td></tr><tr><td><b>Ankara 9</b><br><small>17:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">b688ee63e8fff53dd4ed5df8e618531dba0e12a773e04ce7c31503decce18da9</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">538dccaf859e7b60|2026-11-14|Ankara|9|1,3,2,5</code></td></tr><tr><td><b>İzmir 2</b><br><small>17:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">4c66cb7c12ea2471f5e4a96f8a54b0afda2379ebfcf63306e9bb77f8929766b0</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">f326e0aff4ad49e6|2026-11-14|İzmir|2|1,8,9,13</code></td></tr><tr><td><b>İzmir 3</b><br><small>18:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">ffe7cd55fc927b2bd47288499b77b1c4a5b44298503d29d8bc37bc0dd131d380</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">5ccd740b41ac36cc|2026-11-14|İzmir|3|1,9,13,8</code></td></tr><tr><td><b>İzmir 4</b><br><small>18:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">56d4472eddd062ea97839fddc8f2c104e34dcab480fc8e694029e0b340563fd7</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">f123754ec6bd990f|2026-11-14|İzmir|4|4,8,10,6</code></td></tr><tr><td><b>İzmir 5</b><br><small>19:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">05039e93f6b7ff0ef4599e528afd04b96a1d4c2885b1c2bcaff36a92adf751dd</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">e565c79ad41b9e25|2026-11-14|İzmir|5|2,1,7,6</code></td></tr><tr><td><b>İzmir 6</b><br><small>19:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">786458d7208555ab3cdc0687c337a1c313514528dc6f347c550cd1e23f931e40</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">2e7af0e5c967f4bc|2026-11-14|İzmir|6|1,5,4,3</code></td></tr><tr><td><b>İzmir 7</b><br><small>20:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">0bd4a3aeae545a6b62eb3e2815fcb51ed55c707c14193e82396f388a9ccfb075</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">abcf9beb293e2590|2026-11-14|İzmir|7|2,3,1,6</code></td></tr><tr><td><b>İzmir 8</b><br><small>20:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">851b3812f9f975b7a2da79e9b4443880518f1572e7730c61d0962664848cf80f</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">b6cc5e658030c2a8|2026-11-14|İzmir|8|2,3,7,15</code></td></tr><tr><td><b>Diyarbakır 1</b><br><small>21:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">75593433aac5a2100fde3a06a760209b063ba7b784a4695e401d2861897fa6c3</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">d71e8444c6012650|2026-11-14|Diyarbakır|1|2,4,1,5</code></td></tr><tr><td><b>Diyarbakır 2</b><br><small>21:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">fff8ba9baaaebeb4f787fc01f50942ee7330f4e26c57cffd2bff7442fd27d5f6</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">e339b5262bc0472e|2026-11-14|Diyarbakır|2|3,2,10,12</code></td></tr><tr><td><b>Diyarbakır 3</b><br><small>22:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">9525ae0dde86e674f10a56e7c9a96a8f21a3fd4b32df07bdfa2b1d83f0f021d5</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">1ed78d455413b249|2026-11-14|Diyarbakır|3|1,3,2,10</code></td></tr><tr><td><b>Diyarbakır 4</b><br><small>22:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">42bdf5903932742b45de9c468442ed4bf9a8c1a0d4bd50a7cba536ab8e8ddf03</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">f2c509cfb56c2e71|2026-11-14|Diyarbakır|4|8,1,5,7</code></td></tr><tr><td><b>Diyarbakır 5</b><br><small>23:00 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">3a2b0dea763c821b4ebd78343ad1fe18f0cbdfc0cefc2e718bfa468fed5c13a1</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">edbe26b4e728edf0|2026-11-14|Diyarbakır|5|1,3,2,6</code></td></tr><tr><td><b>Diyarbakır 6</b><br><small>23:30 · mühür 10:03</small></td><td><code style="word-break:break-all;font-size:.78em">06263425c2d899258cf079d9797629a3083b7bcafe25892ae937eb07de8cdd9a</code></td>
-      <td><code style="word-break:break-all;font-size:.78em">b2d60d845f37f935|2026-11-14|Diyarbakır|6|5,4,2,8</code></td></tr></tbody></table></div>
     </section>
 <script>document.getElementById('mh-btn').addEventListener('click',async()=>{const t=document.getElementById('mh-in').value;const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(t));document.getElementById('mh-out').textContent=[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')});</script>
     <section aria-labelledby="yon-b"><h2 id="yon-b">Veri ve yöntem</h2><div class="ic-metin"><p>Mühür = SHA-256(tuz|tarih|hipodrom|koşu|ilk4). Tuz her koşu için gizli anahtardan türetilir ve yalnız koşu bittikten sonra yayımlanır.</p>
-      <p class="sy-not">Güncelleme: 20 Kasım 2026, 12:39. Kaynak: TJK resmi yarış sonuçları (TJK Detay kendi tahmin kayıtları). Bu sayfa istatistik bilgisi verir; bahis tavsiyesi değildir. At yarışı belirsizdir, geçmiş oranlar gelecekteki sonucu garanti etmez.</p></div></section>
+      <p class="sy-not">Güncelleme: 21 Kasım 2026, 00:13. Kaynak: TJK resmi yarış sonuçları (TJK Detay kendi tahmin kayıtları). Bu sayfa istatistik bilgisi verir; bahis tavsiyesi değildir. At yarışı belirsizdir, geçmiş oranlar gelecekteki sonucu garanti etmez.</p></div></section>
     <section class="ic-sss" aria-labelledby="sss-b"><h2 id="sss-b">Sık sorulan sorular</h2>
   <details open><summary>Tahmin kanıtı (mühür) nedir?</summary><p>Koşudan önce ilk 4 tahminimizi SHA-256 ile özetleyip yayımlarız. Koşudan sonra açıkladığımız metin aynı özeti verirse tahminin değiştirilmediği kanıtlanır.</p></details><details><summary>Mühürden tahmini çıkarabilir miyim?</summary><p>Hayır. Her koşuya özel gizli bir tuz kullanılır; tuz koşu bitince açıklanır. O zamana kadar özet tahmin hakkında bilgi vermez.</p></details><details><summary>Koşmaz olursa ne olur?</summary><p>Mühür ilk yayımlandığı haliyle kalır ve değiştirilmez. Sonradan koşmaz nedeniyle listeye giren at, mühürde yer almaz.</p></details><details><summary>Bütün tahminleriniz tutuyor mu?</summary><p>Hayır. Kaçırdıklarımızı da aynı şekilde gösteriyoruz; bütün gün sonuçları <a href="/performans/">performans</a> sayfasında. At yarışı belirsizdir ve hiçbir tahmin kesin değildir.</p></details>
 </section>
@@ -253,7 +247,7 @@
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 20 Kasım 2026, 12:39</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 21 Kasım 2026, 00:13</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -299,8 +293,8 @@
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611201239" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611201239" defer></script>
-<script src="/assets/uyelik.js?v=202611201239" defer></script>
+<script src="/assets/site.js?v=202611210013" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611210013" defer></script>
+<script src="/assets/uyelik.js?v=202611210013" defer></script>
 </body>
 </html>
