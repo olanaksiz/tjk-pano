@@ -651,7 +651,12 @@
     oturum().then(function (s) {
       if (s) L.forEach(function (el) { $$('[data-kilit-misafir]', el).forEach(function (x) { x.hidden = true; }); $$('[data-kilit-yukleniyor]', el).forEach(function (x) { x.hidden = false; }); });
       return Promise.all(L.map(function (el) {
-        return coz(el.getAttribute('data-kilit'), el.getAttribute('data-iv'), el.getAttribute('data-ct')).then(function (h) {
+        var sev = el.getAttribute('data-kilit'), src = el.getAttribute('data-src');
+        var p = src ? anahtar(sev).then(function (k) {
+          if (!k) return null;
+          return fetch(src, {credentials: 'same-origin'}).then(function (r) { return r.json(); }).then(function (v) { return coz(sev, v.iv, v.ct); });
+        }).catch(function () { return null; }) : coz(sev, el.getAttribute('data-iv'), el.getAttribute('data-ct'));
+        return p.then(function (h) {
           if (h == null) {
             $$('[data-kilit-yukleniyor]', el).forEach(function (x) { x.hidden = true; });
             if (s) $$('[data-kilit-uye]', el).forEach(function (x) { x.hidden = false; });
