@@ -29,6 +29,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Altılı ganyan tahminleri](https://tjkdetay.com/altili-ganyan-tahminleri/): bugünkü altılı ayakları, saatler, ikramiyeler
 - [Altılı ganyan sonuçları](https://tjkdetay.com/altili-ganyan-sonuclari/): altılı ne verdi; son 30 günün ikramiyeleri, 2026 en yüksekleri
 - [Altılı ganyan hesaplama](https://tjkdetay.com/altili-ganyan-hesaplama/): kupon tutarı ve kombinasyon; sıralı ikili, üçlü, tabela virgüllü hesap
+- [Sanal koşu](https://tjkdetay.com/sanal-kosu/): günün koşularını verilere göre sanal koşturma, 1.000 koşuda kazanma/ilk 3 yüzdeleri
 - [TJK tek altılı](https://tjkdetay.com/tek-altili/): her ayakta AGF 1.si tek kolon, AGF ilk 2/3 kuponları ve 2026 arşiv karnesi
 - [Banko tahminler](https://tjkdetay.com/banko-tahminler/): günün AGF bankoları, uzmanların ortak bankosu, AGF favorisinin bant bant kazanma oranı
 - [At yarışı tahmin siteleri](https://tjkdetay.com/at-yarisi-tahmin-siteleri/): tahmin sitesi seçerken bakılacak 6 ölçüt ve açık karnemiz
@@ -53,7 +54,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (22 Kasım 2026)
 - İzmir: 8 koşu, 14:30–18:00; 1. altılı 1.–6. koşular (14:30); 2. altılı 3.–8. koşular (15:30)
 - Adana: 8 koşu, 17:45–21:30; 1. altılı 1.–6. koşular (17:45); 2. altılı 3.–8. koşular (19:00)
-- Açık karne: 17 yarış gününde biten 270 koşunun 163'ünde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 17 yarış gününde biten 272 koşunun 164'ünde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
