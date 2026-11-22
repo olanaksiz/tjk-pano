@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 23 Kasım 2026, 01:14. Kaynak: https://tjkdetay.com/
+Güncelleme: 23 Kasım 2026, 01:29. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -844,3 +844,35 @@ At ekle; bugün koşanlar koşu ve saatiyle en üstte çıkar.
 ### Gazi Koşusu kazananları: yıllara göre Gazi galipleri ve jokeyleri
 https://tjkdetay.com/gazi-kosusu/
 2026 Gazi Koşusu'nu Bay Nalçakan kazandı (Halis Karataş). En çok Gazi kazanan jokey Mümin Çılgın (9 galibiyet); yarışın en iyi derecesi 1996'da Bold Pilot'un 2.26.22'si. Tablo, kaynaklarda yılı ve galibi açıkça yazan koşuları içerir; tam liste değildir.
+
+### Pist rekorları: hipodrom ve mesafeye göre TJK en iyi dereceleri (2026)
+https://tjkdetay.com/pist-rekorlari/
+2026'da TJK sonuçlarında 2 pist rekoru kırıldı; en yenisi 8 Kasım 2026 Adana 1500 m sentetik, Consultant (1.29.24). Aşağıda 269 hipodrom–pist–mesafe–ırk kombinasyonunun TJK en iyi derecesi ve 2026'nın en hızlı kazananı var.
+
+### Kazanma farkları: at yarışları kaç boyla kazanılıyor? (TJK 2026)
+https://tjkdetay.com/kazanma-farklari/
+2026'da TJK koşularının %8,4'i burun ya da baş farkıyla, %14,2'i 5 boydan fazla farkla bitti. AGF favorisi kazandığında 5 boy üstü farkla kazanma payı %18,7, favori dışı at kazandığında %11,8.
+
+### Dinlenme süresi: kaç gün arayla koşan at daha çok kazanıyor? (TJK 2026)
+https://tjkdetay.com/dinlenme-suresi/
+2026 TJK sonuçlarında en yüksek kazanma oranı 15–21 gün arayla koşan atlarda (%12,3). 60 günden uzun aradan dönen atlar ilk koşularında %7,4, sonraki koşularında %8,1 kazandı.
+
+### Şehir değişikliği: başka hipodromdan gelen atlar ne kadar kazanıyor? (TJK 2026)
+https://tjkdetay.com/sehir-degisikligi/
+2026'da başka hipodromdan gelen atlar %10,1, aynı hipodromda koşmaya devam edenler %10,5 kazandı. En verimli geçiş İstanbul → Antalya (%22,1, 86 koşu).
+
+### Kısrak istatistikleri: en çok kazanan yavru veren anneler ve anne babaları (TJK 2026)
+https://tjkdetay.com/kisrak-istatistikleri/
+2026 TJK sonuçlarında en çok galibiyet çıkaran kısrak Laser Gırl (İngiliz): 4 yavrusu 13 koşu kazandı. Anne babası tablosu, kısrağın babasının (broodmare sire) torunlarına ne kadar yarış performansı aktardığını gösterir.
+
+### Jokey–antrenör ikilileri: en çok birlikte kazananlar (TJK 2026)
+https://tjkdetay.com/jokey-antrenor-ikilileri/
+2026'da en az 25 koşuda birlikte çalışan jokey–antrenör ikilileri içinde en yüksek kazanma oranı V.ABİŞ – U.KULAK ikilisinde (%36,5, 52 koşu). Son tablo, ikilinin her binişine 1 TL ganyan oynanmış olsaydı koşu başına ne döneceğini gösterir.
+
+### Geç çıkış istatistikleri: startta geç kalan at kazanabilir mi? (TJK 2026)
+https://tjkdetay.com/gec-cikis-istatistikleri/
+2026'da geç çıkış yapan atlar yalnız %4,2 kazandı; normal çıkan atlarda bu oran %10,7. Geç çıkan AGF favorileri 314 koşunun %18,5'ini kazandı.
+
+### Adana'da Karataş Belediyesi Koşusu Periwinkle'ın
+https://tjkdetay.com/haberler/2026-11-22-periwinkle-karatas-belediyesi-kosusu/
+Adana Yeşiloba Hipodromu'nda 22 Kasım'da koşulan KV-6 sınıfındaki Karataş Belediyesi Koşusu'nu Periwinkle, 1400 metre kum pistte 1.30.80'lik dereceyle kaza
