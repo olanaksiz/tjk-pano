@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222128">
+<link rel="stylesheet" href="/assets/site.css?v=202611222135">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:28</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:35</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -67,11 +67,20 @@
 .ust h2{font:700 26px/1.1 var(--sk-disp);margin:0}
 .ust small{color:var(--sk-mut)}
 .pist{position:relative;background:repeating-linear-gradient(90deg,var(--sk-turf) 0 60px,var(--sk-turf2) 60px 120px);border-radius:10px;overflow:hidden;border:3px solid var(--sk-rail)}
-.serit{position:relative;height:30px;border-bottom:1px dashed rgba(255,255,255,.18)}
+.serit{position:relative;height:44px;border-bottom:1px dashed rgba(255,255,255,.18)}
 .serit:last-child{border-bottom:0}
 .bitis{position:absolute;top:0;bottom:0;right:28px;width:6px;background:repeating-linear-gradient(0deg,#fff 0 6px,#111 6px 12px);z-index:1}
-.at{position:absolute;top:3px;left:0;height:24px;display:flex;align-items:center;gap:6px;transform:translateX(0);will-change:transform;z-index:2}
+.at{position:absolute;top:2px;left:0;height:40px;display:flex;align-items:center;gap:6px;transform:translateX(0);will-change:transform;z-index:2}
 .no{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:700 13px var(--sk-body);color:#fff;border:2px solid rgba(255,255,255,.85);box-shadow:0 1px 2px rgba(0,0,0,.35)}
+.hs{width:64px;height:40px;flex:none;overflow:visible;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.hs .bc{fill:#6b3f22}.hs .bk{fill:#3b2112}.hs .bb{stroke:#4a2a16;stroke-width:3.2;stroke-linecap:round;fill:none}
+.hs .lg{transform-box:fill-box;transform-origin:50% 0}
+.at.kos .hs{animation:sk-bob .32s ease-in-out infinite alternate}
+.at.kos .l1,.at.kos .l3{animation:sk-ayak .32s ease-in-out infinite alternate}
+.at.kos .l2,.at.kos .l4{animation:sk-ayak .32s ease-in-out infinite alternate-reverse}
+@keyframes sk-ayak{from{transform:rotate(-28deg)}to{transform:rotate(30deg)}}
+@keyframes sk-bob{from{transform:translateY(0)}to{transform:translateY(-2px)}}
+@media (prefers-reduced-motion: reduce){.at.kos .hs,.at.kos .lg{animation:none}}
 .ad{font:600 12px var(--sk-body);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);white-space:nowrap}
 .btns{display:flex;flex-wrap:wrap;gap:8px}
 .btn{font:600 15px var(--sk-body);padding:10px 16px;border-radius:10px;border:0;cursor:pointer;background:var(--sk-gold);color:#1b1505}
@@ -131,7 +140,18 @@ function ciz(){
   $('bas').textContent=K.baslik+' · '+K.saat;$('alt').textContent=K.cins+' · '+K.msf;
   const p=$('pist');p.querySelectorAll('.serit').forEach(e=>e.remove());
   K.atlar.slice().sort((x,y)=>x.no-y.no).forEach(a=>{const s=document.createElement('div');s.className='serit';
-    s.innerHTML=`<div class="at" id="at${a.no}"><span class="no" style="background:${RENK[(a.no-1)%RENK.length]}">${a.no}</span><span class="ad">${a.at}</span></div>`;p.appendChild(s)});
+    const c=RENK[(a.no-1)%RENK.length];
+    s.innerHTML=`<div class="at" id="at${a.no}"><svg class="hs" viewBox="0 0 64 40" aria-hidden="true">
+<path class="bk" d="M17 17 Q7 15 3 27 Q10 21 17 22 Z"/>
+<line class="bb lg l1" x1="21" y1="23" x2="21" y2="37"/><line class="bb lg l2" x1="25" y1="23" x2="25" y2="37"/>
+<line class="bb lg l3" x1="38" y1="23" x2="38" y2="37"/><line class="bb lg l4" x1="42" y1="23" x2="42" y2="37"/>
+<ellipse class="bc" cx="31" cy="20" rx="15" ry="7"/>
+<path class="bc" d="M39 15 L48 4 L54 7 L46 21 Z"/><path class="bc" d="M48 3 L61 9 L59 13.5 L50 11 Z"/>
+<path class="bk" d="M48 4 L51 -1 L53 5 Z"/><path class="bk" d="M47 4 Q43 9 40 14 L42 15 Q45 10 49 6 Z"/>
+<rect x="24" y="13.5" width="11" height="9" rx="1.5" fill="${c}" stroke="#fff" stroke-width=".8"/>
+<text x="29.5" y="20.6" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff" font-family="system-ui,sans-serif">${a.no}</text>
+<path d="M27 13 L31 5 L35 7 L32 14 Z" fill="${c}"/><circle cx="33.5" cy="3.2" r="2.8" fill="${c}" stroke="#fff" stroke-width=".6"/>
+<line x1="33" y1="8" x2="41" y2="10" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/></svg><span class="ad">${a.at}</span></div>`;p.appendChild(s)});
   $('sonuc').textContent='Sanal koşu için ▶ düğmesine basın.';
   const u=$('uyari');u.hidden=!K.eksik;u.textContent=K.eksik?`${K.eksik} atın geçmiş derecesi yok; bu atlar tahmini değerle koşuyor.`:'';
   $('tb').innerHTML='';$('ozet').innerHTML='';$('binalt').textContent='Henüz koşturulmadı';
@@ -139,13 +159,13 @@ function ciz(){
 }
 function kostur(){
   if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;
-  const o=sirala(),W=$('pist').clientWidth-150,T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:9000;
+  const o=sirala(),W=$('pist').clientWidth-190,T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:9000;
   const best=o[0].p,worst=o[o.length-1].p;
   const fin={};o.forEach((x,i)=>fin[x.a.no]=T*(1+0.012*i+0.02*(best-x.p)/(Math.max(.05,best-worst))));
   const t0=performance.now();
   const step=t=>{const e=t-t0;let bitti=true;
     K.atlar.forEach(a=>{const F=fin[a.no]||1,r=Math.min(1,T?e/F:1);const wob=Math.sin((e/400)+a.no)*(1-r)*0.012;const x=W*Math.max(0,Math.min(1,r+wob));
-      $('at'+a.no).style.transform=`translateX(${x}px)`;if(r<1)bitti=false});
+      const el=$('at'+a.no);el.style.transform=`translateX(${x}px)`;el.classList.toggle('kos',r<1);if(r<1)bitti=false});
     if(!bitti)requestAnimationFrame(step);else{koşuyor=false;$('kostur').disabled=false;
       $('sonuc').innerHTML='Sanal sonuç: '+o.slice(0,4).map((x,i)=>`<b>${i+1}.</b> ${x.a.no} ${x.a.at}`).join(' · ')}};
   K.atlar.forEach(a=>$('at'+a.no).style.transform='translateX(0)');requestAnimationFrame(step);
@@ -203,7 +223,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:28</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:35</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -249,8 +269,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222128" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222128" defer></script>
-<script src="/assets/uyelik.js?v=202611222128" defer></script>
+<script src="/assets/site.js?v=202611222135" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222135" defer></script>
+<script src="/assets/uyelik.js?v=202611222135" defer></script>
 </body>
 </html>
