@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222156">
+<link rel="stylesheet" href="/assets/site.css?v=202611222157">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:56</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:57</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -224,15 +224,24 @@ function TRV(){try{const V=speechSynthesis.getVoices().filter(v=>/^tr/i.test(v.l
   SESV=V.find(v=>ERKEK.test(v.name))||null;return SESV||V.find(v=>!KADIN.test(v.name))||V[0]}catch(e){return null}}
 let AC=null;
 function gong(){if(!SES)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();
-  const t=AC.currentTime,M=AC.createGain();M.gain.value=.55;M.connect(AC.destination);
-  [[98,1,3.6],[196.5,.55,2.8],[262,.35,2.2],[331,.3,1.9],[418,.22,1.5],[587,.14,1.1],[742,.1,.8]].forEach(([f,a,d])=>{
-    const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.setValueAtTime(f*1.012,t);o.frequency.exponentialRampToValueAtTime(f,t+.35);
-    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(a,t+.012);g.gain.exponentialRampToValueAtTime(.0008,t+d);o.connect(g);g.connect(M);o.start(t);o.stop(t+d+.05)});
-  const n=AC.createBufferSource(),b=AC.createBuffer(1,AC.sampleRate*.08,AC.sampleRate),c=b.getChannelData(0);for(let i=0;i<c.length;i++)c[i]=(Math.random()*2-1)*(1-i/c.length);
-  const ng=AC.createGain();ng.gain.value=.25;n.buffer=b;n.connect(ng);ng.connect(M);n.start(t)}catch(e){}}
+  const t0=AC.currentTime+.02,M=AC.createGain();M.gain.value=.35;
+  const hp=AC.createBiquadFilter();hp.type='highpass';hp.frequency.value=600;M.connect(hp);hp.connect(AC.destination);
+  // elektrikli start zili: tokmak saniyede ~22 kez çana vurur (1,25 sn), çan kısmi frekansları
+  const P=[[2093,1],[2637,.55],[3520,.35],[4699,.18],[1318,.25]],dur=1.25,hz=22;
+  for(let k=0;k<dur*hz;k++){const t=t0+k/hz+(Math.random()*.004);
+    P.forEach(([f,a])=>{const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.value=f*(1+(Math.random()-.5)*.002);
+      g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(a*.5,t+.003);g.gain.exponentialRampToValueAtTime(.0005,t+.09+(f<1500?.12:0));
+      o.connect(g);g.connect(M);o.start(t);o.stop(t+.25)})}
+  // son vuruşun çınlaması
+  P.forEach(([f,a])=>{const o=AC.createOscillator(),g=AC.createGain(),t=t0+dur;o.frequency.value=f;g.gain.setValueAtTime(a*.35,t);g.gain.exponentialRampToValueAtTime(.0004,t+.9);o.connect(g);g.connect(M);o.start(t);o.stop(t+1)});
+  // start kapıları açılırken metal çarpma
+  const tg=t0+dur+.02,L=AC.sampleRate*.35,b=AC.createBuffer(1,L,AC.sampleRate),c=b.getChannelData(0);
+  for(let i=0;i<L;i++){const x=i/L;c[i]=(Math.random()*2-1)*Math.exp(-x*9)*(1+.6*Math.sin(i*.09))}
+  const n=AC.createBufferSource(),bp=AC.createBiquadFilter(),ng=AC.createGain();bp.type='bandpass';bp.frequency.value=900;bp.Q.value=.8;ng.gain.value=1.4;
+  n.buffer=b;n.connect(bp);bp.connect(ng);ng.connect(AC.destination);n.start(tg)}catch(e){}}
 function soyle(m,zorla){const p=$('spl');p.textContent=m;p.classList.remove('yeni');void p.offsetWidth;p.classList.add('yeni');
   if(!SES||!('speechSynthesis' in window))return;try{if(speechSynthesis.speaking&&!zorla)return;if(zorla)speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(m);u.lang='tr-TR';const v=TRV();if(v)u.voice=v;u.rate=1.1;u.pitch=SESV?0.95:0.72;speechSynthesis.speak(u)}catch(e){}}
+  const u=new SpeechSynthesisUtterance(m);u.lang='tr-TR';const v=TRV();if(v)u.voice=v;u.rate=1.1;u.pitch=SESV?0.95:0.6;speechSynthesis.speak(u)}catch(e){}}
 const ad=n=>{const a=K.atlar.find(x=>x.no===n);return a?a.at:n+' numara'};
 const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
  [.17,o=>`İlk metrelerde öne ${ad(o[0])} geçiyor, hemen arkasında ${ad(o[1])}.`],
@@ -321,7 +330,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:56</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:57</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -367,8 +376,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222156" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222156" defer></script>
-<script src="/assets/uyelik.js?v=202611222156" defer></script>
+<script src="/assets/site.js?v=202611222157" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222157" defer></script>
+<script src="/assets/uyelik.js?v=202611222157" defer></script>
 </body>
 </html>
