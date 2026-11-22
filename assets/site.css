@@ -2467,3 +2467,6 @@ html.ak-acik{overflow:hidden}
 .sy-kir ol{margin:0;padding-left:20px}
 .sy-kir li{margin:3px 0}
 .sy-kir small{color:var(--soluk,#667)}
+.rh-sema{margin:18px 0;padding:12px;border:1px solid var(--cizgi,#dde3ea);border-radius:14px;background:#fff}
+.rh-sema svg{display:block;max-width:100%;height:auto}
+.rh-sema figcaption{font-size:14px;color:var(--soluk,#556);margin-top:8px}
