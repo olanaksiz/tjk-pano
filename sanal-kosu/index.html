@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222143">
+<link rel="stylesheet" href="/assets/site.css?v=202611222145">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:43</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:45</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -180,10 +180,21 @@ function ciz(){
 
 let SES=true;const T0=0;try{SES=localStorage.getItem('skv-ses')!=='0'}catch(e){}
 function sesYaz(){const b=$('ses');b.setAttribute('aria-pressed',SES);b.textContent=SES?'🔊 Ses açık':'🔈 Ses kapalı'}
-const TRV=()=>{try{return speechSynthesis.getVoices().find(v=>/^tr/i.test(v.lang))}catch(e){return null}};
+const ERKEK=/(cem|tolga|ahmet|mehmet|emre|murat|kerem|male|erkek|man\b)/i, KADIN=/(yelda|filiz|seda|ayşe|ayse|female|kadın|woman)/i;
+let SESV=null;
+function TRV(){try{const V=speechSynthesis.getVoices().filter(v=>/^tr/i.test(v.lang));if(!V.length)return null;
+  SESV=V.find(v=>ERKEK.test(v.name))||null;return SESV||V.find(v=>!KADIN.test(v.name))||V[0]}catch(e){return null}}
+let AC=null;
+function gong(){if(!SES)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();
+  const t=AC.currentTime,M=AC.createGain();M.gain.value=.55;M.connect(AC.destination);
+  [[98,1,3.6],[196.5,.55,2.8],[262,.35,2.2],[331,.3,1.9],[418,.22,1.5],[587,.14,1.1],[742,.1,.8]].forEach(([f,a,d])=>{
+    const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.setValueAtTime(f*1.012,t);o.frequency.exponentialRampToValueAtTime(f,t+.35);
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(a,t+.012);g.gain.exponentialRampToValueAtTime(.0008,t+d);o.connect(g);g.connect(M);o.start(t);o.stop(t+d+.05)});
+  const n=AC.createBufferSource(),b=AC.createBuffer(1,AC.sampleRate*.08,AC.sampleRate),c=b.getChannelData(0);for(let i=0;i<c.length;i++)c[i]=(Math.random()*2-1)*(1-i/c.length);
+  const ng=AC.createGain();ng.gain.value=.25;n.buffer=b;n.connect(ng);ng.connect(M);n.start(t)}catch(e){}}
 function soyle(m,zorla){const p=$('spl');p.textContent=m;p.classList.remove('yeni');void p.offsetWidth;p.classList.add('yeni');
   if(!SES||!('speechSynthesis' in window))return;try{if(speechSynthesis.speaking&&!zorla)return;if(zorla)speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(m);u.lang='tr-TR';const v=TRV();if(v)u.voice=v;u.rate=1.12;u.pitch=1.05;speechSynthesis.speak(u)}catch(e){}}
+  const u=new SpeechSynthesisUtterance(m);u.lang='tr-TR';const v=TRV();if(v)u.voice=v;u.rate=1.1;u.pitch=SESV?0.95:0.72;speechSynthesis.speak(u)}catch(e){}}
 const ad=n=>{const a=K.atlar.find(x=>x.no===n);return a?a.at:n+' numara'};
 const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
  [.17,o=>`İlk metrelerde öne ${ad(o[0])} geçiyor, hemen arkasında ${ad(o[1])}.`],
@@ -194,15 +205,15 @@ const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
 $('ses').onclick=()=>{SES=!SES;try{localStorage.setItem('skv-ses',SES?'1':'0')}catch(e){}if(!SES)try{speechSynthesis.cancel()}catch(e){};sesYaz()};
 sesYaz();
 function kostur(){
-  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';if(!T0)soyle('Atlar start makinesinde…',true);
+  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';soyle('Atlar start makinesinde…',true);gong();
   const o=sirala(),PW=$('pist').clientWidth,W=PW-(PW<600?96:190),T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:9000;
   const best=o[0].p,worst=o[o.length-1].p;
   const fin={};o.forEach((x,i)=>fin[x.a.no]=T*(1+0.012*i+0.02*(best-x.p)/(Math.max(.05,best-worst))));
-  const t0=performance.now();let si=0;const X={};
-  const step=t=>{const e=t-t0;let bitti=true;
+  let t0=performance.now()+1300;let si=0;const X={};
+  const step=t=>{const e=Math.max(0,t-t0);let bitti=true;
     K.atlar.forEach(a=>{const F=fin[a.no]||1,r=Math.min(1,T?e/F:1);const wob=(Math.sin((e/700)+a.no*1.7)*0.03+Math.sin(e/310+a.no)*0.012)*Math.min(1,r*4)*(1-r);const x=W*Math.max(0,Math.min(1,r+wob));
-      const el=$('at'+a.no);el.style.transform=`translateX(${x}px)`;el.classList.toggle('kos',r<1);X[a.no]=x+(r>=1?1e6-fin[a.no]/1e3:0);if(r<1)bitti=false});
-    if(T&&si<SP.length&&e>=SP[si][0]*T){const cur=K.atlar.map(a=>a.no).sort((p,q)=>X[q]-X[p]);soyle(SP[si][1](cur),si===0);si++}
+      const el=$('at'+a.no);el.style.transform=`translateX(${x}px)`;el.classList.toggle('kos',r<1&&t>=t0);X[a.no]=x+(r>=1?1e6-fin[a.no]/1e3:0);if(r<1)bitti=false});
+    if(T&&t>=t0&&si<SP.length&&e>=SP[si][0]*T){const cur=K.atlar.map(a=>a.no).sort((p,q)=>X[q]-X[p]);soyle(SP[si][1](cur),si===0);si++}
     if(!bitti)requestAnimationFrame(step);else{koşuyor=false;$('kostur').disabled=false;
       $('sonuc').innerHTML=sira(o.slice(0,4).map(x=>x.a.no),'Sanal sonuç');
       soyle(`Ve kazanan ${ad(o[0].a.no)}! İkinci ${ad(o[1].a.no)}, üçüncü ${ad(o[2].a.no)}.`,true)}};
@@ -261,7 +272,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:43</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:45</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -307,8 +318,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222143" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222143" defer></script>
-<script src="/assets/uyelik.js?v=202611222143" defer></script>
+<script src="/assets/site.js?v=202611222145" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222145" defer></script>
+<script src="/assets/uyelik.js?v=202611222145" defer></script>
 </body>
 </html>
