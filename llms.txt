@@ -54,6 +54,10 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (22 Kasım 2026)
 - İzmir: 8 koşu, 14:30–18:00; 1. altılı 1.–6. koşular (14:30); 2. altılı 3.–8. koşular (15:30)
 - Adana: 8 koşu, 17:45–21:30; 1. altılı 1.–6. koşular (17:45); 2. altılı 3.–8. koşular (19:00)
+- İzmir 1. 6'lı ganyan: 3,10/4/4/6/5/4 · 18.899,31 TL (1 misli, TJK)
+- İzmir 2. 6'lı ganyan: 4/6/5/4/4,11/4 · 45.400,25 TL (1 misli, TJK)
+- Adana 1. 6'lı ganyan: 4/8/4/13/6/2 · 267.595,50 TL (1 misli, TJK)
+- Adana 2. 6'lı ganyan: 4/13/6/2/9/16 · 73.670,87 TL (1 misli, TJK)
 - Açık karne: 17 yarış gününde biten 273 koşunun 164'ünde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
