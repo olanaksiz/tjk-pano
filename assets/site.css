@@ -2461,3 +2461,9 @@ html.ak-acik{overflow:hidden}
 .rk2-olcut b{display:block;font-weight:700}
 .rk2-olcut span{display:block;font-size:14px;opacity:.85}
 .rk2-giris a{color:inherit;text-decoration:underline}
+.sy-kir{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.sy-kir>div{border:1px solid var(--cizgi,#dde3ea);border-radius:12px;padding:10px 14px}
+.sy-kir h3{margin:0 0 6px;font-size:17px}
+.sy-kir ol{margin:0;padding-left:20px}
+.sy-kir li{margin:3px 0}
+.sy-kir small{color:var(--soluk,#667)}
