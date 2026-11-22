@@ -2483,3 +2483,18 @@ html.ak-acik{overflow:hidden}
 .rs-pist b{display:block;background:var(--c);color:#fff;padding:8px 12px;font-size:17px}
 .rs-pist ul{margin:8px 0;padding:0 12px 0 28px}.rs-pist li{margin:4px 0;font-size:14px}
 .rh-sema .rs-merdiven b,.rh-sema .rs-merdiven small{color:inherit}.rh-sema .rs-akis b{color:#0f2b22}.rh-sema .rs-pist>div>b{color:#fff}
+.ust-ara{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;color:#f3f0e4;border:1px solid rgba(243,240,228,.18);flex:none}
+.ust-ara svg{width:20px;height:20px}
+.ust-ara:hover,.ust-ara:focus-visible{border-color:#d8b04a;color:#d8b04a}
+.mm-ara{display:flex;gap:8px;margin:0 0 12px}
+.mm-ara input{flex:1;min-width:0;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid #c9d3df}
+.mm-ara button,.ara-form button{font:600 15px inherit;padding:10px 16px;border-radius:10px;border:0;background:#d8b04a;color:#1b1505;cursor:pointer}
+.ara-form{display:flex;gap:8px;max-width:640px;margin-top:16px}
+.ara-form input{flex:1;min-width:0;font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid #c9d3df}
+.ara-bilgi{margin:20px 0 8px;color:var(--soluk,#556)}
+.ara-sonuc{list-style:none;margin:0 0 40px;padding:0;display:grid;gap:8px}
+.ara-sonuc a{display:grid;gap:2px;padding:12px 14px;border:1px solid var(--cizgi,#dde3ea);border-radius:12px;background:#fff;text-decoration:none;color:inherit}
+.ara-sonuc a:hover{border-color:#d8b04a}
+.ara-sonuc b{font-size:16px;color:#0f2b22}
+.ara-sonuc small{color:#556}
+.ara-tur{justify-self:start;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8a6a1e;background:#f6ecd0;border-radius:999px;padding:2px 8px}
