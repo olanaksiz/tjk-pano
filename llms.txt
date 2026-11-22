@@ -29,6 +29,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Altılı ganyan tahminleri](https://tjkdetay.com/altili-ganyan-tahminleri/): bugünkü altılı ayakları, saatler, ikramiyeler
 - [Altılı ganyan sonuçları](https://tjkdetay.com/altili-ganyan-sonuclari/): altılı ne verdi; son 30 günün ikramiyeleri, 2026 en yüksekleri
 - [Altılı ganyan hesaplama](https://tjkdetay.com/altili-ganyan-hesaplama/): kupon tutarı ve kombinasyon; sıralı ikili, üçlü, tabela virgüllü hesap
+- [TJK tek altılı](https://tjkdetay.com/tek-altili/): her ayakta AGF 1.si tek kolon, AGF ilk 2/3 kuponları ve 2026 arşiv karnesi
 - [Banko tahminler](https://tjkdetay.com/banko-tahminler/): günün AGF bankoları, uzmanların ortak bankosu, AGF favorisinin bant bant kazanma oranı
 - [At yarışı tahmin siteleri](https://tjkdetay.com/at-yarisi-tahmin-siteleri/): tahmin sitesi seçerken bakılacak 6 ölçüt ve açık karnemiz
 - [Yapay zekâ at yarışı platformları](https://tjkdetay.com/yapay-zeka-at-yarisi-platformlari/): hazır yapay zekâ at yarışı platformları nasıl çalışır, seçerken bakılacak 7 ölçüt
