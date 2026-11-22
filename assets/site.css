@@ -2482,3 +2482,4 @@ html.ak-acik{overflow:hidden}
 .rs-pist>div{background:#fff;border:2px solid var(--c);border-radius:12px;overflow:hidden}
 .rs-pist b{display:block;background:var(--c);color:#fff;padding:8px 12px;font-size:17px}
 .rs-pist ul{margin:8px 0;padding:0 12px 0 28px}.rs-pist li{margin:4px 0;font-size:14px}
+.rh-sema .rs-merdiven b,.rh-sema .rs-merdiven small{color:inherit}.rh-sema .rs-akis b{color:#0f2b22}.rh-sema .rs-pist>div>b{color:#fff}
