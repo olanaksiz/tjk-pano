@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222152">
+<link rel="stylesheet" href="/assets/site.css?v=202611222153">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:52</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:53</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -173,10 +173,10 @@ function pt(s,d){s=((s%LP)+LP)%LP;const r=G.R0+d;
   if(s<G.S)return [G.cx2-s,G.cy-r,Math.PI];s-=G.S;
   const f=s/TL*Math.PI;return [G.cx1-r*Math.sin(f),G.cy-r*Math.cos(f),Math.PI-f]}
 const stad=r=>`M${G.cx1},${G.cy+r} L${G.cx2},${G.cy+r} A${r},${r} 0 0 0 ${G.cx2},${G.cy-r} L${G.cx1},${G.cy-r} A${r},${r} 0 0 0 ${G.cx1},${G.cy+r} Z`;
-const laneD=l=>14+l*15.5;
+const laneD=l=>16+l*14;
 function pistRenk(){const m=(K.msf||'').toLowerCase();return m.includes('çim')?['#3f8a4f','#478f55']:m.includes('sentetik')?['#7a5f4c','#846853']:['#b88c55','#c29a63']}
 function mesafeD(){const m=parseInt(K.msf)||1400;return LP*Math.min(1.45,Math.max(.55,m/2000))}
-function atSvg(a){const c=RENK[(a.no-1)%RENK.length];return `<g class="skv-at" id="at${a.no}"><g transform="scale(1.15) translate(-32,-24)"><g class="skv-hsg">
+function atSvg(a){const c=RENK[(a.no-1)%RENK.length];return `<g class="skv-at" id="at${a.no}"><g transform="scale(1.7) translate(-32,-24)"><g class="skv-hsg">
 <path class="bk" d="M17 17 Q7 15 3 27 Q10 21 17 22 Z"/>
 <line class="bb lg l1" x1="21" y1="23" x2="21" y2="37"/><line class="bb lg l2" x1="25" y1="23" x2="25" y2="37"/>
 <line class="bb lg l3" x1="38" y1="23" x2="38" y2="37"/><line class="bb lg l4" x1="42" y1="23" x2="42" y2="37"/>
@@ -246,7 +246,7 @@ function kostur(){
   if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;dizil();$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';soyle('Atlar start makinesinde…',true);gong();
   const o=sirala(),T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:16000,D=mesafeD(),s0=SF-D;
   const best=o[0].p,worst=o[o.length-1].p;
-  const fin={};o.forEach((x,i)=>fin[x.a.no]=Math.max(1,T)*(1+0.012*i+0.02*(best-x.p)/(Math.max(.05,best-worst))));
+  const fin={};o.forEach((x,i)=>fin[x.a.no]=Math.max(1,T)*(1+0.022*i+0.03*(best-x.p)/(Math.max(.05,best-worst))));
   let t0=performance.now()+(T?1300:0);let si=0,fr=0;const X={},S={};
   const step=t=>{const e=Math.max(0,t-t0);let bitti=true;fr++;
     K.atlar.forEach(a=>{const F=fin[a.no],q=T?e/F:1.2;let pr;
@@ -255,7 +255,7 @@ function kostur(){
       S[a.no]=s0+pr*D;X[a.no]=pr+(q>=1?10-F/1e5:0)});
     const ord=K.atlar.map(a=>a.no).sort((p,q)=>X[q]-X[p]),tk=[];
     ord.forEach(n=>{const q=e/fin[n];let tg;
-      if(q<0.07)tg=GATE[n];else{let l=0;while(l<7&&tk.some(x=>Math.abs(x.s-S[n])<52&&Math.abs(x.l-l)<0.95))l++;tg=l}
+      if(q<0.07)tg=GATE[n];else{let l=0;while(l<7&&tk.some(x=>Math.abs(x.s-S[n])<85&&Math.abs(x.l-l)<0.95))l++;tg=l}
       tk.push({s:S[n],l:tg});LN[n]+=(tg-LN[n])*0.05;
       atKoy(n,S[n],laneD(LN[n]));$('at'+n).classList.toggle('kos',t>=t0&&q<1.08)});
     if(fr%8===0){const g=$('atlar');K.atlar.map(a=>$('at'+a.no)).sort((p,q)=>p.transform.baseVal[0].matrix.f-q.transform.baseVal[0].matrix.f).forEach(el=>g.appendChild(el));
@@ -321,7 +321,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:52</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:53</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -367,8 +367,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222152" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222152" defer></script>
-<script src="/assets/uyelik.js?v=202611222152" defer></script>
+<script src="/assets/site.js?v=202611222153" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222153" defer></script>
+<script src="/assets/uyelik.js?v=202611222153" defer></script>
 </body>
 </html>
