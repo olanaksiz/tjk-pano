@@ -2499,4 +2499,4 @@ html.ak-acik{overflow:hidden}
 .ara-sonuc small{color:#556}
 .ara-tur{justify-self:start;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8a6a1e;background:#f6ecd0;border-radius:999px;padding:2px 8px}
 @media (max-width:430px){.ust-ara{width:36px;height:36px;border-radius:10px}.ust-ara svg{width:18px;height:18px}.ust .kap{gap:8px}}
-@media (max-width:380px){.ust-ara{display:none}}
+@media (max-width:370px){.ust-ara{display:none}}
