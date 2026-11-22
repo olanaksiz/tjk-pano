@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222145">
+<link rel="stylesheet" href="/assets/site.css?v=202611222149">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:45</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:49</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -70,13 +70,22 @@
 .skv-bas h2{font:700 28px/1.05 var(--sk-disp)!important;margin:0}
 .skv-bas small{color:var(--sk-mut);font-size:14px}
 .skv-pist{position:relative;background:repeating-linear-gradient(90deg,var(--sk-turf) 0 60px,var(--sk-turf2) 60px 120px);border-radius:12px;overflow:hidden;border:3px solid var(--sk-rail);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.skv-pist{border-radius:14px;border:1px solid var(--sk-line);overflow:hidden;background:#123222;padding:0}
+#ov{display:block;width:100%;height:auto}
+.skv-at .skv-hsg{transform-box:fill-box;transform-origin:center}
+.skv-at.kos .skv-hsg{animation:sk-bob .32s ease-in-out infinite alternate}
+.skv-canli{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;min-height:34px}
+.skv-canli li{display:flex;align-items:center;gap:6px;background:rgba(243,240,228,.06);border:1px solid var(--sk-line2);border-radius:999px;padding:4px 10px 4px 6px;font-size:13px;color:var(--sk-fg)}
+.skv-canli li b{font:700 15px var(--sk-disp);color:var(--sk-gold2);min-width:12px;text-align:center}
+.skv-canli li:first-child{border-color:var(--sk-gold)}
+.skv-canli .skv-no{width:20px;height:20px;font-size:11px;margin:0}
 .skv-serit{position:relative;height:44px;border-bottom:1px dashed rgba(255,255,255,.18)}
 .skv-serit:last-child{border-bottom:0}
 .skv-bitis{position:absolute;top:0;bottom:0;right:28px;width:6px;background:repeating-linear-gradient(0deg,#fff 0 6px,#111 6px 12px);z-index:1}
 .skv-at{position:absolute;top:2px;left:0;height:40px;display:flex;align-items:center;gap:6px;transform:translateX(0);will-change:transform;z-index:2}
 .skv-hs{width:64px;height:40px;flex:none;overflow:visible;filter:drop-shadow(0 1px 1px rgba(0,0,0,.4))}
-.skv-hs .bc{fill:#6b3f22}.skv-hs .bk{fill:#3b2112}.skv-hs .bb{stroke:#4a2a16;stroke-width:3.2;stroke-linecap:round;fill:none}
-.skv-hs .lg{transform-box:fill-box;transform-origin:50% 0}
+.skv-at .bc{fill:#6b3f22}.skv-at .bk{fill:#3b2112}.skv-at .bb{stroke:#4a2a16;stroke-width:3.2;stroke-linecap:round;fill:none}
+.skv-at .lg{transform-box:fill-box;transform-origin:50% 0}
 .skv-at.kos .skv-hs{animation:sk-bob .32s ease-in-out infinite alternate}
 .skv-at.kos .l1,.skv-at.kos .l3{animation:sk-ayak .32s ease-in-out infinite alternate}
 .skv-at.kos .l2,.skv-at.kos .l4{animation:sk-ayak .32s ease-in-out infinite alternate-reverse}
@@ -127,7 +136,8 @@
   <nav class="skv-sec" id="sec" aria-label="Koşu seç"></nav>
   <section class="skv-kart" aria-live="polite">
     <div class="skv-bas"><h2 id="bas"></h2><small id="alt"></small></div>
-    <div class="skv-pist" id="pist"><div class="skv-bitis"></div></div>
+    <div class="skv-pist" id="pist"><svg id="ov" viewBox="0 0 1000 640" role="img" aria-label="Sanal hipodrom: atlar oval pistte koşuyor"></svg></div>
+    <ol class="skv-canli" id="canli" aria-label="Anlık sıralama"></ol>
     <div class="skv-btns">
       <button class="skv-btn" id="kostur">▶ Sanal koştur</button>
       <button class="skv-btn ikincil" id="bin">1.000 kez koştur</button>
@@ -156,22 +166,51 @@ function gauss(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();r
 function gum(){return -Math.log(-Math.log(Math.random()))}
 function skor(a){return KW.w[0]*a.h+KW.w[1]*a.y+KW.w[2]*a.f+KW.w[3]*Math.log(K.atlar.length)+KW.b}
 function sirala(){return K.atlar.map(a=>({a,p:skor(a)+gum()})).sort((x,y)=>y.p-x.p)}
-function ciz(){
-  $('bas').textContent=K.baslik+' · '+K.saat;$('alt').textContent=K.cins+' · '+K.msf;
-  const p=$('pist');p.querySelectorAll('.serit').forEach(e=>e.remove());
-  K.atlar.slice().sort((x,y)=>x.no-y.no).forEach(a=>{const s=document.createElement('div');s.className='skv-serit';
-    const c=RENK[(a.no-1)%RENK.length];
-    s.innerHTML=`<div class="skv-at" id="at${a.no}"><svg class="skv-hs" viewBox="0 0 64 40" aria-hidden="true">
+const G={cx1:300,cx2:700,cy:320,R0:140,W:130,S:400,RR:200};
+const TL=Math.PI*G.RR, LP=2*G.S+2*TL, SF=G.S*0.75;
+function pt(s,d){s=((s%LP)+LP)%LP;const r=G.R0+d;
+  if(s<G.S)return [G.cx1+s,G.cy+r,0];s-=G.S;
+  if(s<TL){const f=s/TL*Math.PI;return [G.cx2+r*Math.sin(f),G.cy+r*Math.cos(f),-f]}s-=TL;
+  if(s<G.S)return [G.cx2-s,G.cy-r,Math.PI];s-=G.S;
+  const f=s/TL*Math.PI;return [G.cx1-r*Math.sin(f),G.cy-r*Math.cos(f),Math.PI-f]}
+const stad=r=>`M${G.cx1},${G.cy+r} L${G.cx2},${G.cy+r} A${r},${r} 0 0 0 ${G.cx2},${G.cy-r} L${G.cx1},${G.cy-r} A${r},${r} 0 0 0 ${G.cx1},${G.cy+r} Z`;
+const laneD=l=>14+l*15.5;
+function pistRenk(){const m=(K.msf||'').toLowerCase();return m.includes('çim')?['#3f8a4f','#478f55']:m.includes('sentetik')?['#7a5f4c','#846853']:['#b88c55','#c29a63']}
+function mesafeD(){const m=parseInt(K.msf)||1400;return LP*Math.min(1.45,Math.max(.55,m/2000))}
+function atSvg(a){const c=RENK[(a.no-1)%RENK.length];return `<g class="skv-at" id="at${a.no}"><g transform="scale(1.15) translate(-32,-24)"><g class="skv-hsg">
 <path class="bk" d="M17 17 Q7 15 3 27 Q10 21 17 22 Z"/>
 <line class="bb lg l1" x1="21" y1="23" x2="21" y2="37"/><line class="bb lg l2" x1="25" y1="23" x2="25" y2="37"/>
 <line class="bb lg l3" x1="38" y1="23" x2="38" y2="37"/><line class="bb lg l4" x1="42" y1="23" x2="42" y2="37"/>
 <ellipse class="bc" cx="31" cy="20" rx="15" ry="7"/>
 <path class="bc" d="M39 15 L48 4 L54 7 L46 21 Z"/><path class="bc" d="M48 3 L61 9 L59 13.5 L50 11 Z"/>
 <path class="bk" d="M48 4 L51 -1 L53 5 Z"/><path class="bk" d="M47 4 Q43 9 40 14 L42 15 Q45 10 49 6 Z"/>
-<rect x="24" y="13.5" width="11" height="9" rx="1.5" fill="${c}" stroke="#fff" stroke-width=".8"/>
-<text x="29.5" y="20.6" text-anchor="middle" font-size="7.5" font-weight="700" fill="#fff" font-family="system-ui,sans-serif">${a.no}</text>
+<rect x="23.5" y="13" width="12" height="10" rx="1.5" fill="${c}" stroke="#fff" stroke-width=".9"/>
+<text x="29.5" y="20.9" text-anchor="middle" font-size="8.5" font-weight="800" fill="#fff" font-family="system-ui,sans-serif">${a.no}</text>
 <path d="M27 13 L31 5 L35 7 L32 14 Z" fill="${c}"/><circle cx="33.5" cy="3.2" r="2.8" fill="${c}" stroke="#fff" stroke-width=".6"/>
-<line x1="33" y1="8" x2="41" y2="10" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/></svg><span class="skv-ad">${a.at}</span></div>`;p.appendChild(s)});
+<line x1="33" y1="8" x2="41" y2="10" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/></g></g></g>`}
+let GATE={},LN={};
+function atKoy(no,s,d){const [x,y,an]=pt(s,d),deg=an*180/Math.PI,fl=Math.cos(an)<-0.01?-1:1;
+  $('at'+no).setAttribute('transform',`translate(${x.toFixed(1)},${y.toFixed(1)}) rotate(${deg.toFixed(1)}) scale(1,${fl})`);return y}
+function dizil(){const n=K.atlar.length,s0=SF-mesafeD();GATE={};LN={};K.atlar.slice().sort((x,y)=>x.no-y.no).forEach((a,i)=>{GATE[a.no]=n>1?i*7/(n-1):0;LN[a.no]=GATE[a.no];const el=$('at'+a.no);el.classList.remove('kos');atKoy(a.no,s0,laneD(LN[a.no]))})}
+function ciz(){
+  $('bas').textContent=K.baslik+' · '+K.saat;$('alt').textContent=K.cins+' · '+K.msf;
+  const [p1,p2]=pistRenk(),D=mesafeD(),s0=SF-D,n=K.atlar.length;
+  const g1=pt(SF,0),g2=pt(SF,G.W),b1=pt(s0,0),b2=pt(s0,G.W);
+  let h=`<defs><pattern id="skv-cim" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#1f5a36"/><rect width="20" height="40" fill="#22603a"/></pattern></defs>
+<rect width="1000" height="640" fill="#123222"/>
+<path d="${stad(G.R0+G.W)}" fill="${p1}"/><path d="${stad(G.R0+G.W*.5)}" fill="none" stroke="${p2}" stroke-width="${G.W*.5}" opacity=".5"/>
+<path d="${stad(G.R0+G.W)}" fill="none" stroke="#f3f0e4" stroke-width="4"/>
+<path d="${stad(G.R0)}" fill="url(#skv-cim)" stroke="#f3f0e4" stroke-width="5"/>
+<text x="500" y="300" text-anchor="middle" font-size="44" font-weight="800" fill="rgba(216,176,74,.35)" font-family="system-ui,sans-serif">tjkdetay</text>
+<text x="500" y="345" text-anchor="middle" font-size="24" fill="rgba(243,240,228,.45)" font-family="system-ui,sans-serif">${K.baslik} · ${K.msf}</text>
+<line x1="${b1[0]}" y1="${b1[1]}" x2="${b2[0]}" y2="${b2[1]}" stroke="#9aa3ad" stroke-width="10" opacity=".85"/>
+<line x1="${g1[0]}" y1="${g1[1]}" x2="${g2[0]}" y2="${g2[1]}" stroke="#fff" stroke-width="8"/>
+<line x1="${g1[0]}" y1="${g1[1]}" x2="${g2[0]}" y2="${g2[1]}" stroke="#111" stroke-width="8" stroke-dasharray="8 8"/>
+<text x="${g2[0]}" y="${g2[1]+28}" text-anchor="middle" font-size="20" font-weight="700" fill="#f3f0e4" font-family="system-ui,sans-serif">BİTİŞ</text>
+<g id="atlar">${K.atlar.slice().sort((x,y)=>x.no-y.no).map(atSvg).join('')}</g>`;
+  $('ov').innerHTML=h;
+  dizil();
+  $('canli').innerHTML='';
   $('sonuc').textContent='Sanal koşu için ▶ düğmesine basın.';$('spl').textContent='Startı bekliyoruz…';
   const u=$('uyari');u.hidden=!K.eksik;u.textContent=K.eksik?`${K.eksik} atın geçmiş derecesi yok; bu atlar tahmini değerle koşuyor.`:'';
   $('tb').innerHTML='';$('ozet').innerHTML='';$('binalt').textContent='Henüz koşturulmadı';
@@ -205,19 +244,30 @@ const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
 $('ses').onclick=()=>{SES=!SES;try{localStorage.setItem('skv-ses',SES?'1':'0')}catch(e){}if(!SES)try{speechSynthesis.cancel()}catch(e){};sesYaz()};
 sesYaz();
 function kostur(){
-  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';soyle('Atlar start makinesinde…',true);gong();
-  const o=sirala(),PW=$('pist').clientWidth,W=PW-(PW<600?96:190),T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:9000;
+  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;dizil();$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';soyle('Atlar start makinesinde…',true);gong();
+  const o=sirala(),T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:16000,D=mesafeD(),s0=SF-D;
   const best=o[0].p,worst=o[o.length-1].p;
-  const fin={};o.forEach((x,i)=>fin[x.a.no]=T*(1+0.012*i+0.02*(best-x.p)/(Math.max(.05,best-worst))));
-  let t0=performance.now()+1300;let si=0;const X={};
-  const step=t=>{const e=Math.max(0,t-t0);let bitti=true;
-    K.atlar.forEach(a=>{const F=fin[a.no]||1,r=Math.min(1,T?e/F:1);const wob=(Math.sin((e/700)+a.no*1.7)*0.03+Math.sin(e/310+a.no)*0.012)*Math.min(1,r*4)*(1-r);const x=W*Math.max(0,Math.min(1,r+wob));
-      const el=$('at'+a.no);el.style.transform=`translateX(${x}px)`;el.classList.toggle('kos',r<1&&t>=t0);X[a.no]=x+(r>=1?1e6-fin[a.no]/1e3:0);if(r<1)bitti=false});
-    if(T&&t>=t0&&si<SP.length&&e>=SP[si][0]*T){const cur=K.atlar.map(a=>a.no).sort((p,q)=>X[q]-X[p]);soyle(SP[si][1](cur),si===0);si++}
-    if(!bitti)requestAnimationFrame(step);else{koşuyor=false;$('kostur').disabled=false;
+  const fin={};o.forEach((x,i)=>fin[x.a.no]=Math.max(1,T)*(1+0.012*i+0.02*(best-x.p)/(Math.max(.05,best-worst))));
+  let t0=performance.now()+(T?1300:0);let si=0,fr=0;const X={},S={};
+  const step=t=>{const e=Math.max(0,t-t0);let bitti=true;fr++;
+    K.atlar.forEach(a=>{const F=fin[a.no],q=T?e/F:1.2;let pr;
+      if(q<1){const wob=(Math.sin((e/900)+a.no*1.7)*0.035+Math.sin(e/380+a.no)*0.014)*Math.min(1,q*4)*(1-q);pr=Math.max(0,q+wob);bitti=false}
+      else pr=1+0.05*(1-Math.exp(-(q-1)*5));
+      S[a.no]=s0+pr*D;X[a.no]=pr+(q>=1?10-F/1e5:0)});
+    const ord=K.atlar.map(a=>a.no).sort((p,q)=>X[q]-X[p]),tk=[];
+    ord.forEach(n=>{const q=e/fin[n];let tg;
+      if(q<0.07)tg=GATE[n];else{let l=0;while(l<7&&tk.some(x=>Math.abs(x.s-S[n])<52&&Math.abs(x.l-l)<0.95))l++;tg=l}
+      tk.push({s:S[n],l:tg});LN[n]+=(tg-LN[n])*0.05;
+      atKoy(n,S[n],laneD(LN[n]));$('at'+n).classList.toggle('kos',t>=t0&&q<1.08)});
+    if(fr%8===0){const g=$('atlar');K.atlar.map(a=>$('at'+a.no)).sort((p,q)=>p.transform.baseVal[0].matrix.f-q.transform.baseVal[0].matrix.f).forEach(el=>g.appendChild(el));
+      $('canli').innerHTML=ord.slice(0,6).map((n,i)=>`<li><b>${i+1}</b><span class="skv-no" style="background:${RENK[(n-1)%RENK.length]}">${n}</span>${ad(n)}</li>`).join('')}
+    if(T&&t>=t0&&si<SP.length&&e>=SP[si][0]*T){soyle(SP[si][1](ord),si===0);si++}
+    const hepsi=K.atlar.every(a=>e/fin[a.no]>=1.12);
+    if(!hepsi)requestAnimationFrame(step);else{koşuyor=false;$('kostur').disabled=false;
+      $('canli').innerHTML=o.slice(0,6).map((x,i)=>`<li><b>${i+1}</b><span class="skv-no" style="background:${RENK[(x.a.no-1)%RENK.length]}">${x.a.no}</span>${x.a.at}</li>`).join('');
       $('sonuc').innerHTML=sira(o.slice(0,4).map(x=>x.a.no),'Sanal sonuç');
       soyle(`Ve kazanan ${ad(o[0].a.no)}! İkinci ${ad(o[1].a.no)}, üçüncü ${ad(o[2].a.no)}.`,true)}};
-  K.atlar.forEach(a=>$('at'+a.no).style.transform='translateX(0)');requestAnimationFrame(step);
+  requestAnimationFrame(step);
 }
 function bin(){
   const N=1000,w={},t3={},t4={},ik={};K.atlar.forEach(a=>{w[a.no]=t3[a.no]=t4[a.no]=0});
@@ -272,7 +322,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:45</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:49</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -318,8 +368,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222145" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222145" defer></script>
-<script src="/assets/uyelik.js?v=202611222145" defer></script>
+<script src="/assets/site.js?v=202611222149" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222149" defer></script>
+<script src="/assets/uyelik.js?v=202611222149" defer></script>
 </body>
 </html>
