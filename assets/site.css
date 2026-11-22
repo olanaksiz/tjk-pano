@@ -2455,3 +2455,9 @@ html.ak-acik{overflow:hidden}
 .yk-liste[open]>.hk-kuponlar{margin-top:14px}
 .sy-puan{display:grid;gap:8px;margin:12px 0;padding:16px;border:1px solid var(--cizgi,#d9d3c4);border-radius:14px}.sy-puan label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.sy-puan input{margin-top:3px;width:18px;height:18px;accent-color:#D8B04A}.sy-puan-sonuc{margin:6px 0 0;font-size:1.05rem}.sy-puan-sonuc b{font-size:1.4rem}
 .sy-tablo-kap .sy-tablo{min-width:640px}
+.rk2-olcut-b{margin:18px 0 10px;font:700 20px/1.2 var(--baslik,inherit)}
+.rk2-olcut{list-style:none;margin:0 0 12px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.rk2-olcut li{border:1px solid rgba(216,176,74,.35);border-radius:12px;padding:10px 12px}
+.rk2-olcut b{display:block;font-weight:700}
+.rk2-olcut span{display:block;font-size:14px;opacity:.85}
+.rk2-giris a{color:inherit;text-decoration:underline}
