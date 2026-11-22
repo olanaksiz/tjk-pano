@@ -12,6 +12,9 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Muhtemel ve AGF](https://tjkdetay.com/muhtemel-agf/): koşu öncesi son oranlar
 - [Canlı yayın](https://tjkdetay.com/canli/): TJK TV resmi YouTube yayınları
 - [Hazır kuponlar](https://tjkdetay.com/hazir-kuponlar/): her altılı için düşük, orta, büyük bütçe ve süper kupon, canlı durum
+- [AGF tablosu](https://tjkdetay.com/agf-tablosu/): bugünün altılılarında ayak ayak AGF yüzdeleri ve eşiğe göre otomatik AGF kuponu
+- [Antrenör istatistikleri](https://tjkdetay.com/antrenorler/): 2026 TJK antrenör sayfaları; galibiyet, kazanma oranı, hipodrom ve pist kırılımı
+- [At sahibi istatistikleri](https://tjkdetay.com/sahipler/): 2026 TJK at sahibi sayfaları; galibiyet, kazanma oranı, en çok kazandıran atlar
 - [Performans](https://tjkdetay.com/performans/): gün gün isabet karnesi
 
 ## Başvuru
