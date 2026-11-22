@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/assets/fonts/BarlowCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=202611222157">
+<link rel="stylesheet" href="/assets/site.css?v=202611222211">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "TJK Detay", "item": "https://tjkdetay.com/"}, {"@type": "ListItem", "position": 2, "name": "Sanal koşu", "item": "https://tjkdetay.com/sanal-kosu/"}]}</script>
 </head>
 <body data-gun="2026-11-22">
@@ -45,7 +45,7 @@
 </div></nav>
 </header>
 <main id="icerik">
-<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 21:57</span></a></div></div>
+<div class="ysay-serit" role="note" aria-label="Bugünkü yorumcu sayısı"><div class="kap"><a href="/yorumcu-ilk-4/"><span class="ysay-ik" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.2 3-5 6-5s5.4 1.8 6 5"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 13.6c2.4.2 4 1.7 4.5 4.4"/></svg></span><span class="ysay-ana"><b>57</b> yorumcu</span><span class="ysay-alt">22 Kasım analizine giren yorumcu sayısı · İzmir <b>46</b> · Adana <b>32</b> · 542 koşu tahmini · güncelleme 22:11</span></a></div></div>
 <p class="deneme-serit" data-deneme hidden></p>
 
 <style>
@@ -222,7 +222,7 @@ const ERKEK=/(cem|tolga|ahmet|mehmet|emre|murat|kerem|male|erkek|man\b)/i, KADIN
 let SESV=null;
 function TRV(){try{const V=speechSynthesis.getVoices().filter(v=>/^tr/i.test(v.lang));if(!V.length)return null;
   SESV=V.find(v=>ERKEK.test(v.name))||null;return SESV||V.find(v=>!KADIN.test(v.name))||V[0]}catch(e){return null}}
-let AC=null;
+let AC=null;const STA=new Audio('/assets/sanal-start.mp3?v=1');STA.preload='auto';
 function gong(){if(!SES)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();
   const t0=AC.currentTime+.02,M=AC.createGain();M.gain.value=.35;
   const hp=AC.createBiquadFilter();hp.type='highpass';hp.frequency.value=600;M.connect(hp);hp.connect(AC.destination);
@@ -243,7 +243,7 @@ function soyle(m,zorla){const p=$('spl');p.textContent=m;p.classList.remove('yen
   if(!SES||!('speechSynthesis' in window))return;try{if(speechSynthesis.speaking&&!zorla)return;if(zorla)speechSynthesis.cancel();
   const u=new SpeechSynthesisUtterance(m);u.lang='tr-TR';const v=TRV();if(v)u.voice=v;u.rate=1.1;u.pitch=SESV?0.95:0.6;speechSynthesis.speak(u)}catch(e){}}
 const ad=n=>{const a=K.atlar.find(x=>x.no===n);return a?a.at:n+' numara'};
-const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
+const SP=[[0.04,o=>`${K.atlar.length} at yolda, ${ad(o[0])} iyi çıktı.`],
  [.17,o=>`İlk metrelerde öne ${ad(o[0])} geçiyor, hemen arkasında ${ad(o[1])}.`],
  [.36,o=>`Yarış oturdu. Önde ${ad(o[0])}, ikinci ${ad(o[1])}, üçüncü ${ad(o[2])}.`],
  [.55,o=>`Yarı mesafe geçildi! ${ad(o[0])} tempoyu sürdürüyor, ${ad(o[1])} yakın takipte.`],
@@ -252,11 +252,17 @@ const SP=[[0,o=>`Ve start verildi! ${K.atlar.length} at yola çıktı.`],
 $('ses').onclick=()=>{SES=!SES;try{localStorage.setItem('skv-ses',SES?'1':'0')}catch(e){}if(!SES)try{speechSynthesis.cancel()}catch(e){};sesYaz()};
 sesYaz();
 function kostur(){
-  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;dizil();$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';soyle('Atlar start makinesinde…',true);gong();
+  if(koşuyor)return;koşuyor=true;$('kostur').disabled=true;dizil();$('sonuc').innerHTML='<span class="skv-sb">Koşu sürüyor…</span>';
   const o=sirala(),T=matchMedia('(prefers-reduced-motion: reduce)').matches?0:16000,D=mesafeD(),s0=SF-D;
   const best=o[0].p,worst=o[o.length-1].p;
   const fin={};o.forEach((x,i)=>fin[x.a.no]=Math.max(1,T)*(1+0.022*i+0.03*(best-x.p)/(Math.max(.05,best-worst))));
-  let t0=performance.now()+(T?1300:0);let si=0,fr=0;const X={},S={};
+  let t0=Infinity;let si=0,fr=0;const X={},S={};
+  const basla=()=>{if(t0===Infinity)t0=performance.now()};
+  $('spl').textContent='Atlar start makinesinde…';
+  if(SES&&T){try{try{speechSynthesis.cancel()}catch(_){}STA.currentTime=0;STA.onended=()=>{$('spl').textContent='Start verildi ve koşu başladı!';basla()};
+      const pr=STA.play();if(pr&&pr.catch)pr.catch(()=>setTimeout(basla,300));setTimeout(basla,6000);
+      setTimeout(()=>{$('spl').textContent='Start verildi ve koşu başladı!'},1800)}catch(e){setTimeout(basla,300)}}
+  else setTimeout(basla,T?400:0);
   const step=t=>{const e=Math.max(0,t-t0);let bitti=true;fr++;
     K.atlar.forEach(a=>{const F=fin[a.no],q=T?e/F:1.2;let pr;
       if(q<1){const wob=(Math.sin((e/900)+a.no*1.7)*0.035+Math.sin(e/380+a.no)*0.014)*Math.min(1,q*4)*(1-q);pr=Math.max(0,q+wob);bitti=false}
@@ -269,7 +275,7 @@ function kostur(){
       atKoy(n,S[n],laneD(LN[n]));$('at'+n).classList.toggle('kos',t>=t0&&q<1.08)});
     if(fr%8===0){const g=$('atlar');K.atlar.map(a=>$('at'+a.no)).sort((p,q)=>p.transform.baseVal[0].matrix.f-q.transform.baseVal[0].matrix.f).forEach(el=>g.appendChild(el));
       $('canli').innerHTML=ord.slice(0,6).map((n,i)=>`<li><b>${i+1}</b><span class="skv-no" style="background:${RENK[(n-1)%RENK.length]}">${n}</span>${ad(n)}</li>`).join('')}
-    if(T&&t>=t0&&si<SP.length&&e>=SP[si][0]*T){soyle(SP[si][1](ord),si===0);si++}
+    if(T&&t>=t0&&si<SP.length&&e>=SP[si][0]*T){soyle(SP[si][1](ord),false);si++}
     const hepsi=K.atlar.every(a=>e/fin[a.no]>=1.12);
     if(!hepsi)requestAnimationFrame(step);else{koşuyor=false;$('kostur').disabled=false;
       $('canli').innerHTML=o.slice(0,6).map((x,i)=>`<li><b>${i+1}</b><span class="skv-no" style="background:${RENK[(x.a.no-1)%RENK.length]}">${x.a.no}</span>${x.a.at}</li>`).join('');
@@ -330,7 +336,7 @@ ciz();bin();
     <div class="alt-uyari"><span class="yas" aria-label="18 yaş sınırı">18+</span><p>Koşu analizleri bilgi amaçlıdır, bahis tavsiyesi değildir. 18 yaşından küçükler bahis oynayamaz. TJK Detay bağımsız bir analiz sitesidir; Türkiye Jokey Kulübü ile bağlantısı yoktur. Program, sonuç ve ödeme bilgileri TJK'nın kamuya açık yayınlarından derlenir.</p></div>
   </div>
   <div class="alt-yasal"><div class="kap">
-    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 21:57</span></p>
+    <p class="alt-telif">© 2026 Elyapa E-Ticaret Hizmetleri Limited Şirketi<span>Son güncelleme: 22 Kasım 2026, 22:11</span></p>
     <nav aria-label="Yasal bilgiler"><a href="/hakkimizda/reklam-politikasi/">Reklam Politikası</a><a href="/hakkimizda/kullanim-sartlari/">Kullanım Şartları</a><a href="/hakkimizda/cerez-politikasi/">Çerez Politikası</a><a href="/hakkimizda/mesafeli-satis-sozlesmesi/">Mesafeli Satış Sözleşmesi</a><a href="/hakkimizda/on-bilgilendirme-formu/">Ön Bilgilendirme Formu</a><a href="/hakkimizda/iptal-ve-iade/">İptal ve İade Koşulları</a><a href="/hakkimizda/kisisel-verileri-koruma/">Kişisel Verileri Koruma</a></nav>
   </div></div>
 </footer>
@@ -376,8 +382,8 @@ ciz();bin();
   </form>
 </div>
 </dialog>
-<script src="/assets/site.js?v=202611222157" defer></script>
-<script src="/assets/uyelik-ayar.js?v=202611222157" defer></script>
-<script src="/assets/uyelik.js?v=202611222157" defer></script>
+<script src="/assets/site.js?v=202611222211" defer></script>
+<script src="/assets/uyelik-ayar.js?v=202611222211" defer></script>
+<script src="/assets/uyelik.js?v=202611222211" defer></script>
 </body>
 </html>
