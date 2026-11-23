@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 23 Kasım 2026, 08:40. Kaynak: https://tjkdetay.com/
+Güncelleme: 23 Kasım 2026, 09:23. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -643,6 +643,114 @@ C: 18'dir. TJK'nın bahis kurallarında iştirakçinin 18 yaş ve üzerindeki ki
 
 S: Kaybettiğim parayı geri kazanmak için oynamak doğru mu?
 C: Hayır. Kayıp kovalamak bütçe sınırını ortadan kaldırır ve kaybı büyütebilir; her koşu bir öncekinden bağımsızdır.
+
+## At yarışı türleri: düz koşu, engelli koşu ve kriterli koşu
+https://tjkdetay.com/rehber/at-yarisi-turleri/
+
+Dünyada üç ana at yarışı türü vardır: engelsiz düz koşu, engellerin atlandığı steeplechase ve hurdle koşuları ve atın arkasında hafif bir araba (sulky) çektiği kriterli koşu. Türkiye'de TJK yalnız düz koşu düzenler; koşular ırk, yaş, sınıf ve kiloya göre ayrılır.
+
+### Düz koşu (flat racing) nedir?
+Düz koşu, atların engel olmadan belli bir mesafeyi en kısa sürede koştuğu yarıştır. Dünyadaki at yarışlarının büyük çoğunluğu bu türdür ve Türkiye'deki tüm TJK koşuları düz koşudur. Mesafeler genellikle 800 ile 3000 metre arasındadır; Türkiye'de en sık koşulan mesafeler 1200–2000 metredir.Düz koşu çim, kum ya da sentetik pistte yapılır. Pistin etkisini pist türleri rehberinde, mesafe ve pistlere göre en iyi dereceleri pist rekorları sayfasında bulabilirsin.
+
+### Engelli koşular: steeplechase ve hurdle
+Engelli koşularda atlar parkur boyunca çit ve hendek gibi engelleri atlar. Hurdle koşularında engeller daha alçak ve esnektir; steeplechase'te daha yüksek ve sabittir, mesafeler de genellikle uzundur. Bu yarışlar özellikle İngiltere, İrlanda ve Fransa'da yaygındır.Engelli koşular düz koşuya göre daha yaşlı ve dayanıklı atlarla yapılır, düşme riski yüksektir. Türkiye'de TJK programında engelli koşu bulunmaz.
+
+### Kriterli koşu (harness racing) nedir?
+Kriterli koşuda at, arkasında sürücünün oturduğu iki tekerlekli hafif bir araba (sulky) çeker ve dörtnala değil, tırıs ya da yorga yürüyüşüyle koşmak zorundadır. Bu yarışlarda genellikle safkan İngiliz değil, bu iş için yetiştirilen Standardbred gibi ırklar kullanılır. ABD, Kanada, Fransa, İsveç ve Avustralya'da yaygındır; Türkiye'de yapılmaz.
+
+### Türkiye'de düz koşular nasıl sınıflanır?
+TJK koşuları önce ırka göre ayrılır: safkan İngilizler ve safkan Araplar birbirine karşı koşmaz (farkı bu rehberde). Sonra yaşa ve sınıfa göre ayrılır: hiç kazanmamış atlar için maiden, kazanç ve galibiyete göre şartlı koşular, KV koşuları, en üstte G3, G2 ve G1 grup koşuları ve atların kiloyla dengelendiği handikap koşuları.2026'da en çok koşulan koşu türleri maiden (1.104), Şartlı 4 (615) ve Handikap 15 (554) oldu. Ayrıntı koşu cinsleri rehberinde.
+
+### Kilo, yaş ve cinsiyet kuralları neden var?
+İlk yarışlar iki at arasındaki eşleşmelerdi. Alanlar kalabalıklaşınca güçlü atların her yarışı kazanmasını önlemek için kilo ile dengeleme başladı. Yaşa göre kilo (genç atlar daha hafif), dişilere kilo indirimi ve handikap puanı bu fikrin bugünkü biçimleridir.Kilonun sonuca etkisini kilo istatistikleri sayfasında ve kilo rehberinde inceleyebilirsin.
+
+S: Türkiye'de engelli at yarışı var mı?
+C: Hayır. TJK programındaki koşuların tamamı düz koşudur; steeplechase, hurdle ve kriterli koşu yapılmaz.
+
+S: Steeplechase ile hurdle arasındaki fark nedir?
+C: İkisi de engelli koşudur. Hurdle engelleri daha alçak ve esnek, steeplechase engelleri daha yüksek ve sabittir; steeplechase mesafeleri genellikle daha uzundur.
+
+S: Kriterli koşuda hangi atlar koşar?
+C: Genellikle Standardbred gibi tırıs ve yorga yürüyüşü için yetiştirilen ırklar. At arkasında sulky denen hafif bir araba çeker.
+
+S: Türkiye'de en sık koşulan koşu türü hangisi?
+C: 2026 TJK sonuçlarında en sık maiden koşuları (1.104 koşu) yapıldı; onları Şartlı 4 ve Handikap 15 izledi.
+
+## At yarışının tarihi: antik çağdan Veliefendi'ye
+https://tjkdetay.com/rehber/at-yarisinin-tarihi/
+
+At yarışı binlerce yıllık bir yarışmadır; bugünkü kuralları büyük ölçüde 17. ve 18. yüzyıl İngiltere'sinde şekillendi. Türkiye'de yarışlar Osmanlı döneminde İzmir'de başladı. Cumhuriyetle birlikte 1927'de ilk Gazi Koşusu yapıldı, Türkiye Jokey Kulübü 1950'de kuruldu ve 1953'te yarış düzenleme yetkisi aldı.
+
+### At yarışı ne zaman başladı?
+Atların hızını yarıştırmak, atın evcilleştirilmesi kadar eski bir uğraştır. Antik Yunan'daki olimpiyat oyunlarında araba ve atlı yarışlar vardı; Roma'da araba yarışları en büyük kalabalıkları toplayan gösterilerdi. Orta Doğu, Orta Asya ve Kuzey Afrika'da da çöl ve bozkır atlarıyla yarışlar yapılıyordu.Bugünkü anlamıyla organize yarışçılık ise İngiltere'de gelişti. Doğu'dan getirilen Arap, Türk ve Berberi (Barb) atları yerli kısraklarla birleştirildi; kraliyet ailesinin desteğiyle yarışlar düzenli hâle geldi ve Newmarket bu sporun merkezi oldu.
+
+### Kurallar nasıl ortaya çıktı?
+İlk yarışlar genellikle iki ya da üç at arasında, sahiplerin kendi aralarında koyduğu bahisle yapılan karşılaşmalardı. Sahibi atını yarıştan çekerse bahsi kaybederdi; bu 'oyna ya da öde' kuralı bugünkü koşu kayıt düzeninin atasıdır.Zamanla alanlar kalabalıklaştı ve koşulara yaş, cinsiyet, doğum yeri ve geçmiş başarıya göre katılım şartları getirildi. Atlar arasındaki farkı dengelemek için kilo verilmeye başlandı; handikap fikri buradan doğdu. Birkaç tur üzerinden yapılan 'heat' yarışlarının yerini tek seferlik koşular aldı ve bu değişim jokeyin ustalığını da öne çıkardı.Bugün Türkiye'de gördüğümüz maiden, şartlı, KV ve grup koşuları ile handikap puanı bu uzun gelişimin sonucudur.
+
+### Safkan İngiliz atı nasıl doğdu?
+17. yüzyılın sonu ile 18. yüzyılın başında İngiltere'ye getirilen üç aygır, safkan İngiliz atının kurucuları kabul edilir: Byerley Turk, Darley Arabian ve Godolphin Arabian. 1791'de ilk kez yayımlanan General Stud Book, bu soydan gelen atları kayıt altına aldı ve 'safkan' kavramını resmîleştirdi.Bu konunun ayrıntısı safkan İngiliz ve safkan Arap rehberinde.
+
+### Türkiye'de at yarışı nasıl başladı?
+Osmanlı'da organize yarışlar 19. yüzyılın ortalarında İzmir'de, özellikle Levanten ailelerin öncülüğünde başladı. TJK arşivindeki bir fotoğraf, 19 Nisan 1909'daki İzmir yarışlarının büyük bir kalabalık topladığını gösterir. Veliefendi Hipodromu 1912–1913'te Enver Paşa'nın girişimiyle Alman uzmanlara inşa ettirildi.Cumhuriyetin ilk yıllarında yarışlar İzmir'in yanında İstanbul, Ankara, Samsun, Urfa ve Bursa'da da düzenlendi. Mustafa Kemal Atatürk at yetiştiriciliğini ve yarışları destekledi.
+
+### Gazi Koşusu ne zaman başladı?
+İlk Gazi Koşusu 10 Haziran 1927'de Ankara'da, Mustafa Kemal'in de izlediği yarışla koşuldu; mesafe 2000 metreydi ve yarışı Neriman kazandı. Koşu bugün İstanbul Veliefendi'de, 3 yaşlı safkan İngilizler için 2400 metre çim pistte yapılıyor. 100. Gazi Koşusu 28 Haziran 2026'da koşuldu.Gazi'nin en iyi derecesi 1996'da Bold Pilot'un 2.26.22'sidir. Yıllara göre kazananlar Gazi Koşusu kazananları sayfasında.
+
+### Türkiye Jokey Kulübü ne zaman kuruldu?
+Türkiye Jokey Kulübü Kasım 1950'de İzmir'de kuruldu ve 1951'de Ankara'da ilk merkezini açtı. Temmuz 1953'te yürürlüğe giren 6132 sayılı Kanun, kulübe Tarım Bakanlığı denetiminde yarış düzenleme yetkisi verdi; kulübün düzenlediği ilk yarış Eylül 1953'te yapıldı.Bugün TJK on hipodromda yarış düzenliyor: İstanbul, Ankara, İzmir, Bursa, Adana, Kocaeli, Elazığ, Diyarbakır, Şanlıurfa ve Antalya. Hipodromların pist bilgileri Türkiye'deki hipodromlar rehberinde.
+
+### Türk yarışçılığı bugün nasıl?
+Türkiye, İngiliz ve Fransız geleneğini izler: çim pist ve uzun mesafeler önemlidir, ama kış sezonunda kum ve sentetik pistler de yoğun kullanılır. Ülkemizi farklı kılan bir özellik, safkan Arap koşularının programda büyük yer tutmasıdır.TJK Detay'ın 2026 sonuç arşivinde (1 Ocak – 9 Kasım) 5.362 koşunun 2.364'ü, yani yaklaşık %44'ü safkan Arap koşusudur. Sezonun akışı da tarihsel bir düzen izler: ilkbaharda derbiler, Haziran'da Gazi, kışın ise yarışlar Adana, İzmir, Antalya ve Şanlıurfa gibi güneydeki hipodromlara taşınır.
+
+S: İlk Gazi Koşusu ne zaman yapıldı?
+C: İlk Gazi Koşusu 10 Haziran 1927'de Ankara'da 2000 metrede koşuldu ve Neriman kazandı.
+
+S: Türkiye Jokey Kulübü ne zaman kuruldu?
+C: Kasım 1950'de İzmir'de kuruldu; 1953'te yürürlüğe giren 6132 sayılı Kanun ile yarış düzenleme yetkisi aldı ve ilk yarışını Eylül 1953'te düzenledi.
+
+S: Veliefendi Hipodromu ne zaman yapıldı?
+C: Veliefendi 1912–1913 yıllarında Enver Paşa'nın girişimiyle inşa edildi ve 1913'te açıldı.
+
+S: Gazi Koşusu'nun rekoru kimde?
+C: En iyi derece 1996'da Halis Karataş'ın bindiği Bold Pilot'un 2.26.22'sidir.
+
+S: At yarışında handikap fikri nereden geliyor?
+C: Kalabalık alanlarda atların şansını eşitlemek için güçlü atlara daha fazla kilo verilmesiyle doğdu. Türkiye'de bugün handikap puanı ile uygulanır.
+
+## Safkan İngiliz ve safkan Arap: kan hatları ve soy kütüğü
+https://tjkdetay.com/rehber/safkan-ingiliz-ve-safkan-arap/
+
+Safkan İngiliz atı hız için 18. yüzyıl İngiltere'sinde Doğu kökenli üç aygırdan geliştirilmiş bir ırktır; safkan Arap ise çok daha eski, dayanıklı ve daha yavaş bir ırktır. Türkiye'de iki ırk ayrı koşularda yarışır: 2026'da 1400 metre kumda kazanan İngiliz atları Araplardan ortalama 9–10 saniye hızlı koştu.
+
+### Safkan İngiliz ile safkan Arap arasındaki fark nedir?
+Safkan İngiliz (Thoroughbred), yarış için ıslah edilmiş, daha uzun bacaklı ve daha hızlı bir ırktır. Safkan Arap ise binlerce yıllık bir çöl atıdır; daha küçük yapılı, dayanıklı ve hızı daha düşüktür. Bu yüzden iki ırk Türkiye'de birbirine karşı koşmaz; programda 'İngilizler' ve 'Araplar' koşuları ayrıdır.Farkı TJK Detay'ın 2026 sonuç arşivi açıkça gösteriyor (kazanan dereceleri, ortanca):Mesafe ve pistSafkan İngilizSafkan ArapFark1400 m kum1.28.57 (421 koşu)1.38.24 (317 koşu)≈ 9,7 sn2000 m kum2.12.19 (203 koşu)2.25.29 (152 koşu)≈ 13,1 snMesafe uzadıkça fark büyür; 1400 metrede 9–10 saniye, yaklaşık 50–60 boy demektir.
+
+### Safkan İngiliz atı nereden geliyor?
+Safkan İngiliz atının kurucuları kabul edilen üç aygır Doğu kökenlidir: 1680'lerde İngiltere'ye gelen Byerley Turk, 1704'te gelen Darley Arabian ve 1729'da gelen Godolphin Arabian. Bu aygırlar yerli İngiliz kısraklarıyla çiftleştirildi. Bugün erkek safkan İngilizlerin yaklaşık %95'inin baba hattı, Darley Arabian'ın torununun torunu olan ünlü Eclipse üzerinden ona uzanır.Kısacası adı 'İngiliz' olan bu ırkın kökünde Arap ve Türk atları vardır; 'Byerley Turk' adı da bunu gösterir.
+
+### Soy kütüğü (studbook) neden önemli?
+1791'de ilk kez yayımlanan General Stud Book, safkan İngiliz atlarının kaydını tutan ilk soy kütüğüdür. Bir atın 'safkan' sayılması için annesinin ve babasının bu kütükte kayıtlı olması gerekir. Fransa ve ABD de sonradan kendi kütüklerini kurdu; İngiltere 1913'teki Jersey Act ile bazı yabancı kökenli atları kütük dışı bıraktı, bu kural 1949'da kaldırıldı.Türkiye'de safkan Arap ve İngiliz atlarının soy kütüğü yönetmelikle düzenlenir; her yarış atının orijini (baba – anne / annenin babası) programda yazılıdır. Bunu nasıl okuyacağını orijin sözlük maddesinde bulabilirsin.
+
+### Türkiye'de safkan Arap yarışçılığı
+Türkiye, yarış programının çok büyük bir kısmını safkan Arap koşularına ayıran ülkelerdendir. 2026 arşivimizde 5.362 koşunun 2.364'ü (%44) Arap koşusuydu. Arap atlarının önemli bir bölümü TİGEM'in haralarında yetiştirilir; Bursa Karacabey ve Malatya Sultansuyu bunların en köklüleridir ve her yıl koşu tayları açık artırmayla satılır.2026'da en çok galibiyet çıkaran Arap aygırları Fatih Ağa, Turbo, Gümbürgümbür, Gelibolu ve Ayabakan oldu; tamamı yerli yetiştirme aygırlardır. İngiliz koşularında ise kazananların yaklaşık %76'sının babası yurt dışında doğmuş (USA, IRE, GB gibi) aygırlardır.
+
+### Pedigriyi yarış analizinde nasıl kullanırsın?
+Baba ve annenin babası, atın mesafe ve pist eğilimi hakkında ipucu verir: bazı aygırların yavruları kısa mesafede, bazılarınınki çimde ya da kumda daha başarılıdır. Günün atlarının babalarına göre başarı oranlarını aygır istatistikleri, annelere göre kısrak istatistikleri, günün akrabalı yetiştirmelerini pedigri sayfasında görebilirsin.Pedigri yardımcı bir veridir; atın kendi formu, derecesi ve idmanı her zaman önce gelir.
+
+S: Safkan Arap mı daha hızlı, safkan İngiliz mi?
+C: Safkan İngiliz. 2026 TJK sonuçlarında 1400 metre kumda kazanan İngilizlerin ortanca derecesi 1.28.57, Arapların 1.38.24 oldu; fark yaklaşık 9,7 saniye.
+
+S: Safkan İngiliz ile Arap aynı koşuda yarışır mı?
+C: Hayır. Türkiye'de iki ırk ayrı koşularda yarışır; koşu başlığında 'İngilizler' ya da 'Araplar' yazar.
+
+S: Safkan İngiliz atının kurucu aygırları hangileri?
+C: Byerley Turk (1680'ler), Darley Arabian (1704) ve Godolphin Arabian (1729). Erkek safkan İngilizlerin yaklaşık %95'i baba hattından Darley Arabian'a uzanır.
+
+S: Türkiye'de Arap atları nerede yetiştirilir?
+C: Önemli bir kısmı TİGEM'in Karacabey (Bursa) ve Sultansuyu (Malatya) gibi haralarında, bir kısmı da özel yetiştiricilerin yanında yetiştirilir.
+
+S: General Stud Book nedir?
+C: Safkan İngiliz atlarının kaydını tutan ilk soy kütüğüdür; ilk kez 1791'de yayımlandı.
 
 ## 2026 sezonu jokey istatistikleri (ilk 40, galibiyete göre)
 Kaynak: TJK jokey istatistikleri. Ayrıntı: https://tjkdetay.com/jokeyler/
