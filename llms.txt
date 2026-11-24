@@ -1,5 +1,7 @@
 # TJK Detay
 
+> TJK Detay (tjkdetay.com) nedir? Türkiye at yarışları için yapay zekâ destekli, bağımsız at yarışı analiz platformu. Ücretsiz yapay zeka at yarışı araçları (sanal koşu, banko, karne) ve tahmin sayfası: https://tjkdetay.com/yapay-zeka-at-yarisi-tahminleri/
+
 > Türkiye at yarışları (TJK) için bağımsız günlük koşu analizi: her koşu için kural tablosundan çıkan ilk 4, yorumcu favorisi ve sürpriz olasılığı; koşu sonrası sonuç ve ödemeler. Ayrıca at yarışı sözlüğü, rehber yazıları ve jokey istatistikleri. Bilgi amaçlıdır, bahis tavsiyesi değildir. Türkiye Jokey Kulübü ile bağlantısı yoktur, bahis kabul etmez.
 
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
