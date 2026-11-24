@@ -2577,3 +2577,4 @@ html.ak-acik{overflow:hidden}
 .mmenu[open] .akm-g>summary{background:none;border-color:#1A3566;color:inherit;border-radius:0;box-shadow:none}
 @media (min-width:900px){.mm-panel .mm-alt{display:none}.mm-panel .akm-g>summary{display:flex;align-items:center;gap:8px;border-width:0 0 1px;border-style:solid}}
 .mm-panel .akm-g>summary{color:#EAF1FB}.mm-panel .akm-g>summary small{color:#9FB3D1;opacity:1}
+.mm-panel .akm-g>summary b{color:#fff!important;grid-column:2}.mm-panel .akm-g>summary small{grid-column:2;grid-row:2}@media (min-width:900px){.mm-panel .akm-g>summary b{color:#F2CE6B!important}}
