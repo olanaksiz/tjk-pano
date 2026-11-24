@@ -2555,3 +2555,22 @@ html.ak-acik{overflow:hidden}
 .kx-srp-uyari small{display:block;margin-top:6px;color:var(--soluk)}
 .kx-is-bos{font-size:13px;color:var(--soluk)}
 @media (max-width:760px){.kx-ilksira li{grid-template-columns:auto minmax(0,1fr) auto}.kx-is-y{display:none}}
+/* Masaüstü mega menü: Menü'ye tek tıkla TÜM menüler açık, sütunlar halinde (kullanıcı 24.11 20:54) */
+@media (min-width:900px){
+ .mmenu{position:static}
+ .mmenu summary{font-size:15px;padding:10px 16px}
+ .mm-panel{position:fixed;left:0;right:0;top:var(--mm-ust,74px);width:auto;max-height:calc(100vh - var(--mm-ust,74px) - 12px);overflow:auto;border-radius:0 0 18px 18px;border-left:0;border-right:0;padding:18px max(24px,calc((100vw - 1280px)/2)) 22px}
+ .mm-panel .akm{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;align-items:start;padding:0}
+ .mm-panel .akm-g{margin:0;background:transparent;border:0;border-radius:0}
+ .mm-panel .akm-g>summary{pointer-events:none;padding:0 0 8px;border-bottom:1px solid #1A3566;margin-bottom:6px}
+ .mm-panel .akm-g>summary::after{display:none}
+ .mm-panel .akm-g>summary small{display:none}
+ .mm-panel .akm-g>summary b{font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:#F2CE6B}
+ .mm-panel .akm-i{font-size:18px}
+ .mm-panel .akm-g ul{display:flex;flex-direction:column;gap:2px;padding:0}
+ .mm-panel .akm-g li a{background:transparent;padding:6px 8px;border-radius:7px}
+ .mm-panel .akm-g li a b{font-size:14px;font-weight:600}
+ .mm-panel .akm-g li a small{font-size:11.5px}
+ .mm-panel .akm-g li a:hover{background:rgba(61,139,255,.18)}
+}
+@media (min-width:1400px){.mm-panel .akm{grid-template-columns:repeat(7,minmax(0,1fr))}}
