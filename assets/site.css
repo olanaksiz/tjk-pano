@@ -2517,3 +2517,16 @@ html.ak-acik{overflow:hidden}
 .akm-g li a:hover{background:rgba(127,140,170,.2)}
 .akm-g li a b{font-size:14.5px}
 .akm-g li a small{opacity:.7;font-size:12.5px}
+
+/* Menü (hamburger) masaüstünde de: akordiyon panel (kullanıcı 24.11 13:49) */
+.mmenu{display:block;margin-left:10px;position:relative}
+.mmenu summary{list-style:none;display:flex;align-items:center;gap:8px;padding:9px 12px;border:1.5px solid #2A3F66;border-radius:10px;font:600 15px/1 var(--govde);color:#EAF1FB;cursor:pointer}
+.mmenu summary::-webkit-details-marker{display:none}
+.mmenu[open] summary{background:linear-gradient(180deg,#3D8BFF,#1F64E0);border-color:#3D8BFF;color:#fff}
+@media (min-width:761px){
+ .mm-panel{position:absolute;right:0;left:auto;top:calc(100% + 8px);width:min(560px,92vw);background:#00081A;border:1px solid #12284D;border-radius:14px;padding:14px;box-shadow:0 24px 50px -16px rgba(0,0,0,.6);max-height:calc(100vh - 90px);overflow:auto;z-index:60;color:#EAF1FB}
+}
+.mm-panel .akm{padding:6px 0}
+.mm-panel .akm-g{border-color:#1A3566;background:rgba(61,139,255,.06)}
+.mm-panel .akm-g li a{background:rgba(255,255,255,.05);color:#EAF1FB}
+.mm-panel .akm-g li a:hover{background:rgba(61,139,255,.18)}
