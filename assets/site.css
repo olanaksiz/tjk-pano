@@ -2574,3 +2574,5 @@ html.ak-acik{overflow:hidden}
  .mm-panel .akm-g li a:hover{background:rgba(61,139,255,.18)}
 }
 @media (min-width:1400px){.mm-panel .akm{grid-template-columns:repeat(7,minmax(0,1fr))}}
+.mmenu[open] .akm-g>summary{background:none;border-color:#1A3566;color:inherit;border-radius:0;box-shadow:none}
+@media (min-width:900px){.mm-panel .mm-alt{display:none}.mm-panel .akm-g>summary{display:flex;align-items:center;gap:8px;border-width:0 0 1px;border-style:solid}}
