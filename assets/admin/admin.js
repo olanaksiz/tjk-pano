@@ -61,7 +61,7 @@
     // kolonlar: [{ad, deger(row)->string|Node, sinif}]
     tablo: function (alan, kolonlar, satirlar, bos) {
       var sar = el('div', 'ad-tablo-sar'); var t = el('table', 'ad-tablo'); var th = el('thead'); var tr = el('tr');
-      kolonlar.forEach(function (k) { tr.appendChild(el('th', k.sinif || '', k.ad)); }); th.appendChild(tr); t.appendChild(th);
+      kolonlar.forEach(function (k) { var h = el('th', k.sinif || '', k.ad); h.scope = 'col'; tr.appendChild(h); }); th.appendChild(tr); t.appendChild(th);
       var tb = el('tbody');
       if (!satirlar.length) { var r = el('tr'); var td = el('td', 'ad-bos', bos || 'Kayıt yok.'); td.colSpan = kolonlar.length; r.appendChild(td); tb.appendChild(r); }
       satirlar.forEach(function (s) {

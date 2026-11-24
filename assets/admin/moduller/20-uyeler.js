@@ -10,15 +10,15 @@ TJKDAdmin.modul({
       var ust = A.el('div', 'ad-arac');
       var ara = A.el('input', 'ad-girdi'); ara.type = 'search'; ara.placeholder = 'Ad, e-posta ya da telefon ara'; ara.setAttribute('aria-label', 'Üye ara');
       var fil = A.el('select', 'ad-girdi'); [['', 'Tüm üyeler'], ['premium', 'Premium üyeler'], ['ucretsiz', 'Ücretsiz üyeler'], ['odeme', 'Ödemeye geçenler'], ['ileti', 'İleti onayı verenler'], ['kupon', 'Hazır kuponlardan gelenler']].forEach(function (x) { var o = A.el('option', '', x[1]); o.value = x[0]; fil.appendChild(o); });
-      var say = A.el('span', 'ad-not');
+      var say = A.el('span', 'ad-not'); say.setAttribute('aria-live', 'polite');
       var csv = A.el('button', 'ad-dugme ikincil', 'CSV indir'); csv.type = 'button';
       [ara, fil, say, csv].forEach(function (x) { ust.appendChild(x); });
       var kutu = A.kutu(alan, 'Üye listesi'); kutu.classList.add('ad-tamsayfa', 'ad-uy');
       // premium başlık şeridi: özet sayılar (tıklanınca filtre)
-      var hafta = Date.now() - 7 * 864e5;
+      var hafta = Date.now() - 7 * 864e5, yeniMi = false;
       var ozet = [['', 'Toplam üye', U.length], ['premium', 'Premium', U.filter(function (u) { return A.premiumMu(u); }).length], ['ucretsiz', 'Ücretsiz', U.filter(function (u) { return !A.premiumMu(u); }).length], ['odeme', 'Ödemeye geçen', U.filter(function (u) { return odemeci[u.id]; }).length], ['yeni', 'Son 7 gün yeni', U.filter(function (u) { return new Date(u.created_at).getTime() >= hafta; }).length]];
-      var hero = A.el('div', 'ad-uy-hero');
-      ozet.forEach(function (x) { var b = A.el('button', 'ad-uy-kpi' + (x[0] === 'premium' ? ' altin' : '')); b.type = 'button'; b.appendChild(A.el('b', '', String(x[2]))); b.appendChild(A.el('span', '', x[1])); b.addEventListener('click', function () { fil.value = x[0] === 'yeni' ? '' : x[0]; ciz(); }); hero.appendChild(b); });
+      var hero = A.el('div', 'ad-uy-hero'); hero.setAttribute('role', 'group'); hero.setAttribute('aria-label', 'Üye özeti, tıklayınca listeyi filtreler');
+      ozet.forEach(function (x) { var b = A.el('button', 'ad-uy-kpi' + (x[0] === 'premium' ? ' altin' : '')); b.type = 'button'; b.appendChild(A.el('b', '', String(x[2]))); b.appendChild(A.el('span', '', x[1])); b.dataset.f = x[0]; b.setAttribute('aria-pressed', 'false'); b.addEventListener('click', function () { yeniMi = x[0] === 'yeni'; fil.value = yeniMi ? '' : x[0]; ciz(); }); hero.appendChild(b); });
       kutu.appendChild(hero); kutu.appendChild(ust);
       var yer = A.el('div'); kutu.appendChild(yer);
       function liste() {
@@ -29,6 +29,7 @@ TJKDAdmin.modul({
           if (f === 'odeme' && !odemeci[u.id]) return false;
           if (f === 'ileti' && !u.ileti_onay) return false;
           if (f === 'kupon' && u.kaynak !== 'kupon') return false;
+          if (yeniMi && new Date(u.created_at).getTime() < hafta) return false;
           return !q || [u.ad_soyad, u.eposta, u.telefon].join(' ').toLocaleLowerCase('tr-TR').indexOf(q) >= 0;
         });
       }
@@ -78,6 +79,8 @@ TJKDAdmin.modul({
       }
       function ciz() {
         var L = liste(); yer.textContent = ''; say.textContent = L.length + ' üye';
+        L.forEach(function (u) { u.__sinif = A.premiumMu(u) ? 'ad-uy-prem' : ''; });
+        Array.prototype.forEach.call(hero.children, function (b) { var on = yeniMi ? b.dataset.f === 'yeni' : b.dataset.f === fil.value; b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
         A.tablo(yer, [
           {ad: 'Ad soyad', deger: function (u) { var w = A.el('span', 'ad-uye'); if (u.foto_url) { var i = A.el('img', 'ad-uye-foto'); i.src = u.foto_url; i.alt = ''; i.width = 28; i.height = 28; w.appendChild(i); } else { w.appendChild(A.el('span', 'ad-uy-bas', ((u.ad_soyad || u.eposta || '?').trim().split(/\s+/).slice(0, 2).map(function (k) { return k.charAt(0); }).join('') || '?').toLocaleUpperCase('tr-TR'))); } w.appendChild(document.createTextNode(u.ad_soyad || '—')); return w; }},
           {ad: 'E-posta', deger: function (u) { return u.eposta; }},
@@ -89,8 +92,9 @@ TJKDAdmin.modul({
           {ad: 'Son hareket', deger: function (u) { return son[u.id] ? (A.OLAY_AD[son[u.id].tur] || son[u.id].tur) + ' · ' + A.tarih(son[u.id].created_at) : '—'; }},
           {ad: 'İşlem', deger: islem}
         ], L, 'Bu filtreye uyan üye yok.');
+        var cap = A.el('caption', 'ad-gizli', 'Üye listesi: ' + L.length + ' üye'); var tb = yer.querySelector('table'); tb.insertBefore(cap, tb.firstChild);
       }
-      ara.addEventListener('input', ciz); fil.addEventListener('change', ciz);
+      ara.addEventListener('input', ciz); fil.addEventListener('change', function () { yeniMi = false; ciz(); });
       csv.addEventListener('click', function () {
         A.csv('tjkdetay-uyeler', [['Ad soyad', 'E-posta', 'Telefon', 'Kayıt', 'Premium', 'Premium bitiş', 'Ödemeye geçti', 'İleti onayı', 'Kaynak']].concat(liste().map(function (u) {
           return [u.ad_soyad, u.eposta, u.telefon, u.created_at, A.premiumMu(u) ? 'evet' : 'hayır', u.premium_bitis || '', odemeci[u.id] ? 'evet' : 'hayır', u.ileti_onay ? 'evet' : 'hayır', u.kaynak || ''];
