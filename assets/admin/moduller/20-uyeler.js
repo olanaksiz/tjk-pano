@@ -13,7 +13,13 @@ TJKDAdmin.modul({
       var say = A.el('span', 'ad-not');
       var csv = A.el('button', 'ad-dugme ikincil', 'CSV indir'); csv.type = 'button';
       [ara, fil, say, csv].forEach(function (x) { ust.appendChild(x); });
-      var kutu = A.kutu(alan, 'Üye listesi'); kutu.classList.add('ad-tamsayfa'); kutu.appendChild(ust);
+      var kutu = A.kutu(alan, 'Üye listesi'); kutu.classList.add('ad-tamsayfa', 'ad-uy');
+      // premium başlık şeridi: özet sayılar (tıklanınca filtre)
+      var hafta = Date.now() - 7 * 864e5;
+      var ozet = [['', 'Toplam üye', U.length], ['premium', 'Premium', U.filter(function (u) { return A.premiumMu(u); }).length], ['ucretsiz', 'Ücretsiz', U.filter(function (u) { return !A.premiumMu(u); }).length], ['odeme', 'Ödemeye geçen', U.filter(function (u) { return odemeci[u.id]; }).length], ['yeni', 'Son 7 gün yeni', U.filter(function (u) { return new Date(u.created_at).getTime() >= hafta; }).length]];
+      var hero = A.el('div', 'ad-uy-hero');
+      ozet.forEach(function (x) { var b = A.el('button', 'ad-uy-kpi' + (x[0] === 'premium' ? ' altin' : '')); b.type = 'button'; b.appendChild(A.el('b', '', String(x[2]))); b.appendChild(A.el('span', '', x[1])); b.addEventListener('click', function () { fil.value = x[0] === 'yeni' ? '' : x[0]; ciz(); }); hero.appendChild(b); });
+      kutu.appendChild(hero); kutu.appendChild(ust);
       var yer = A.el('div'); kutu.appendChild(yer);
       function liste() {
         var q = (ara.value || '').toLocaleLowerCase('tr-TR'), f = fil.value;
@@ -73,7 +79,7 @@ TJKDAdmin.modul({
       function ciz() {
         var L = liste(); yer.textContent = ''; say.textContent = L.length + ' üye';
         A.tablo(yer, [
-          {ad: 'Ad soyad', deger: function (u) { var w = A.el('span', 'ad-uye'); if (u.foto_url) { var i = A.el('img', 'ad-uye-foto'); i.src = u.foto_url; i.alt = ''; i.width = 28; i.height = 28; w.appendChild(i); } w.appendChild(document.createTextNode(u.ad_soyad || '—')); return w; }},
+          {ad: 'Ad soyad', deger: function (u) { var w = A.el('span', 'ad-uye'); if (u.foto_url) { var i = A.el('img', 'ad-uye-foto'); i.src = u.foto_url; i.alt = ''; i.width = 28; i.height = 28; w.appendChild(i); } else { w.appendChild(A.el('span', 'ad-uy-bas', ((u.ad_soyad || u.eposta || '?').trim().split(/\s+/).slice(0, 2).map(function (k) { return k.charAt(0); }).join('') || '?').toLocaleUpperCase('tr-TR'))); } w.appendChild(document.createTextNode(u.ad_soyad || '—')); return w; }},
           {ad: 'E-posta', deger: function (u) { return u.eposta; }},
           {ad: 'Telefon', deger: function (u) { return u.telefon || '—'; }},
           {ad: 'Kayıt', deger: function (u) { return A.tarih(u.created_at); }},
