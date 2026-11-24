@@ -2536,3 +2536,22 @@ html.ak-acik{overflow:hidden}
 .yz-gorsel{margin:22px 0 4px;max-width:1100px}
 .yz-gorsel img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid #1A3566;box-shadow:0 30px 60px -30px rgba(61,139,255,.55)}
 .yz-gorsel figcaption{margin-top:8px;font-size:13px;color:#8FA6C8}
+
+/* sol sütun: yorumcuların 1. sıraya yazdığı atlar + sürpriz uyarısı (kullanıcı 24.11 14:51) */
+.kx-ilksira{margin-top:14px;padding:12px 14px;border-radius:12px;border:1px solid var(--cizgi);background:var(--beyaz)}
+.kx-ilksira ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.kx-ilksira li{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;padding:7px 10px;border-radius:9px;background:#F6F8FB;font-size:14px}
+.kx-ilksira li b{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kx-ilksira li em{grid-column:2/-1;font-style:normal;font-size:12px;color:var(--soluk)}
+.kx-ilksira li.biz{background:var(--cim-acik)}
+.kx-ilksira li.biz em{color:var(--cim);font-weight:600}
+.kx-ilksira li.srp{background:#FFF4E5;border:1px solid #F2C14E}
+.kx-ilksira li.srp em{color:#B26A00;font-weight:700}
+.kx-ilksira li.dis em{color:#B3261E;font-weight:600}
+.kx-is-n{font-size:13px;white-space:nowrap}.kx-is-n b{font-size:15px}.kx-is-n small{color:var(--soluk)}
+.kx-is-y{font-size:12px;color:var(--soluk);white-space:nowrap}
+.kx-srp-uyari{margin-top:10px;padding:10px 12px;border-radius:10px;background:#FFF4E5;border:1px solid #F2C14E;border-left:4px solid #E8A317;font-size:13.5px}
+.kx-srp-uyari p{margin:6px 0 0;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.kx-srp-uyari small{display:block;margin-top:6px;color:var(--soluk)}
+.kx-is-bos{font-size:13px;color:var(--soluk)}
+@media (max-width:760px){.kx-ilksira li{grid-template-columns:auto minmax(0,1fr) auto}.kx-is-y{display:none}}
