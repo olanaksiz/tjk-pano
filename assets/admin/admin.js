@@ -66,7 +66,7 @@
       if (!satirlar.length) { var r = el('tr'); var td = el('td', 'ad-bos', bos || 'Kayıt yok.'); td.colSpan = kolonlar.length; r.appendChild(td); tb.appendChild(r); }
       satirlar.forEach(function (s) {
         var r = el('tr'); if (s.__sinif) r.className = s.__sinif;
-        kolonlar.forEach(function (k) { var td = el('td', k.sinif || ''); var v = k.deger(s); if (v instanceof Node) td.appendChild(v); else td.textContent = v == null ? '' : String(v); if (k.baslik) td.setAttribute('data-l', k.ad); r.appendChild(td); });
+        kolonlar.forEach(function (k) { var td = el('td', k.sinif || ''); var v = k.deger(s); if (v instanceof Node) td.appendChild(v); else td.textContent = v == null ? '' : String(v); if (k.ad) td.setAttribute('data-l', k.ad); r.appendChild(td); });
         tb.appendChild(r);
       });
       t.appendChild(tb); sar.appendChild(t); alan.appendChild(sar); return t;

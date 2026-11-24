@@ -145,4 +145,17 @@ input.ad-girdi[type=search]{flex:1 1 260px}
 /* Üyeler: tam sayfa genişlik (kullanıcı 24.11) */
 .ad-icerik:has(.ad-tamsayfa){max-width:none}
 .ad-tamsayfa{width:100%}
-.ad-tamsayfa table{width:100%;min-width:max-content}
+/* tam sayfa: yatay kaydırma yok, hücreler sarılır (kullanıcı 24.11 13:48) */
+.ad-tamsayfa .ad-tablo-sar{overflow-x:visible}
+.ad-tamsayfa .ad-tablo{width:100%;min-width:0;table-layout:auto;font-size:13.5px}
+.ad-tamsayfa .ad-tablo th,.ad-tamsayfa .ad-tablo td{white-space:normal;overflow-wrap:anywhere;padding:9px 8px}
+.ad-tamsayfa .ad-islem{flex-wrap:wrap;gap:5px;min-width:180px;max-width:280px}
+.ad-tamsayfa .ad-islem .ad-dugme,.ad-tamsayfa .ad-islem .ad-girdi{white-space:normal;min-height:30px;padding:3px 9px;font-size:12.5px;line-height:1.2}
+@media (max-width:900px){
+ .ad-tamsayfa .ad-tablo thead{display:none}
+ .ad-tamsayfa .ad-tablo,.ad-tamsayfa .ad-tablo tbody,.ad-tamsayfa .ad-tablo tr,.ad-tamsayfa .ad-tablo td{display:block;width:100%}
+ .ad-tamsayfa .ad-tablo tr{border-bottom:1px solid #E7ECF3;padding:8px 0}
+ .ad-tamsayfa .ad-tablo td{border:0;padding:3px 10px}
+ .ad-tamsayfa .ad-tablo td[data-l]::before{content:attr(data-l) ": ";font-weight:600;color:#5B6B82}
+ .ad-tamsayfa .ad-islem{max-width:none}
+}
