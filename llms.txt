@@ -51,14 +51,10 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 - [Şanlıurfa at yarışı tahminleri](https://tjkdetay.com/sanliurfa-at-yarisi-tahminleri/) · [Şanlıurfa at yarışı sonuçları](https://tjkdetay.com/sanliurfa-at-yarisi-sonuclari/)
 - [Antalya at yarışı tahminleri](https://tjkdetay.com/antalya-at-yarisi-tahminleri/) · [Antalya at yarışı sonuçları](https://tjkdetay.com/antalya-at-yarisi-sonuclari/)
 
-## Bugün (23 Kasım 2026)
-- Bursa: 9 koşu, 13:30–17:30; 1. altılı 1.–6. koşular (13:30); 2. altılı 4.–9. koşular (15:00)
-- Şanlıurfa: 8 koşu, 18:00–21:30; 1. altılı 1.–6. koşular (18:00); 2. altılı 3.–8. koşular (19:00)
-- Bursa 1. 6'lı ganyan: 3/1/4/8/6/9 · 7.705,37 TL (1 misli, TJK)
-- Bursa 2. 6'lı ganyan: 8/6/9/3/7/5 · 41.753,68 TL (1 misli, TJK)
-- Şanlıurfa 1. 6'lı ganyan: 3/6/4/9/10/4,13 · 596.512,00 TL (1 misli, TJK)
-- Şanlıurfa 2. 6'lı ganyan: 4/9/10/4,13/13/11 · 971.726,80 TL (1 misli, TJK)
-- Açık karne: 18 yarış gününde biten 290 koşunun 173'ünde kazanan ilk 4'ümüzdeydi.
+## Bugün (24 Kasım 2026)
+- Adana: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
+- Antalya: 7 koşu, 18:30–21:30; 1. altılı 2.–7. koşular (19:00)
+- Açık karne: 19 yarış gününde biten 290 koşunun 173'ünde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
