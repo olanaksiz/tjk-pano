@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 24 Kasım 2026, 06:40. Kaynak: https://tjkdetay.com/
+Güncelleme: 24 Kasım 2026, 06:43. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -920,6 +920,10 @@ Zemin ağırlaştıkça sürpriz payının nasıl değiştiğini aşağıdaki ta
 ### Yarış atının kariyeri: maidendan Gazi'ye, yaşa göre kazanma oranları
 https://tjkdetay.com/yaris-ati-kariyeri/
 İngiliz atları genellikle 2, Arap atları 3 yaşında ilk koşusuna çıkar; maidendan sonra şartlı, KV ve grup koşularına yükselir ya da handikapta puanıyla koşar.
+
+### Hız figürleri: bugünkü atların 100 metre hızı ve tahmini derecesi
+https://tjkdetay.com/hiz-figurleri/
+Figür artı ise at, o pist ve mesafenin ortalama ilk 3 derecesinden hızlıdır. Tablo her koşuda figüre göre sıralıdır; en sağdaki tahmini derece bir beklentidir.
 
 ### Jokey–at uyumu: bugünkü jokeyler bu atlarla daha önce ne yaptı?
 https://tjkdetay.com/jokey-at-uyumu/
