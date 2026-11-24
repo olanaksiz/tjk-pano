@@ -13,7 +13,7 @@ TJKDAdmin.modul({
       var say = A.el('span', 'ad-not');
       var csv = A.el('button', 'ad-dugme ikincil', 'CSV indir'); csv.type = 'button';
       [ara, fil, say, csv].forEach(function (x) { ust.appendChild(x); });
-      var kutu = A.kutu(alan, 'Üye listesi'); kutu.appendChild(ust);
+      var kutu = A.kutu(alan, 'Üye listesi'); kutu.classList.add('ad-tamsayfa'); kutu.appendChild(ust);
       var yer = A.el('div'); kutu.appendChild(yer);
       function liste() {
         var q = (ara.value || '').toLocaleLowerCase('tr-TR'), f = fil.value;
