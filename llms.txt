@@ -56,7 +56,10 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (24 Kasım 2026)
 - Adana: 9 koşu, 14:00–18:00; 1. altılı 1.–6. koşular (14:00); 2. altılı 4.–9. koşular (15:30)
 - Antalya: 7 koşu, 18:30–21:30; 1. altılı 2.–7. koşular (19:00)
-- Açık karne: 19 yarış gününde biten 290 koşunun 173'ünde kazanan ilk 4'ümüzdeydi.
+- Adana 1. 6'lı ganyan: 1/8/1/10/7/4 · 99.532,87 TL (1 misli, TJK)
+- Adana 2. 6'lı ganyan: 10/7/4/7/10/15 · 7.756.161,75 TL (1 misli, TJK)
+- Antalya 6'lı ganyan: 5/3,5,8/5/7/5/2 · 3.780,87 TL (1 misli, TJK)
+- Açık karne: 19 yarış gününde biten 306 koşunun 182'sinde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
