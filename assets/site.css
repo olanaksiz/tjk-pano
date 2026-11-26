@@ -2578,3 +2578,5 @@ html.ak-acik{overflow:hidden}
 @media (min-width:900px){.mm-panel .mm-alt{display:none}.mm-panel .akm-g>summary{display:flex;align-items:center;gap:8px;border-width:0 0 1px;border-style:solid}}
 .mm-panel .akm-g>summary{color:#EAF1FB}.mm-panel .akm-g>summary small{color:#9FB3D1;opacity:1}
 .mm-panel .akm-g>summary b{color:#fff!important;grid-column:2}.mm-panel .akm-g>summary small{grid-column:2;grid-row:2}@media (min-width:900px){.mm-panel .akm-g>summary b{color:#F2CE6B!important}}
+
+.oc-kc .oc-yk{display:block;font-size:12px;line-height:1.35;color:#0A142C}.oc-kc .oc-yk b{font-weight:800}.oc-kc .oc-y2,.oc-kc .oc-y2 b{color:#D21F1F}.oc-kc .oc-biz,.oc-kc .oc-biz b{color:#1F5BD6}.oc-kc .kilit-gizli{display:contents}
