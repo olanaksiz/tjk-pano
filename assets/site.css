@@ -2589,3 +2589,5 @@ html.ak-acik{overflow:hidden}
 .al-kart ul{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:8px}.al-kart li{background:#FFE3E3;border:1px solid #F3A3A3;border-radius:10px;padding:9px 11px;display:flex;flex-direction:column;gap:2px}
 .al-kart li b{font:800 15px/1.25 var(--govde)}.al-kart li span{font-size:13px}.al-kart li em{font-style:normal;font-weight:800;color:#B00000}
 .al-kart .dugme{display:block;text-align:center}.al-not{font-size:11px;color:#777;margin:8px 0 0;text-align:center}html.al-acik{overflow:hidden}
+
+.al-kart .al-git{display:flex;align-items:center;justify-content:center;width:100%;height:48px;box-sizing:border-box;padding:0 18px;border-radius:12px;background:#D21F1F;color:#fff;font:800 16px/1 var(--govde);text-decoration:none;letter-spacing:.2px;box-shadow:0 4px 12px rgba(210,31,31,.3)}.al-kart .al-git:hover{background:#B00000}
