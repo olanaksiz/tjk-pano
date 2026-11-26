@@ -56,7 +56,7 @@ TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son ko
 ## Bugün (26 Kasım 2026)
 - İzmir: 7 koşu, 15:00–18:00; 1. altılı 2.–7. koşular (15:30)
 - Antalya: 7 koşu, 18:30–21:30; 1. altılı 2.–7. koşular (19:00)
-- Açık karne: 21 yarış gününde biten 324 koşunun 192'sinde kazanan ilk 4'ümüzdeydi.
+- Açık karne: 21 yarış gününde biten 338 koşunun 203'ünde kazanan ilk 4'ümüzdeydi.
 
 ## Veri
 Koşu tahminleri Premium üyelere açıktır; program ve sonuçlar herkese açıktır.
