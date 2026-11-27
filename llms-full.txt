@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 27 Kasım 2026, 09:28. Kaynak: https://tjkdetay.com/
+Güncelleme: 27 Kasım 2026, 10:01. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -988,6 +988,10 @@ Son 3 koşusunda her seferinde daha iyi derece yapan atlar %11,1 kazandı; her s
 ### Hipodrom istatistikleri: yarış günü, koşu, pist ve favori oranı
 https://tjkdetay.com/hipodrom-istatistikleri/
 Arşivde 10 hipodromda 5.362 koşu var; en çok koşu İstanbul hipodromunda. AGF favorisinin en sık kazandığı hipodrom Adana (%39,7), en az kazandığı Diyarbakır (%24,6).
+
+### İzmir 7. koşuda attan düşen apranti hastaneye sevk edildi
+https://tjkdetay.com/haberler/2026-11-26-izmir-7-kosu-apranti-dusme/
+26 Kasım İzmir Şirinyer'deki 7. koşuda İzmir Güneşi'nden düşen apranti jokey, TJK'nın açıklamasına göre kontrol amacıyla hastaneye götürüldü.
 
 ### TJK 2027 bütçe genel kurulu 12 Aralık'ta Veliefendi'de
 https://tjkdetay.com/haberler/2026-11-26-tjk-2027-butce-genel-kurulu/
