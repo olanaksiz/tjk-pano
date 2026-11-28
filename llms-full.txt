@@ -1,6 +1,6 @@
 # TJK Detay — tam metin
 
-Güncelleme: 28 Kasım 2026, 00:39. Kaynak: https://tjkdetay.com/
+Güncelleme: 28 Kasım 2026, 08:35. Kaynak: https://tjkdetay.com/
 
 ## Yöntem
 TJK Detay her koşudaki bütün atları aynı kural tablosundan geçirir: son koşuya göre kilo değişimi, sınıf yönü, idman ve galop dereceleri, jokey başarısı, pist ve mesafe uyumu, son koşu sonucu ve mazeret. Artı ile eksinin farkı en yüksek dört at 'ilk 4' olur. Yorumcuların en çok seçtiği ama ilk 4'te olmayan at 'Y atı' olarak ayrıca verilir. Seçimler koşudan önce yayımlanır, sonradan değiştirilmez; isabet gün gün Performans sayfasında tutulur.
@@ -807,11 +807,11 @@ https://tjkdetay.com/jokey-istatistikleri/
 
 ### Antrenör istatistikleri 2026: en çok kazanan antrenörler
 https://tjkdetay.com/antrenor-istatistikleri/
-2026'da en çok kazanan antrenör M.DOLAK: 689 koşuda 71 galibiyet (%10,3). En az 60 koşuda en yüksek kazanma oranı T.AYDIN (%29,2).
+2026'da en çok kazanan antrenör M.DOLAK: 691 koşuda 71 galibiyet (%10,3). En az 60 koşuda en yüksek kazanma oranı İ.TEMEL (%29,0).
 
 ### İstanbul jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/istanbul-jokey-istatistikleri/
-3 Ocak 2026 – 8 Kasım 2026 arasında İstanbul'da koşulan 1037 TJK koşusuna göre en çok kazanan jokey Vedat Abiş: 574 koşuda 110 birincilik, kazanma oranı %19,2, ilk 3 oranı %55,1. Onu Gökhan Kocakaya (92 galibiyet) ve Ayhan Kurşun (67) izliyor. En az 60 koşuda en yüksek kazanma oranı Gökhan Kocakaya (%23,6).
+3 Ocak 2026 – 11 Kasım 2026 arasında İstanbul'da koşulan 1046 TJK koşusuna göre en çok kazanan jokey Vedat Abiş: 574 koşuda 110 birincilik, kazanma oranı %19,2, ilk 3 oranı %55,1. Onu Gökhan Kocakaya (92 galibiyet) ve Ayhan Kurşun (67) izliyor. En az 60 koşuda en yüksek kazanma oranı Gökhan Kocakaya (%23,6).
 
 ### Ankara jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/ankara-jokey-istatistikleri/
@@ -827,15 +827,15 @@ https://tjkdetay.com/bursa-jokey-istatistikleri/
 
 ### Adana jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/adana-jokey-istatistikleri/
-3 Ocak 2026 – 8 Kasım 2026 arasında Adana'da koşulan 572 TJK koşusuna göre en çok kazanan jokey Mehmet Salih Çelik: 258 koşuda 48 birincilik, kazanma oranı %18,6, ilk 3 oranı %47,3. Onu Vedat Abiş (46 galibiyet) ve Ahmet Çelik (43) izliyor. En az 38 koşuda en yüksek kazanma oranı Vedat Abiş (%29,3).
+3 Ocak 2026 – 10 Kasım 2026 arasında Adana'da koşulan 581 TJK koşusuna göre en çok kazanan jokey Mehmet Salih Çelik: 265 koşuda 48 birincilik, kazanma oranı %18,1, ilk 3 oranı %46,4. Onu Vedat Abiş (46 galibiyet) ve Ahmet Çelik (44) izliyor. En az 38 koşuda en yüksek kazanma oranı Vedat Abiş (%29,3).
 
 ### Kocaeli jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/kocaeli-jokey-istatistikleri/
-14 Nisan 2026 – 3 Kasım 2026 arasında Kocaeli'nde koşulan 369 TJK koşusuna göre en çok kazanan jokey Muhammed Mir Bilgin: 170 koşuda 38 birincilik, kazanma oranı %22,4, ilk 3 oranı %50,6. Onu Ali Yıldız (25 galibiyet) ve Nevzat Avci (25) izliyor. En az 24 koşuda en yüksek kazanma oranı Nevzat Avci (%23,6).
+14 Nisan 2026 – 10 Kasım 2026 arasında Kocaeli'nde koşulan 378 TJK koşusuna göre en çok kazanan jokey Muhammed Mir Bilgin: 176 koşuda 39 birincilik, kazanma oranı %22,2, ilk 3 oranı %50,6. Onu Ali Yıldız (26 galibiyet) ve Nevzat Avci (25) izliyor. En az 25 koşuda en yüksek kazanma oranı Nevzat Avci (%23,6).
 
 ### Elazığ jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/elazig-jokey-istatistikleri/
-1 Nisan 2026 – 4 Kasım 2026 arasında Elazığ'da koşulan 362 TJK koşusuna göre en çok kazanan jokey İsa Akyavuz: 284 koşuda 60 birincilik, kazanma oranı %21,1, ilk 3 oranı %51,8. Onu Necmi Altın (51 galibiyet) ve M. Doğan (36) izliyor. En az 24 koşuda en yüksek kazanma oranı İsa Akyavuz (%21,1).
+1 Nisan 2026 – 11 Kasım 2026 arasında Elazığ'da koşulan 370 TJK koşusuna göre en çok kazanan jokey İsa Akyavuz: 291 koşuda 61 birincilik, kazanma oranı %21,0, ilk 3 oranı %51,5. Onu Necmi Altın (51 galibiyet) ve M. Doğan (37) izliyor. En az 24 koşuda en yüksek kazanma oranı İsa Akyavuz (%21,0).
 
 ### Diyarbakır jokey istatistikleri 2026: en çok kazanan jokeyler ve kazanma oranları
 https://tjkdetay.com/diyarbakir-jokey-istatistikleri/
@@ -851,7 +851,7 @@ https://tjkdetay.com/antalya-jokey-istatistikleri/
 
 ### İstanbul antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/istanbul-antrenor-istatistikleri/
-3 Ocak 2026 – 8 Kasım 2026 arasında İstanbul'da koşulan 1037 TJK koşusuna göre en çok kazanan antrenör C. Turan: 414 koşuda 40 birincilik, kazanma oranı %9,7, ilk 3 oranı %28,0. Onu H. Yüzbaşı (30 galibiyet) ve E. Uslu (27) izliyor. En az 60 koşuda en yüksek kazanma oranı İb. B. Oğulları (%24,3).
+3 Ocak 2026 – 11 Kasım 2026 arasında İstanbul'da koşulan 1046 TJK koşusuna göre en çok kazanan antrenör C. Turan: 417 koşuda 40 birincilik, kazanma oranı %9,6, ilk 3 oranı %27,8. Onu H. Yüzbaşı (30 galibiyet) ve E. Uslu (27) izliyor. En az 60 koşuda en yüksek kazanma oranı İb. B. Oğulları (%24,3).
 
 ### Ankara antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/ankara-antrenor-istatistikleri/
@@ -867,15 +867,15 @@ https://tjkdetay.com/bursa-antrenor-istatistikleri/
 
 ### Adana antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/adana-antrenor-istatistikleri/
-3 Ocak 2026 – 8 Kasım 2026 arasında Adana'da koşulan 572 TJK koşusuna göre en çok kazanan antrenör S. Süslü: 192 koşuda 32 birincilik, kazanma oranı %16,7, ilk 3 oranı %46,9. Onu Y. Tuncay (21 galibiyet) ve İ. Köroğlu (15) izliyor. En az 38 koşuda en yüksek kazanma oranı İs. Tekinalp (%32,6).
+3 Ocak 2026 – 10 Kasım 2026 arasında Adana'da koşulan 581 TJK koşusuna göre en çok kazanan antrenör S. Süslü: 194 koşuda 33 birincilik, kazanma oranı %17,0, ilk 3 oranı %47,4. Onu Y. Tuncay (21 galibiyet) ve İ. Köroğlu (16) izliyor. En az 38 koşuda en yüksek kazanma oranı İ. Akkılıç (%31,7).
 
 ### Kocaeli antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/kocaeli-antrenor-istatistikleri/
-14 Nisan 2026 – 3 Kasım 2026 arasında Kocaeli'nde koşulan 369 TJK koşusuna göre en çok kazanan antrenör T. Çekici: 137 koşuda 13 birincilik, kazanma oranı %9,5, ilk 3 oranı %24,1. Onu Ram.  kaya (9 galibiyet) ve S. Yanmaz (9) izliyor. En az 24 koşuda en yüksek kazanma oranı Mur. Akkılıç (%29,2).
+14 Nisan 2026 – 10 Kasım 2026 arasında Kocaeli'nde koşulan 378 TJK koşusuna göre en çok kazanan antrenör T. Çekici: 144 koşuda 14 birincilik, kazanma oranı %9,7, ilk 3 oranı %25,0. Onu Ram.  kaya (12 galibiyet) ve S. Yanmaz (9) izliyor. En az 25 koşuda en yüksek kazanma oranı S. Yanmaz (%29,0).
 
 ### Elazığ antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/elazig-antrenor-istatistikleri/
-1 Nisan 2026 – 4 Kasım 2026 arasında Elazığ'da koşulan 362 TJK koşusuna göre en çok kazanan antrenör M. Buluç: 299 koşuda 27 birincilik, kazanma oranı %9,0, ilk 3 oranı %26,4. Onu E. Altın (24 galibiyet) ve M. A. Subay (23) izliyor. En az 24 koşuda en yüksek kazanma oranı T. Aydın (%26,4).
+1 Nisan 2026 – 11 Kasım 2026 arasında Elazığ'da koşulan 370 TJK koşusuna göre en çok kazanan antrenör M. Buluç: 299 koşuda 27 birincilik, kazanma oranı %9,0, ilk 3 oranı %26,4. Onu E. Altın (24 galibiyet) ve M. A. Subay (23) izliyor. En az 24 koşuda en yüksek kazanma oranı T. Aydın (%25,5).
 
 ### Diyarbakır antrenör istatistikleri 2026: en çok kazanan antrenörler ve kazanma oranları
 https://tjkdetay.com/diyarbakir-antrenor-istatistikleri/
@@ -891,11 +891,11 @@ https://tjkdetay.com/antalya-antrenor-istatistikleri/
 
 ### Kulvar analizi: start numarasına göre kazanma oranları (TJK 2026)
 https://tjkdetay.com/kulvar-analizi/
-İzmir kum 1400 m ve üstü: start 1-3 %12,7 (beklenen %11,8), start 7+ %8,5 (beklenen %8,7); İstanbul sentetik 1400 m ve üstü: start 1-3 %10,5 (beklenen %10,8), start 7+ %8,2 (beklenen %8,2); Adana kum 1400 m ve üstü: start 1-3 %11,5 (beklenen %12,2), start 7+ %9,5 (beklenen %9,1); İstanbul çim 1400 m ve üstü: start 1-3 %11,0 (beklenen %10,5), start 7+ %8,2 (beklenen %8,4).
+İzmir kum 1400 m ve üstü: start 1-3 %12,7 (beklenen %11,8), start 7+ %8,5 (beklenen %8,7); İstanbul sentetik 1400 m ve üstü: start 1-3 %10,8 (beklenen %10,8), start 7+ %8,1 (beklenen %8,2); Adana kum 1400 m ve üstü: start 1-3 %11,5 (beklenen %12,2), start 7+ %9,5 (beklenen %9,1); İstanbul çim 1400 m ve üstü: start 1-3 %11,0 (beklenen %10,5), start 7+ %8,2 (beklenen %8,4).
 
 ### Favori analizi: AGF favorisi ne sıklıkla kazanıyor, sürpriz oranı (TJK 2026)
 https://tjkdetay.com/favori-analizi/
-2026 TJK koşularında AGF favorisinin kazanma oranı %34,8, ilk 3'e girme oranı %69,3. Kazananların yüzde 14,9 kadarı 10'un üzerinde ganyan verdi; AGF sıralamasında ilk 3 dışındaki bir atın kazandığı koşu oranı %31,2.
+2026 TJK koşularında AGF favorisinin kazanma oranı %34,8, ilk 3'e girme oranı %69,3. Kazananların yüzde 14,9 kadarı 10'un üzerinde ganyan verdi; AGF sıralamasında ilk 3 dışındaki bir atın kazandığı koşu oranı %31,3.
 
 ### Derece analizi: hipodrom ve mesafeye göre en iyi dereceler (TJK 2026)
 https://tjkdetay.com/derece-analizi/
@@ -931,7 +931,7 @@ Bugün 39 at, bugünkü jokeyiyle son 6 koşusunda en az bir kez kazanmış; 53 
 
 ### Kilo istatistikleri: at yarışında kilo kazanmayı nasıl etkiler? (TJK 2026)
 https://tjkdetay.com/kilo-istatistikleri/
-2026 handikaplarında alanın en hafif atı %5,8, en ağır atı %10,8 oranında kazandı.
+2026 handikaplarında alanın en hafif atı %5,9, en ağır atı %10,8 oranında kazandı.
 
 ### Kupon hesaplama: 7'li plase, 6'lı, 5'li, 4'lü, 3'lü ganyan kupon tutarı
 https://tjkdetay.com/kupon-hesaplama/
@@ -955,7 +955,7 @@ https://tjkdetay.com/gazi-kosusu/
 
 ### Pist rekorları: hipodrom ve mesafeye göre TJK en iyi dereceleri (2026)
 https://tjkdetay.com/pist-rekorlari/
-2026'da TJK sonuçlarında 2 pist rekoru kırıldı; en yenisi 8 Kasım 2026 Adana 1500 m sentetik, Consultant (1.29.24). Aşağıda 269 hipodrom–pist–mesafe–ırk kombinasyonunun TJK en iyi derecesi ve 2026'nın en hızlı kazananı var.
+2026'da TJK sonuçlarında 3 pist rekoru kırıldı; en yenisi 10 Kasım 2026 Adana 1400 m sentetik, Erdi Bey (1.31.77). Aşağıda 269 hipodrom–pist–mesafe–ırk kombinasyonunun TJK en iyi derecesi ve 2026'nın en hızlı kazananı var.
 
 ### Kazanma farkları: at yarışları kaç boyla kazanılıyor? (TJK 2026)
 https://tjkdetay.com/kazanma-farklari/
@@ -963,7 +963,7 @@ https://tjkdetay.com/kazanma-farklari/
 
 ### Dinlenme süresi: kaç gün arayla koşan at daha çok kazanıyor? (TJK 2026)
 https://tjkdetay.com/dinlenme-suresi/
-2026 TJK sonuçlarında en yüksek kazanma oranı 15–21 gün arayla koşan atlarda (%12,3). 60 günden uzun aradan dönen atlar ilk koşularında %7,3, sonraki koşularında %8,1 kazandı.
+2026 TJK sonuçlarında en yüksek kazanma oranı 15–21 gün arayla koşan atlarda (%12,3). 60 günden uzun aradan dönen atlar ilk koşularında %7,3, sonraki koşularında %8,0 kazandı.
 
 ### Şehir değişikliği: başka hipodromdan gelen atlar ne kadar kazanıyor? (TJK 2026)
 https://tjkdetay.com/sehir-degisikligi/
@@ -971,7 +971,7 @@ https://tjkdetay.com/sehir-degisikligi/
 
 ### Kısrak istatistikleri: en çok kazanan yavru veren anneler ve anne babaları (TJK 2026)
 https://tjkdetay.com/kisrak-istatistikleri/
-2026 TJK sonuçlarında en çok galibiyet çıkaran kısrak Laser Girl (İngiliz): 4 yavrusu 13 koşu kazandı. Anne babası tablosu, kısrağın babasının (broodmare sire) torunlarına ne kadar yarış performansı aktardığını gösterir.
+2026 TJK sonuçlarında en çok galibiyet çıkaran kısrak Laser Girl (İngiliz): 4 yavrusu 14 koşu kazandı. Anne babası tablosu, kısrağın babasının (broodmare sire) torunlarına ne kadar yarış performansı aktardığını gösterir.
 
 ### Jokey–antrenör ikilileri: en çok birlikte kazananlar (TJK 2026)
 https://tjkdetay.com/jokey-antrenor-ikilileri/
@@ -979,15 +979,15 @@ https://tjkdetay.com/jokey-antrenor-ikilileri/
 
 ### Geç çıkış istatistikleri: startta geç kalan at kazanabilir mi? (TJK 2026)
 https://tjkdetay.com/gec-cikis-istatistikleri/
-2026'da geç çıkış yapan atlar yalnız %4,2 kazandı; normal çıkan atlarda bu oran %10,7. Geç çıkan AGF favorilerinin kazanma oranı %18,5 (314 koşu).
+2026'da geç çıkış yapan atlar yalnız %4,2 kazandı; normal çıkan atlarda bu oran %10,7. Geç çıkan AGF favorilerinin kazanma oranı %18,4 (315 koşu).
 
 ### Form trendi: gelişen formdaki at daha sık kazanır mı?
 https://tjkdetay.com/form-trendi/
-Son 3 koşusunda her seferinde daha iyi derece yapan atlar %11,1 kazandı; her seferinde geriye düşenlerde oran %7,3. Son 3 koşusunun hepsinde ilk 3'e giren 'istikrarlı' atlar ise %20,4 ile en yüksek kazanma oranına sahip. Tüm gruplarda ortalama kazanma oranı %10,3.
+Son 3 koşusunda her seferinde daha iyi derece yapan atlar %11,1 kazandı; her seferinde geriye düşenlerde oran %7,3. Son 3 koşusunun hepsinde ilk 3'e giren 'istikrarlı' atlar ise %20,4 ile en yüksek kazanma oranına sahip. Tüm gruplarda ortalama kazanma oranı %10,4.
 
 ### Hipodrom istatistikleri: yarış günü, koşu, pist ve favori oranı
 https://tjkdetay.com/hipodrom-istatistikleri/
-Arşivde 10 hipodromda 5.375 koşu var; en çok koşu İstanbul hipodromunda. AGF favorisinin en sık kazandığı hipodrom Adana (%39,7), en az kazandığı Diyarbakır (%24,6).
+Arşivde 10 hipodromda 5.410 koşu var; en çok koşu İstanbul hipodromunda. AGF favorisinin en sık kazandığı hipodrom Adana (%39,5), en az kazandığı Diyarbakır (%24,6).
 
 ### Arap taylarının 3 yaş muayenesi 4 Ocak–7 Şubat arasında
 https://tjkdetay.com/haberler/2026-11-27-arap-taylari-3-yas-muayenesi/
